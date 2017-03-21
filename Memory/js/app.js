@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 var playAgain = document.createElement("a");
                                 buttonContainer.appendChild(playAgain);
                                 playAgain.setAttribute("id", "playAgain");
-                                playAgain.setAttribute("href", "https://ewagrela.github.io/MemoryGames/");
+                                playAgain.setAttribute("href", "https://ewagrela.github.io/Memory/");
                                 playAgain.innerText ="Go ahead!";
                             }
                         }
