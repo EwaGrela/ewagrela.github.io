@@ -1,0 +1,14 @@
+$baseColor: #99cccc;
+$secondaryColor: darken($baseColor, 30%);
+$tertiaryColor: darken($baseColor, 40%);
+$fourthColor: lighten($baseColor, 20%);
+$baseFont: 30px;
+@media(min-width: 796px){
+	$baseFont: 40px;
+}
+%layout {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}

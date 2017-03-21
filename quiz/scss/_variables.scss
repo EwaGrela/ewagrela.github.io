@@ -1,0 +1,53 @@
+$mainColor: lighten(#ff9966, 40%);
+$baseColor : mix($mainColor, lightblue, 10%);
+$secondaryColor: lighten($baseColor, 10%);
+$thirdColor: darken($baseColor, 40%);
+$fourthColor: darken($baseColor, 30%);
+$fifthColor: darken($baseColor, 50%);
+$bigFont: 72px;
+$mediumFont: 42px;
+$headerColor: #ccff33;
+
+
+@mixin biggerLetters($amount){
+	&:hover {
+	font-size: $font-size + $amount;
+	}
+}
+
+@mixin layoutMixin1() {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@mixin layoutMixin2() {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@mixin layoutMixin3() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+@mixin layoutMixin4() {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+@mixin gamesBoards() {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+

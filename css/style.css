@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ 
+ 
+ 
+ 
+body {
+  background: lightblue;
+  }
+ 
+  
+
+.container {
+  max-width: 1000px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.grid-section {
+    overflow: hidden;
+    padding-bottom: 200px;
+    
+}
+ 
+.grid {
+    padding-bottom: 100%;
+    position: relative;
+    height: 50vh;
+    transform: rotate(45deg);
+    transform-origin: 39%;
+}
+ 
+.square {
+    width: 11.5%;
+    border-radius: 10%;
+    padding-bottom: 11.5%;
+    background-color: rgba(38, 97, 156, 0.95);
+    display: inline-block;
+}
+ 
+.square-big {
+    width: 25%;
+    border-radius: 5%;
+    padding-bottom: 25%;
+    display: inline-block;
+    transition: 2s;
+    background-color: rgba(38, 97, 156, 0.55);
+}
+
+.square-big:hover {
+  //transform: rotateX(180deg);
+  transform: scale(1.1);
+}
+  
+#square1 {
+  position: absolute;
+  top: 0.5%;
+  left: 20.5%; 
+  transition: 2s;
+}
+
+#square2 {
+  position: absolute;
+  top: 0.5%;
+  left: 47.5%; 
+}
+
+#square3 {
+  position: absolute;
+  top: 27.5%;
+  left: 20.5%; 
+}
+
+#square4 {
+  position: absolute;
+  top: 27.5%;
+  left: 34%; 
+}
+
+#square5 {
+  position: absolute;
+  top:27.5%;
+  left: 47.5%;
+  
+}
+#square6 {
+  position: absolute;
+  top: 41%;
+  left:20.5%;
+  
+}
+#square7 {
+  position: absolute;
+  top: 41%;
+  left: 34%;
+  
+}
+#square8 {
+  position: absolute;
+  top: 54.5%;
+  left: 20.5%;
+  
+}
+#square9 {
+  position: absolute;
+  top: 54.5%;
+  left: 34%;
+  
+}
+#square10 {
+  position: absolute;
+  left: 61%;
+  top: 54.5%;
+  
+}
+#square11 {
+  position: absolute;
+  left: 61%;
+  top: 68%;
+  
+}
+#square12 {
+  position: absolute;
+  left: 20.5%;
+  top: 68%;
+}
+
+p {
+  position: absolute;
+  top: 25%;
+  left:25%;
+  transform: rotate(315deg);
+  color: white;
+  font-family: "Raleway";
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+@media(min-width: 560px){
+    p {
+      font-size: 16px;
+  }
+@media(min-width: 768px){
+    p {
+      font-size: 18px;
+    }
+}
+@media(min-width: 1000px){
+  p {
+    font-size: 20px;
+  }
+}
+
+
+
+footer {
+  background: #88B04B;;
+  height: 25vh;
+  width: 100vw;
+  font-family: "Raleway";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

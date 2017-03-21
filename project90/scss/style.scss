@@ -1,0 +1,1042 @@
+@import "_variables";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+body:before{
+  content: "";
+  display: block;
+  position: fixed;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  z-index: -10;
+  background-image: url("../images/camera-1851541_1920.jpg");
+  background-repeat:  no-repeat;
+  background-position:  center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	max-width: 100vw;
+}
+section {
+	//border: 1px solid blue;
+	max-width: 100vw;
+	min-height: 450px;
+}
+header {
+	//@include fixedBcg();
+	//background-image: url("../images/camera-1851541_1920.jpg");
+	//border:1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: relative;
+	height: 100vh;
+	max-width: 100vw;
+	.header-item {
+		font-family: 'Permanent Marker', cursive;
+
+		&:nth-child(3) {
+			text-align: center;
+			align-self: center;
+			//border: 1px solid yellow;
+			
+		}
+
+		&:nth-child(4) {
+			align-self: center;
+			text-align: center;
+			margin-bottom: 10%;
+			color: #efefef;
+			font-size: $bigFont/4;
+			width: 100px;
+			height: 50px;
+			background: #dd6677;
+			&:hover {
+				background: lighten(#ff6677, 10%);
+			}
+			border: 2px solid #cccccc;
+			border-radius: 10%;
+			@media(min-width: 600px){
+				width: 150px;
+				height: 75px;
+				font-size: $bigFont/3;
+			}
+			@media(min-width: 1200px){
+				width: 180px;
+				height: 90px;
+				font-size: $bigFont/2.4;
+			}
+
+		}
+		
+	}
+
+}
+#newParagraph {
+	border: 1px dotted $sixthColor;
+	width: 90%;
+	height: 200px;
+	margin: 0 auto;
+	background: #eeeeee;
+	font-family: "Raleway";
+	font-size: $mediumFont/1.5;
+
+}
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-family: "Permanent Marker";
+		color: #565656;
+		text-shadow: 5px 5px 5px lighten(#ff6677, 15%);
+		text-align: center;
+		@media(max-width: 560px){
+			font-size: $bigFont*0.5/$i;
+		}
+		@media(min-width: 561px){
+			font-size: $bigFont*0.7/$i;
+		}
+		@media(min-width: 796px){
+			font-size: $bigFont*0.9/$i;
+		}
+		
+	}
+
+}
+
+	
+.hamburger {
+margin-left: 10px;
+margin-top: 10px;		
+  width: 40px;
+  height: 35px;
+  border: 0;
+  border-top: 5px solid lighten($sixthColor, 10%);
+  background: transparent;
+  position: relative;
+  transition: 0.3s transform linear;
+  outline: 0;
+}
+
+.hamburger::before, .hamburger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 5px solid lighten($sixthColor, 10%);
+  transform: translateY(10px);
+}
+
+.hamburger::after {
+  transform: translateY(25px);
+  transition: 0.3s transform linear;
+}
+
+.hamburger.focus {
+  transform: rotate(45deg) translateY(5px);
+  border: none;
+}
+
+.hamburger.focus::after {
+  transform: rotate(-90deg) translateX(-10px);
+}
+
+
+
+.invisible {
+	display: none;
+}
+
+nav {
+	boder: 1px solid white;
+	font-family: 'Permanent Marker', cursive;
+	display: flex;
+	margin-right: 10px;
+	height: 13%;
+	position: absolute;
+	//background: rgba(254,254,254, 0.4);
+	left: 55px;
+	top: 0px;
+
+
+	ul {
+		@include layoutMixin1();
+		list-style-type: none;
+		
+		margin-right: 20px;
+		
+		
+		li {
+			//background: rgba(255,204,204, 0.9);
+			color:  #999999;
+			margin-left: 1%;
+			text-shadow: 2px 2px #cccccc ;
+			margin-left: 10px;
+			margin-top: 20px;
+			
+			&:nth-of-type(2n){
+				align-self: flex-start;
+			}
+			&:nth-of-type(2n+1){
+				align-self: flex-end;
+			}
+			@media(min-width:420px ){
+				font-size: $bigFont/4;
+			}
+			@media(min-width:600px ){
+				font-size: $bigFont/3;
+			}
+			@media(min-width:1200px ){
+				font-size: $bigFont/2;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+				&:hover {
+					color: lighten(#ff6677, 10%);
+				}
+			}
+		}
+
+	}
+	
+}
+
+
+
+#infoSection {
+	@include layoutMixin2();
+	//border: 2px solid orange;
+	position: relative;
+	max-width: 100vw;
+	min-height: 820px;
+	
+}
+
+
+.hidden {
+	visibility: hidden;
+}
+
+#about {
+	//border: 1px solid black;
+	min-height: 50%;
+	width: 65%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 20px;
+	@media(min-width: 600px){
+		padding: 20px 50px;
+	}
+	//border: 1px solid yellow;
+	position: relative;
+	@include layoutMixin2();
+		button {
+			margin-top: 10px;
+			background: $sixthColor;
+			color: #dddddd;
+			text-shadow: 2px 2.5px darken(#ff6688, 30%);
+			font-family: "Permanent Marker";
+			width:180px;
+			height: 60px;
+			transition: 0.5s;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+			&:nth-of-type(2n){
+			align-self: flex-end;
+			}
+			&:nth-of-type(2n+1){
+				align-self: flex-start;
+			}
+			font-size: $mediumFont/3;
+			@media(min-width: 600px){
+				font-size: $mediumFont/2;
+				width: 255px;
+				height: 85px;
+			}
+			@media(min-width: 1200px){
+				font-size: $mediumFont/1.5;
+				width: 360px;
+				height: 120px;
+			}
+			border: none;
+			border-radius: 5%;
+		}
+
+	p {
+		color: #444444;
+		border-radius: 5%;
+		background: rgba(204,204,204, 0.90);
+		box-shadow: 10px 15px 20px lighten(#ff6677, 10%);
+		text-align: center;
+		font-family: "Raleway";
+		font-weight: bold;
+		font-size: $bigFont/7.2;
+		margin-bottom: 10px;
+		@media(min-width: 600px){
+			font-size: $bigFont/4.5;
+		}
+		@media(min-width: 1200px){
+			font-size: $bigFont/3.5;
+		}
+		width: 85%;
+		height: auto;
+		padding: 5px;
+		position: relative;
+		&:nth-of-type(2n){
+			align-self: flex-end;
+		}
+		&:nth-of-type(2n+1){
+			align-self: flex-start;
+		}
+	}
+
+}
+
+
+
+#learnSection{
+	@include layoutMixin3();
+	min-height: 450px;
+	max-width: 100vw;
+	//border: 1px solid green;
+	background: rgba(209,209,209, 0.8)
+}
+
+#learn {
+	@include layoutMixin6();
+	//border: 1px solid yellow;
+	width: 100%;
+	min-height: 450px;
+	position:relative;
+	//margin-top: 5%;
+	
+	div {
+		//border: 1px solid blue;
+		min-height: 70%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+	button {
+		background:  $sixthColor;
+		border-radius: 20%;
+		width: 80px;
+		height: 40px;
+		font-size: $mediumFont/3;
+		font-family: 'Permanent Marker', cursive;
+		transition: 0.8s;
+		@media(min-width: 600px){
+			width: 100px;
+			height: 50px;
+			font-size: $mediumFont/2.2;
+		}
+		@media(min-width: 1200px){
+			width: 150px;
+			height: 75px;
+			font-size: $mediumFont/1.55;
+		}
+		
+		&:hover {
+			background:  darken($sixthColor, 10%);
+			text-decoration: underline;
+			color: darken(#cccccc, 20%);
+			text-underline-position: under;
+			transform: scale(1.2);
+		}
+		
+		margin: 5px;
+		border: none;
+		color: white;
+		
+	}
+}
+
+
+
+#gameSection {
+	//border: 1px solid blue;
+	height: 100vh;
+	max-width: 100vw;
+	@include layoutMixin6();
+	
+
+	article {
+		//border: 1px solid orange;
+		width: 95%;
+		min-height: 50%;
+		
+		@include layoutMixin6();
+		@media(min-width: 530px){
+			@include layoutMixin1();
+			margin-top: 15%;
+		}
+	}
+}
+
+.games {
+	@media(min-width:530px){
+		
+		&:first-of-type {
+		align-self: flex-start;
+	}
+		&:last-of-type {
+			align-self: flex-start;
+		}
+
+	}
+	
+}
+	
+.games{
+		width: 120px;
+		height: 120px;
+		margin: 5px;
+		background: $sixthColor;
+		border: none;
+		border-radius: 5%;
+		font-size: $mediumFont/2;
+		font-family: "Permanent Marker";
+		color: #eeeeee;
+		text-shadow: 2px 2px 3px #ff7777;
+		@media (min-width:420px) {
+			width: 160px;
+			height: 160px;
+			font-size: $mediumFont/1.6;
+			transition: 1s;
+			&:hover {
+				transform:scale(1.1);
+			}
+		}
+		@media(min-width:600px){
+			width: 180px;
+			height: 180px;
+			font-size: $mediumFont/1.3;
+		}
+		@media(min-width:1200px){
+			width: 240px;
+			height: 240px;
+			font-size: $mediumFont/1.2;
+		}
+	
+	
+}
+
+%gamesBtn {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#memoryGame {
+	@extend %gamesBtn;
+	background-image: url("../images/brain.png");	
+}
+
+#triviaGame {
+	@extend %gamesBtn;
+	background-image: url("../images/nerd.png");	
+}
+
+#psychoTest {
+	@extend %gamesBtn;
+	background-image: url("../images/2000px-Inkblot.svg_.png");
+}
+
+
+#triviaSection, #testSection {
+	@include layoutMixin3();
+	padding-top: 20px;
+	background: $baseColor;
+	max-width: 100vw;
+	min-height: 100vh;
+	display: none;
+}
+
+
+footer {
+	height: 100vh;
+	min-height: 550px;
+	//width: 100vw;
+	max-width: 100vw;
+	text-align: center;
+	color: white;
+	
+
+	section {
+		@include layoutMixin2();
+		height: 90%;
+		min-height: 450px;
+		@media(min-width: 796px){
+			@include layoutMixin1();
+			//position: relative;
+		}
+	}
+	article {
+		@include layoutMixin6();
+		
+		//border: 2px solid orange;
+		width: 90%;
+		height: 90%;
+		@media(min-width: 796px){
+			width: 30%;
+			height: 45%;
+			&:nth-of-type(2) {
+			align-self: flex-end;
+			}
+			&:nth-of-type(2n+1){
+			animation-name: flapping;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-delay: 2s;
+			animation-timing-function: ease-in-out;
+
+			}
+			&:nth-of-type(2n){
+				animation-name: jumping;
+				animation-duration: 10s;
+				animation-iteration-count: infinite;
+				animation-delay: 2s;
+				animation-timing-function: ease-in-out;
+
+			}
+		}
+		
+		p{
+			font-family: "Raleway";
+			text-align: center;
+			font-size: $mediumFont/3;
+			border: 1px solid red;
+			height: 90%;
+			width: 50%;
+			margin-top: 15%;
+			margin-bottom: 25%;
+			letter-spacing: 1.4px;
+			@media(min-width: 600px){
+				font-size: $mediumFont/2.5;
+			}
+			@media(min-width: 1200px ){
+				font-size: $mediumFont/1.8;
+			}
+		}
+	}
+	ul {
+		list-style: none;
+		@include layoutMixin3();
+		li {
+			color: darken(#ff6677, 5%);
+			text-shadow: 1px 1px #cccccc;
+			font-weight: bold;
+			font-style: italic;
+			margin: 10px;
+			font-family: Raleway;
+			text-decoration: underline;
+			a{
+				color: inherit;
+				font-size: $mediumFont/3;
+				@media(min-width:600px){
+					font-size: $mediumFont/2;
+				}
+				@media(min-width:1200px){
+					font-size: $mediumFont/1.7;
+				}
+			}
+		}
+	}
+
+	button {
+		width: 50px;
+		height: 50px;
+		background: #efefef;
+		border-radius: 50%;
+		padding-top: 5px;
+		color: #ff6677;
+		border: none;
+		font-family: "Raleway";
+		text-align: center;
+		font-size: $mediumFont;
+		font-weight: bold;
+	}
+}
+
+@keyframes slither {
+	0% {
+		transform: translate(5px, 0px);
+	}
+	25% {
+		transform: translate(-5px, 0px);
+	}
+	50% {
+		transform: translate(5px, 0px);
+	}
+	75% {
+		transform: translate(-5px, 0px);
+	}
+	100% {
+		transform: translate(5px, 0px);
+	}
+}
+
+@keyframes flapping {
+	0% {
+		transform: translate(10px, 10px);
+	}
+	25% {
+		transform: translate(-10px, -10px);
+	}
+	50% {
+		transform: translate(10px, 10px);
+	}
+	75% {
+		transform: translate(-10px, -10px);
+	}
+	100% {
+		transform: translate(10px, 10px);
+	}
+}
+
+@keyframes jumping {
+	0% {
+		transform: translate(0px, 40px);
+	}
+	25% {
+		transform: translate(0px, -40px);
+	}
+	50% {
+		transform: translate(0px, 30px);
+	}
+	75% {
+		transform: translate(0px, -30px);
+	}
+	100% {
+		transform: translate(0px, 40px);
+	}
+}
+
+/* elements not yet existing in DOM */
+
+/*for learning buttons events */
+
+.infoBoard {
+	width: 100%;
+	height: 450px;
+	background-color: rgba(204,204,204,0.90);
+	//border: 1px solid orange;
+	//background-image: url("../images/camera-1851541_1920.jpg");
+  	background-repeat:  no-repeat;
+  	background-position:  center center;
+  //opacity: 0.7;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+	position: absolute;
+	top: 0;
+	@include layoutMixin2();
+
+
+	.infoParagraph {	
+		//border: 1px solid red;
+		padding: 10px;
+    	font-family: 'Raleway', sans-serif;
+    	font-weight: bold;
+		text-align: center;
+		margin: 0 auto;
+		height: 60%;
+		width: 90%;
+		color: darken($sixthColor, 15%);
+		font-size: $mediumFont/3;
+		@media(min-width: 600px){
+			font-size: $mediumFont/2;
+		}
+		@media(min-width: 1200px){
+			font-size: $mediumFont/1.5;
+		}
+
+	}
+
+}
+
+
+/* for games */
+.board {
+	max-width: 100vw;
+	max-height: 100vh;
+	background: inherit;
+	//border: 2px solid $baseColor;
+	@include layoutMixin3();
+
+	#start {
+	background-image: url("../images/brain.png");
+	width: 120px;
+	height: 120px;
+	margin-top: 20px;
+	@extend %gamesBtn;
+	text-transform: uppercase;
+	font-family: "Permanent Marker";
+	background-color: $baseColor;
+	color: mix($fifthColor, $sixthColor, 30%);
+	font-size: $mediumFont/2;
+	border: none;
+		@media( min-width: 420px){
+				width: 150px;
+				height: 150px;
+				font-size: $mediumFont/1.5;
+			}
+
+		@media( min-width: 796px){
+			width: 250px;
+			height: 250px;
+			font-size: $mediumFont;
+			
+		}
+	}
+}
+
+
+
+.startTest {
+	//background-image: url("../images/2000px-Inkblot.svg_.png");
+	width: 100px;
+	height: 100px;
+	@extend %gamesBtn;
+	color: $baseColor;
+	background:  $sixthColor;
+	font-size: $mediumFont/3;
+	border: none;
+	border-radius: 5%;
+	font-family: 'Permanent Marker', cursive;
+		@media( min-width: 420px){
+				width: 150px;
+				height: 150px;
+				font-size: $mediumFont/2;
+			}
+
+		@media( min-width: 796px){
+			width: 180px;
+			height: 180px;
+			font-size: $mediumFont/1.5;
+		}
+}
+#divContainer {
+	@include layoutMixin1();
+	//border: 1px solid red;
+	width: 100%;
+	height: 100%;
+
+}
+#testBoard {
+	//border: 1px solid blue;
+	max-width: 90%;
+	height: 90vh;
+	border-radius: 5%;
+	margin: 0 auto;
+	background: $secondaryColor;
+	position: relative;
+}
+#testBoard h3 {
+		text-transform: uppercase;
+		text-decoration: underline;
+		text-align: center;
+		color: mix($fifthColor, $sixthColor, 10%);
+		font-family: 'Permanent Marker', cursive;
+		font-size: $mediumFont/2;
+		text-shadow: none;
+		@media (min-width: 560px){
+			font-size: $mediumFont;
+		}
+	}
+	
+
+
+
+
+#gameBoard {
+	@include gamesBoards();
+	margin-top: 20px;
+	width: 300px;
+	height: 300px;
+	@media (min-width: 420px){
+		width: 350px;
+		height: 350px;
+	}
+	@media (min-width: 796px){
+		width: 500px;
+		height: 500px;
+	}
+	background: lighten($baseColor, 15%);
+		
+}
+
+div.boardDiv {
+		width: 19%;
+		height: 24%;
+		//background: $secondaryColor;
+		@extend %gamesBtn;
+		
+	}
+#resultsDiv {
+	width: 100%;
+	height: auto;
+	margin-top: 100px;
+	color: $sixthColor;
+	background: $baseColor;
+	font-family: "Permanent Marker";
+	text-align: center;
+	font-size: $mediumFont/2;
+	@media(min-width:600px){
+		font-size: $mediumFont/1.2;
+
+	}
+	@media(min-width: 1200px){
+		font-size: $mediumFont;
+	}
+	text-shadow: 2px 3px #cccccc;
+}
+
+/*classes for memory game */
+
+#coveringBtn{
+	width: 150px;
+	height: auto;
+	font-size: $bigFont/2;
+	font-family: "Permanent Marker";
+	color: #efefef;
+	background-color: $sixthColor;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5%;
+}
+.tamagotchi {
+	
+	background-image: url("../images/tamagotchi.png");
+}
+
+.beverlyHills {
+	
+	background-image: url("../images/brenda.jpg");
+}
+
+.kellyFamily {
+	
+	background-image: url("../images/paddy.jpg");
+}
+
+.euroDance {
+	
+	background-image: url("../images/captain.jpeg");
+}
+.boyband {
+	
+	background-image: url("../images/bsb.jpeg");
+}
+.girlband {
+	
+	background-image: url("../images/spice.jpg");
+}
+.macdonald {
+	
+	background-image: url("../images/burger.jpeg");
+}
+.furby {
+	
+	background-image: url("../images/Furby_picture.jpg");
+}
+
+.nirvana {
+	
+	background-image: url("../images/nirvana.jpg");
+}
+.fashion {
+	
+	background-image: url("../images/clueless.jpg");
+}
+
+.covered {
+	background: $baseColor;
+}
+
+#scoreBoard {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	background: $secondaryColor;
+	color: $fifthColor;
+	font-family: 'Permanent Marker', cursive;
+	font-size: $bigFont/3;
+
+}
+
+/*dla trivia quizu */
+
+#triviaBoard {
+	
+	@extend %gamesBtn;
+	@include  gamesBoards();
+	max-width: 90%;
+	max-height: 90%;
+	min-height: 300px;
+	border-radius: 5%;
+	margin: 0 auto;
+	background-color: $secondaryColor;
+}
+
+.startTrivia {
+	//background-image: url("../images/nerd.png");
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	@extend %gamesBtn;
+	background-color: $sixthColor;
+	color: $baseColor;
+	text-shadow: 3px 3px $fifthColor;
+	font-size: $mediumFont/2.2;
+	border: none;
+	border-radius: 5%;
+	font-family: 'Permanent Marker', cursive;
+		@media( min-width: 420px){
+				width: 150px;
+				height: 150px;
+				font-size: $mediumFont/2;
+			}
+
+		@media( min-width: 796px){
+			width: 180px;
+			height: 180px;
+			font-size: $mediumFont/1.5;
+			
+		}
+}
+
+
+
+
+.title {
+	color: $sixthColor;
+	font-size: $mediumFont/2.2;
+	font-family: 'Permanent Marker', cursive;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 10px;
+	text-shadow: none;
+}
+
+.quizDiv {
+	@include layoutMixin2();
+	//border: 1px solid red;
+	margin-top: 10px;
+	width: 80vw;
+	min-height: 300px;
+	margin: 0 auto;
+	label {
+		background: $baseColor;
+		border: 1px solid $secondaryColor;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		margin-top: 2px;
+		font-family: "Raleway";
+		text-transform: uppercase;
+		color: $fifthColor;
+		font-weight: bold;
+		font-size: $mediumFont/4;
+		@media(min-width: 600px){
+			font-size: $mediumFont/3;
+		}
+	}
+}
+.checked {
+	background: $sixthColor;
+}
+.quizButton {
+	background: $fifthColor;
+	font-size: $mediumFont/2.5;
+	color: white;
+	&:hover{
+		color: darken(white, 20%);
+	}
+	border: none;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.alertBox {
+	background: $secondaryColor;
+	color: #222222;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	border: 2px dashed $fifthColor;
+	text-align: center;
+	@include layoutMixin2();
+	font-family: "Permanent Marker";
+	button {
+		width: 60px;
+		height: 20px;
+		border: none;
+		border-radius: 20%;
+		font-size: $mediumFont/3;
+		font-family: "Permanent Marker";
+		color: #cccccc;
+		background: $fifthColor;
+	}
+}
+.resultsBoard {
+	//border: 1px solid red;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 90%;
+	min-height: 300px;
+	@include layoutMixin3();
+	font-family: "Raleway";
+	font-weight: bold;
+	color: $fifthColor;
+	text-align: center;
+	font-size: $mediumFont/2;
+	@media(min-width: 600px){
+		font-size: $mediumFont/1.5;
+	}
+	@media(min-width: 1200px){
+		font-size: $mediumFont;
+	}
+	
+}
+.resultsParagraph {
+	font-size: $bigFont/6;
+	font-weight: bold;
+	//text-transform: uppercase;
+	@media(min-width: 330px){
+		font-size: $bigFont/5;
+	}
+	@media(min-width:680px){
+		font-size: $bigFont/4.5;
+	}
+	@media(min-width: 1000px){
+		font-size: $bigFont/3;
+	}
+	
+	text-align:center;
+}

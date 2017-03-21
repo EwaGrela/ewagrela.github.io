@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="eng-ENG">
+   <head>
+      <meta charset="UTF-8">
+      <title>quiz master</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+   </head>
+   <body>
+   		<section id="formSection">
+   			<h1>Stwórz swój własny quiz!</h1>
+   			<form>
+   			<label> Twoje pytanie:
+   			</label>
+   			<br>
+   			<input type ="text" name ="question"/>
+   			<br>
+   			<label> Odpowiedź 1 - błędna:
+   			</label>
+   			<br>
+   			<input type ="text" name ="answer" value="false"/>
+   			<br>
+   			<label> Odpowiedź 2 - błędna:
+   			</label>
+   			<br>
+   			<input type ="text" name ="answer" value ="false"/>
+   			<br>
+   			<label> Odpowiedź 3 - błędna:
+   			</label>
+   			<br>
+   			<input type ="text" name ="answer" value ="false"/>
+   			<br>
+   			<label> Odpowiedź prawidłowa:
+   			</label>
+   			<br>
+   			<input type ="text" name ="answer" value ="correct"/>
+   			<br>
+   			<input type ="submit" value="Dodaj"/>
+   			
+   		</form>
+   		<button id ="finishedBtn">Tworzenie quizu zakończone</button>
+   		<br>
+   		<button id ="creatingQuizBtn">Zobacz swój quiz w akcji!</button>
+   	</section>
+   		
+   <script type="text/javascript" src="js/app.js"></script>
+   </body>
+ </html>

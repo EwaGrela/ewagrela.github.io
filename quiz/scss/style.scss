@@ -1,0 +1,431 @@
+@import "_variables";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+body {
+	background: $fourthColor;
+
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+    font-family: 'Candal', sans-serif;
+ 
+	}
+}
+
+
+#gamesSection {
+	background: $fourthColor;
+	@include layoutMixin4();
+	
+	min-height: 100vh;
+	#gameChoice {
+		width: 100%;
+		min-height: 450px;
+	
+		@include layoutMixin2();
+		@media(min-width: 1200px){
+			@include layoutMixin1()
+		}
+		
+		.games {
+			background: $baseColor;
+			@include layoutMixin3();
+			box-shadow: 10px 10px $thirdColor;
+			margin: 10px;
+			width: 60%;
+			height: 200px;
+			@media(min-width: 796px){
+			height: 250px;
+			}
+			@media(min-width: 1200px){
+			width: 40%;
+			height: 260px;
+			}
+			
+			h4 {
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				color: $fifthColor;
+				text-shadow: 2px 2px $thirdColor;
+				&:hover {
+					color: $fourthColor;
+				}
+				text-align: center;
+				font-size: $mediumFont/1.8;
+				@media (min-width:796px){
+					text-shadow: 3px 3px $thirdColor;
+					font-size: $bigFont/1.5;
+				}
+			}
+		}
+
+	}
+	h1,h2 {
+		//padding-top: 20px;
+		text-transform: uppercase;
+		min-height: 70px;
+		text-shadow: 5px 4px $fifthColor;
+		width: 100%;
+		color: white;
+		text-align: center;
+		@media(min-width: 576px){
+			height: 90px;
+		}
+		
+	}
+	h1 {
+		
+		font-size: $bigFont/2.5;
+		@media(min-width:420px) {
+			font-size: $bigFont/2;
+		}
+		@media(min-width: 796px){
+			font-size: $bigFont/1.2;
+		}
+	}
+
+	h2 {
+		color: $secondaryColor;
+		font-size: $mediumFont/2.2;
+		text-align: center;
+		@media(min-width:420px){
+			font-size: $mediumFont/2;
+		}
+
+		@media(min-width:796px){
+			font-size: $mediumFont/1.5;
+		}
+	}
+
+	p {
+		font-family: 'Candal', sans-serif;
+		color: $secondaryColor;
+		text-shadow: 5px 4px $thirdColor;
+		font-size: $mediumFont/3.6;
+		text-align: center;
+		width: 70%;
+		@media(min-width:420px){
+			font-size: $mediumFont/2.8;
+		}
+
+		@media(min-width:796px){
+			font-size: $mediumFont/2;
+		}
+	}
+
+}
+
+#triviaGame, #psychoTest {
+	background: inherit;
+	button {
+		width: 150px;
+		height: 75px;
+		background: $fifthColor;
+		border: none;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media (min-width:420px) {
+			width: 180px;
+			height: 90px;
+			transition: 2s;
+			&:hover {
+				transform: scale(1.09);
+				opacity: 0.9;
+			}
+		}
+		@media (min-width: 796px) {
+			width: 250px;
+			height: 125px;
+			transition: 2s;
+			&:hover {
+				transform: scale(1.1);
+				opacity: 0.9;
+			}
+		}
+
+		@media (min-width: 1000px) {
+			width: 300px;
+			height: 150px;
+			transition: 2s;
+			&:hover {
+				transform: scale(1.1);
+				opacity: 0.9;
+			}
+		}
+	}
+		
+}
+
+
+#triviaGame button {
+	background-image: url("../images/brain.png");
+	
+}
+
+#psychoTest button {
+	background-image: url("../images/2000px-Inkblot.svg_.png");
+	
+}
+
+
+#triviaSection, #testSection {
+	@include layoutMixin3();
+	padding-top: 20px;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	h1 {
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 15px;
+		@media(min-width: 1200px){
+			margin-top: 50px;
+		}
+		font-size: $mediumFont/1.5;
+		@media (min-width: 560px){
+			font-size: $mediumFont*1.1;
+		}
+	}
+}
+
+.board {
+	width: 100vw;
+	height: 100vh;
+	background: inherit;
+	//border: 2px solid $baseColor;
+	@include layoutMixin4();
+
+	#start {
+		width: 100px;
+		height: 100px;
+		background: inherit;
+		background-image: url("../images/brain.png");
+		text-align: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		text-transform: uppercase;
+		color: teal;
+		font-style: bold;
+		font-size: $bigFont/2;
+		border: 2px solid $secondaryColor;
+		@media( min-width: 420px){
+			width: 150px;
+			height: 150px;
+
+		}
+
+		@media( min-width: 796px){
+			width: 250px;
+			height: 250px;
+			
+		}
+	}
+}
+
+
+
+#startTest {
+	background-image: url("../images/2000px-Inkblot.svg_.png");
+	width: 120px;
+	height: 120px;
+	//transform: rotate(45deg);
+	font-family: 'Candal', sans-serif;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: none;
+	background-color: $secondaryColor;
+	color: $thirdColor;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: $mediumFont/2;
+		@media( min-width: 420px){
+				width: 150px;
+				height: 150px;
+				font-size: $mediumFont/1.6;
+			}
+
+		@media( min-width: 796px){
+			width: 250px;
+			height: 250px;
+			padding-top: 175px;
+			font-size: $mediumFont/1.2;
+		}
+}
+
+#testBoard h3 {
+		//text-transform: uppercase;
+		text-shadow: 3px 2px $thirdColor;
+		text-align: center;
+		color: $fifthColor;
+		font-size: $mediumFont/1.4;
+		@media (min-width: 560px){
+			font-size: $mediumFont;
+		}
+	}
+
+.alertBox {
+	@include layoutMixin3();
+	background: $fifthColor;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	width: 320px;
+	height: 150px;
+	//line-height: 100px;
+	padding-top: 10px;
+	font-size: 25px;
+	text-transform: uppercase;
+	.hideAlertBtn {
+		width: 100px;
+		height: 50px;
+		margin-top: 10px;
+		border-radius: 10%;
+		background: $fourthColor;
+		color: $secondaryColor;
+		border: none;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+}
+
+#triviaBoard {
+	//border: 2px solid red;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#startTrivia {
+	background-image: url("../images/brain.png");
+	width: 120px;
+	height: 120px;
+	font-family: 'Candal', sans-serif;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: $secondaryColor;
+	color: $thirdColor;
+	font-size: $mediumFont/2;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: none;
+		@media( min-width: 420px){
+				width: 150px;
+				height: 150px;
+				font-size: $mediumFont/1.8;
+			}
+
+		@media( min-width: 796px){
+			width: 250px;
+			height: 250px;
+			padding-top: 175px;
+			font-size: $mediumFont/1.2;
+			
+		}
+}
+
+
+
+
+.title {
+	color: $fifthColor;
+	font-size: $mediumFont/1.8;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.quizDiv {
+	@include layoutMixin2();
+	//border: 1px solid red;
+	margin-top: 10px;
+	width: 80vw;
+	min-height: 300px;
+	margin: 0 auto;
+	label {
+		background: $baseColor;
+		font-size: 9px;
+		padding: 0px 15px;
+		@media(min-width: 560px){
+			font-size: 12px;
+		}
+		@media(min-width: 860px){
+			font-size: 14px;
+		}
+		border: 1px solid $secondaryColor;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		margin-top: 2px;
+		font-family: 'Open Sans', sans-serif;
+		text-transform: uppercase;
+		color: $fifthColor;
+		font-weight: bold;
+		
+	}
+}
+
+.quizButton {
+	//align-self: flex-end;
+	background:  #ff9800;
+	font-size: $mediumFont/2.5;
+	font-weight: bold;
+	color: $secondaryColor;
+	&:hover{
+		color: darken($secondaryColor, 15%);
+	}
+	border: none;
+	height: 40px;
+	width: 100px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.resultsBoard {
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 90vw;
+	min-height: 300px;
+	font-size: $bigFont/4;
+	font-weight: bold;
+	text-transform: uppercase;
+	@media(min-width: 330px){
+		font-size: $bigFont/3;
+	}
+	@media(min-width:680px){
+		font-size: $bigFont/2.5;
+	}
+	@media(min-width: 1000px){
+		font-size: $bigFont/2;
+	}
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;
+	@include  layoutMixin3();
+	p {
+		font-size: inherit;
+		font-weight: inherit;
+
+	}
+}

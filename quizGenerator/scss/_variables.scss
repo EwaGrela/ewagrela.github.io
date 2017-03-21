@@ -1,0 +1,16 @@
+$baseColor: darken(lightblue, 20%);
+$secondaryColor: lighten($baseColor, 20%);
+$thirdColor: darken($baseColor, 30%);
+@mixin layout1(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@mixin layout2(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+}

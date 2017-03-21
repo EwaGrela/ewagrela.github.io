@@ -1,0 +1,111 @@
+@import "_variables";
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: darken($baseColor, 10%);
+}
+
+
+section {
+	width: 90vw;
+	min-height: 100vh;
+	background: $baseColor;
+	border: 1px dashed $secondaryColor;
+	margin: 0 auto;
+	margin-top: 5%;
+	@extend %layout;
+
+	article{
+		@extend %layout;
+		width: 100%;
+		height: 100%;
+
+		.item {
+			margin-top: 10px;
+		}
+	}
+
+}
+@for $i from 1 through 6 {
+	h#{$i}{
+		@if($i%2 ==1){
+			font-family: 'Pacifico', cursive;
+			text-shadow: 2px 2px lighten($baseColor,15%);
+			} @else {
+				font-family: "Open Sans";
+			}
+		
+		font-size: $baseFont * 1.7/$i;
+		text-align: center;
+		
+	}
+}
+
+h1 {
+	color: $secondaryColor;
+	text-decoration: underline;
+}
+
+h3 {
+	color: $tertiaryColor;
+	background: $fourthColor;
+	border: 1.5px dotted $tertiaryColor;
+}
+input {
+	background: $fourthColor;
+	border: 2px dashed $tertiaryColor;
+	width: 60%;
+	height: 50px;
+	font-family: "Open Sans";
+	text-align: center;
+	color: $tertiaryColor;
+	font-weight: bold;
+	font-style: italic;
+	font-size: $baseFont/1.5;
+}
+#taskList {
+	list-style: none;
+	color: $tertiaryColor;
+	li {
+		color: inherit;
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		h2 {
+			width: 100%;
+		}
+	}
+}
+.invisible {
+	visibility: hidden;
+}
+.complete {
+	h2 {
+		text-decoration: underline;
+		font-weight: bold;
+		color: $fourthColor;
+		text-shadow: 2px 2px $tertiaryColor;
+	}
+	
+}
+
+button {
+	width: auto;
+	height: 35px;
+	font-family: "Open Sans";
+	color: $fourthColor;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: $baseFont/2;
+	background: $tertiaryColor;
+	&:hover {
+		background: $secondaryColor;
+	}
+	border: none;
+	margin: 10px 2px;
+}
+

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Fredericka the Great', cursive, "DejaVu Sans Mono";
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #009900;
+    background-image: url("images/Jungle.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    font-family: 'Fredericka the Great', cursive, "DejaVu Sans Mono";
+}
+
+#inputBoardWidth,
+#inputBoardHeight,
+#start {
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Fredericka the Great', cursive, "DejaVu Sans Mono";
+}
+
+.flexbox {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.info {
+    width: 400px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-weight: bold;
+    font-size: 0.85em;
+    position: relative;
+}
+
+.info>button {
+    width: 100px;
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 5px;
+    left: 150px;
+}
+
+.popup {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 50px 20px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border: 2px dashed #008000;
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.popup>button {
+    width: 100px;
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+    font-size: 0.8em;
+    background: #ace600;
+    color: black;
+    position: absolute;
+    bottom: 15px;
+    left: 150px;
+}
+
+input,
+button {
+    width: 200px;
+    height: 35px;
+    margin: 10px 0px;
+    background: #008000;
+    border: #006600;
+    text-transform: uppercase;
+    color: #ace600;
+    font-size: 1.35em;
+}
+.hidden {
+    visibility: hidden;
+}
+#board div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #80ff80;
+    background-color: rgba(255, 255, 255, 0.8);
+    float: left;
+}
+#board div.live {
+    background-color: #00b300;
+}
+#board {
+    margin: 0 auto;
+    margin-top: 20px;
+    min-height: 100px;
+    min-width: 100px;
+}
+#game-set {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: auto;
+}
