@@ -1,22 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("this is a copy you are using");
     var buttons = document.querySelectorAll("button");
 
     var startButton = document.getElementById("startButton");
 
-
     var initiating_buttons = document.querySelectorAll("article button");
-    
 
     var upperSection = document.querySelector("#controlPanel");
-    
   
     var divContainer = document.getElementById("divContainer");
 
-    var hideButton = document.querySelectorAll(".hideBtn");
-
     var buttonContainer = document.getElementById("buttonContainer");
-
-    var hideButtonLeft = document.querySelector(".hideBtn");
 
 
     var classes = ["blackRose", "carnation", "chrysanthemum", "cornflower", "cymbidium", "falenopsis", "jasminum", "lilac", "obuwik", "peony",
@@ -33,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for ( var i =0; i<initiating_buttons.length; i ++){
         initiating_buttons[i].addEventListener("click", function(event){
-            startButton.classList.remove("invisible");
+            startButton.classList.remove("invisible"); //pokazanie guzika start
             upperSection.parentNode.removeChild(upperSection);
             if(this === initiating_buttons[0]) {
                 classes = classes;        
@@ -55,8 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     startButton.addEventListener("click", startGame);
-
+    console.log(startButton);
     function startGame(event) {
+     //mixowanie klas a potem stworzenie divów i nadanie im tych klas
             mixArray(classes);
             divContainer.classList.remove("hidden");
             for (var i = 0; i < 24; i++) {
@@ -64,122 +59,86 @@ document.addEventListener("DOMContentLoaded", function() {
                 divContainer.appendChild(newDiv);
                 newDiv.classList.add(classes[i]);
             }
+            startButton.parentNode.removeChild(startButton); //usuń start
 
-        startButton.parentNode.removeChild(startButton); 
-        var hideButtonLeft = document.createElement("button");
-        buttonContainer.appendChild(hideButtonLeft);
-        hideButtonLeft.classList.add("hideBtn");
-        hideButtonLeft.classList.add("eventButtons");
-        hideButtonLeft.innerText = "Hide them";
+            var hidingTheCardsBtn = document.createElement("button");
+            hidingTheCardsBtn.classList.add("eventButtons");
+            buttonContainer.appendChild(hidingTheCardsBtn);
+            hidingTheCardsBtn.innerText ="hide them";
 
-        hideButtonLeft.addEventListener("click", hidePictures);
+            hidingTheCardsBtn.addEventListener("click", hideCards);
 
-        function hidePictures() {
-            var divs = document.querySelectorAll("div");
-            for (var i = 0; i < divs.length; i++) {
-                divs[i].classList.add("covered");
-            }
-            hideButtonLeft.parentNode.removeChild(hideButtonLeft);
+            var divs = divContainer.children;
 
-            var revealButton = document.createElement("button");
-            revealButton.classList.add("eventButtons");
-            buttonContainer.appendChild(revealButton);
-            revealButton.innerText = "Look again";
-
-            revealButton.addEventListener("click", revealPictures);
-
-            function revealPictures() {
-                var divs = document.querySelectorAll("div");
-                for (var i = 0; i < divs.length; i++) {
-                    divs[i].classList.remove("covered");
-                }
-                revealButton.parentNode.removeChild(revealButton);
-                var hideButtonRight = document.createElement("button");
-                hideButtonRight.classList.add("eventButtons");
-                buttonContainer.appendChild(hideButtonRight);
-                hideButtonRight.innerText = "Memorize them";
-
-                hideButtonRight.addEventListener("click", hideThemAgain);
-
-                function hideThemAgain() {
-                    var divs = document.querySelectorAll("div");
-                    for (var i = 0; i < divs.length; i++) {
-                        divs[i].classList.add("hidden");
+                function hideCards() {
+                    for ( var i =0; i<divs.length; i++){
+                        divs[i].classList.add("covered");
                     }
-                    hideButtonRight.parentNode.removeChild(hideButtonRight);
-                    var lastButton = document.createElement("button");
-                    buttonContainer.appendChild(lastButton);
-                    lastButton.classList.add("eventButtons");
-                    lastButton.innerText = "Start playing";
+                    hidingTheCardsBtn.parentNode.removeChild(hidingTheCardsBtn);
+                }
 
-                    lastButton.addEventListener("click", startForReal);
+                for ( var i = 0; i<divs.length; i++){
+                    divs[i].addEventListener("click", uncoverCover);
+                    divs[i].addEventListener("click", scorePoints);
+                    //divs[i].addEventListener("click", clearClasses)
+                    divs[i].addEventListener("click", finishGame);
+                }
+                var clickCount =0;
+                var points =0;
+                
+                function uncoverCover(event){
+                    event.target.classList.remove("covered");
+                    var timeout = setTimeout(function(){
+                        event.target.classList.add("covered");
+                    }, 1500);
+                }
 
-                    clickCount = 0;
-
-                    function startForReal() {
-                        var divs = document.querySelectorAll("div");
-                        for (var i = 0; i < divs.length; i++) {
-                            divs[i].classList.add("covered");
-                            divs[i].classList.remove("hidden");
-                        }
-                        lastButton.parentNode.removeChild(lastButton);
-
-                        for (var i = 0; i < divs.length; i++) {
-                            divs[i].addEventListener("click", uncoverCover);
-                            divs[i].addEventListener("click", scorePoints);
-                            divs[i].addEventListener("click", countPoints);
-                        }
-
-                        function uncoverCover(event) {
-                            event.target.classList.remove("covered");
-                            setTimeout(function() {
-                                event.target.classList.add("covered");
-                            }, 1500);
-                        }
-
-
-
-                        function scorePoints() {
-                            var divsMyClass = document.querySelectorAll("." + this.className); // tu mówię: znajdź mi divy, które mają tę samą klasę, co kliknięty
-                            for (var i = 0; i < divsMyClass.length; i++) {
-                                if (divsMyClass[0].className === divsMyClass[1].className) {
-                                    divsMyClass[0].classList.add("hidden");
-                                    divsMyClass[1].classList.add("hidden");
-                                }
-
-                            }
+                function scorePoints() {
+                    var divsMyClass = divContainer.querySelectorAll("."+ this.className); //wszystkie z moją klasą
+                    console.log(this.className);
+                    console.log(divsMyClass);
+                    for(var i = 0; i<divsMyClass.length; i++){
+                        console.log(divsMyClass[i].className);
+                        if(divsMyClass[0].className ===divsMyClass[1].className){
+                            divsMyClass[0].classList.add("hidden"); // inna klasa, jakaś z animacją
+                            divsMyClass[1].classList.add("hidden");
 
                         }
-
-                        function countPoints() {
-                            clickCount++;
-                            var invisibleDivs = document.querySelectorAll(".hidden");
-                            if (invisibleDivs.length === 24) {
-                                var counter = document.createElement("button");
-                                divContainer.parentNode.removeChild(divContainer);
-                                buttonContainer.appendChild(counter);
-                                counter.setAttribute("id", "counter");
-                                counter.innerText = "Congrats, you have "+(240 - Math.round(clickCount / 2)) + " points and you clicked " + clickCount + " times";
+                    }
+                }
+                
+                
+                
+                function finishGame() {
+                    clickCount++
+                    var fadedDivs = divContainer.querySelectorAll(".hidden");
+                    if(fadedDivs.length===divs.length){
+                        var counter = document.createElement("button");
+                        divContainer.parentNode.removeChild(divContainer);
+                        buttonContainer.appendChild(counter);
+                        counter.setAttribute("id", "counter");
+                        counter.innerText = "Congrats, you have "+(240 - Math.round(clickCount / 2)) + " points and you clicked " + clickCount + " times";
                                 
-                                var replay = document.createElement("button");
-                                buttonContainer.appendChild(replay);
-                                replay.setAttribute("id", "replay");
-                                replay.innerText ="Wanna play again?";
+                        var replay = document.createElement("button");
+                        buttonContainer.appendChild(replay);
+                        replay.setAttribute("id", "replay");
+                        replay.innerText ="Wanna play again?";
 
-                                var playAgain = document.createElement("a");
-                                buttonContainer.appendChild(playAgain);
-                                playAgain.setAttribute("id", "playAgain");
-                                playAgain.setAttribute("href", "https://ewagrela.github.io/Memory/");
-                                playAgain.innerText ="Go ahead!";
-                            }
-                        }
+                        var playAgain = document.createElement("a");
+                        buttonContainer.appendChild(playAgain);
+                        playAgain.setAttribute("id", "playAgain");
+                        playAgain.setAttribute("href", "https://ewagrela.github.io/Memory/");
+                        playAgain.innerText ="Go ahead!";
+
+
+
                     }
-                }
-            }
-        }
 
+                }
 
     }
+
+
 
 
 
