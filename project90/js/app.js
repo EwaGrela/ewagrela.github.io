@@ -63,11 +63,30 @@ $(function() {
         learnArt.children("h1").show();
         learnArt.children("h2").show();
     })
-
-    
-   
+  
 
 //events for trivia game - dynamic 
+
+
+    function createAlertBox() {
+        var alertBox = $("<div>", {
+            class: "alertBox"
+        });
+        alertBox.prependTo(triviaBoard);
+        alertBox.text("in order to proceed you must choose an answer!")
+        var hideAlertBtn = $("<button>", {
+            class: "hideAlertBtn"
+        });
+        hideAlertBtn.appendTo(alertBox);
+        hideAlertBtn.text("hide me")
+    }
+
+     triviaSection.on("click", ".hideAlertBtn", function() {
+        //$(this).remove();
+        $(this).parent().remove();
+    })
+
+
     triviaBtn.on("click", function(event) {
         //console.log("trivia");
         var triviaBoard = $("<div>");
@@ -182,7 +201,39 @@ triviaSection.on("click", ".startTrivia", function(event) {
         
 
         triviaSection.on("click", ".quizButton", function(event) {
-               if (index < questionSet) {
+            if(index<questionSet){
+                var checked = $(this).siblings("label").find("input:checked");
+                var value = checked.attr("value");
+                //console.log(value);
+                if(value ==="true"){
+                        points++;
+                        console.log(points);
+                }
+                if(value ===undefined){
+                    createAlertBox();
+                } else {
+                    index++;
+                    createQuestion();
+                    $(this).parent().hide();
+                    $(this).parent().prev().hide();
+
+                }
+            } else{
+                createResultsBoard();
+            }
+               
+
+
+        })
+
+    })
+
+    
+
+})
+
+/*
+if (index < questionSet) {
                 index++;
                 $(this).parent().hide();
                 $(this).parent().prev().hide();
@@ -200,10 +251,6 @@ triviaSection.on("click", ".startTrivia", function(event) {
                 createResultsBoard();
                 alert("you have " + points + " points")
             }
-        })
 
-    })
 
-    
-
-})
+*/

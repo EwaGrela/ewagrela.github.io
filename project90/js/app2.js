@@ -1,17 +1,13 @@
 $(function() {
     
     //functions for personality test
-    
-
-
-    
 
     function createAlertBox() {
         var alertBox = $("<div>", {
             class: "alertBox"
         });
         alertBox.prependTo(testBoard);
-        alertBox.text("choose answer!")
+        alertBox.text(" in order to proceed you must choose an answer!")
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });

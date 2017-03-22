@@ -987,17 +987,21 @@ div.boardDiv {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 2;
 	border: 2px dashed $fifthColor;
 	text-align: center;
 	@include layoutMixin2();
 	font-family: "Permanent Marker";
+	font-size: $mediumFont/1.5;
+	color: $sixthColor;
 	button {
 		width: 60px;
-		height: 20px;
+		height: auto;
 		border: none;
 		border-radius: 20%;
-		font-size: $mediumFont/3;
+		font-size: $mediumFont/2;
 		font-family: "Permanent Marker";
 		color: #cccccc;
 		background: $fifthColor;
