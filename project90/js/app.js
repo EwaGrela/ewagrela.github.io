@@ -1,7 +1,6 @@
 $(function() {
   
     //showing content of hamburger menu
-
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
         hamburgerMenu.toggleClass("focus");
@@ -65,102 +64,8 @@ $(function() {
         learnArt.children("h2").show();
     })
 
-    //background changing event
-    /*
-    var backgrounds = ["url('../images/camera-1842535_1920.jpg')","url('../images/camera-1851541_1920.jpg')","url('../images/vhs-1941725_1920.jpg')","url('../images/ghettoblaster-1452077_1920.jpg')","url('../images/polaroid-1288162_1920.jpg')"];
-    console.log(backgrounds[2], typeof backgrounds[0]);
-    setInterval(function() {
-        var index = Math.floor(Math.random() * backgrounds.length);
-        console.log(index);
-       $("body:before").css("background-image", backgrounds[index]);
-    }, 1000);
-    */
-    // events for memory game:
-    var clicks = 0;
-    var score =0;
-    initiatingBtn.on("click", function() {
-        var memoryBoard = $("<div>", {id:"gameBoard"});
-        memoryBoard.addClass("board");
-        memoryBoard.appendTo(gameSection);
-
-        lowerContent.remove();
-        otherSections.hide();
-        header.hide();
-        footer.hide();
-        $(this).hide();
-        /*
-        var gameBoard = $("<div>", {
-            id: "gameBoard"
-        });
-        var memoryBoard = $(".board");
-        gameBoard.appendTo(memoryBoard);
-        */
-        
-        
-        for (var i = 0; i < 20; i++) {
-            var newDiv = $("<div>", {
-                class: "boardDiv"
-            });
-            newDiv.appendTo(memoryBoard);
-
-        }
-        randomize(classes);
-        var boardDiv = $(".boardDiv");
-        var coveringBtn = $("<button>", {id: "coveringBtn"});
-        coveringBtn.insertAfter(memoryBoard);
-        coveringBtn.text("hide them");
-        coveringBtn.one("click", function(event){
-            //console.log("ok");
-            boardDiv.addClass("covered");
-            $(this).remove();
-        })
-
-        function addRandomClass(classes) {
-            boardDiv.each(function(index) {
-                $(this).addClass(classes[index]);
-            });
-        }
-        addRandomClass(classes);
-        
-    })
-
     
-
-    gameSection.on("click", ".covered", function(event) {
-        $(this).removeClass("covered");
-        var uncoveredDivs = $(".boardDiv").not(".covered");
-        var className = $(this).prop("className");
-        clicks++;
-        uncoveredDivs.each(function(index, value) {
-            var divsLength = uncoveredDivs.length
-            if (uncoveredDivs.length ===2 && uncoveredDivs[0].className === uncoveredDivs[1].className) {
-                uncoveredDivs.animate({
-                    "opacity": 0
-                }, 1400);
-                score++;
-                uncoveredDivs.addClass("uncovered").removeClass("covered");
-                var doneDivs = $(".uncovered");
-                console.log(doneDivs.length);
-
-            } else {
-                var target = $(this);
-                setTimeout(function() {
-                    target.addClass("covered");
-                }, 2000);
-            }
-       })
-        var finalScore = (score * 10) - (clicks / 2);
-        console.log(finalScore,  typeof finalScore, clicks);
-        var doneDivs = $(".uncovered");
-        if(doneDivs.length ===20) {
-            $("#gameBoard").hide();
-           var resultsDiv = $("<div>");
-           resultsDiv.attr("id","resultsDiv");
-           resultsDiv.appendTo(gameSection);
-           resultsDiv.text("congrats! you earned " + finalScore + " points!")
-        }
-
-    })
+   
 
 //events for trivia game - dynamic 
     triviaBtn.on("click", function(event) {
