@@ -109,27 +109,42 @@ triviaSection.on("click", "#startTrivia", function(event){
 
 })
 
+
 triviaSection.on("click", ".quizButton", function(event){
 	if(index<questionSet){
-		index++;
-		$(this).parent().hide();
-		$(this).parent().prev().hide();
 		var checked = $(this).siblings("label").find("input:checked");
-		//console.log(checked);
-		//console.log(checked.length);
 		var value = checked.attr("value");
-		console.log(value);
-		if(value === "true"){
-			points++;
-		} 
+		//console.log(value);
+		if(value ==="true"){
+				points++;
+		}
+		if(value ===undefined){
+			createAlertBox();
+		} else {
+			index++;
+			createQuestion();
+			$(this).parent().hide();
+			$(this).parent().prev().hide();
 
-		//console.log(points);
-		createQuestion();
-
-	} else {
+		}
+	} else{
 		createResultsBoard();
 	}
 
+})
+
+function createAlertBox(){
+	var alertBox = $("<div>", {class: "alertBox"});
+	alertBox.prependTo(triviaBoard);
+	alertBox.text("in order to proceed, you have to choose an answer! otherwise, you shall not pass");
+	var hideAlertBtn = $("<button>", {class: "hideAlertBtn"});
+	hideAlertBtn.appendTo(alertBox);
+	hideAlertBtn.text("hide me")
+}
+
+triviaSection.on("click", ".hideAlertBtn", function(){
+	$(this).hide();
+	$(this).parent().hide();
 })
 
 function createResultsBoard() {

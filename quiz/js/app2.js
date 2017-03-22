@@ -131,7 +131,7 @@ testSection.on("click", ".quizButton", function(event){
 function createAlertBox(){
 	var alertBox = $("<div>", {class: "alertBox"});
 	alertBox.prependTo(testBoard);
-	alertBox.text("choose answer!")
+	alertBox.text("in order to proceed, you have to choose an answer! otherwise, you shall not pass");
 	var hideAlertBtn = $("<button>", {class: "hideAlertBtn"});
 	hideAlertBtn.appendTo(alertBox);
 	hideAlertBtn.text("hide me")
