@@ -10,12 +10,26 @@
 <section>
     <h1>Tasks list</h1>
     <article>
-    	<input class="item" id="taskInput" placeholder="write your task in"><br>
+    	<input class="item" id="taskInput" placeholder="your task"><br>
+        <input class ="item" id="priorityInput" placeholder="priority(1-10)"><br>
     	<button class="item" id="addTaskBtn">add new task</button>
-	    <h3  class="item invisible" id ="counterContainer">Tasks to finish: <span></span></h3>
-	    <ul class="item" id="taskList">
-	    </ul>
-		<button class="item" id="removeFinishedTasksBtn">remove finished tasks</button>
+	    <h2  class="item invisible" id ="counterContainer">Tasks to finish: <span></span></h2>
+        <div class="listsContainer item">
+            <div class="inside">
+                <h3>immediate</h3>
+                <ul class="taskList"></ul>
+            </div>
+            <div class ="inside">
+                <h3>urgent</h3>
+                <ul  class ="taskList"></ul>
+            </div>
+            <div class ="inside">
+                <h3>normal</h3>
+                <ul class ="taskList"></ul> 
+            </div>    
+        </div>
+	    
+		<button class="item" id="removeFinishedTasksBtn">remove finished</button>
     </article>    
 </section>
 

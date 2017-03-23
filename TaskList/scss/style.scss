@@ -7,6 +7,7 @@
 
 body {
 	background: darken($baseColor, 10%);
+	font-family: "Open Sans";
 }
 
 
@@ -23,6 +24,7 @@ section {
 		@extend %layout;
 		width: 100%;
 		height: 100%;
+		//border: 1px solid red;
 
 		.item {
 			margin-top: 10px;
@@ -30,17 +32,52 @@ section {
 	}
 
 }
+
+.listsContainer {
+	@extend %layout2;
+	//border: 1px solid blue;
+	width: 100%;
+	height: auto;
+	.inside {
+		@extend %layout;
+		//border: 1px solid orange;
+		width: 30%;
+		height: auto;
+		h3 {
+			width: 100%;
+			//border: 1px solid black;
+			height: auto;
+			text-transform: capitalize;
+			font-family: "Pacifico";
+			text-align: center;
+			text-decoration: underline;
+		}
+	}
+}
+
+.taskList {
+	list-style-type: none;
+	@extend %layout;
+	font-size: $baseFont/1.5;
+	width:100%;
+	//border: 2px solid yellow;
+	li {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		h4 {
+			width: 100%;
+		}
+		button {
+			width: 40%;
+		}
+	}
+}
 @for $i from 1 through 6 {
 	h#{$i}{
-		@if($i%2 ==1){
-			font-family: 'Pacifico', cursive;
-			text-shadow: 2px 2px lighten($baseColor,15%);
-			} @else {
-				font-family: "Open Sans";
-			}
-		
-		font-size: $baseFont * 1.7/$i;
+		font-size: $baseFont * 2/$i;
 		text-align: center;
+		color: $secondaryColor;
 		
 	}
 }
@@ -48,13 +85,18 @@ section {
 h1 {
 	color: $secondaryColor;
 	text-decoration: underline;
+	font-family: 'Pacifico';
 }
 
-h3 {
+
+h2 {
 	color: $tertiaryColor;
 	background: $fourthColor;
 	border: 1.5px dotted $tertiaryColor;
+	height: 50px;
+	line-height: 50px;
 }
+
 input {
 	background: $fourthColor;
 	border: 2px dashed $tertiaryColor;
@@ -67,40 +109,29 @@ input {
 	font-style: italic;
 	font-size: $baseFont/1.5;
 }
-#taskList {
-	list-style: none;
-	color: $tertiaryColor;
-	li {
-		color: inherit;
-		display:flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		h2 {
-			width: 100%;
-		}
-	}
-}
+
 .invisible {
 	visibility: hidden;
 }
 .complete {
-	h2 {
+	h4 {
 		text-decoration: underline;
 		font-weight: bold;
 		color: $fourthColor;
-		text-shadow: 2px 2px $tertiaryColor;
+		opacity: 0.5;
 	}
 	
 }
 
 button {
 	width: auto;
-	height: 35px;
+	height: 50px;
+	border-radius: 5%;
 	font-family: "Open Sans";
 	color: $fourthColor;
 	text-transform: uppercase;
-	font-weight: bold;
-	font-size: $baseFont/2;
+	font-weight: bolder;
+	font-size: $baseFont/1.7;
 	background: $tertiaryColor;
 	&:hover {
 		background: $secondaryColor;
