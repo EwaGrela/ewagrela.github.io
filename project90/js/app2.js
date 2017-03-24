@@ -1,23 +1,32 @@
 $(function() {
     
     //functions for personality test
-
+    var alerts = ["Scary Spice is not amused you missed the question. Choose an answer before you proceed", "Justin feels sad 'cause you did not choose the answer, please make him happy - go back and do it"]
+    var alertIndicator = Math.floor(Math.random() * alerts.length);
+    var alertText = alerts[alertIndicator];
+    console.log(alerts[alertIndicator]);
+    var backgrounds = ["url('../images/scaryspice.jpg')", "url('../images/young-justin-timberlake-4.jpg')"];
+    var alertBcg = backgrounds[alertIndicator];
+    console.log(backgrounds[alertIndicator]);
     function createAlertBox() {
         var alertBox = $("<div>", {
             class: "alertBox"
         });
+        var alertP = $("<p>");
         alertBox.prependTo(testBoard);
-        alertBox.text(" in order to proceed you must choose an answer!")
+        alertP.appendTo(alertBox)
+        alertP.text(alertText);
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "center").css("background-color", "white");
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });
         hideAlertBtn.appendTo(alertBox);
-        hideAlertBtn.text("hide me")
+        hideAlertBtn.text("ok");
     }
 
 
 
-    //starting psychotest
+    //starting personality test
     startingBtn.on("click", function(event) {
         $(this).hide();
         header.hide();
@@ -166,15 +175,24 @@ $(function() {
                 } else {
                     resultsParagraph.text(quiz[indicator].descriptions[3]);
                 }
-
+                createComebackBtns(resultsBoard);
         }
-
+                function createComebackBtns(element){
+                    for(var i = 0; i<2; i++){
+                        var button = $("<a>", {class: "comeback"})
+                        button.appendTo(element);
+                    }
+                    console.log($(".comeback"));
+                    var button = $(".comeback");
+                    button.eq(0).text("home");
+                    button.eq(1).text("play again");
+                    button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
+                    button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+                }
 
 
     })
 
-    
-    
 
     testSection.on("click", ".hideAlertBtn", function() {
         //$(this).remove();

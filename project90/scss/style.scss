@@ -61,7 +61,7 @@ header {
 		&:nth-child(4) {
 			align-self: center;
 			text-align: center;
-			margin-bottom: 10%;
+			margin-bottom: 100px;
 			color: #efefef;
 			font-size: $bigFont/4;
 			width: 100px;
@@ -423,6 +423,7 @@ nav {
 		font-family: "Permanent Marker";
 		color: #eeeeee;
 		text-shadow: 2px 2px 3px #ff7777;
+		padding-top: 60px;
 		@media (min-width:420px) {
 			width: 160px;
 			height: 160px;
@@ -492,22 +493,24 @@ footer {
 	
 
 	section {
-		@include layoutMixin2($baseColor);
+		@include layoutMixin2(transparent);
 		height: 90%;
 		min-height: 450px;
+		border: none;
+		//border: 1px solid blue;
 		@media(min-width: 796px){
-			@include layoutMixin1($baseColor);
+			@include layoutMixin1(transparent);
 			//position: relative;
 		}
 	}
 	article {
-		@include layoutMixin6($baseColor);
+		@include layoutMixin6(transparent);
 		
 		//border: 2px solid orange;
 		width: 90%;
 		height: 90%;
 		@media(min-width: 796px){
-			width: 30%;
+			width: 40%;
 			height: 45%;
 			&:nth-of-type(2) {
 			align-self: flex-end;
@@ -530,27 +533,11 @@ footer {
 			}
 		}
 		
-		p{
-			font-family: "Raleway";
-			text-align: center;
-			font-size: $mediumFont/3;
-			border: 1px solid red;
-			height: 90%;
-			width: 50%;
-			margin-top: 15%;
-			margin-bottom: 25%;
-			letter-spacing: 1.4px;
-			@media(min-width: 600px){
-				font-size: $mediumFont/2.5;
-			}
-			@media(min-width: 1200px ){
-				font-size: $mediumFont/1.8;
-			}
-		}
+		
 	}
 	ul {
 		list-style: none;
-		@include layoutMixin3($baseColor);
+		@include layoutMixin3(transparent);
 		li {
 			color: darken(#ff6677, 5%);
 			text-shadow: 1px 1px #cccccc;
@@ -724,26 +711,44 @@ footer {
 
 #divContainer {
 	@include layoutMixin3($secondaryColor);
-	justify-content: space-between;
 	width: 100%;
 	//height: auto;
 	min-height: 550px;
-	border: 1px solid blue;
+	//border: 1px solid blue;
 }
 
 .startTest {
 	//background-image: url("../images/2000px-Inkblot.svg_.png");
-	width: 100px;
+	width: 160px;
 	height: 100px;
 	@extend %gamesBtn;
-	color: $baseColor;
-	background:  $sixthColor;
-	font-size: $mediumFont/3;
+	color: white;
+	text-shadow: 2px 2px $fifthColor;
+	background: $secondaryColor;
+	font-size: $mediumFont/2.5;
 	border: none;
 	border-radius: 5%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	transition: 2s;
+	padding-top: 50px;
+	&:nth-of-type(1){
+		background-image: url("../images/lips2.jpeg");
+		background-size: cover;
+
+	}
+	&:nth-of-type(2){
+		background-image: url("../images/friends.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&:nth-of-type(3){
+		background-image: url("../images/hp.jpg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 	&:hover {
 		transform: scale(1.2);
 	}
@@ -762,15 +767,15 @@ footer {
 	
 	font-family: 'Permanent Marker', cursive;
 		@media( min-width: 420px){
-				width: 150px;
+				width: 210px;
 				height: 150px;
-				font-size: $mediumFont/2;
+				font-size: $mediumFont/1.7;
 			}
 
 		@media( min-width: 796px){
-			width: 180px;
+			width: 240px;
 			height: 180px;
-			font-size: $mediumFont/1.5;
+			font-size: $mediumFont/1.2;
 		}
 }
 
@@ -930,7 +935,7 @@ div.boardDiv {
 	max-width: 90%;
 	max-height: 90%;
 	min-height: 300px;
-	border-radius: 5%;
+	border-radius: 2%;
 	margin: 0 auto;
 	background-color: $secondaryColor;
 }
@@ -982,7 +987,7 @@ div.boardDiv {
 
 .quizDiv {
 	@include layoutMixin2($secondaryColor);
-	border: 1px solid red;
+	//border: 1px solid red;
 	margin-top: 10px;
 	width: 80%;
 	min-height: 300px;
@@ -1021,7 +1026,7 @@ div.boardDiv {
 	text-transform: uppercase;
 }
 .alertBox {
-	background: $secondaryColor;
+	background-color: $secondaryColor;
 	color: #222222;
 	width: 100%;
 	height: 100%;
@@ -1029,19 +1034,25 @@ div.boardDiv {
 	top: 0;
 	left: 0;
 	z-index: 2;
-	border: 2px dashed $fifthColor;
+	border: 4px solid $fifthColor;
 	text-align: center;
 	@include layoutMixin2($baseColor);
-	font-family: "Permanent Marker";
-	font-size: $mediumFont/1.5;
-	color: $sixthColor;
+	justify-content: flex-end;
+	p{
+		font-family: "Raleway";
+		font-size: $mediumFont/1.5;
+		font-weight: bolder;
+		color: #333333;
+		text-shadow: 2px 2px $fifthColor;
+	}
 	button {
 		width: 60px;
 		height: auto;
 		border: none;
-		border-radius: 20%;
+		border-radius: 10%;
+		margin-bottom: 10px;
 		font-size: $mediumFont/2;
-		font-family: "Permanent Marker";
+		font-family: "Raleway";
 		color: #cccccc;
 		background: $fifthColor;
 	}
@@ -1053,7 +1064,7 @@ div.boardDiv {
 	margin-bottom: 20px;
 	width: 90%;
 	min-height: 300px;
-	@include layoutMixin3($baseColor);
+	@include layoutMixin3($secondaryColor);
 	font-family: "Raleway";
 	font-weight: bold;
 	color: $fifthColor;
@@ -1065,7 +1076,18 @@ div.boardDiv {
 	@media(min-width: 1200px){
 		font-size: $mediumFont;
 	}
+
 	
+}
+.comeback {
+	width: 90px;
+	height: 40px;
+	background: $fifthColor;
+	border-radius: 2%;
+	color: $baseColor;
+	font-size: 12px;
+	margin-bottom: 3px;
+	line-height: 40px;
 }
 .resultsParagraph {
 	font-size: $bigFont/6;

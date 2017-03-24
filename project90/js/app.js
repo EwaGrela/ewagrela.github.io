@@ -6,11 +6,22 @@ $(function() {
         hamburgerMenu.toggleClass("focus");
     })
     //event button directing to the games
+    /*
     toTheGamesBtn.on("click", function(event) {
         $(this).hide();
         $(this).parent().hide();
         otherSections.hide();
         footer.hide();
+    })
+    */
+    
+	toTheGamesBtn.on("click", function(event) {
+        //event.preventDefault();
+        var href = $(this).attr("href");
+        console.log(href);
+        $("html, body").animate({
+            scrollTop: $(href).offset().top
+        }, 4000);
     })
 
     //scrolling events
@@ -66,20 +77,30 @@ $(function() {
   
 
 //events for trivia game - dynamic 
-
-
+    var alerts = ["Scary Spice is not amused you missed the question. Choose an answer before you proceed", "Justin feels sad you did not choose the answer, please make him happy - go back and do it"]
+    var alertIndicator = Math.floor(Math.random() * alerts.length);
+    var alertText = alerts[alertIndicator];
+    console.log(alerts[alertIndicator]);
+    var backgrounds = ["url('../images/scaryspice.jpg')", "url('../images/young Justin Timberlake.jpg')"];
+    var alertBcg = backgrounds[alertIndicator];
+    console.log(backgrounds[alertIndicator]);
     function createAlertBox() {
         var alertBox = $("<div>", {
             class: "alertBox"
         });
         alertBox.prependTo(triviaBoard);
-        alertBox.text("in order to proceed you must choose an answer!")
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "center").css("background-color", "white");
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });
+        var alertP = $("<p>");
+        alertP.appendTo(alertBox)
+        alertP.text(alertText);
         hideAlertBtn.appendTo(alertBox);
-        hideAlertBtn.text("hide me")
+        hideAlertBtn.text("ok")
     }
+
+
 
      triviaSection.on("click", ".hideAlertBtn", function() {
         //$(this).remove();
@@ -195,10 +216,21 @@ triviaSection.on("click", ".startTrivia", function(event) {
                 resultsBoard.text(points + "/" + questionSet + " points! a true 90s kid!");
             }
             
-
+            createComebackBtns(resultsBoard);
         }
 
-        
+        function createComebackBtns(element){
+        	for(var i = 0; i<2; i++){
+        		var button = $("<a>", {class: "comeback"})
+        		button.appendTo(element);
+        	}
+        	console.log($(".comeback"));
+        	var button = $(".comeback");
+        	button.eq(0).text("home");
+        	button.eq(1).text("play again");
+        	button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
+        	button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+        }
 
         triviaSection.on("click", ".quizButton", function(event) {
             if(index<questionSet){
@@ -232,25 +264,3 @@ triviaSection.on("click", ".startTrivia", function(event) {
 
 })
 
-/*
-if (index < questionSet) {
-                index++;
-                $(this).parent().hide();
-                $(this).parent().prev().hide();
-                var checked = $(this).siblings("label").find("input:checked");
-                //console.log(checked);
-                //console.log(checked.length);
-                var value = checked.attr("value");
-                console.log(value);
-            if (value === "true") {
-                points++;
-            }
-                createQuestion();
-
-            } else {
-                createResultsBoard();
-                alert("you have " + points + " points")
-            }
-
-
-*/
