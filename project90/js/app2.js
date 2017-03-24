@@ -1,7 +1,7 @@
 $(function() {
     
     //functions for personality test
-    var alerts = ["Scary Spice is not amused you missed the question. Choose an answer before you proceed", "Justin feels sad 'cause you did not choose the answer, please make him happy - go back and do it"]
+    var alerts = ["Scary Spice is not amused you missed the question", "Justin feels sad 'cause you did not choose the answer"]
     var alertIndicator = Math.floor(Math.random() * alerts.length);
     var alertText = alerts[alertIndicator];
     console.log(alerts[alertIndicator]);
@@ -16,7 +16,7 @@ $(function() {
         alertBox.prependTo(testBoard);
         alertP.appendTo(alertBox)
         alertP.text(alertText);
-        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center");
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center").css("background-color", " rgba(255,255,255, 0.8)");
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });
