@@ -81,7 +81,7 @@ $(function() {
     var alertIndicator = Math.floor(Math.random() * alerts.length);
     var alertText = alerts[alertIndicator];
     console.log(alerts[alertIndicator]);
-    var backgrounds = ["url('images/scaryspice.jpg')", "url('images/young Justin Timberlake.jpg')"];
+    var backgrounds = ["url('images/scaryspice.png')", "url('images/jt.png')"];
     var alertBcg = backgrounds[alertIndicator];
     console.log(backgrounds[alertIndicator]);
     function createAlertBox() {
@@ -89,7 +89,7 @@ $(function() {
             class: "alertBox"
         });
         alertBox.prependTo(triviaBoard);
-        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "cover").css("background-position", "top center");
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center");
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });
@@ -220,16 +220,16 @@ triviaSection.on("click", ".startTrivia", function(event) {
         }
 
         function createComebackBtns(element){
-        	for(var i = 0; i<2; i++){
-        		var button = $("<a>", {class: "comeback"})
+        	//for(var i = 0; i<2; i++){
+        		var button = $("<a>", {class: "comeback"});
         		button.appendTo(element);
-        	}
+        	//}
         	console.log($(".comeback"));
         	var button = $(".comeback");
         	button.eq(0).text("home");
-        	button.eq(1).text("play again");
+        	//button.eq(1).text("play again");
         	button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-        	button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+        	//button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
         }
 
         triviaSection.on("click", ".quizButton", function(event) {

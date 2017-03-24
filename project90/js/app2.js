@@ -5,7 +5,7 @@ $(function() {
     var alertIndicator = Math.floor(Math.random() * alerts.length);
     var alertText = alerts[alertIndicator];
     console.log(alerts[alertIndicator]);
-    var backgrounds = ["url('images/scaryspice.jpg')", "url('images/young-justin-timberlake-4.jpg')"];
+    var backgrounds = ["url('images/scaryspice.png')", "url('images/jt.png')"];
     var alertBcg = backgrounds[alertIndicator];
     console.log(backgrounds[alertIndicator]);
     function createAlertBox() {
@@ -16,7 +16,7 @@ $(function() {
         alertBox.prependTo(testBoard);
         alertP.appendTo(alertBox)
         alertP.text(alertText);
-        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "cover").css("background-position", "top center");
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center");
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });
@@ -178,16 +178,16 @@ $(function() {
                 createComebackBtns(resultsBoard);
         }
                 function createComebackBtns(element){
-                    for(var i = 0; i<2; i++){
-                        var button = $("<a>", {class: "comeback"})
+                    //for(var i = 0; i<2; i++){
+                        var button = $("<a>", {class: "comeback"});
                         button.appendTo(element);
-                    }
+                   // }
                     console.log($(".comeback"));
                     var button = $(".comeback");
                     button.eq(0).text("home");
-                    button.eq(1).text("play again");
+                   // button.eq(1).text("play again");
                     button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-                    button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+                    //button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
                 }
 
 

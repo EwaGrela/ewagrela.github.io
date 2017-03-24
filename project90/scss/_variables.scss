@@ -13,6 +13,7 @@ $smallFont: 20px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
 @mixin responsiveBackground($width, $height) {
 	background-size: contain;
 	background-position: center;
