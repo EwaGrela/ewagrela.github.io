@@ -1,5 +1,5 @@
 $(function() {
-  
+  console.log("ok");
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
@@ -81,7 +81,7 @@ $(function() {
     var alertIndicator = Math.floor(Math.random() * alerts.length);
     var alertText = alerts[alertIndicator];
     console.log(alerts[alertIndicator]);
-    var backgrounds = ["url('../images/scaryspice.jpg')", "url('../images/young Justin Timberlake.jpg')"];
+    var backgrounds = ["url('images/scaryspice.jpg')", "url('images/young Justin Timberlake.jpg')"];
     var alertBcg = backgrounds[alertIndicator];
     console.log(backgrounds[alertIndicator]);
     function createAlertBox() {
@@ -89,7 +89,7 @@ $(function() {
             class: "alertBox"
         });
         alertBox.prependTo(triviaBoard);
-        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "center").css("background-color", "white");
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "cover").css("background-position", "top center");
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });

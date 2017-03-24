@@ -5,7 +5,7 @@ $(function() {
     var alertIndicator = Math.floor(Math.random() * alerts.length);
     var alertText = alerts[alertIndicator];
     console.log(alerts[alertIndicator]);
-    var backgrounds = ["url('../images/scaryspice.jpg')", "url('../images/young-justin-timberlake-4.jpg')"];
+    var backgrounds = ["url('images/scaryspice.jpg')", "url('images/young-justin-timberlake-4.jpg')"];
     var alertBcg = backgrounds[alertIndicator];
     console.log(backgrounds[alertIndicator]);
     function createAlertBox() {
@@ -16,7 +16,7 @@ $(function() {
         alertBox.prependTo(testBoard);
         alertP.appendTo(alertBox)
         alertP.text(alertText);
-        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "center").css("background-color", "white");
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "cover").css("background-position", "top center");
         var hideAlertBtn = $("<button>", {
             class: "hideAlertBtn"
         });
