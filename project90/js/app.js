@@ -81,7 +81,7 @@ $(function() {
     var alertIndicator = Math.floor(Math.random() * alerts.length);
     var alertText = alerts[alertIndicator];
     console.log(alerts[alertIndicator]);
-    var backgrounds = ["url('images/scaryspice.png')", "url('images/jt.png')"];
+    var backgrounds = ["url('images/scaryspice.png')", "url('images/justin.png')"];
     var alertBcg = backgrounds[alertIndicator];
     console.log(backgrounds[alertIndicator]);
     function createAlertBox() {
