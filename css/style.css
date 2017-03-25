@@ -90,28 +90,28 @@ body {
   top: 0.5%;
   left: 20.5%; 
   transition: 2s;
-  animation-duration: 5s;
+  animation-duration: 4s;
 }
 
 #square2 {
   position: absolute;
   top: 0.5%;
   left: 47.5%; 
-  animation-duration: 6s;
+  animation-duration: 5s;
 }
 
 #square3 {
   position: absolute;
   top: 27.5%;
   left: 20.5%; 
-  animation-duration: 7s;
+  animation-duration: 6s;
 }
 
 #square4 {
   position: absolute;
   top: 27.5%;
   left: 34%; 
-  animation-duration: 5s;
+  animation-duration: 7s;
 }
 
 #square5 {
@@ -125,21 +125,21 @@ body {
   position: absolute;
   top: 41%;
   left:20.5%;
-  animation-duration: 6s;
+  animation-duration: 8s;
   
 }
 #square7 {
   position: absolute;
   top: 41%;
   left: 34%;
-  animation-duration: 7s;
+  animation-duration: 8s;
   
 }
 #square8 {
   position: absolute;
   top: 54.5%;
   left: 20.5%;
-  animation-duration: 5s;
+  animation-duration: 8s;
   
 }
 #square9 {
@@ -153,20 +153,20 @@ body {
   position: absolute;
   left: 61%;
   top: 54.5%;
-  animation-duration: 6s;
+  animation-duration: 8s;
 }
 #square11 {
   position: absolute;
   left: 61%;
   top: 68%;
-  animation-duration: 5s;
+  animation-duration: 8s;
   
 }
 #square12 {
   position: absolute;
   left: 20.5%;
   top: 68%;
-  animation-duration: 7s;
+  animation-duration: 9s;
 }
 
 p {
