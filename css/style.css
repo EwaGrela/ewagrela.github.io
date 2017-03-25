@@ -4,7 +4,28 @@
   box-sizing: border-box;
 }
  
- 
+@keyframes appearing {
+  0% {
+  opacity: 0;
+  transform: scale(0.1)
+  }
+  25% {
+    opacity: 0.25;
+    transform: scale(0.2)
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.6)
+  }
+  75% {
+    opacity: 0.75;
+    transform: scale(0.8)
+  }
+  100% {
+  opacity: 1;
+  transform: scale(1.0)
+  }
+}
  
  
 body {
@@ -38,6 +59,11 @@ body {
     padding-bottom: 11.5%;
     background-color: rgba(38, 97, 156, 0.95);
     display: inline-block;
+    animation-name: appearing;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
  
 .square-big {
@@ -47,6 +73,11 @@ body {
     display: inline-block;
     transition: 2s;
     background-color: rgba(38, 97, 156, 0.55);
+    animation-name: appearing;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
 .square-big:hover {
@@ -59,72 +90,83 @@ body {
   top: 0.5%;
   left: 20.5%; 
   transition: 2s;
+  animation-duration: 5s;
 }
 
 #square2 {
   position: absolute;
   top: 0.5%;
   left: 47.5%; 
+  animation-duration: 6s;
 }
 
 #square3 {
   position: absolute;
   top: 27.5%;
   left: 20.5%; 
+  animation-duration: 7s;
 }
 
 #square4 {
   position: absolute;
   top: 27.5%;
   left: 34%; 
+  animation-duration: 5s;
 }
 
 #square5 {
   position: absolute;
   top:27.5%;
   left: 47.5%;
+  animation-duration: 7s;
   
 }
 #square6 {
   position: absolute;
   top: 41%;
   left:20.5%;
+  animation-duration: 6s;
   
 }
 #square7 {
   position: absolute;
   top: 41%;
   left: 34%;
+  animation-duration: 7s;
   
 }
 #square8 {
   position: absolute;
   top: 54.5%;
   left: 20.5%;
+  animation-duration: 5s;
   
 }
 #square9 {
   position: absolute;
   top: 54.5%;
   left: 34%;
+  animation-duration: 7s;
   
 }
 #square10 {
   position: absolute;
   left: 61%;
   top: 54.5%;
-  
+  animation-duration: 6s;
 }
 #square11 {
   position: absolute;
   left: 61%;
   top: 68%;
+  animation-duration: 5s;
   
 }
 #square12 {
   position: absolute;
   left: 20.5%;
   top: 68%;
+  animation-duration: 7s;
 }
 
 p {
