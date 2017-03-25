@@ -475,6 +475,7 @@ nav {
 	background: $baseColor;
 	max-width: 100vw;
 	display: none;
+	//border: 1px solid blue;
 }
 #testSection {
 	height: auto;
@@ -782,7 +783,7 @@ footer {
 
 #testBoard {
 	@include layoutMixin3($baseColor);
-	//border: 1px solid blue;
+	//border: 1px solid orange;
 	max-width: 90%;
 	//height: auto;
 	min-height: 550px;
@@ -931,6 +932,7 @@ div.boardDiv {
 #triviaBoard {
 	
 	@extend %gamesBtn;
+	//border: 1px solid purple;
 	@include  gamesBoards($baseColor);
 	max-width: 90%;
 	max-height: 90%;
@@ -1034,7 +1036,7 @@ div.boardDiv {
 	top: 0;
 	left: 0;
 	z-index: 2;
-	//border: 4px solid $fifthColor;
+	//border: 1px solid black;
 	text-align: center;
 	@include layoutMixin2($baseColor);
 	justify-content: flex-end;
