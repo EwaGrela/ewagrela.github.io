@@ -60,7 +60,7 @@ body {
     background-color: rgba(38, 97, 156, 0.95);
     display: inline-block;
     animation-name: appearing;
-    animation-delay: 2s;
+    //animation-delay: 2s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -74,7 +74,7 @@ body {
     transition: 2s;
     background-color: rgba(38, 97, 156, 0.55);
     animation-name: appearing;
-    animation-delay: 2s;
+    //animation-delay: 2s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-direction: normal;
