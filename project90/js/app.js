@@ -6,14 +6,6 @@ $(function() {
         hamburgerMenu.toggleClass("focus");
     })
     //event button directing to the games
-    /*
-    toTheGamesBtn.on("click", function(event) {
-        $(this).hide();
-        $(this).parent().hide();
-        otherSections.hide();
-        footer.hide();
-    })
-    */
     
 	toTheGamesBtn.on("click", function(event) {
         //event.preventDefault();
@@ -24,7 +16,7 @@ $(function() {
         }, 4000);
     })
 
-    //scrolling events
+    // other scrolling events
     //event scrolling the page up
     var scrollingButton =  footer.find("button");
     scrollingButton.on("click", function(event) {
@@ -45,10 +37,10 @@ $(function() {
     //events for learn section
 
     learnBtn.on("click", function(event) {
-        var infoBoard = $("<div>", {
+        var infoBoard = $("<article>", {
             class: "infoBoard"
         });
-        infoBoard.appendTo(learnArt);
+        infoBoard.appendTo(learnSection);
         var hideBtn = $("<button>", {
             class: "hideBtn"
         });
@@ -67,7 +59,7 @@ $(function() {
     })
 
 
-    learnArt.on("click", ".hideBtn", function(event) {
+    learnSection.on("click", ".hideBtn", function(event) {
         console.log("działa");
         $(this).parent().remove();
         learnArt.children("div#buttons").fadeIn(1400);

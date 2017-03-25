@@ -716,6 +716,7 @@
 	var header = $("header");
 	var learnArt = $("#learn");
 	var infoSection = $("#infoSection");
+	var learnSection = $("#learnSection");
 	var learnBtn = learnArt.find("button");
 	var linksInMenu = $("ul.menu").find("a");
 	//psychotest DOM
@@ -723,7 +724,6 @@
 	console.log(startingBtn);
 	var testSection = $("#testSection");
 	var sections = $("section").not(testSection);
-
 	var header = $("header");
 	var footer = $("footer");
 	var h1 = testSection.find("h1");
