@@ -381,7 +381,7 @@ nav {
 
 #gameSection {
 	//border: 1px solid blue;
-	height: auto;
+	height: 600px;
 	min-width: 300px;
 	max-width: 100vw;
 	@include layoutMixin6($baseColor);
@@ -395,7 +395,7 @@ nav {
 		@include layoutMixin6($baseColor);
 		@media(min-width: 530px){
 			@include layoutMixin1($baseColor);
-			margin-top: 15%;
+			margin-top: 10%;
 		}
 	}
 }
