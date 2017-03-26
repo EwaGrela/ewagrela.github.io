@@ -390,12 +390,12 @@ nav {
 	article {
 		//border: 1px solid orange;
 		width: 95%;
-		min-height: 50%;
+		min-height: 60%;
 		
 		@include layoutMixin6($baseColor);
 		@media(min-width: 530px){
 			@include layoutMixin1($baseColor);
-			margin-top: 10%;
+			margin-top: 5%;
 		}
 	}
 }
