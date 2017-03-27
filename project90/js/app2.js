@@ -208,7 +208,7 @@ $(function() {
         notTestSections.show();
         footer.show();
         testSection.hide();
-
+        triviaSection.hide();
     })
 
 

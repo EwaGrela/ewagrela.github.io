@@ -258,6 +258,7 @@ triviaSection.on("click", ".startTrivia", function(event) {
         notTriviaSections.show();
         footer.show();
         triviaSection.hide();
+        testSection.hide();
 
     })
 
