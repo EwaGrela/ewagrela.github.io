@@ -27,6 +27,7 @@ $(function() {
 
 
     //starting personality test
+    console.log(startingBtn);
     startingBtn.on("click", function(event) {
         $(this).hide();
         header.hide();

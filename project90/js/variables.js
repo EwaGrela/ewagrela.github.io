@@ -705,6 +705,7 @@
 	var header = $("header");
 	var footer = $("footer");
 	var initiatingBtn = $("button#memoryGame");
+	console.log(initiatingBtn);
 	var hamburgerMenu = $(".hamburger");
 	var hamburgerMenuFocused = $(".hamburger.focus");
 
