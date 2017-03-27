@@ -5,6 +5,8 @@
     console.log("DOM loaded");
     var points = 0;
     var clicks = 0;
+    var initiatingBtn = $("button#memoryGame");
+    console.log(initiatingBtn);
     initiatingBtn.on("click", function(event){
         var memoryBoard = $("<div>", {id:"gameBoard"});
         memoryBoard.addClass("board");

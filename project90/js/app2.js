@@ -27,6 +27,8 @@ $(function() {
 
 
     //starting personality test
+    var startingBtn = $("button#psychoTest");
+    console.log(startingBtn);
     console.log(startingBtn);
     startingBtn.on("click", function(event) {
         $(this).hide();
