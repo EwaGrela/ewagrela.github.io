@@ -202,9 +202,10 @@ $(function() {
         $(this).parent().remove();
     })
 
+    
     testSection.on("click", "#comeback2", function(event){
         header.show();
-        sections.show();
+        notTestSections.show();
         footer.show();
         testSection.hide();
 

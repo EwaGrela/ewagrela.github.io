@@ -255,7 +255,7 @@ triviaSection.on("click", ".startTrivia", function(event) {
 
     triviaSection.on("click", "#comeback", function(event){
         header.show();
-        sections2.show();
+        notTriviaSections.show();
         footer.show();
         triviaSection.hide();
 

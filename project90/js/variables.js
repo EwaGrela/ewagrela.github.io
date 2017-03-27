@@ -719,6 +719,8 @@
 	var learnSection = $("#learnSection");
 	var learnBtn = learnArt.find("button");
 	var linksInMenu = $("ul.menu").find("a");
+	var notTestSections = $("section").not("#testSection");
+	var notTriviaSections = $("section").not("#triviaSection");
 	//psychotest DOM
 	var startingBtn = $("button#psychoTest");
 	console.log(startingBtn);
