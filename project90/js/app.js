@@ -212,16 +212,17 @@ triviaSection.on("click", ".startTrivia", function(event) {
         }
 
         function createComebackBtns(element){
-        	//for(var i = 0; i<2; i++){
+        	for(var i = 0; i<2; i++){
         		var button = $("<a>", {class: "comeback"});
         		button.appendTo(element);
-        	//}
+        	}
         	console.log($(".comeback"));
         	var button = $(".comeback");
         	button.eq(0).text("home");
-        	//button.eq(1).text("play again");
+        	button.eq(1).text("play again");
         	button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-        	//button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+        	button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+            button.eq(1).attr("id", "comeback");
         }
 
         triviaSection.on("click", ".quizButton", function(event) {
@@ -252,7 +253,13 @@ triviaSection.on("click", ".startTrivia", function(event) {
 
     })
 
-    
+    triviaSection.on("click", "#comeback", function(event){
+        header.show();
+        sections2.show();
+        footer.show();
+        triviaSection.hide();
+
+    })
 
 })
 

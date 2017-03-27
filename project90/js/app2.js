@@ -1,5 +1,5 @@
 $(function() {
-    
+    console.log("ok");
     //functions for personality test
     var alerts = ["Scary Spice is not amused you missed the question", "Justin feels sad 'cause you did not choose the answer"]
     var alertIndicator = Math.floor(Math.random() * alerts.length);
@@ -178,16 +178,19 @@ $(function() {
                 createComebackBtns(resultsBoard);
         }
                 function createComebackBtns(element){
-                    //for(var i = 0; i<2; i++){
+                    for(var i = 0; i<2; i++){
                         var button = $("<a>", {class: "comeback"});
                         button.appendTo(element);
-                   // }
+                    }
+                    
                     console.log($(".comeback"));
                     var button = $(".comeback");
+                    console.log(button);
                     button.eq(0).text("home");
-                   // button.eq(1).text("play again");
+                    button.eq(1).text("play again");
                     button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-                    //button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+                    button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+                    button.eq(1).attr("id", "comeback2")
                 }
 
 
@@ -197,6 +200,14 @@ $(function() {
     testSection.on("click", ".hideAlertBtn", function() {
         //$(this).remove();
         $(this).parent().remove();
+    })
+
+    testSection.on("click", "#comeback2", function(event){
+        header.show();
+        sections.show();
+        footer.show();
+        testSection.hide();
+
     })
 
 
