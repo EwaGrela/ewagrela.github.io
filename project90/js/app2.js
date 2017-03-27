@@ -8,6 +8,7 @@ $(function() {
     var backgrounds = ["url('images/scaryspice.png')", "url('images/justin.png')"];
     var alertBcg = backgrounds[alertIndicator];
     console.log(backgrounds[alertIndicator]);
+
     function createAlertBox() {
         var alertBox = $("<div>", {
             class: "alertBox"
@@ -43,7 +44,7 @@ $(function() {
         var divContainer = $("<div>");
         divContainer.attr("id", "divContainer");
         divContainer.appendTo(testBoard);
-        for ( var i =0; i <3; i++){
+        for (var i = 0; i < 3; i++) {
             var button = $("<button>start test</button>");
             button.appendTo(divContainer);
             button.attr("class", "startTest");
@@ -54,7 +55,7 @@ $(function() {
         startTest.eq(0).text("90s boyfriend");
         startTest.eq(1).text("friends girls");
         startTest.eq(2).text("harry potter characters");
-        
+
 
     })
 
@@ -76,7 +77,7 @@ $(function() {
         testTitle.text(test.myTitle);
         createQuestions();
 
-            function createQuestions() {
+        function createQuestions() {
             if (index < questionSet) {
                 var answers = questions[index].answers;
                 randomize(answers);
@@ -124,7 +125,7 @@ $(function() {
 
         }
 
-            testSection.on("click", ".quizButton", function(event) {
+        testSection.on("click", ".quizButton", function(event) {
             var labels = $(this).siblings("label");
             //console.log(labels);
             var checked = labels.find("input:checked");
@@ -149,52 +150,56 @@ $(function() {
             }
 
         })
-            function showResults() {
+
+        function showResults() {
             var resultsBoard = $("<div>", {
                 class: "resultsBoard"
             });
-                resultsBoard.appendTo(testSection);
-                testSection.children().not(resultsBoard).hide();
-                var resultsParagraph = $("<p>", {
-                    class: "resultsParagraph"
-                })
-                resultsParagraph.appendTo(resultsBoard);
-                var result0 = collectedAnswers.filter(function(item) {
-                    return item === quiz[indicator].results[0];
-                }).length;
-                var result1 = collectedAnswers.filter(function(item) {
-                    return item === quiz[indicator].results[1];
-                }).length;
-                var result2 = collectedAnswers.filter(function(item) {
-                    return item === quiz[indicator].results[2];
-                }).length;
-                console.log(result0, result1, result2);
-                if (result0 > result1 && result0 > result2) {
-                    resultsParagraph.text(quiz[indicator].descriptions[0]);
-                } else if (result1 > result0 && result1 > result2) {
-                    resultsParagraph.text(quiz[indicator].descriptions[1]);
-                } else if (result2 > result0 && result2 > result1) {
-                    resultsParagraph.text(quiz[indicator].descriptions[2]);
-                } else {
-                    resultsParagraph.text(quiz[indicator].descriptions[3]);
-                }
-                createComebackBtns(resultsBoard);
+            resultsBoard.appendTo(testSection);
+            testSection.children().not(resultsBoard).hide();
+            var resultsParagraph = $("<p>", {
+                class: "resultsParagraph"
+            })
+            resultsParagraph.appendTo(resultsBoard);
+            var result0 = collectedAnswers.filter(function(item) {
+                return item === quiz[indicator].results[0];
+            }).length;
+            var result1 = collectedAnswers.filter(function(item) {
+                return item === quiz[indicator].results[1];
+            }).length;
+            var result2 = collectedAnswers.filter(function(item) {
+                return item === quiz[indicator].results[2];
+            }).length;
+            console.log(result0, result1, result2);
+            if (result0 > result1 && result0 > result2) {
+                resultsParagraph.text(quiz[indicator].descriptions[0]);
+            } else if (result1 > result0 && result1 > result2) {
+                resultsParagraph.text(quiz[indicator].descriptions[1]);
+            } else if (result2 > result0 && result2 > result1) {
+                resultsParagraph.text(quiz[indicator].descriptions[2]);
+            } else {
+                resultsParagraph.text(quiz[indicator].descriptions[3]);
+            }
+            createComebackBtns(resultsBoard);
         }
-                function createComebackBtns(element){
-                    for(var i = 0; i<2; i++){
-                        var button = $("<a>", {class: "comeback"});
-                        button.appendTo(element);
-                    }
-                    
-                    console.log($(".comeback"));
-                    var button = $(".comeback");
-                    console.log(button);
-                    button.eq(0).text("home");
-                    button.eq(1).text("play again");
-                    button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-                    button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
-                    button.eq(1).attr("id", "comeback2")
-                }
+
+        function createComebackBtns(element) {
+            for (var i = 0; i < 2; i++) {
+                var button = $("<a>", {
+                    class: "comeback"
+                });
+                button.appendTo(element);
+            }
+
+            console.log($(".comeback"));
+            var button = $(".comeback");
+            console.log(button);
+            button.eq(0).text("home");
+            button.eq(1).text("play again");
+            button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
+            button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+            button.eq(1).attr("id", "comeback2")
+        }
 
 
     })
@@ -205,8 +210,8 @@ $(function() {
         $(this).parent().remove();
     })
 
-    
-    testSection.on("click", "#comeback2", function(event){
+
+    testSection.on("click", "#comeback2", function(event) {
         header.show();
         notTestSections.show();
         footer.show();

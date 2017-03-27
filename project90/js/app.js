@@ -1,24 +1,31 @@
 $(function() {
-  console.log("ok");
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
         hamburgerMenu.toggleClass("focus");
-    })
+    });
     //event button directing to the games
-    
-	toTheGamesBtn.on("click", function(event) {
+
+    toTheGamesBtn.on("click", function(event) {
         //event.preventDefault();
         var href = $(this).attr("href");
         console.log(href);
         $("html, body").animate({
             scrollTop: $(href).offset().top
         }, 4000);
-    })
+    });
 
     // other scrolling events
+    //events scrolling to sections
+    linksInMenu.on("click", function(event){
+        var href = $(this).attr("href");
+        console.log(href);
+        $("html, body").animate({
+            scrollTop: $(href).offset().top
+        }, 2000);
+    });
     //event scrolling the page up
-    var scrollingButton =  footer.find("button");
+    var scrollingButton = footer.find("button");
     scrollingButton.on("click", function(event) {
         event.preventDefault();
         var href = $(this).attr("href");
@@ -29,7 +36,7 @@ $(function() {
     })
     //events for infoSection
     var talkButton = infoSection.find("button");
-    talkButton.one("click", function(event){
+    talkButton.one("click", function(event) {
         $(this).hide();
         $(this).next().removeClass("hidden");
     })
@@ -54,8 +61,8 @@ $(function() {
         var index = $(this).index();
         console.log(index);
         infoParagraph.text(texts[index]);
-        infoBoard.attr("id", "board"+index);
-        
+        infoBoard.attr("id", "board" + index);
+
     })
 
 
@@ -66,9 +73,9 @@ $(function() {
         learnArt.children("h1").show();
         learnArt.children("h2").show();
     })
-  
 
-//events for trivia game - dynamic 
+
+    //events for trivia game - dynamic 
     var alerts = ["Scary Spice is not amused you missed the question", "Justin feels sad you did not choose the answer"]
     var alertIndicator = Math.floor(Math.random() * alerts.length);
     var alertText = alerts[alertIndicator];
@@ -76,6 +83,7 @@ $(function() {
     var backgrounds = ["url('images/scaryspice.png')", "url('images/justin.png')"];
     var alertBcg = backgrounds[alertIndicator];
     console.log(backgrounds[alertIndicator]);
+
     function createAlertBox() {
         var alertBox = $("<div>", {
             class: "alertBox"
@@ -94,7 +102,7 @@ $(function() {
 
 
 
-     triviaSection.on("click", ".hideAlertBtn", function() {
+    triviaSection.on("click", ".hideAlertBtn", function() {
         //$(this).remove();
         $(this).parent().remove();
     })
@@ -110,13 +118,13 @@ $(function() {
         footer.hide();
         triviaSection.show();
         triviaBoard.attr("id", "triviaBoard");
-        for ( var i = 0; i<3; i++) {
+        for (var i = 0; i < 3; i++) {
             var button = $("<button></button>");
             button.appendTo(triviaBoard);
             button.attr("class", "startTrivia");
             console.log(button);
         }
-        
+
         var startTrivias = $(".startTrivia");
         startTrivias.eq(0).text("easy");
         startTrivias.eq(1).text("medium");
@@ -124,23 +132,24 @@ $(function() {
     })
 
 
-triviaSection.on("click", ".startTrivia", function(event) {
-    $(this).hide();
-    $(this).siblings().hide()
-    var indicator = $(this).index();
-    console.log(indicator);
-    var index = 0; //index początkowego pytania, będzie wzrastał
-    var points = 0;
-    var questions = test[indicator];
-    var questionSet = questions.length; 
-    $(this).parent().prev().hide();
-    randomize(questions);
-    createQuestion();
+    triviaSection.on("click", ".startTrivia", function(event) {
+        $(this).hide();
+        $(this).siblings().hide()
+        var indicator = $(this).index();
+        console.log(indicator);
+        var index = 0; //index początkowego pytania, będzie wzrastał
+        var points = 0;
+
+        var questions = test[indicator];
+        var questionSet = questions.length;
+        $(this).parent().prev().hide();
+        randomize(questions);
+        createQuestion();
 
         function createQuestion() {
             if (index < questionSet) {
-            var answers = questions[index].answers;
-            randomize(answers);
+                var answers = questions[index].answers;
+                randomize(answers);
 
                 var h5 = $("<h5>", {
                     class: "title"
@@ -207,34 +216,36 @@ triviaSection.on("click", ".startTrivia", function(event) {
             if (points >= questionSet / 1.25) {
                 resultsBoard.text(points + "/" + questionSet + " points! a true 90s kid!");
             }
-            
+
             createComebackBtns(resultsBoard);
         }
 
-        function createComebackBtns(element){
-        	for(var i = 0; i<2; i++){
-        		var button = $("<a>", {class: "comeback"});
-        		button.appendTo(element);
-        	}
-        	console.log($(".comeback"));
-        	var button = $(".comeback");
-        	button.eq(0).text("home");
-        	button.eq(1).text("play again");
-        	button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-        	button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+        function createComebackBtns(element) {
+            for (var i = 0; i < 2; i++) {
+                var button = $("<a>", {
+                    class: "comeback"
+                });
+                button.appendTo(element);
+            }
+            console.log($(".comeback"));
+            var button = $(".comeback");
+            button.eq(0).text("home");
+            button.eq(1).text("play again");
+            button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
+            button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
             button.eq(1).attr("id", "comeback");
         }
 
         triviaSection.on("click", ".quizButton", function(event) {
-            if(index<questionSet){
+            if (index < questionSet) {
                 var checked = $(this).siblings("label").find("input:checked");
                 var value = checked.attr("value");
                 //console.log(value);
-                if(value ==="true"){
-                        points++;
-                        console.log(points);
+                if (value === "true") {
+                    points++;
+                    console.log(points);
                 }
-                if(value ===undefined){
+                if (value === undefined) {
                     createAlertBox();
                 } else {
                     index++;
@@ -243,17 +254,17 @@ triviaSection.on("click", ".startTrivia", function(event) {
                     $(this).parent().prev().hide();
 
                 }
-            } else{
+            } else {
                 createResultsBoard();
             }
-               
+
 
 
         })
 
     })
 
-    triviaSection.on("click", "#comeback", function(event){
+    triviaSection.on("click", "#comeback", function(event) {
         header.show();
         notTriviaSections.show();
         footer.show();
@@ -263,4 +274,3 @@ triviaSection.on("click", ".startTrivia", function(event) {
     })
 
 })
-
