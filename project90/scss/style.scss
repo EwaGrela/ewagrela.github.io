@@ -102,10 +102,7 @@ header {
 			width: 100px;
 			height: 50px;
 			background: #dd6677;
-			animation-name: appear;
-			animation-duration: 2s;
-			animation-iteration-count: 1;
-			animation-timing-function: ease-in-out;
+			
 			&:hover {
 				background: lighten(#ff6677, 10%);
 			}
