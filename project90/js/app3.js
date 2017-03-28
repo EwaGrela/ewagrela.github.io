@@ -91,9 +91,8 @@ $(function() {
         header.show();
         footer.show();
         $("#gameBoard").remove();
-        $(this).remove();
-        $(this).prev().remove();
-        $(this).next().remove();
+        $("#resultsDiv").remove();
+        $(".comeback").remove();
         testSection.hide();
         triviaSection.hide();
         
