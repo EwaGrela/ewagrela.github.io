@@ -86,12 +86,13 @@ $(function() {
     })
 
     gameSection.on("click", "#comeback", function(){
-        memoryBoard.remove();
         lowerContent.show();
         otherSections.show();
         header.show();
         footer.show();
-        $(this).hide();
+        $(this).remove();
+        $(this).parent().remove();
+        $(this).siblings().remove();
     })
 
 
