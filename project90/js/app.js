@@ -220,25 +220,7 @@ $(function() {
             createComebackBtns(resultsBoard);
         }
 
-        function createComebackBtns(element) {
-            for (var i = 0; i < 2; i++) {
-                var button = $("<a>", {
-                    class: "comeback"
-                });
-                button.appendTo(element);
-            }
-            var button = $(".comeback");
-            button.eq(0).text("home");
-            button.eq(1).text("play again");
-            button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-            button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
-            addingId();
-        }
-
-        function addingId(){
-            var button = $(".comeback");
-            button.eq(1).attr("id", "comeback");
-        }
+        
 
         triviaSection.on("click", ".quizButton", function(event) {
             if (index < questionSet) {
