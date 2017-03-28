@@ -40,7 +40,7 @@
 
  }
 body {
-  background: lightblue;
+  background:  #66cccc;
   }
  
   
@@ -68,7 +68,9 @@ body {
     width: 11.5%;
     border-radius: 10%;
     padding-bottom: 11.5%;
-    background-color: rgba(38, 97, 156, 0.95);
+    background-color: rgba(0,153,153, 0.8);
+    border: 1px solid rgb(0,204,204);
+    box-shadow: 15px 15px 45px #ffffff;
     display: inline-block;
     animation-name: appear;
     //animation-delay: 2s;
@@ -83,7 +85,9 @@ body {
     padding-bottom: 25%;
     display: inline-block;
     transition: 2s;
-    background-color: rgba(38, 97, 156, 0.55);
+    background-color: rgba(0,102,102, 0.6);
+    border: 1px solid rgb(0,102,102);
+    box-shadow: 24px 24px 60px #ffffff;
     animation-name: appear;
     //animation-delay: 2s;
     animation-timing-function: ease;
@@ -180,7 +184,18 @@ body {
   animation-duration: 4s;
 }
 
-p {
+.square-big p {
+  position: absolute;
+  top: 25%;
+  left:50%;
+  transform: rotate(315deg);
+  color: white;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.square p {
   position: absolute;
   top: 25%;
   left:25%;
@@ -192,20 +207,33 @@ p {
   text-align: center;
 }
 @media(min-width: 560px){
-    p {
+    .square p {
       font-size: 16px;
   }
 @media(min-width: 768px){
-    p {
+   .square p {
       font-size: 18px;
     }
 }
 @media(min-width: 1000px){
-  p {
+  .square p {
     font-size: 20px;
   }
 }
-
+@media(min-width: 560px){
+    .square-big p {
+      font-size: 16px;
+  }
+@media(min-width: 768px){
+   .square-big p {
+      font-size: 18px;
+    }
+}
+@media(min-width: 1000px){
+  .square-big p {
+    font-size: 20px;
+  }
+}
 
 
 footer {
