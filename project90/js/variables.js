@@ -713,29 +713,28 @@
 	var gameSection = $("#gameSection");
 	var lowerContent = gameSection.children();
 	var otherSections = $("section").not(gameSection);
-	//variables - elements
+	
 	var header = $("header");
 	var learnArt = $("#learn");
 	var infoSection = $("#infoSection");
 	var learnSection = $("#learnSection");
 	var learnBtn = learnArt.find("button");
 	var linksInMenu = $("ul.menu").find("a");
-	var notTestSections = $("section").not("#testSection");
-	var notTriviaSections = $("section").not("#triviaSection");
-	//psychotest DOM
+	
+	
 	var startingBtn = $("button#psychoTest");
-	console.log(startingBtn);
 	var testSection = $("#testSection");
-	var sections = $("section").not(testSection);
+	//var sections = $("section").not(testSection);
 	var header = $("header");
 	var footer = $("footer");
 	var h1 = testSection.find("h1");
 	var gamesSection = $("#gamesSection");
 	var navigation = header.find("nav");
 	var triviaBtn = $("#triviaGame");
-	console.log(triviaBtn);
 	var triviaSection = $("#triviaSection");
 	var triviaSectionHeader = triviaSection.find("h1");
-	var sections2 = $("section").not(triviaSection);
+	var notTestSections = $("section").not("#testSection");
+	var notTriviaSections = $("section").not("#triviaSection");
+	//var sections2 = $("section").not(triviaSection);
 	var gamesSection = $("#gamesSection");
 	var boardDiv = $(".boardDiv");

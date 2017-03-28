@@ -12,8 +12,28 @@ function randomize(elements) {
     return elements;
 }
 
+function createComebackBtns(element) {
+            for (var i = 0; i < 2; i++) {
+                var button = $("<a>", {
+                    class: "comeback"
+                });
+                button.appendTo(element);
+            }
 
+            console.log($(".comeback"));
+            var button = $(".comeback");
+            console.log(button);
+            button.eq(0).text("home");
+            button.eq(1).text("play again");
+            button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
+            button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+            addingId();
+        }
 
+        function addingId(){
+            var button = $(".comeback");
+            button.eq(1).attr("id", "comeback");
+        }
 
 /* 
 tu są f-cje, nad którymi będzie prowadzona praca udoskonalająca, więc muszę zachować oryginał

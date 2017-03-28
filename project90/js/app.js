@@ -114,7 +114,7 @@ $(function() {
         triviaBoard.addClass("board");
         triviaBoard.insertAfter(triviaSectionHeader);
         header.hide();
-        sections2.hide();
+        notTriviaSections.hide();
         footer.hide();
         triviaSection.show();
         triviaBoard.attr("id", "triviaBoard");
@@ -216,7 +216,7 @@ $(function() {
             if (points >= questionSet / 1.25) {
                 resultsBoard.text(points + "/" + questionSet + " points! a true 90s kid!");
             }
-
+            
             createComebackBtns(resultsBoard);
         }
 
@@ -227,12 +227,16 @@ $(function() {
                 });
                 button.appendTo(element);
             }
-            console.log($(".comeback"));
             var button = $(".comeback");
             button.eq(0).text("home");
             button.eq(1).text("play again");
             button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
             button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
+            addingId();
+        }
+
+        function addingId(){
+            var button = $(".comeback");
             button.eq(1).attr("id", "comeback");
         }
 

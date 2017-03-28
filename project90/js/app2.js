@@ -34,7 +34,7 @@ $(function() {
     startingBtn.on("click", function(event) {
         $(this).hide();
         header.hide();
-        sections.hide();
+        notTestSections.hide();
         footer.hide();
         testSection.show();
         var testBoard = $("<div>");
@@ -198,7 +198,12 @@ $(function() {
             button.eq(1).text("play again");
             button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
             button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
-            button.eq(1).attr("id", "comeback2")
+            addingId();
+        }
+
+        function addingId(){
+            var button = $(".comeback");
+            button.eq(1).attr("id", "comeback");
         }
 
 
@@ -211,7 +216,7 @@ $(function() {
     })
 
 
-    testSection.on("click", "#comeback2", function(event) {
+    testSection.on("click", "#comeback", function(event) {
         header.show();
         notTestSections.show();
         footer.show();

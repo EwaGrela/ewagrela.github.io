@@ -1,5 +1,5 @@
 // events for memory game:
-/**/
+
 $(function() {
     console.log("DOM loaded");
     var points = 0;
@@ -12,7 +12,7 @@ $(function() {
         });
         memoryBoard.addClass("board");
         memoryBoard.appendTo(gameSection);
-        lowerContent.remove();
+        lowerContent.hide();
         otherSections.hide();
         header.hide();
         footer.hide();
@@ -47,10 +47,8 @@ $(function() {
     })
 
     gameSection.on("click", ".boardDiv", function(event) {
-        //console.log("working");
-        //console.log($(this));
         clicks++
-        console.log(clicks);
+        //console.log(clicks);
         $(this).removeClass("covered");
         var target = $(this);
         var timeout = setTimeout(function() {
@@ -58,41 +56,43 @@ $(function() {
         }, 1200);
 
         var className = $(this).prop("className");
-        //console.log(className, typeof className);
-        //console.log(className.length);
         var lastLetterIndex = (className.length);
-        //var toRemove = className.slice(0,9);
-        //console.log(toRemove);
         var properClassName = className.slice(9, lastLetterIndex);
-        //console.log(properClassName, properClassName.length);
         var divsSameClass = $("." + properClassName);
-        //console.log(divsSameClass);
         for (var i = 0; i < divsSameClass.length; i++) {
             if (divsSameClass.eq(0).prop("className") === divsSameClass.eq(1).prop("className")) {
                 divsSameClass.animate({
                     "opacity": 0
-                }, 1400)
+                }, 1000)
                 divsSameClass.addClass("opaque");
                 points++;
-                console.log(points, clicks);
+                //console.log(points, clicks);
 
             }
 
         }
         var opaqueDivs = $(".opaque");
-        console.log(opaqueDivs.length);
+        //console.log(opaqueDivs.length);
         var finalScore = (points * 10) - clicks;
         if (opaqueDivs.length === 20) {
             $("#gameBoard").hide();
             var resultsDiv = $("<div>");
             resultsDiv.attr("id", "resultsDiv");
             resultsDiv.appendTo(gameSection);
-            resultsDiv.text("congrats! you earned " + finalScore + " points!")
+            resultsDiv.text("congrats! you earned " + finalScore + " points!");
+            createComebackBtns(gameSection);
         }
 
     })
 
-
+    gameSection.on("click", "#comeback", function(){
+        memoryBoard.remove();
+        lowerContent.show();
+        otherSections.show();
+        header.show();
+        footer.show();
+        $(this).hide();
+    })
 
 
 })
