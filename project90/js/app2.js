@@ -175,6 +175,7 @@ $(function() {
     testSection.on("click", "#comeback", function(event) {
         header.show();
         notTestSections.show();
+        startingBtn.show();
         footer.show();
         testSection.hide();
         triviaSection.hide();
