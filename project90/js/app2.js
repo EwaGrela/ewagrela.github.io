@@ -9,8 +9,6 @@ $(function() {
     
     //starting personality test
     var startingBtn = $("button#psychoTest");
-    console.log(startingBtn);
-    console.log(startingBtn);
     startingBtn.on("click", function(event) {
         $(this).hide();
         header.hide();
@@ -92,6 +90,11 @@ $(function() {
 
                 var inputs = quizDiv.find("input");
 
+                inputs.on("change", function(event){
+                    $(this).parent().addClass("checked");
+                    $(this).parent().siblings("label").removeClass();
+                })
+
                 var button = $("<button>", {
                     class: "quizButton"
                 });
@@ -104,7 +107,10 @@ $(function() {
             }
 
         }
-
+        
+        
+        
+        
         testSection.on("click", ".quizButton", function(event) {
             var labels = $(this).siblings("label");
             //console.log(labels);

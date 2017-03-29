@@ -323,9 +323,9 @@
 	            }
 	        ],
 	        "results": ["justin", "nick", "paddy"],
-	        "descriptions": ["Your dream boy is Paddy. Like him, you are romantic, sensitive and kind. You like nature, good food and are loyal to your friends and family",
-							"Your dream boy is Justin. Like him, you are sexy, outgoing and fun. You like pop music, pizza and there is no party without you!",
-							"Your dream boy is Nick. Like him you are nice, cute and a bit of a romantic soul. You like long walks on the beach, good wine and soul music",
+	        "descriptions": ["Your dream boy is Justin. Like him, you are sexy, outgoing and fun. You like pop music, pizza and there is no party without you!",
+	        				"Your dream boy is Nick. Like him you are nice, cute and a bit of a romantic soul. You like long walks on the beach, good wine and soul music",
+	        				"Your dream boy is Paddy. Like him, you are romantic, sensitive and kind. You like nature, good food and are loyal to your friends and family",	
 							"Well, you cannot decide, can you? Each of them is special and so are you."],
 	        "my title": "Find your 90s boyfriend"
 	    },

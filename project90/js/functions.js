@@ -20,9 +20,9 @@ function createComebackBtns(element) {
                 button.appendTo(element);
             }
 
-            console.log($(".comeback"));
+            //console.log($(".comeback"));
             var button = $(".comeback");
-            console.log(button);
+            //console.log(button);
             button.eq(0).text("home");
             button.eq(1).text("play again");
             button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
@@ -38,10 +38,10 @@ function createComebackBtns(element) {
 var alerts = ["Scary Spice is not amused you missed the question", "Justin feels sad 'cause you did not choose the answer"]
 var alertIndicator = Math.floor(Math.random() * alerts.length);
 var alertText = alerts[alertIndicator];
-console.log(alerts[alertIndicator]);
+//console.log(alerts[alertIndicator]);
 var backgrounds = ["url('images/scaryspice.png')", "url('images/justin.png')"];
 var alertBcg = backgrounds[alertIndicator];
-console.log(backgrounds[alertIndicator]);
+//console.log(backgrounds[alertIndicator]);
 
 function createAlertBox(element) {
     var alertBox = $("<div>", {

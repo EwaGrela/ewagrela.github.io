@@ -1108,7 +1108,7 @@ div.boardDiv {
 	margin: 0 auto;
 	label {
 		background: $baseColor;
-		border: 1px solid $secondaryColor;
+		//border: 1px solid $secondaryColor;
 		width: 100%;
 		height: 60px;
 		line-height: 60px;
@@ -1124,8 +1124,13 @@ div.boardDiv {
 	}
 }
 .checked {
-	background: $sixthColor;
+	border: 2px solid $sixthColor;
 }
+
+input[type="radio"] {
+	opacity: 0.001;
+}
+
 .quizButton {
 	background: $fifthColor;
 	font-size: $mediumFont/2.5;

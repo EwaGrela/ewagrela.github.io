@@ -104,7 +104,7 @@ $(function() {
             var button = $("<button></button>");
             button.appendTo(triviaBoard);
             button.attr("class", "startTrivia");
-            console.log(button);
+            //console.log(button);
         }
 
         var startTrivias = $(".startTrivia");
@@ -160,6 +160,12 @@ $(function() {
                 })
 
                 var inputs = quizDiv.find("input");
+
+                inputs.on("change", function(event){
+                    $(this).parent().addClass("checked");
+                    $(this).parent().siblings("label").removeClass(); //w ten sposób kolorujemy zaznaczoną labelkę i tylko nią
+                });
+
                 inputs.each(function(index3, value) {
                     var labText = $(this).parent().text();
                     var correctAns = questions[index].correct;
