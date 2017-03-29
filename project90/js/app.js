@@ -237,6 +237,7 @@ $(function() {
         notTriviaSections.show();
         footer.show();
         triviaSection.hide();
+        resultsBoard.remove();
         testSection.hide();
 
     })

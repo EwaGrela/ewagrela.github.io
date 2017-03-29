@@ -179,6 +179,7 @@ $(function() {
         footer.show();
         testSection.hide();
         triviaSection.hide();
+        resultsBoard.remove();
     })
 
 
