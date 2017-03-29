@@ -8,10 +8,6 @@ var browserSync= require("browser-sync").create();
 
 var sourcemaps = require('gulp-sourcemaps');
 
-//zadanie do kompilacji sassa do css to compileSass
-//ctr c wpisz po zadaniu watch, żeby przerwać działanie
-
-
 gulp.task("zadanie", function() {
 	console.log("melduję wykonanie zadania");
 });
@@ -24,14 +20,6 @@ gulp.task("pokolorujDrwala", function(){
 	console.log("pokoloruj drwala używając JS");
 });
 
-
-/*
-gulp.task("zadanie2", function(){
-	return gulp.src('js/*.js')
-	.pipe(jshint())	
-	.pipe(jshint.reporter('default'))
-});
-*/
 
 gulp.task('compileSass', function() {
 	return gulp.src('scss/**/style.scss')
