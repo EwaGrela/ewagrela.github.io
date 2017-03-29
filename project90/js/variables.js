@@ -1,6 +1,6 @@
 	/* 
-			memory game classes
-			*/
+	memory game classes
+	*/
 	var classes = ["tamagotchi", "beverlyHills", "kellyFamily", "euroDance", "boyband", "girlband",
 	    "macdonald", "furby", "nirvana", "fashion", "tamagotchi", "beverlyHills", "kellyFamily", "euroDance", "boyband", "girlband",
 	    "macdonald", "furby", "nirvana", "fashion"
@@ -29,47 +29,29 @@
 	/*
 	variables for DOM elements
 	*/
-	var score = 0; //momeory
-	var clicks = 0; //momeory
-
-
-	var toTheGamesBtn = $("header").find("button").not(".hamburger");
-	var gameSection = $("#gameSection");
-	var lowerContent = gameSection.children();
-
 	var header = $("header");
 	var footer = $("footer");
-	var initiatingBtn = $("button#memoryGame");
-	console.log(initiatingBtn);
-	var hamburgerMenu = $(".hamburger");
-	var hamburgerMenuFocused = $(".hamburger.focus");
-
 	var toTheGamesBtn = $("header").find("button").not(".hamburger");
 	var gameSection = $("#gameSection");
 	var lowerContent = gameSection.children();
+	var initiatingBtn = $("button#memoryGame");
+	var hamburgerMenu = $(".hamburger");
+	var hamburgerMenuFocused = $(".hamburger.focus");
+	var toTheGamesBtn = $("header").find("button").not(".hamburger");
+	var lowerContent = gameSection.children();
 	var otherSections = $("section").not(gameSection);
-	
-	var header = $("header");
 	var learnArt = $("#learn");
 	var infoSection = $("#infoSection");
 	var learnSection = $("#learnSection");
 	var learnBtn = learnArt.find("button");
 	var linksInMenu = $("ul.menu").find("a");
-	
-	
 	var startingBtn = $("button#psychoTest");
 	var testSection = $("#testSection");
-	//var sections = $("section").not(testSection);
-	var header = $("header");
-	var footer = $("footer");
 	var h1 = testSection.find("h1");
-	var gamesSection = $("#gamesSection");
 	var navigation = header.find("nav");
 	var triviaBtn = $("#triviaGame");
 	var triviaSection = $("#triviaSection");
 	var triviaSectionHeader = triviaSection.find("h1");
 	var notTestSections = $("section").not("#testSection");
 	var notTriviaSections = $("section").not("#triviaSection");
-	//var sections2 = $("section").not(triviaSection);
-	var gamesSection = $("#gamesSection");
 	var boardDiv = $(".boardDiv");
