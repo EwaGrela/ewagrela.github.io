@@ -1,14 +1,36 @@
-//functions for personality test
 $(function() {
-    var collectedAnswers = [];
-    var testRef = firebase.database().ref("/personality");
-    testRef.once("value").then(function(data){
-            quiz = data.val();
-             console.log(quiz);
-    })
-    
+    console.log("ok");
+    //functions for personality test
+    var alerts = ["Scary Spice is not amused you missed the question", "Justin feels sad 'cause you did not choose the answer"]
+    var alertIndicator = Math.floor(Math.random() * alerts.length);
+    var alertText = alerts[alertIndicator];
+    console.log(alerts[alertIndicator]);
+    var backgrounds = ["url('images/scaryspice.png')", "url('images/justin.png')"];
+    var alertBcg = backgrounds[alertIndicator];
+    console.log(backgrounds[alertIndicator]);
+
+    function createAlertBox() {
+        var alertBox = $("<div>", {
+            class: "alertBox"
+        });
+        var alertP = $("<p>");
+        alertBox.prependTo(testBoard);
+        alertP.appendTo(alertBox)
+        alertP.text(alertText);
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center").css("background-color", " rgba(255,255,255, 0.8)");
+        var hideAlertBtn = $("<button>", {
+            class: "hideAlertBtn"
+        });
+        hideAlertBtn.appendTo(alertBox);
+        hideAlertBtn.text("ok");
+    }
+
+
+
     //starting personality test
     var startingBtn = $("button#psychoTest");
+    console.log(startingBtn);
+    console.log(startingBtn);
     startingBtn.on("click", function(event) {
         $(this).hide();
         header.hide();
@@ -89,11 +111,10 @@ $(function() {
                 })
 
                 var inputs = quizDiv.find("input");
-
                 inputs.on("change", function(event){
                     $(this).parent().addClass("checked");
-                    $(this).parent().siblings("label").removeClass();
-                })
+                    $(this).parent().siblings("label").removeClass(); //w ten sposób kolorujemy zaznaczoną labelkę i tylko nią
+                });
 
                 var button = $("<button>", {
                     class: "quizButton"
@@ -107,18 +128,18 @@ $(function() {
             }
 
         }
-        
-        
-        
-        
+
         testSection.on("click", ".quizButton", function(event) {
             var labels = $(this).siblings("label");
+            //console.log(labels);
             var checked = labels.find("input:checked");
+            //console.log(checked);
             var labelText = checked.parent().text();
+            console.log(labelText);
             var dataText = checked.parent().attr("data");
             if (index < questionSet) {
                 if (dataText === undefined) {
-                    createAlertBox($("#testBoard"));
+                    createAlertBox();
                 } else {
                     index++;
                     collectedAnswers.push(dataText);
@@ -178,12 +199,9 @@ $(function() {
     testSection.on("click", "#comeback", function(event) {
         header.show();
         notTestSections.show();
-        startingBtn.show();
         footer.show();
         testSection.hide();
         triviaSection.hide();
-        $(".comeback").remove();
-       
     })
 
 

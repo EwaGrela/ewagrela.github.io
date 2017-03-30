@@ -76,13 +76,31 @@ $(function() {
 
 
     //events for trivia game - dynamic 
+    var alerts = ["Scary Spice is not amused you missed the question", "Justin feels sad you did not choose the answer"]
+    var alertIndicator = Math.floor(Math.random() * alerts.length);
+    var alertText = alerts[alertIndicator];
+    console.log(alerts[alertIndicator]);
+    var backgrounds = ["url('images/scaryspice.png')", "url('images/justin.png')"];
+    var alertBcg = backgrounds[alertIndicator];
+    console.log(backgrounds[alertIndicator]);
 
-    var triviaRef = firebase.database().ref("/quizes");
-    triviaRef.once("value").then(function(data){
-            test = data.val();
-             console.log(test);
-    })
- 
+    function createAlertBox() {
+        var alertBox = $("<div>", {
+            class: "alertBox"
+        });
+        alertBox.prependTo(triviaBoard);
+        alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center").css("background-color", "rgba(255,255,255, 0.8)");
+        var hideAlertBtn = $("<button>", {
+            class: "hideAlertBtn"
+        });
+        var alertP = $("<p>");
+        alertP.appendTo(alertBox)
+        alertP.text(alertText);
+        hideAlertBtn.appendTo(alertBox);
+        hideAlertBtn.text("ok")
+    }
+
+
 
     triviaSection.on("click", ".hideAlertBtn", function() {
         //$(this).remove();
@@ -104,7 +122,7 @@ $(function() {
             var button = $("<button></button>");
             button.appendTo(triviaBoard);
             button.attr("class", "startTrivia");
-            //console.log(button);
+            console.log(button);
         }
 
         var startTrivias = $(".startTrivia");
@@ -160,12 +178,10 @@ $(function() {
                 })
 
                 var inputs = quizDiv.find("input");
-
                 inputs.on("change", function(event){
                     $(this).parent().addClass("checked");
                     $(this).parent().siblings("label").removeClass(); //w ten sposób kolorujemy zaznaczoną labelkę i tylko nią
                 });
-
                 inputs.each(function(index3, value) {
                     var labText = $(this).parent().text();
                     var correctAns = questions[index].correct;
@@ -220,11 +236,10 @@ $(function() {
                     console.log(points);
                 }
                 if (value === undefined) {
-                    createAlertBox($("#triviaBoard"));
+                    createAlertBox();
                 } else {
                     index++;
                     createQuestion();
-                    console.log($(this).parent(), $(this).parent().prev());
                     $(this).parent().hide();
                     $(this).parent().prev().hide();
 
@@ -245,8 +260,6 @@ $(function() {
         footer.show();
         triviaSection.hide();
         testSection.hide();
-        
-        
 
     })
 
