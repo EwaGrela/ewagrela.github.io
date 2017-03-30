@@ -1,5 +1,5 @@
 $(function() {
-	console.log("ok, działa??");
+	console.log("ok, działa?");
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
@@ -223,6 +223,7 @@ $(function() {
                     createAlertBox($("#triviaBoard"));
                 } else {
                     index++;
+                    console.log(index);
                     createQuestion();
                     $(this).parent().hide();
                     $(this).parent().prev().hide();
@@ -230,6 +231,7 @@ $(function() {
                 }
             } else {
                 index = 0;
+                console.log("to jest indeks pytania " + index)
                 createResultsBoard();
             }
 
