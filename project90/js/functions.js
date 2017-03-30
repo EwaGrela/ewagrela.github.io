@@ -12,29 +12,18 @@ function randomize(elements) {
     return elements;
 }
 
-function createComebackBtns(element) {
-            for (var i = 0; i < 2; i++) {
-                var button = $("<a>", {
-                    class: "comeback"
-                });
-                button.appendTo(element);
-            }
-
-            //console.log($(".comeback"));
+function createComebackBtn(element) {
+        
+            var button = $("<a>", {
+                class: "comeback"
+            });
+            button.appendTo(element);
             var button = $(".comeback");
-            //console.log(button);
-            button.eq(0).text("home");
-            button.eq(1).text("play again");
-            button.eq(0).attr("href", "https://ewagrela.github.io/project90/");
-            button.eq(1).attr("href", "https://ewagrela.github.io/project90/#gameSection");
-            addingId();
+            button.text("again");
+            button.attr("href", "https://ewagrela.github.io/project90/");         
         }
 
-        function addingId(){
-            var button = $(".comeback");
-            button.eq(1).attr("id", "comeback");
-            
-        }
+        
 
 var alertText = "Scary Spice is not amused you missed the question";
 var background = "url('images/scaryspice.png')";

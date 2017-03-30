@@ -177,22 +177,10 @@ $(function() {
     })
 
 
-    testSection.on("click", "#comeback", function(event) {
-        location.reload();
-        //event.preventDefault();
-        //header.show();
-        //notTestSections.show();
-        //footer.show();
-        //testSection.hide();
-        //triviaSection.hide();
-        //$("#testBoard").remove();
-        //$(".resultsBoard").remove();
-        
-        });
+    
         
    
         
     
-
 
 })
