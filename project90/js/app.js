@@ -1,5 +1,5 @@
 $(function() {
-	console.log("ok, działa");
+	console.log("ok, działa to");
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
