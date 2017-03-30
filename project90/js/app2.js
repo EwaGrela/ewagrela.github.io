@@ -1,6 +1,6 @@
 //functions for personality test
 $(function() {
-    console.log("works3");
+    console.log("works4");
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
     testRef.once("value").then(function(data){
@@ -182,9 +182,12 @@ $(function() {
         //event.preventDefault();
         var href = "#gameSection";
         console.log(href);
-        $("html, body").animate({
-            scrollTop: $(href).offset().top
-        }, 1000);
+        $("html, body").on("reload",function(event){
+            $(this).animate({
+                scrollTop: $(href).offset().top
+            }, 1000);
+        });
+        
    
         //header.show();
         //notTestSections.show();
