@@ -1,6 +1,6 @@
 //functions for personality test
 $(function() {
-    console.log("works");
+    console.log("works2");
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
     testRef.once("value").then(function(data){
@@ -184,7 +184,8 @@ $(function() {
         //footer.show();
         //testSection.hide();
         //triviaSection.hide();
-        //$("#testBoard").remove();
+        $("#testBoard").remove();
+        $(".resultsBoard").remove();
     })
 
 
