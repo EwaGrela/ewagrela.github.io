@@ -224,8 +224,8 @@ $(function() {
                 } else {
                     index++;
                     createQuestion();
-                    $(this).parent().hide();
-                    $(this).parent().prev().hide();
+                    $(this).parent().remove();
+                    $(this).parent().prev().remove();
 
                 }
             } else {
