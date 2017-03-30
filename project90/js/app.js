@@ -1,4 +1,5 @@
 $(function() {
+	console.log("ok, działa");
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
@@ -238,12 +239,13 @@ $(function() {
     })
 
     triviaSection.on("click", "#comeback", function(event) {
-        header.show();
-        notTriviaSections.show();
-        footer.show();
-        triviaSection.hide();
-        testSection.hide();
-        $("#triviaBoard").remove();
+    	location.reload();
+        //header.show();
+        //notTriviaSections.show();
+        //footer.show();
+        //triviaSection.hide();
+        //testSection.hide();
+        //$("#triviaBoard").remove();
     })
 
 })
