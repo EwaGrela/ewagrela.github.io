@@ -113,11 +113,8 @@ $(function() {
         
         testSection.on("click", ".quizButton", function(event) {
             var labels = $(this).siblings("label");
-            //console.log(labels);
             var checked = labels.find("input:checked");
-            //console.log(checked);
             var labelText = checked.parent().text();
-            console.log(labelText);
             var dataText = checked.parent().attr("data");
             if (index < questionSet) {
                 if (dataText === undefined) {
@@ -185,6 +182,7 @@ $(function() {
         footer.show();
         testSection.hide();
         triviaSection.hide();
+        $(".testBoard").remove();
         $(".resultsBoard").remove();
     })
 

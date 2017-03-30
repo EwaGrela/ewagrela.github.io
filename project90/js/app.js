@@ -244,6 +244,7 @@ $(function() {
         footer.show();
         triviaSection.hide();
         testSection.hide();
+        $(".triviaBoard").remove();
         $(".resultsBoard").remove();
         
 
