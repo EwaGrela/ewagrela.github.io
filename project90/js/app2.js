@@ -165,7 +165,7 @@ $(function() {
             } else {
                 resultsParagraph.text(quiz[indicator].descriptions[3]);
             }
-            createComebackBtns(resultsBoard);
+            createComebackBtn(resultsBoard);
         }
 
     })

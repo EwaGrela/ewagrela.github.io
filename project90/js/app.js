@@ -205,7 +205,7 @@ $(function() {
                 resultsBoard.text(points + "/" + questionSet + " points! a true 90s kid!");
             }
             
-            createComebackBtns(resultsBoard);
+            createComebackBtn(resultsBoard);
         }
 
         
