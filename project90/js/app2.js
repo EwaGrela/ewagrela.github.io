@@ -1,6 +1,6 @@
 //functions for personality test
 $(function() {
-    console.log("works4");
+    console.log("works5");
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
     testRef.once("value").then(function(data){
@@ -182,7 +182,7 @@ $(function() {
         //event.preventDefault();
         var href = "#gameSection";
         console.log(href);
-        $("html, body").on("reload",function(event){
+        $("html, body").on("mousemove",function(event){
             $(this).animate({
                 scrollTop: $(href).offset().top
             }, 1000);
