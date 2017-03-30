@@ -183,7 +183,7 @@ $(function() {
         testSection.hide();
         triviaSection.hide();
         $(".comeback").remove();
-        testSection.children().remove();
+       
     })
 
 
