@@ -1,5 +1,6 @@
 //functions for personality test
 $(function() {
+    console.log("works");
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
     testRef.once("value").then(function(data){
