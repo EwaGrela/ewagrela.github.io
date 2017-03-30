@@ -182,6 +182,7 @@ $(function() {
         footer.show();
         testSection.hide();
         triviaSection.hide();
+        $(".comeback").remove();
         $("#testBoard").remove();
         $(".resultsBoard").remove();
     })
