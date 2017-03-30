@@ -246,6 +246,12 @@ $(function() {
         //triviaSection.hide();
         //testSection.hide();
         //$("#triviaBoard").remove();
+    }, function(){
+    	var href = $(this).attr("href");
+        console.log(href);
+        $("html, body").animate({
+            scrollTop: $(href).offset().top
+        }, 2000);
     })
 
 })
