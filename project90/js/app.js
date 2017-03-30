@@ -239,13 +239,16 @@ $(function() {
     })
 
     triviaSection.on("click", "#comeback", function(event) {
-    	location.reload();
-        //header.show();
-        //notTriviaSections.show();
-        //footer.show();
-        //triviaSection.hide();
-        //testSection.hide();
-        //$("#triviaBoard").remove();
+    	//location.reload();
+        header.show();
+        notTriviaSections.show();
+        footer.show();
+        triviaSection.hide();
+        testSection.hide();
+        $(this).remove();
+        $(this).siblings().remove();
+        $(this).parent().remove();
+        $("#triviaBoard").remove();
    
     })
 
