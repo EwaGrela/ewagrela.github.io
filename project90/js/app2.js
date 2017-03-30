@@ -177,12 +177,12 @@ $(function() {
 
 
     testSection.on("click", "#comeback", function(event) {
-        header.show();
-        notTestSections.show();
-        footer.show();
-        testSection.hide();
-        triviaSection.hide();
-        $("#testBoard").remove();
+        //header.show();
+        //notTestSections.show();
+        //footer.show();
+        //testSection.hide();
+        //triviaSection.hide();
+        //$("#testBoard").remove();
     })
 
 
