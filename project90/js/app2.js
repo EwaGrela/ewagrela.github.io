@@ -178,6 +178,7 @@ $(function() {
 
 
     testSection.on("click", "#comeback", function(event) {
+        event.preventDefault();
         location.reload();
         //event.preventDefault();
         //header.show();

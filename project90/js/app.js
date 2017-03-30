@@ -239,6 +239,7 @@ $(function() {
     })
 
     triviaSection.on("click", "#comeback", function(event) {
+    	event.preventDefault();
     	location.reload();
         //header.show();
         //notTriviaSections.show();
