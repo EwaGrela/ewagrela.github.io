@@ -35,14 +35,8 @@ function createComebackBtns(element) {
             button.eq(1).attr("id", "comeback");
         }
 
-var alerts = ["Scary Spice is not amused you missed the question", "Justin feels sad 'cause you did not choose the answer"]
-var alertIndicator = Math.floor(Math.random() * alerts.length);
-var alertText = alerts[alertIndicator];
-//console.log(alerts[alertIndicator]);
-var backgrounds = ["url('images/scaryspice.png')", "url('images/justin.png')"];
-var alertBcg = backgrounds[alertIndicator];
-//console.log(backgrounds[alertIndicator]);
-
+var alertText = "Scary Spice is not amused you missed the question";
+var background = "url('images/scaryspice.png')";
 function createAlertBox(element) {
     var alertBox = $("<div>", {
           class: "alertBox"
@@ -51,7 +45,7 @@ function createAlertBox(element) {
     alertBox.prependTo(element);
     alertP.appendTo(alertBox)
     alertP.text(alertText);
-    alertBox.css("background", alertBcg).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center").css("background-color", " rgba(255,255,255, 0.8)");
+    alertBox.css("background", background).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center").css("background-color", " rgba(255,255,255, 0.8)");
     var hideAlertBtn = $("<button>", {
       	class: "hideAlertBtn"
     });
