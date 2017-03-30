@@ -177,6 +177,7 @@ $(function() {
 
 
     testSection.on("click", "#comeback", function(event) {
+        location.reload();
         //header.show();
         //notTestSections.show();
         //footer.show();
