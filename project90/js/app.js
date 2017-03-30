@@ -230,8 +230,7 @@ $(function() {
 
                 }
             } else {
-                index = 0;
-                console.log("to jest indeks pytania " + index)
+    
                 createResultsBoard();
             }
 
@@ -241,6 +240,8 @@ $(function() {
 
     })
 
-    
+    triviaSection.on("click", ".comeback", function(event){
+        location.reload();
+    })
 
 })

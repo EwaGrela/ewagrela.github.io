@@ -176,7 +176,9 @@ $(function() {
         $(this).parent().remove();
     })
 
-
+    triviaSection.on("click", ".comeback", function(event){
+        location.reload();
+    })
     
         
    
