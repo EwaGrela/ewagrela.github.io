@@ -124,8 +124,8 @@ $(function() {
                     collectedAnswers.push(dataText);
                     console.log(collectedAnswers, collectedAnswers.length);
                     createQuestions();
-                    $(this).parent().hide();
-                    $(this).parent().prev().hide();
+                    $(this).parent().remove();
+                    $(this).parent().prev().remove();
                 }
 
             } else {
