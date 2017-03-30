@@ -111,7 +111,7 @@ $(function() {
         startTrivias.eq(0).text("easy");
         startTrivias.eq(1).text("medium");
         startTrivias.eq(2).text("hardcore");
-       
+
     })
 
 
@@ -243,7 +243,7 @@ $(function() {
         footer.show();
         triviaSection.hide();
         testSection.hide();
-
+        $("#triviaBoard").remove();
     })
 
 })
