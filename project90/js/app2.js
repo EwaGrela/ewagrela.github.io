@@ -178,7 +178,6 @@ $(function() {
 
 
     testSection.on("click", "#comeback", function(event) {
-        event.preventDefault();
         location.reload();
         //event.preventDefault();
         //header.show();
@@ -188,12 +187,7 @@ $(function() {
         //triviaSection.hide();
         //$("#testBoard").remove();
         //$(".resultsBoard").remove();
-        },function(){
-            var href = $(this).attr("href");
-            console.log(href);
-            $("html, body").animate({
-                scrollTop: $(href).offset().top
-            }, 1000);
+        
         });
         
    
