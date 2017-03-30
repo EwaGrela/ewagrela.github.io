@@ -1,5 +1,5 @@
 $(function() {
-	console.log("ok, działa to");
+	console.log("ok, działa??");
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
@@ -229,6 +229,7 @@ $(function() {
 
                 }
             } else {
+                index = 0;
                 createResultsBoard();
             }
 
