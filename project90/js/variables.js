@@ -14,7 +14,7 @@
 	var text2 = "A movement in the mid 90s, encouraging young women to be brave and daring, a part of third wave feminism. The term was associated with British girlband Spice Girls, whose hit single, 'Wannabe' topped the charts in late 1996."
 	var text3 = "Boybands were abundant in the 90s! The hype started in the late 80s with the American group New Kids on the Block. Later came the Brits and bands like East17 and Take That became popular. One could say they were to the 90s pop music what frameworks are to JavaScript developers - not a day passed without one emerging. However, in the end only two boybands really mattered - Backstreet Boys and NSYNC."
 	var text4 = "Fashion in the 90s was very varied, however several major trends are worth reminding. There are the grunge/hippie like clothes, there are also bright tank tops and low cut jeans, very like the ones Britney and Christina wore and last but not least - minimalism, which basically meant wearing all black. Other stuff? Babydoll dresses, over the knee socks, flared jeans, flanel shirts, butterfly clips, slip dresses...you name it, the list is long!"
-	var text5 = "The 90s were the last decade of the century and it was also the end of the millenium. This might contribute to the fact why there was so much focus on spirituality. This was generally very positive, in fact the 90s were very similar to the 60s in that matter! Unfortunately, this also meant some people sought solace in quasi religions and now and then one heard of mass suicide of the members of such groups"
+	var text5 = "The 90s were the last decade of the century and it was also the end of the millenium. This might contribute to the fact why there was so much focus on spirituality. This was generally very positive, in fact the 90s were very similar to the 60s in that matter! Unfortunately, this also meant some people sought solace in quasi religions and now and then one heard of mass suicide of the members of such groups."
 	var text6 = "The 90s were not all about happy pop songs and catchy dance tunes. Have you ever heard of Nirvana, Soundgarden, The Smashing Pumpkins or Pearl Jam? Well, I bet you have. These are the bands which peaked at that time and were the most popular in the genre. Grunge comes from Seattle, where it rains 360 days a year. The Evergreen State is not only home to sparkling vampires, but to some really meaningful music which defined a generation."
 	var text7 = "The 90s were not a time of reality shows, people preferred to watch soap operas. The most popular and cult were Beverly Hills 90210 and Friends. The first was aimed at high schoolers and the latter was supposed to portray generation X. Girls wanted to be like Brenda and Kelly or like Monica and Rachel.Later in the decade another soap opera, Sex and the City was also becoming increasingly popular."
 	var text8 = "Bravo was one of the most popular teen magazines of the era. It had posters of your favourite stars you could plaster to your bedroom walls and also included vital life advice and foto-stories which dealt with important topics such as satanism and teen pregnancy. Other notable teen magazines included Popcorn, Bravo Girl and Megastar."
@@ -31,6 +31,7 @@
 	*/
 	var header = $("header");
 	var footer = $("footer");
+	var scrollingButton = footer.find("button");
 	var toTheGamesBtn = $("header").find("button").not(".hamburger");
 	var gameSection = $("#gameSection");
 	var lowerContent = gameSection.children();
@@ -51,7 +52,8 @@
 	var navigation = header.find("nav");
 	var triviaBtn = $("#triviaGame");
 	var triviaSection = $("#triviaSection");
-	var triviaSectionHeader = triviaSection.find("h1");
+	var triviaHeaderOne = triviaSection.find("h1");
+	var triviaSectionHeader = triviaSection.find("h2");
 	var notTestSections = $("section").not("#testSection");
 	var notTriviaSections = $("section").not("#triviaSection");
 	var boardDiv = $(".boardDiv");

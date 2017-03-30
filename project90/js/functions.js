@@ -40,5 +40,5 @@ function createAlertBox(element) {
       	class: "hideAlertBtn"
     });
     hideAlertBtn.appendTo(alertBox);
-    hideAlertBtn.text("ok");
+    hideAlertBtn.text("sorry!");
 }

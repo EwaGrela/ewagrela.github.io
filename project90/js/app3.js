@@ -29,7 +29,7 @@ $(function() {
             id: "coveringBtn"
         });
         coveringBtn.insertAfter(memoryBoard);
-        coveringBtn.text("hide them");
+        coveringBtn.text("cover");
         coveringBtn.one("click", function(event) {
             //console.log("ok");
             boardDiv.addClass("covered");
@@ -79,22 +79,13 @@ $(function() {
             resultsDiv.attr("id", "resultsDiv");
             resultsDiv.appendTo(gameSection);
             resultsDiv.text("congrats! you earned " + finalScore + " points!");
-            createComebackBtns(gameSection);
+            createComebackBtn(gameSection);
         }
 
     })
 
-    gameSection.on("click", "#comeback", function(){
-        lowerContent.show();
-        otherSections.show();
-        initiatingBtn.show();
-        header.show();
-        footer.show();
-        $("#gameBoard").remove();
-        $("#resultsDiv").remove();
-        $(".comeback").remove();
-        testSection.hide();
-        triviaSection.hide();
+    gameSection.on("click", ".comeback", function(){
+        location.reload();
         
     })
 

@@ -1,5 +1,5 @@
 $(function() {
-	console.log("ok, działa??");
+	
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
@@ -10,7 +10,6 @@ $(function() {
     toTheGamesBtn.on("click", function(event) {
         //event.preventDefault();
         var href = $(this).attr("href");
-        console.log(href);
         $("html, body").animate({
             scrollTop: $(href).offset().top
         }, 4000);
@@ -20,13 +19,12 @@ $(function() {
     //events scrolling to sections
     linksInMenu.on("click", function(event){
         var href = $(this).attr("href");
-        console.log(href);
         $("html, body").animate({
             scrollTop: $(href).offset().top
         }, 2000);
     });
-    //event scrolling the page up
-    var scrollingButton = footer.find("button");
+    //event scrolling the page up from footer
+    
     scrollingButton.on("click", function(event) {
         event.preventDefault();
         var href = $(this).attr("href");
@@ -62,7 +60,7 @@ $(function() {
         var index = $(this).index();
         console.log(index);
         infoParagraph.text(texts[index]);
-        infoBoard.attr("id", "board" + index);
+        infoBoard.attr("id", "board" + index); //ten fragment kodu jeszcze nie wiem, czy wykorzystam - miał być, by dawać zdj, w tle
 
     })
 
@@ -105,7 +103,7 @@ $(function() {
             var button = $("<button></button>");
             button.appendTo(triviaBoard);
             button.attr("class", "startTrivia");
-            console.log(button);
+            
         }
 
         var startTrivias = $(".startTrivia");
@@ -119,8 +117,9 @@ $(function() {
     triviaSection.on("click", ".startTrivia", function(event) {
         $(this).hide();
         $(this).siblings().hide()
+        triviaHeaderOne.hide();
         var indicator = $(this).index();
-        console.log(indicator);
+        //console.log(indicator);
         var index = 0; //index początkowego pytania, będzie wzrastał
         var points = 0;
 
@@ -214,7 +213,7 @@ $(function() {
             if (index < questionSet) {
                 var checked = $(this).siblings("label").find("input:checked");
                 var value = checked.attr("value");
-                //console.log(value);
+                console.log(value);
                 if (value === "true") {
                     points++;
                     console.log(points);
@@ -223,7 +222,6 @@ $(function() {
                     createAlertBox($("#triviaBoard"));
                 } else {
                     index++;
-                    console.log(index);
                     createQuestion();
                     $(this).parent().hide();
                     $(this).parent().prev().hide();

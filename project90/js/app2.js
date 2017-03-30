@@ -1,6 +1,6 @@
 //functions for personality test
 $(function() {
-    console.log("works");
+    
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
     testRef.once("value").then(function(data){
@@ -10,8 +10,6 @@ $(function() {
     
     //starting personality test
     var startingBtn = $("button#psychoTest");
-    console.log(startingBtn);
-    console.log(startingBtn);
     startingBtn.on("click", function(event) {
         $(this).hide();
         header.hide();
@@ -32,10 +30,9 @@ $(function() {
         }
 
         var startTest = $(".startTest");
-        console.log(startTest);
         startTest.eq(0).text("90s boyfriend");
         startTest.eq(1).text("friends girls");
-        startTest.eq(2).text("harry potter characters");
+        startTest.eq(2).text("harry potter");
 
 
     })
@@ -116,7 +113,7 @@ $(function() {
             var checked = labels.find("input:checked");
             //console.log(checked);
             var labelText = checked.parent().text();
-            console.log(labelText);
+            //console.log(labelText);
             var dataText = checked.parent().attr("data");
             if (index < questionSet) {
                 if (dataText === undefined) {
@@ -135,7 +132,7 @@ $(function() {
             }
 
         })
-        console.log(index);
+        //console.log(index);
         function showResults() {
             var resultsBoard = $("<div>", {
                 class: "resultsBoard"
