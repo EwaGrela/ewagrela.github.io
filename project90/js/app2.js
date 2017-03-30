@@ -187,15 +187,6 @@ $(function() {
         //triviaSection.hide();
         //$("#testBoard").remove();
         //$(".resultsBoard").remove();
-            
-        },function(){
-            console.log("mousemove me");
-            var href = "#gameSection";
-            console.log(href);
-            $("html, body").animate({
-                scrollTop: $(href).offset().top
-            }, 1000);
-
         });
         
    
