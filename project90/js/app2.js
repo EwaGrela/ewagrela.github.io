@@ -134,7 +134,7 @@ $(function() {
             }
 
         })
-
+        console.log(index);
         function showResults() {
             var resultsBoard = $("<div>", {
                 class: "resultsBoard"
