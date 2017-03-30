@@ -33,6 +33,7 @@ function createComebackBtns(element) {
         function addingId(){
             var button = $(".comeback");
             button.eq(1).attr("id", "comeback");
+            button.eq(1).attr("href", "#gameSection");
         }
 
 var alertText = "Scary Spice is not amused you missed the question";
