@@ -35,9 +35,14 @@ $(function() {
     })
     //events for infoSection
     var talkButton = infoSection.find("button");
-    talkButton.one("click", function(event) {
-        $(this).hide();
-        $(this).next().removeClass("hidden");
+    talkButton.on("click", function(event) {
+        //$(this).hide();
+        var parToShow = $(this).next()
+        console.log(parToShow);
+        parToShow.toggle();
+        var otherPars = $(this).siblings("p").not(parToShow);
+        console.log(otherPars, otherPars.length);
+        otherPars.hide();
     })
 
     //events for learn section
