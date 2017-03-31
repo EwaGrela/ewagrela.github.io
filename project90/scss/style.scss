@@ -124,15 +124,15 @@ header {
 			font-size: $bigFont/3;
 			width: 100px;
 			height: 50px;
-			background: #dd6677;
+			background: lighten($fifthColor, 10%);
 			animation-name: appear;
 			animation-duration: 2s;
 			animation-iteration-count: 1;
 			animation-timing-function: ease-in-out;
 			&:hover {
-				background: lighten(#ff6677, 10%);
+				background: lighten($fifthColor, 20%);
 			}
-			border: 2px solid #cccccc;
+			border: 2px solid $sixthColor;
 			border-radius: 10%;
 			@media(min-width: 600px){
 				width: 150px;
@@ -324,10 +324,10 @@ nav {
 			font-family: "Permanent Marker";
 			width:180px;
 			height: 60px;
-			transition: 0.5s;
+			transition: 1s;
 
 			&:hover {
-				transform: scale(1.2);
+				transform: scale(1.1);
 			}
 			&:nth-of-type(2n){
 			align-self: flex-end;
@@ -1085,17 +1085,19 @@ div.boardDiv {
 	
 	transition: 2s;
 	&:hover {
-		transform: scale(1.2);
+		transform: scale(1.2)translate(0px, -10px);
 	}
 	&:nth-of-type(1){
 		margin-top: 20px;
 		border-radius: 50%;
-		background-color:  #009999;
+		background-color: lighten($sixthColor, 10%);
+		border: 2px solid $sixthColor;
 	}
 	&:nth-of-type(3){
 		margin-bottom: 20px;
 		border-radius: 1%;
-		background-color: $sixthColor;
+		background-color: $fifthColor;
+		border: 2px solid darken($fifthColor, 10%);
 	}
 	&:nth-of-type(2n+1){
 		align-self: flex-start;
@@ -1106,7 +1108,8 @@ div.boardDiv {
 		align-self: flex-end;
 		margin-right: 25%;
 		border-radius: 20%;
-		background-color:  #ffcc33;
+		background-color: $sixthColor;
+		border: 2px solid darken($sixthColor, 10%);
 	}
 	
 	font-family: 'Permanent Marker', cursive;
