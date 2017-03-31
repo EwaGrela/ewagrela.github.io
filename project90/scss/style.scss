@@ -231,9 +231,9 @@ nav {
 	display: flex;
 	margin-right: 10px;
 	border-bottom: 4px solid lighten($sixthColor, 10%);
-	height: 80px;
+	height: 90px;
 	position: absolute;
-	background: $baseColor;
+	background: darken($baseColor, 5%);
 	left: 0px;
 	top: 0px;
 	width: 100%;
@@ -252,7 +252,7 @@ nav {
 		
 		li {
 			color:  #666666;
-			text-shadow: 2px 2px 10px $sixthColor ;
+			text-shadow: 2px 2px 10px $fifthColor ;
 			margin-left: 10px;
 			margin-top: 20px;
 			margin-bottom:10px;
