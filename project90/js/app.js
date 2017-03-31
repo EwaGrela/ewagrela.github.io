@@ -1,4 +1,5 @@
 $(function() {
+	
 	console.log("change1")
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
