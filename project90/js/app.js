@@ -38,10 +38,10 @@ $(function() {
     talkButton.on("click", function(event) {
         //$(this).hide();
         var parToShow = $(this).next()
-        console.log(parToShow);
+        //console.log(parToShow);
         parToShow.toggle();
         var otherPars = $(this).siblings("p").not(parToShow);
-        console.log(otherPars, otherPars.length);
+        //console.log(otherPars, otherPars.length);
         otherPars.hide();
     })
 
@@ -65,7 +65,7 @@ $(function() {
         var index = $(this).index();
         console.log(index);
         infoParagraph.text(texts[index]);
-        infoBoard.attr("id", "board" + index); //ten fragment kodu jeszcze nie wiem, czy wykorzystam - miał być, by dawać zdj, w tle
+        infoBoard.attr("id", "board" + index); //ten fragment kodu jeszcze nie wiem, czy wykorzystam - miał być, by dawać zdj. w tle inne każdemu art.
 
     })
 
