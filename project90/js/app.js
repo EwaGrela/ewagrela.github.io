@@ -1,5 +1,5 @@
 $(function() {
-	
+	console.log("change1")
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggle(2000);
@@ -85,10 +85,7 @@ $(function() {
     triviaRef.once("value").then(function(data){
             test = data.val();
              console.log(test);
-    })
- 
-
-    triviaSection.on("click", ".hideAlertBtn", function() {
+                triviaSection.on("click", ".hideAlertBtn", function() {
         //$(this).remove();
         $(this).parent().remove();
     })
@@ -246,5 +243,13 @@ $(function() {
     triviaSection.on("click", ".comeback", function(event){
         location.reload();
     })
+
+
+
+
+    });
+ 
+
+ 
 
 })

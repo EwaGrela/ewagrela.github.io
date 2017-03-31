@@ -1,14 +1,12 @@
 //functions for personality test
 $(function() {
-    
+    console.log("change");
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
     testRef.once("value").then(function(data){
             quiz = data.val();
              console.log(quiz);
-    })
-    
-    //starting personality test
+             //starting personality test
     var startingBtn = $("button#psychoTest");
     startingBtn.on("click", function(event) {
         $(this).hide();
@@ -180,6 +178,11 @@ $(function() {
         
    
         
+    
+
+
+    })
+    
     
 
 })
