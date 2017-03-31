@@ -362,7 +362,7 @@ nav {
 		font-family: "Raleway";
 		font-weight: bold;
 		font-size: $bigFont/6;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		 position: relative; 
 		  border-radius: 10px;
 		align-self: flex-start;
@@ -398,7 +398,7 @@ nav {
 		font-family: "Raleway";
 		font-weight: bold;
 		font-size: $bigFont/6;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		  border-radius: 10px;
 		  align-self: flex-end;
 		  @media(min-width: 600px){
@@ -1067,7 +1067,6 @@ div.boardDiv {
 	@include layoutMixin3($secondaryColor);
 	max-width: 90%;
 	height: auto;
-	border-radius: 2%;
 	margin: 0 auto;
 	background-color: $secondaryColor;
 
@@ -1139,6 +1138,12 @@ div.boardDiv {
 .title {
 	color: $sixthColor;
 	font-size: $mediumFont/2.2;
+	@media(min-width: 600px){
+		font-size: $mediumFont/1.8;
+	}
+	@media(min-width:900px) {
+		font-size: $mediumFont/1.5;
+	}
 	font-family: 'Permanent Marker', cursive;
 	text-transform: uppercase;
 	text-align: center;
@@ -1164,9 +1169,12 @@ div.boardDiv {
 		text-transform: uppercase;
 		color: $fifthColor;
 		font-weight: bold;
-		font-size: $mediumFont/4;
+		font-size: $mediumFont/4.2;
 		@media(min-width: 600px){
 			font-size: $mediumFont/3;
+		}
+		@media(min-width: 1200px){
+			font-size: $mediumFont/2;
 		}
 	}
 }
