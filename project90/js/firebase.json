@@ -175,7 +175,7 @@
 	                        "result": "justin"
 	                    },
 	                    {
-	                        "answer": "home cooked food",
+	                        "answer": "home cooked",
 	                        "result": "paddy"
 	                    },
 	                    {
@@ -188,7 +188,7 @@
 	            {
 	                "title": "City or countryside?",
 	                "answers": [{
-	                        "answer": "definitely countryside!",
+	                        "answer": "countryside!",
 	                        "result": "paddy"
 	                    },
 	                    {
