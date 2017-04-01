@@ -355,7 +355,7 @@ nav {
 		 height: auto; 
 		 color: #444444;
 		 padding: 5px;
-		 background: lighten($sixthColor, 20%); 
+		 background: lighten($sixthColor, 30%); 
 		text-align: center;
 		font-family: "Raleway";
 		font-weight: bold;
@@ -380,7 +380,7 @@ nav {
 			 width: 0; 
 			 height: 0; 
 			 border-top: 13px solid transparent; 
-			 border-right: 26px solid lighten($sixthColor, 20%); 
+			 border-right: 26px solid lighten($sixthColor, 30%); 
 			 border-bottom: 13px solid transparent;
 
 		  }
@@ -389,7 +389,7 @@ nav {
 		 width: auto; 
 		 min-height: 80px;
 		 height: auto; 
-		 background: lighten($sixthColor, 20%); 
+		 background: lighten($sixthColor, 30%); 
 		 padding: 5px;
 		 color: #444444;
 		 position: relative; 
@@ -416,7 +416,7 @@ nav {
 			 width: 0; 
 			 height: 0; 
 			 border-top: 13px solid transparent; 
-			 border-left: 26px solid lighten($sixthColor, 20%); 
+			 border-left: 26px solid lighten($sixthColor, 30%); 
 			 border-bottom: 13px solid transparent;
 
 		  }
