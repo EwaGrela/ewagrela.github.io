@@ -164,7 +164,7 @@ header {
 @for $i from 1 through 6 {
 	h#{$i} {
 		font-family: "Fontdiner Swanky";
-		color: #333333;
+		color: #818181;
 		text-shadow: 5px 5px 5px lighten($fifthColor, 10%);
 		text-align: center;
 		@media(max-width: 560px){
@@ -602,7 +602,9 @@ footer {
 	text-align: center;
 	color: white;
 	
-
+	h1,h2 {
+		color: #666666;
+	}
 	section {
 		@include layoutMixin2(transparent);
 		height: 90%;
@@ -851,39 +853,24 @@ footer {
 #divContainer {
 	@include layoutMixin3($secondaryColor);
 	width: 100%;
-	max-height: 290px;
-	//border: 1px solid blue;
+	max-height: 250px;
+	border: 1px solid blue;
+	
 }
 
 .startTest {
 	width: 150px;
-	height: 90px;
-	color:  darken($fifthColor, 5%);
-	text-shadow: 4px 5px 6px white;
-	background-color: $secondaryColor;
+	height: 45px;
+	background-color:  darken($sixthColor, 5%);
+	color: white;
 	font-size: $mediumFont/3;
 	border-radius: 5%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	transition: 2s;
-	padding-top: 50px;
 	border: none;
-	@extend %gamesBtn;
-	&:nth-of-type(1){
-		background-image: url("../images/lips2.jpeg");
-		
-		
-	}
-	&:nth-of-type(2){
-		background-image: url("../images/friends.png");
-		
-	}
-	&:nth-of-type(3){
-		background-image: url("../images/harrypotter.jpg");
-		
-	}
 	&:hover {
-		transform: scale(1.2);
+		transform: scale(1.2)translate(0px, 10px);
 	}
 	@media(min-width:568px){
 		&:nth-of-type(2n+1){
@@ -897,22 +884,21 @@ footer {
 			
 		}
 	}
-	
 	font-family: "Fontdiner Swanky", cursive;
 		@media( min-width: 420px){
 				width: 180px;
-				height: 100px;
+				height: 60px;
 				font-size: $mediumFont/2.5;
 			}
 
 		@media( min-width: 796px){
 			width: 200px;
-			height: 140px;
+			height: 70px;
 			font-size: $mediumFont/2;
 		}
 		@media( min-width: 1200px){
 			width: 240px;
-			height: 180px;
+			height: 80px;
 			font-size: $mediumFont/1.5;
 		}
 }
@@ -920,10 +906,10 @@ footer {
 
 #testBoard {
 	@include layoutMixin3($baseColor);
-	//border: 1px solid orange;
+	border: 1px solid orange;
 	max-width: 90%;
 	height: auto;
-	max-height: 350px;
+	max-height: 300px;
 	margin: 0 auto;
 	padding: 20px;
 	background: $secondaryColor;
@@ -1138,24 +1124,24 @@ div.boardDiv {
 	font-family: "Fontdiner Swanky", cursive;
 		@media( min-width: 420px){
 				width: 120px;
-				height: 90px;
+				height: 80px;
 				font-size: $mediumFont/2;
 			}
 		@media( min-width: 600px){
 				width: 140px;
-				height: 90px;
+				height: 80px;
 				font-size: $mediumFont/1.9;
 			}
 
 		@media( min-width: 800px){
 			width: 180px;
-			height: 100px;
+			height: 80px;
 			font-size: $mediumFont/1.5;
 			
 		}
 		@media( min-width: 1200px){
 			width: 200px;
-			height: 100px;
+			height: 85px;
 			font-size: $mediumFont;
 			
 		}
@@ -1242,12 +1228,15 @@ input[type="radio"] {
 	justify-content: flex-end;
 	p{
 		font-family: "Raleway";
-		font-size: $mediumFont/1.5;
+		font-size: $mediumFont/2;
+		@media(min-width: 600px){
+			font-size: $mediumFont/1.5;
+		}
 		font-weight: bolder;
-		color: darken($fourthColor, 10%);
+		color: $fourthColor;
+		text-shadow: 1px 2px white;
 		width: 100%;
 		padding: 15%;
-		text-shadow: 2px 2px $sixthColor;
 	}
 	button {
 		width: auto;
