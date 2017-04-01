@@ -497,7 +497,7 @@
 	        "questions": [{
 	                "title": "You are best known for your...",
 	                "answers": [{
-	                        "answer": "bravery and recklesness",
+	                        "answer": "bravery",
 	                        "result": "harry"
 	                    },
 	                    {
@@ -505,7 +505,7 @@
 	                        "result": "hermione"
 	                    },
 	                    {
-	                        "answer": "loyalty and sense of humour",
+	                        "answer": "loyalty",
 	                        "result": "ron"
 	                    }
 	                ]
@@ -546,9 +546,9 @@
 
 	            },
 	            {
-	                "title": "Your ideal partner would be?",
+	                "title": "Your ideal partner would...?",
 	                "answers": [{
-	                        "answer": "independent and understanding",
+	                        "answer": " be independent",
 	                        "result": "harry"
 	                    },
 	                    {
@@ -603,7 +603,7 @@
 	                        "result": "harry"
 	                    },
 	                    {
-	                        "answer": "scientist, web developer, doctor",
+	                        "answer": "scientist, doctor, web developer",
 	                        "result": "hermione"
 	                    },
 	                    {
