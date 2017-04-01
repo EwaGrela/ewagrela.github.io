@@ -159,8 +159,8 @@
 	            "correct": "The Dome"
 	        },
 	        {
-	            "title": "Nirvana's artist Dave Grohl founded another band- name it:",
-	            "answers": ["Our Lady Peace", "Foo Fighters", "Smashing Pumpkins"],
+	            "title": "Nirvana's  Dave Grohl founded another band - name it:",
+	            "answers": ["Our Lady Peace", "Foo Fighters", " The Smashing Pumpkins"],
 	            "correct": "Foo Fighters"
 	        }
 	    ]
