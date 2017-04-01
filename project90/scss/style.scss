@@ -1154,7 +1154,6 @@ div.boardDiv {
 		font-size: $mediumFont/1.5;
 	}
 	font-family: "Fontdiner Swanky", cursive;
-	text-transform: uppercase;
 	text-align: center;
 	margin-top: 10px;
 	text-shadow: none;
@@ -1269,9 +1268,10 @@ input[type="radio"] {
 	width: 90px;
 	height: 40px;
 	background: $fifthColor;
-	border-radius: 2%;
+	border-radius: 5%;
 	color: $baseColor;
 	font-size: 18px;
+	font-weight: bolder;
 	margin-bottom: 3px;
 	margin-top: 10px;
 	line-height: 40px;

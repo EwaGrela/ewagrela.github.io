@@ -1,160 +1,160 @@
 {
 	"quizes": [
 	    [{
-	            "title": "name two most popular boybands of the 90s",
+	            "title": "Name two most popular boybands of the 90s",
 	            "answers": ["bsb and nsync", "1-D and 5ive", "take that and nkotb"],
 	            "correct": "bsb and nsync"
 	        },
 	        {
-	            "title": "which girlband released their hit single 'wannabe' in 1996?",
+	            "title": "Which girlband released their hit single 'Wannabe' in 1996?",
 	            "answers": ["spice girls", "funky diamonds", "solid harmony"],
 	            "correct": "spice girls"
 	        },
 	        {
-	            "title": "which band was a grunge band from seattle?",
+	            "title": "Which band was a grunge band from Seattle?",
 	            "answers": ["captain jack", "stone temple pilots", "pearl jam"],
 	            "correct": "pearl jam"
 	        },
 	        {
-	            "title": "what was the name of the dance music genre popular in the 90s?",
+	            "title": "What was the name of the dance music genre popular in the 90s?",
 	            "answers": ["eurodance", "edm", "deep house"],
 	            "correct": "eurodance"
 	        },
 	        {
-	            "title": "what was the name of irish band consisting of family members?",
+	            "title": "What was the name of irish band consisting of family members?",
 	            "answers": ["the moffats", "hanson", "the kelly family"],
 	            "correct": "the kelly family"
 	        },
 	        {
-	            "title": "which of these soap operas did not run in the 90s?",
+	            "title": "Which of these soap operas did not run in the 90s?",
 	            "answers": ["sex and the city", "gossip girl", "friends"],
 	            "correct": "gossip girl"
 	        },
 	        {
-	            "title": "what is the  other name of a state which is a birthplace of grunge music?",
+	            "title": "What is the  other name of a state which is a birthplace of grunge music?",
 	            "answers": ["the rainy state", "the evergreen state", "garden state"],
 	            "correct": "the evergreen state"
 	        },
 	        {
-	            "title": "two frenemies from the popular 90s soap opera 'beverly hills 90210' were named...",
+	            "title": "Two frenemies from the popular 90s soap opera 'Beverly Hills 90210' were named...",
 	            "answers": ["blair and serena", "brenda and kelly", "monica and rachel"],
 	            "correct": "brenda and kelly"
 	        },
 	        {
-	            "title": "justin timberlake's first band was...",
+	            "title": "Justin Timberlake's first band was...",
 	            "answers": ["nkotb", "bsb", "nsync"],
 	            "correct": "nsync"
 	        },
 	        {
-	            "title": "what were the names of electronic toys kept as pets?",
+	            "title": "What were the names of electronic toys kept as pets?",
 	            "answers": ["furigi and tamaru", "furby and tamagotchi", "tamagoru and fibura"],
 	            "correct": "furby and tamagotchi"
 	        },
 	        {
-	            "title": "what year was JavaScript invented in?",
+	            "title": "What year was JavaScript invented in?",
 	            "answers": ["1996", "1992", "1995"],
 	            "correct": "1995"
 	        },
 	        {
-	            "title": "what was the name of the british boyband where robbie williams started his career?",
+	            "title": "What was the name of the british boyband where Robbie Williams started his career?",
 	            "answers": ["take that", "boyzone", "east-17"],
 	            "correct": "take that"
 	        }
 	    ],
 
 	    [{
-	            "title": "which boyband sung 'quit playing games'?",
+	            "title": "Which boyband sung 'Quit playing games'?",
 	            "answers": ["backstreet boys", "nsync", "take that"],
 	            "correct": "backstreet boys"
 	        },
 	        {
-	            "title": "which of these boys did not decide to go solo?",
+	            "title": "Which of these boys did not decide to go solo?",
 	            "answers": ["nick carter", "justin timberlake", "owen williams"],
 	            "correct": "owen williams"
 	        },
 	        {
-	            "title": "who covered george michael's 'freedom' after leaving his band?",
+	            "title": "Who covered George Michael's 'Freedom' after leaving his band?",
 	            "answers": ["nick carter", "justin timberlake", "robbie williams"],
 	            "correct": "robbie williams"
 	        },
 	        {
-	            "title": "those two bandmates really hated each other but reconciled in 2010. they are...",
+	            "title": "Those two bandmates really hated each other but reconciled in 2010. they are...",
 	            "answers": ["nick carter & brian littrel", "justin timberlake and jc chasez", "robbie williams & gary barlow"],
 	            "correct": "robbie williams & gary barlow"
 	        },
 	        {
-	            "title": "those two bands are british:",
+	            "title": "These two bands are British:",
 	            "answers": ["five & take that", "east 17 & nkotb", "nsync and bsb"],
 	            "correct": "five & take that"
 	        },
 	        {
-	            "title": "these two bands are irish:",
+	            "title": "These two bands are Irish:",
 	            "answers": ["take that & nkotb", "east 17 & 98degrees", "westlife & boyzone"],
 	            "correct": "westlife & boyzone"
 	        },
 	        {
-	            "title": "'if you got the feeling' is a song by...",
+	            "title": "'If you got the feeling' is a song by...",
 	            "answers": ["five", "east 17", "backstreet boys"],
 	            "correct": "five"
 	        },
 	        {
-	            "title": "backstreet boys' first hit single was released in...",
+	            "title": "Backstreet Boys' first hit single was released in...",
 	            "answers": ["1995", "1994", "1997"],
 	            "correct": "1995"
 	        },
 	        {
-	            "title": "touche are a boyband from...",
+	            "title": "Touche are a boyband from...",
 	            "answers": ["germany", "belgium", "france"],
 	            "correct": "germany"
 	        },
 	        {
-	            "title": "how many members did 98degrees have?",
+	            "title": "How many members did 98degrees have?",
 	            "answers": ["five", "three", "four"],
 	            "correct": "four"
 	        }
 	    ],
 	    [{
-	            "title": "what was the name of paddy kelly's brother?",
+	            "title": "What was the name of Paddy Kelly's brother?",
 	            "answers": ["aaron", "bobbie", "angelo"],
 	            "correct": "angelo"
 	        },
 	        {
-	            "title": "which band sung 'blackhole sun?",
+	            "title": "Which band sung 'Blackhole sun?",
 	            "answers": ["soundgarden", "the smashing pumpkins", "nirvana"],
 	            "correct": "soundgarden"
 	        },
 	        {
-	            "title": "whose brother dated lindsay lohan in early 2000s?",
+	            "title": "Whose brother dated Lindsay Lohan in early 2000s?",
 	            "answers": ["nick carter's", "justin timberlake's", "mark owen's"],
 	            "correct": "nick carter's"
 	        },
 	        {
-	            "title": "member of which irish boyband came out to the public?",
+	            "title": "Member of which Irish boyband came out to the public?",
 	            "answers": ["nsync", "take that", "boyzone"],
 	            "correct": "boyzone"
 	        },
 	        {
-	            "title": "who dated paris hilton?",
+	            "title": "Who dated Paris Hilton?",
 	            "answers": ["lance bass", "nick carter", "justin timberlake"],
 	            "correct": "nick carter"
 	        },
 	        {
-	            "title": "kurt cobain's wife's name was...",
+	            "title": "Kurt Cobain's wife's name was...",
 	            "answers": ["jessica simpson", "geri halliwell", "courtney love"],
 	            "correct": "courtney love"
 	        },
 	        {
-	            "title": "which band had a duet with queen?",
+	            "title": "Which band had a duet with Queen?",
 	            "answers": ["five", "boyzone", "take that"],
 	            "correct": "five"
 	        },
 	        {
-	            "title": "furby was invented in...",
+	            "title": "Furby was invented in...",
 	            "answers": ["1995", "1998", "1997"],
 	            "correct": "1998"
 	        },
 	        {
-	            "title": "what is the name of pop dance festival held in Germany and Austria?",
+	            "title": "What is the name of pop dance festival held in Germany and Austria?",
 	            "answers": ["The Doom", "The Dance Off", "The Dome"],
 	            "correct": "The Dome"
 	        },
@@ -169,7 +169,7 @@
 
 "personality": [{
 	        "questions": [{
-	                "title": "your favourite food?",
+	                "title": "Your favourite food?",
 	                "answers": [{
 	                        "answer": "pizza",
 	                        "result": "justin"
@@ -186,7 +186,7 @@
 
 	            },
 	            {
-	                "title": "city or countryside?",
+	                "title": "City or countryside?",
 	                "answers": [{
 	                        "answer": "definitely countryside!",
 	                        "result": "paddy"
@@ -203,7 +203,7 @@
 
 	            },
 	            {
-	                "title": "favourite music?",
+	                "title": "Favourite music?",
 	                "answers": [{
 	                        "answer": "pop rock",
 	                        "result": "nick"
@@ -220,7 +220,7 @@
 
 	            },
 	            {
-	                "title": "your ideal boyfriend would be?",
+	                "title": "Your ideal boyfriend would be?",
 	                "answers": [{
 	                        "answer": "sexy and fun",
 	                        "result": "justin"
@@ -237,7 +237,7 @@
 
 	            },
 	            {
-	                "title": "your ideal date?",
+	                "title": "Your ideal date?",
 	                "answers": [{
 	                        "answer": "film night, making out",
 	                        "result": "justin"
@@ -254,7 +254,7 @@
 
 	            },
 	            {
-	                "title": "are looks important?",
+	                "title": "Are looks important?",
 	                "answers": [{
 	                        "answer": "of course they are!",
 	                        "result": "justin"
@@ -271,7 +271,7 @@
 
 	            },
 	            {
-	                "title": "describe your personal style",
+	                "title": "Describe your personal style",
 	                "answers": [{
 	                        "answer": "skinny jeans, crop top",
 	                        "result": "justin"
@@ -288,7 +288,7 @@
 
 	            },
 	            {
-	                "title": "your favourite 90s film",
+	                "title": "Your favourite 90s film",
 	                "answers": [{
 	                        "answer": "matrix",
 	                        "result": "justin"
@@ -305,7 +305,7 @@
 
 	            },
 	            {
-	                "title": "your favourite song is...",
+	                "title": "Your favourite song is...",
 	                "answers": [{
 	                        "answer": "i want you back",
 	                        "result": "justin"
@@ -331,7 +331,7 @@
 	    },
 	    {
 	        "questions": [{
-	                "title": "your friends say you are",
+	                "title": "Your friends say you are...",
 	                "answers": [{
 	                        "answer": "weird but in a good way",
 	                        "result": "phoebe"
@@ -348,7 +348,7 @@
 
 	            },
 	            {
-	                "title": "what are you like at work?",
+	                "title": "What are you like at work?",
 	                "answers": [{
 	                        "answer": "easily distracted",
 	                        "result": "phoebe"
@@ -365,7 +365,7 @@
 
 	            },
 	            {
-	                "title": "favourite music?",
+	                "title": "Favourite music?",
 	                "answers": [{
 	                        "answer": "folk, psychodelic rock",
 	                        "result": "phoebe"
@@ -382,7 +382,7 @@
 
 	            },
 	            {
-	                "title": "your ideal boyfriend would be?",
+	                "title": "Your ideal boyfriend would be?",
 	                "answers": [{
 	                        "answer": "spiritual, mysterious",
 	                        "result": "phoebe"
@@ -399,7 +399,7 @@
 
 	            },
 	            {
-	                "title": "your favourite food",
+	                "title": "Your favourite food",
 	                "answers": [{
 	                        "answer": "fruits and vegetables",
 	                        "result": "phoebe"
@@ -416,7 +416,7 @@
 
 	            },
 	            {
-	                "title": "your relationship with parents is...?",
+	                "title": "Your relationship with parents is...?",
 	                "answers": [{
 	                        "answer": "very loose",
 	                        "result": "phoebe"
@@ -433,7 +433,7 @@
 
 	            },
 	            {
-	                "title": "describe your style",
+	                "title": "Describe your style",
 	                "answers": [{
 	                        "answer": "boho/hippie",
 	                        "result": "phoebe"
@@ -450,7 +450,7 @@
 
 	            },
 	            {
-	                "title": "your favourite book?",
+	                "title": "Your favourite book?",
 	                "answers": [{
 	                        "answer": "life of pi",
 	                        "result": "phoebe"
@@ -467,7 +467,7 @@
 
 	            },
 	            {
-	                "title": "your partner should...",
+	                "title": "Your partner should...",
 	                "answers": [{
 	                        "answer": "understand me deeply",
 	                        "result": "phoebe"
@@ -495,7 +495,7 @@
 	    },
 	    {
 	        "questions": [{
-	                "title": "you are best known for your...",
+	                "title": "You are best known for your...",
 	                "answers": [{
 	                        "answer": "bravery and recklesness",
 	                        "result": "harry"
@@ -512,7 +512,7 @@
 
 	            },
 	            {
-	                "title": "what were you like at school?",
+	                "title": "What were you like at school?",
 	                "answers": [{
 	                        "answer": "excelled at 1-2 subjects",
 	                        "result": "harry"
@@ -529,7 +529,7 @@
 
 	            },
 	            {
-	                "title": "your favourite color?",
+	                "title": "Your favourite color?",
 	                "answers": [{
 	                        "answer": "red, gold, black",
 	                        "result": "harry"
@@ -546,7 +546,7 @@
 
 	            },
 	            {
-	                "title": "your ideal partner would be?",
+	                "title": "Your ideal partner would be?",
 	                "answers": [{
 	                        "answer": "someone independent and understanding",
 	                        "result": "harry"
@@ -563,7 +563,7 @@
 
 	            },
 	            {
-	                "title": "your favourite food?",
+	                "title": "Your favourite food?",
 	                "answers": [{
 	                        "answer": "home made food",
 	                        "result": "harry"
@@ -580,7 +580,7 @@
 
 	            },
 	            {
-	                "title": "your relationship with parents is...?",
+	                "title": "Your relationship with parents is...?",
 	                "answers": [{
 	                        "answer": "i look up to them",
 	                        "result": "harry"
@@ -597,7 +597,7 @@
 
 	            },
 	            {
-	                "title": "your dream profession?",
+	                "title": "Your dream profession?",
 	                "answers": [{
 	                        "answer": "journalist, traveller, enterpreneur",
 	                        "result": "harry"
@@ -614,7 +614,7 @@
 
 	            },
 	            {
-	                "title": "best film ever?",
+	                "title": "Best film ever?",
 	                "answers": [{
 	                        "answer": "matrix",
 	                        "result": "harry"
@@ -631,7 +631,7 @@
 
 	            },
 	            {
-	                "title": "your favourite animal?",
+	                "title": "Your favourite animal?",
 	                "answers": [{
 	                        "answer": "deer, eagle, lion",
 	                        "result": "harry"

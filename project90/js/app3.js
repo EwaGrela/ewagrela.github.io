@@ -78,7 +78,7 @@ $(function() {
             var resultsDiv = $("<div>");
             resultsDiv.attr("id", "resultsDiv");
             resultsDiv.appendTo(gameSection);
-            resultsDiv.text("congrats! you earned " + finalScore + " points!");
+            resultsDiv.text("Congrats! You earned " + finalScore + " points!");
             createComebackBtn(gameSection);
         }
 
