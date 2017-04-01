@@ -1,6 +1,6 @@
 $(function() {
 
-    console.log("changing")
+    console.log("changing this");
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggleClass("invisible");
@@ -47,8 +47,11 @@ $(function() {
     })
 
     //events for learn section
-
-    learnBtn.on("click", function(event) {
+    var textRef = firebase.database().ref("/texts");
+        textRef.once("value").then(function(data) {
+        texts = data.val();
+        console.log(texts);
+        learnBtn.on("click", function(event) {
         var infoBoard = $("<article>", {
             class: "infoBoard"
         });
@@ -65,14 +68,18 @@ $(function() {
         hideBtn.text("hide");
         var index = $(this).index();
         console.log(index);
+        
+
         infoParagraph.text(texts[index]);
         infoBoard.attr("id", "board" + index); //ten fragment kodu jeszcze nie wiem, czy wykorzystam - miał być, by dawać zdj. w tle inne każdemu art.
 
     })
 
 
+    });
+    
+
     learnSection.on("click", ".hideBtn", function(event) {
-        console.log("działa");
         $(this).parent().remove();
         learnArt.children("div#buttons").fadeIn(1400);
         learnArt.children("h1").show();
