@@ -4,11 +4,11 @@ $(function() {
     console.log("change");
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
+    //putting all code into the reference to the database
     testRef.once("value").then(function(data){
             quiz = data.val();
              console.log(quiz);
              //starting personality test
-    var startingBtn = $("button#psychoTest");
     startingBtn.on("click", function(event) {
         $(this).hide();
         header.hide();
@@ -43,6 +43,8 @@ $(function() {
         var questions = test.questions;
         var questionSet = questions.length;
         var index = 0;
+        testHeaderOne.hide();
+        testSectionHeader.hide();
         var siblings = $(this).siblings();
         var parent = $(this).parent();
         $(this).remove();

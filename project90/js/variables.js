@@ -54,6 +54,8 @@
 	var triviaSection = $("#triviaSection");
 	var triviaHeaderOne = triviaSection.find("h1");
 	var triviaSectionHeader = triviaSection.find("h2");
+	var testHeaderOne = testSection.find("h1");
+	var testSectionHeader = testSection.find("h2");
 	var notTestSections = $("section").not("#testSection");
 	var notTriviaSections = $("section").not("#triviaSection");
 	var boardDiv = $(".boardDiv");
