@@ -104,7 +104,8 @@ header {
 	justify-content: space-between;
 	align-items: flex-start;
 	position: relative;
-	height: 100vh;
+	height: 90vh;
+	max-height: 100vh;
 	max-width: 100vw;
 	.header-item {
 		font-family: "Fontdiner Swanky", cursive;
@@ -164,7 +165,7 @@ header {
 @for $i from 1 through 6 {
 	h#{$i} {
 		font-family: "Fontdiner Swanky";
-		color: #818181;
+		color: #a3a3a3;
 		text-shadow: 5px 5px 5px lighten($fifthColor, 10%);
 		text-align: center;
 		@media(max-width: 560px){
