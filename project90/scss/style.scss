@@ -856,10 +856,10 @@ footer {
 .startTest {
 	width: 150px;
 	height: 90px;
-	color:  #cccccc;
-	text-shadow: 4px 5px 6px $fifthColor;
+	color:  darken($fifthColor, 5%);
+	text-shadow: 4px 5px 6px white;
 	background-color: $secondaryColor;
-	font-size: $mediumFont/2.5;
+	font-size: $mediumFont/3;
 	border: none;
 	border-radius: 5%;
 	margin-top: 10px;
@@ -877,7 +877,7 @@ footer {
 		
 	}
 	&:nth-of-type(3){
-		background-image: url("../images/hp.jpg");
+		background-image: url("../images/harrypotter.jpg");
 		
 	}
 	&:hover {
@@ -900,18 +900,18 @@ footer {
 		@media( min-width: 420px){
 				width: 180px;
 				height: 120px;
-				font-size: $mediumFont/1.7;
+				font-size: $mediumFont/2.5;
 			}
 
 		@media( min-width: 796px){
 			width: 200px;
 			height: 140px;
-			font-size: $mediumFont/1.2;
+			font-size: $mediumFont/2;
 		}
 		@media( min-width: 1200px){
 			width: 240px;
 			height: 180px;
-			font-size: $mediumFont;
+			font-size: $mediumFont/1.5;
 		}
 }
 
