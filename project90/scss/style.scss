@@ -949,6 +949,7 @@ footer {
 	margin-top: 20px;
 	width: 300px;
 	height: 300px;
+	position: relative;
 	@media (min-width: 420px){
 		width: 350px;
 		height: 350px;
@@ -990,7 +991,8 @@ div.boardDiv {
 
 #coveringBtn{
 	width: 100px;
-	height: auto;
+	height: 50px;
+	position: absolute;
 	font-size: $bigFont/3.4;
 	font-family: "Fontdiner Swanky";
 	color: #efefef;
