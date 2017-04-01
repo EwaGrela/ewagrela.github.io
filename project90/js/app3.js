@@ -16,7 +16,7 @@ $(function() {
         header.hide();
         footer.hide();
         $(this).hide();
-        for (var i = 0; i < 20; i++) {
+        for (var i = 0; i <20; i++) {
             var newDiv = $("<div>", {
                 class: "boardDiv"
             });

@@ -86,11 +86,6 @@ $(function() {
     triviaRef.once("value").then(function(data) {
         test = data.val();
         console.log(test);
-        triviaSection.on("click", ".hideAlertBtn", function() {
-            //$(this).remove();
-            $(this).parent().remove();
-        })
-
 
         triviaBtn.on("click", function(event) {
             //console.log("trivia");
@@ -240,7 +235,12 @@ $(function() {
             })
 
         })
-
+        
+        triviaSection.on("click", ".hideAlertBtn", function() {
+            //$(this).remove();
+            $(this).parent().remove();
+        })
+        
         triviaSection.on("click", ".comeback", function(event) {
             location.reload();
         })
