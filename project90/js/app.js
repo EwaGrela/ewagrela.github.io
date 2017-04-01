@@ -110,9 +110,9 @@ $(function() {
         }
 
         var startTrivias = $(".startTrivia");
-        startTrivias.eq(0).text("easy");
-        startTrivias.eq(1).text("medium");
-        startTrivias.eq(2).text("hardcore");
+        startTrivias.eq(0).text("Easy");
+        startTrivias.eq(1).text("Medium");
+        startTrivias.eq(2).text("Hardcore");
 
     })
 

@@ -19,7 +19,7 @@ body:before{
   height: 100%;
   z-index: -10;
   background-color: $baseColor;
-  background-image: url("../images/camera-1851541_1920.jpg");
+  background-image: url("../images/furby-974707_1920.jpg");
   background-repeat:  no-repeat;
   background-position:  center center;
   -webkit-background-size: cover;
@@ -107,7 +107,7 @@ header {
 	height: 100vh;
 	max-width: 100vw;
 	.header-item {
-		font-family: 'Permanent Marker', cursive;
+		font-family: "Fontdiner Swanky", cursive;
 
 		&:nth-child(3) {
 			text-align: center;
@@ -162,9 +162,9 @@ header {
 }
 @for $i from 1 through 6 {
 	h#{$i} {
-		font-family: "Permanent Marker";
-		color: #565656;
-		text-shadow: 5px 5px 5px lighten(#ff6677, 15%);
+		font-family: "Fontdiner Swanky";
+		color: #333333;
+		text-shadow: 5px 5px 5px lighten($fifthColor, 10%);
 		text-align: center;
 		@media(max-width: 560px){
 			font-size: $bigFont*0.5/$i;
@@ -227,7 +227,7 @@ margin-top: 10px;
 
 nav {
 	boder: 1px solid white;
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Fontdiner Swanky", cursive;
 	display: flex;
 	margin-right: 10px;
 	border-bottom: 4px solid lighten($sixthColor, 10%);
@@ -320,8 +320,8 @@ nav {
 			margin-top: 10px;
 			background: $sixthColor;
 			color: #dddddd;
-			text-shadow: 2px 2.5px darken(#ff6688, 30%);
-			font-family: "Permanent Marker";
+			text-shadow: 2px 2.5px darken($fourthColor, 30%);
+			font-family: "Fontdiner Swanky";
 			width:180px;
 			height: 60px;
 			
@@ -459,7 +459,7 @@ nav {
 		width: 80px;
 		height: 40px;
 		font-size: $mediumFont/3;
-		font-family: 'Permanent Marker', cursive;
+		font-family: "Fontdiner Swanky", cursive;
 		transition: 0.8s;
 		@media(min-width: 600px){
 			width: 100px;
@@ -532,9 +532,9 @@ nav {
 		border: none;
 		border-radius: 5%;
 		font-size: $mediumFont/2;
-		font-family: "Permanent Marker";
+		font-family: "Fontdiner Swanky";
 		color: #eeeeee;
-		text-shadow: 2px 2px 3px #ff7777;
+		text-shadow: 2px 2px 3px $fifthColor;
 		padding-top: 60px;
 		@media (min-width:420px) {
 			width: 160px;
@@ -646,7 +646,7 @@ footer {
 		list-style: none;
 		@include layoutMixin3(transparent);
 		li {
-			color: darken(#ff6677, 5%);
+			color: darken($fourthColor, 5%);
 			text-shadow: 1px 1px #cccccc;
 			font-weight: bold;
 			font-style: italic;
@@ -672,7 +672,7 @@ footer {
 		background: #efefef;
 		border-radius: 50%;
 		padding-top: 5px;
-		color: #ff6677;
+		color: $fourthColor;
 		border: none;
 		font-family: "Raleway";
 		text-align: center;
@@ -779,7 +779,7 @@ footer {
 		width: 80px;
 		height: 40px;
 		font-size: $mediumFont/3;
-		font-family: 'Permanent Marker', cursive;
+		font-family: "Fontdiner Swanky", cursive;
 		transition: 0.8s;
 		@media(min-width: 600px){
 			width: 100px;
@@ -824,7 +824,7 @@ footer {
 	margin-top: 20px;
 	@extend %gamesBtn;
 	text-transform: uppercase;
-	font-family: "Permanent Marker";
+	font-family: "Fontdiner Swanky";
 	background-color: $baseColor;
 	color: mix($fifthColor, $sixthColor, 30%);
 	font-size: $mediumFont/2;
@@ -854,8 +854,8 @@ footer {
 .startTest {
 	width: 150px;
 	height: 90px;
-	color:  #666666;
-	text-shadow: 3px 3px $fifthColor;
+	color:  #cccccc;
+	text-shadow: 4px 5px 6px $fifthColor;
 	background-color: $secondaryColor;
 	font-size: $mediumFont/2.5;
 	border: none;
@@ -867,7 +867,7 @@ footer {
 	@extend %gamesBtn;
 	&:nth-of-type(1){
 		background-image: url("../images/lips2.jpeg");
-		text-shadow: 4px 5px 6px darken(#ff6699, 10%);
+		
 		
 	}
 	&:nth-of-type(2){
@@ -894,7 +894,7 @@ footer {
 		}
 	}
 	
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Fontdiner Swanky", cursive;
 		@media( min-width: 420px){
 				width: 180px;
 				height: 120px;
@@ -930,7 +930,7 @@ footer {
 		text-decoration: underline;
 		text-align: center;
 		color: mix($fifthColor, $sixthColor, 10%);
-		font-family: 'Permanent Marker', cursive;
+		font-family: "Fontdiner Swanky", cursive;
 		font-size: $mediumFont/2;
 		text-shadow: none;
 		@media (min-width: 560px){
@@ -971,7 +971,7 @@ div.boardDiv {
 	margin-top: 100px;
 	color: $sixthColor;
 	background: $baseColor;
-	font-family: "Permanent Marker";
+	font-family: "Fontdiner Swanky";
 	text-align: center;
 	font-size: $mediumFont/2;
 	@media(min-width:600px){
@@ -990,7 +990,7 @@ div.boardDiv {
 	width: 100px;
 	height: auto;
 	font-size: $bigFont/3.4;
-	font-family: "Permanent Marker";
+	font-family: "Fontdiner Swanky";
 	color: #efefef;
 	background-color: $fifthColor;
 	margin-top: 10px;
@@ -1053,7 +1053,7 @@ div.boardDiv {
 	text-align: center;
 	background: $secondaryColor;
 	color: $fifthColor;
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Fontdiner Swanky", cursive;
 	font-size: $bigFont/3;
 
 }
@@ -1078,7 +1078,7 @@ div.boardDiv {
 	text-align: center;
 	@extend %gamesBtn;
 	color: $baseColor;
-	text-shadow: 3px 3px #555555;
+	text-shadow: 1px 1px #555555;
 	font-size: $mediumFont/2.2;
 	border: none;
 	
@@ -1111,7 +1111,7 @@ div.boardDiv {
 		border: 2px solid darken($sixthColor, 10%);
 	}
 	
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Fontdiner Swanky", cursive;
 		@media( min-width: 420px){
 				width: 120px;
 				height: 120px;
@@ -1149,7 +1149,7 @@ div.boardDiv {
 	@media(min-width:900px) {
 		font-size: $mediumFont/1.5;
 	}
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Fontdiner Swanky", cursive;
 	text-transform: uppercase;
 	text-align: center;
 	margin-top: 10px;
@@ -1221,7 +1221,7 @@ input[type="radio"] {
 		font-family: "Raleway";
 		font-size: $mediumFont/1.5;
 		font-weight: bolder;
-		color: darken(hotpink, 10%);
+		color: darken($fourthColor, 10%);
 		width: 100%;
 		padding: 15%;
 		text-shadow: 2px 2px $sixthColor;

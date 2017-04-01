@@ -1,9 +1,9 @@
 $baseColor : #efefef;
 $secondaryColor: lighten($baseColor, 5%);
 $thirdColor: darken($baseColor, 20%);
-$fourthColor: #ff7799;
-$fifthColor: darken(#ff7799, 10%);
-$sixthColor: #ee6677;
+$fourthColor: #339999;
+$fifthColor: darken($fourthColor, 10%);
+$sixthColor:  #336699;
 $bigFont: 66px;
 $mediumFont: 42px;
 $smallFont: 20px;

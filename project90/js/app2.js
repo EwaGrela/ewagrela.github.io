@@ -30,8 +30,8 @@ $(function() {
 
         var startTest = $(".startTest");
         startTest.eq(0).text("90s boyfriend");
-        startTest.eq(1).text("friends girls");
-        startTest.eq(2).text("harry potter");
+        startTest.eq(1).text("Friends girls");
+        startTest.eq(2).text("Harry Potter");
 
 
     })
