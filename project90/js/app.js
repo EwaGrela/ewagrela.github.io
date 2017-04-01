@@ -3,7 +3,7 @@ $(function() {
 	console.log("change1")
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
-        navigation.toggle(2000);
+        navigation.toggleClass("invisible");
         hamburgerMenu.toggleClass("focus");
     });
     //event button directing to the games
