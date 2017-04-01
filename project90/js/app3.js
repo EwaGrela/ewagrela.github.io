@@ -16,6 +16,9 @@ $(function() {
         header.hide();
         footer.hide();
         $(this).hide();
+        var clickInfo = $("<p>", {class:"clickInfo"});
+        clickInfo.addClass("hidden");
+        clickInfo.prependTo(gameSection);
         for (var i = 0; i <20; i++) {
             var newDiv = $("<div>", {
                 class: "boardDiv"
@@ -28,7 +31,7 @@ $(function() {
         var coveringBtn = $("<button>", {
             id: "coveringBtn"
         });
-        coveringBtn.insertAfter(memoryBoard);
+        coveringBtn.prependTo(gameSection);
         coveringBtn.text("cover");
         coveringBtn.one("click", function(event) {
             //console.log("ok");
@@ -46,7 +49,10 @@ $(function() {
     })
 
     gameSection.on("click", ".boardDiv", function(event) {
-        clicks++
+        clicks++;
+        var clickInfo = $(".clickInfo");
+        clickInfo.removeClass("hidden");
+        clickInfo.text("Your click count is: " + clicks);
         //console.log(clicks);
         $(this).removeClass("covered");
         var target = $(this);

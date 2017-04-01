@@ -949,7 +949,8 @@ footer {
 	margin-top: 20px;
 	width: 300px;
 	height: 300px;
-	position: relative;
+	//position: relative;
+	border: 4px solid $sixthColor;
 	@media (min-width: 420px){
 		width: 350px;
 		height: 350px;
@@ -972,7 +973,7 @@ div.boardDiv {
 	width: 100%;
 	height: auto;
 	margin-top: 100px;
-	color: $sixthColor;
+	color: mix($sixthColor, $fifthColor);
 	background: $baseColor;
 	font-family: "Fontdiner Swanky";
 	text-align: center;
@@ -992,7 +993,7 @@ div.boardDiv {
 #coveringBtn{
 	width: 100px;
 	height: 50px;
-	position: absolute;
+	//position: absolute;
 	font-size: $bigFont/3.4;
 	font-family: "Fontdiner Swanky";
 	color: #efefef;
@@ -1000,6 +1001,19 @@ div.boardDiv {
 	margin-top: 10px;
 	border: none;
 	border-radius: 5%;
+}
+.clickInfo {
+	width: auto;
+	height: 60px;
+	line-height: 60px;
+	font-size: $bigFont/3;
+	font-family: "Fontdiner Swanky";
+	color: #efefef;
+	background-color: $fifthColor;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5%;
+
 }
 .tamagotchi {
 	

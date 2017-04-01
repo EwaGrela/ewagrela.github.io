@@ -6,8 +6,6 @@
 	    "macdonald", "furby", "nirvana", "fashion"
 	];
 
-	
-	
 	/*
 	variables for DOM elements
 	*/
