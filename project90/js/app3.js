@@ -17,7 +17,7 @@ $(function() {
         footer.hide();
         $(this).hide();
         var clickInfo = $("<p>", {class:"clickInfo"});
-        clickInfo.addClass("hidden");
+        clickInfo.addClass("invisible");
         clickInfo.prependTo(gameSection);
         for (var i = 0; i <20; i++) {
             var newDiv = $("<div>", {
@@ -36,7 +36,7 @@ $(function() {
         coveringBtn.one("click", function(event) {
             //console.log("ok");
             boardDiv.addClass("covered");
-            $(this).remove();
+            $(this).addClass("invisible");
         })
 
         function addRandomClass(classes) {
@@ -51,7 +51,7 @@ $(function() {
     gameSection.on("click", ".boardDiv", function(event) {
         clicks++;
         var clickInfo = $(".clickInfo");
-        clickInfo.removeClass("hidden");
+        clickInfo.removeClass("invisible");
         clickInfo.text("Your click count is: " + clicks);
         //console.log(clicks);
         $(this).removeClass("covered");
