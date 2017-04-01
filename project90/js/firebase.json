@@ -16,27 +16,27 @@
 	            "correct": "pearl jam"
 	        },
 	        {
-	            "title": "What was the name of the dance music genre popular in the 90s?",
+	            "title": "Name the dance music genre from the 90s",
 	            "answers": ["eurodance", "edm", "deep house"],
 	            "correct": "eurodance"
 	        },
 	        {
-	            "title": "What was the name of irish band consisting of family members?",
+	            "title": "Name the irish band consisting of family members",
 	            "answers": ["the moffats", "hanson", "the kelly family"],
 	            "correct": "the kelly family"
 	        },
 	        {
-	            "title": "Which of these soap operas did not run in the 90s?",
+	            "title": "Which TV show did not run in the 90s?",
 	            "answers": ["sex and the city", "gossip girl", "friends"],
 	            "correct": "gossip girl"
 	        },
 	        {
-	            "title": "What is the  other name of a state which is a birthplace of grunge music?",
+	            "title": "What is the other name of grunge birthplace?",
 	            "answers": ["the rainy state", "the evergreen state", "garden state"],
 	            "correct": "the evergreen state"
 	        },
 	        {
-	            "title": "Two frenemies from the popular 90s soap opera 'Beverly Hills 90210' were named...",
+	            "title": "Two frenemies from 'Beverly Hills 90210' are...",
 	            "answers": ["blair and serena", "brenda and kelly", "monica and rachel"],
 	            "correct": "brenda and kelly"
 	        },
@@ -46,7 +46,7 @@
 	            "correct": "nsync"
 	        },
 	        {
-	            "title": "What were the names of electronic toys kept as pets?",
+	            "title": "Which were the electronic toys kept as pets?",
 	            "answers": ["furigi and tamaru", "furby and tamagotchi", "tamagoru and fibura"],
 	            "correct": "furby and tamagotchi"
 	        },
@@ -56,7 +56,7 @@
 	            "correct": "1995"
 	        },
 	        {
-	            "title": "What was the name of the british boyband where Robbie Williams started his career?",
+	            "title": "Where did Robbie Williams start his career?",
 	            "answers": ["take that", "boyzone", "east-17"],
 	            "correct": "take that"
 	        }
@@ -68,19 +68,19 @@
 	            "correct": "backstreet boys"
 	        },
 	        {
-	            "title": "Which of these boys did not decide to go solo?",
+	            "title": "Who did not decide to go solo?",
 	            "answers": ["nick carter", "justin timberlake", "owen williams"],
 	            "correct": "owen williams"
 	        },
 	        {
-	            "title": "Who covered George Michael's 'Freedom' after leaving his band?",
+	            "title": "Who covered George Michael's 'Freedom'?",
 	            "answers": ["nick carter", "justin timberlake", "robbie williams"],
 	            "correct": "robbie williams"
 	        },
 	        {
-	            "title": "Those two bandmates really hated each other but reconciled in 2010. they are...",
-	            "answers": ["nick carter & brian littrel", "justin timberlake and jc chasez", "robbie williams & gary barlow"],
-	            "correct": "robbie williams & gary barlow"
+	            "title": "Those two hated each other but reconciled:",
+	            "answers": ["nick & brian", "justin and jc", "robbie & gary"],
+	            "correct": "robbie & gary"
 	        },
 	        {
 	            "title": "These two bands are British:",
@@ -154,12 +154,12 @@
 	            "correct": "1998"
 	        },
 	        {
-	            "title": "What is the name of pop dance festival held in Germany and Austria?",
+	            "title": "Name the pop dance festival held in Germany and Austria?",
 	            "answers": ["The Doom", "The Dance Off", "The Dome"],
 	            "correct": "The Dome"
 	        },
 	        {
-	            "title": "Nirvana's artist Dave Grohl founded another band in 1995. It was...",
+	            "title": "Nirvana's artist Dave Grohl founded another band- name it:",
 	            "answers": ["Our Lady Peace", "Foo Fighters", "Smashing Pumpkins"],
 	            "correct": "Foo Fighters"
 	        }
@@ -456,7 +456,7 @@
 	                        "result": "phoebe"
 	                    },
 	                    {
-	                        "answer": "girl with dragon tatoo",
+	                        "answer": "millenium",
 	                        "result": "monica"
 	                    },
 	                    {
@@ -469,11 +469,11 @@
 	            {
 	                "title": "Your partner should...",
 	                "answers": [{
-	                        "answer": "understand me deeply",
+	                        "answer": "understand me",
 	                        "result": "phoebe"
 	                    },
 	                    {
-	                        "answer": "support me in achieving my goals",
+	                        "answer": "support me",
 	                        "result": "monica"
 	                    },
 	                    {
@@ -548,15 +548,15 @@
 	            {
 	                "title": "Your ideal partner would be?",
 	                "answers": [{
-	                        "answer": "someone independent and understanding",
+	                        "answer": "independent and understanding",
 	                        "result": "harry"
 	                    },
 	                    {
-	                        "answer": "someone making me smile",
+	                        "answer": "make me smile",
 	                        "result": "hermione"
 	                    },
 	                    {
-	                        "answer": "someone helping me reach my potential",
+	                        "answer": "help me reach my potential",
 	                        "result": "ron"
 	                    }
 	                ]
@@ -586,11 +586,11 @@
 	                        "result": "harry"
 	                    },
 	                    {
-	                        "answer": "we are very different but i love them",
+	                        "answer": "we are very different",
 	                        "result": "hermione"
 	                    },
 	                    {
-	                        "answer": "we are every close",
+	                        "answer": "we are very close",
 	                        "result": "ron"
 	                    }
 	                ]
@@ -599,11 +599,11 @@
 	            {
 	                "title": "Your dream profession?",
 	                "answers": [{
-	                        "answer": "journalist, traveller, enterpreneur",
+	                        "answer": "journalist, traveller",
 	                        "result": "harry"
 	                    },
 	                    {
-	                        "answer": "scientist, activist, web developer, doctor",
+	                        "answer": "scientist, web developer, doctor",
 	                        "result": "hermione"
 	                    },
 	                    {
