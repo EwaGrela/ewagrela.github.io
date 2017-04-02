@@ -35,7 +35,7 @@ function createAlertBox(element) {
     alertBox.prependTo(element);
     alertP.appendTo(alertBox)
     alertP.text(alertText);
-    alertBox.css("background", background).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center").css("background-color", " rgba(255,255,255, 0.8)");
+    alertBox.css("background", background).css("background-repeat", "no-repeat").css("background-size", "contain").css("background-position", "top center").css("background-color", " rgba(255,255,255, 0.95)");
     var hideAlertBtn = $("<button>", {
       	class: "hideAlertBtn"
     });

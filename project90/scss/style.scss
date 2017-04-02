@@ -992,9 +992,9 @@ footer {
 }
 
 .startTest {
-	width: 80px;
+	width: 60px;
 	height: 45px;
-	background-color:  darken($sixthColor, 5%);
+	background-color:darken($sixthColor, 5%);
 	color: white;
 	font-size: $mediumFont/3;
 	border-radius: 5%;
@@ -1003,9 +1003,10 @@ footer {
 	transition: 2s;
 	border: none;
 	@media(min-height:560px){
-		width: 150px;
-		height: 45px;
-		@media(min-width:568px){
+
+		@media(min-width:600px){
+			width: 100px;
+			height: 45px;
 			&:nth-of-type(2n+1){
 			align-self: flex-start;
 			margin-left: 20%;
@@ -1025,18 +1026,18 @@ footer {
 	
 	font-family: "Fontdiner Swanky", cursive;
 		@media( min-width: 420px){
-				width: 180px;
+				width: 100px;
 				height: 60px;
 				font-size: $mediumFont/2.5;
 			}
 
 		@media( min-width: 796px){
-			width: 200px;
+			width: 150px;
 			height: 70px;
 			font-size: $mediumFont/2;
 		}
 		@media( min-width: 1200px){
-			width: 240px;
+			width: 200px;
 			height: 80px;
 			font-size: $mediumFont/1.5;
 		}
@@ -1045,9 +1046,10 @@ footer {
 
 #testBoard {
 	@include layoutMixin3($baseColor);
-	border: 1px solid orange;
+	//border: 1px solid orange;
 	max-width: 90%;
 	height: auto;
+	max-height: 95%;
 	//border: 1px solid blue;
 	margin: 0 auto;
 	padding: 20px;
@@ -1210,10 +1212,11 @@ div.boardDiv {
 #triviaBoard {
 	
 	@extend %gamesBtn;
-	border: 1px solid purple;
+	//border: 1px solid purple;
 	@include layoutMixin3($secondaryColor);
 	max-width: 90%;
 	height: auto;
+	max-height: 95%;
 	/*
 	@media(min-height: 560px){
 		max-height: 265px;
@@ -1310,25 +1313,26 @@ div.boardDiv {
 	}
 	font-family: "Fontdiner Swanky", cursive;
 	text-align: center;
-	margin-top: 10px;
 	text-shadow: none;
+	margin-top: 10px;
 }
 
 .quizDiv {
 	@include layoutMixin2($secondaryColor);
 	//border: 1px solid red;
-	margin-top: 40px;
+	margin-top: 10px;
 	width: 80%;
-	min-height: 200px;
+	height: auto;
 	margin: 0 auto;
 	label {
 		background: $baseColor;
 		//border: 1px solid $secondaryColor;
 		width: 80%;
-		height: 50px;
+		height: 45px;
 		line-height: 45px;
 		margin-top: 2px;
 		font-family: "Raleway";
+		text-overflow: ellipsis;
 		text-transform: uppercase;
 		color: $fifthColor;
 		font-weight: bold;
@@ -1359,7 +1363,7 @@ input[type="radio"] {
 	border: none;
 	height: 30px;
 	width: 60px;
-	margin-top: 10px;
+	margin: 10px 0px;
 	line-height: 30px;
 	border-radius: 4%;
 	text-align: center;
