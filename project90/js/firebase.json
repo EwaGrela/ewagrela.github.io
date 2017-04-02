@@ -21,7 +21,7 @@
 	            "correct": "eurodance"
 	        },
 	        {
-	            "title": "Name the irish band consisting of family members",
+	            "title": "Name the Irish band consisting of family members",
 	            "answers": ["the moffats", "hanson", "the kelly family"],
 	            "correct": "the kelly family"
 	        },
@@ -78,7 +78,7 @@
 	            "correct": "robbie williams"
 	        },
 	        {
-	            "title": "Those two hated each other but reconciled:",
+	            "title": "Those two hated each other, but reconciled:",
 	            "answers": ["nick and brian", "justin and jc", "robbie and gary"],
 	            "correct": "robbie and gary"
 	        },
