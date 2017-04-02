@@ -290,7 +290,7 @@ nav {
 		height: 80%;
 		margin-right: 20px;
 		margin-left: 35px;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		
 		li {
 			color:  #666666;
@@ -545,7 +545,10 @@ nav {
 	article {
 		//border: 1px solid orange;
 		width: 95%;
-		min-height: 320px;
+		height:auto;
+		@media(min-height: 450px){
+			min-height: 320px;
+		}
 		
 		@include layoutMixin6($baseColor);
 		@media(min-width: 530px){
@@ -827,7 +830,7 @@ footer {
 		border-radius: 20%;
 		width: auto;
 		height: auto;
-		font-size: $mediumFont/3;
+		font-size: $mediumFont/3.5;
 		font-family: "Fontdiner Swanky", cursive;
 		transition: 0.8s;
 		&:hover {
@@ -1293,7 +1296,7 @@ div.boardDiv {
 	//border: 1px solid red;
 	margin-top: 10px;
 	width: 80%;
-	min-height: 220px;
+	min-height: 200px;
 	margin: 0 auto;
 	label {
 		background: $baseColor;
@@ -1347,6 +1350,10 @@ input[type="radio"] {
 	z-index: 2;
 	//border: 1px solid black;
 	text-align: center;
+	animation-name: appear;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
 	@include layoutMixin2($baseColor);
 	justify-content: flex-end;
 	p{
