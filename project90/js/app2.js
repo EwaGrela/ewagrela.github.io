@@ -4,7 +4,7 @@ $(function() {
     console.log("changes");
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
-    //putting all code inside the reference to the database
+    //putting all code inside the reference to the database -so the data is accessed
     testRef.once("value").then(function(data) {
         quiz = data.val();
         console.log(quiz);

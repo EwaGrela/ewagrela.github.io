@@ -69,9 +69,11 @@ $(function() {
         var index = $(this).index();
         console.log(index);
         
+        var photoDiv = $("<div>", {class: "photoDiv"});
+        photoDiv.insertAfter(infoParagraph);
+        photoDiv.attr("id", "board" + (index+1)); //ten fragment kodu jeszcze nie wiem, czy wykorzystam - miał być, by dawać zdj. w tle inne każdemu art.
 
         infoParagraph.text(texts[index]);
-        infoBoard.attr("id", "board" + index); //ten fragment kodu jeszcze nie wiem, czy wykorzystam - miał być, by dawać zdj. w tle inne każdemu art.
 
     })
 
@@ -90,7 +92,7 @@ $(function() {
     //events for trivia game - dynamic 
 
     var triviaRef = firebase.database().ref("/quizes");
-    triviaRef.once("value").then(function(data) {
+    triviaRef.once("value").then(function(data) { //put it inside the reference to the database, so the code is accessed
         test = data.val();
         console.log(test);
 
@@ -200,13 +202,13 @@ $(function() {
                 });
                 resultsBoard.prependTo(triviaBoard);
                 if (points < questionSet / 2) {
-                    resultsBoard.text(points + "/" + questionSet + " points, learn a bit more");
+                    resultsBoard.text(points + " out of " + questionSet + " points, learn a bit more");
                 }
                 if (points >= questionSet / 2 && points < questionSet / 1.25) {
-                    resultsBoard.text(points + "/" + questionSet + " points! not bad at all!");
+                    resultsBoard.text(points + " out of " + questionSet + " points! not bad at all!");
                 }
                 if (points >= questionSet / 1.25) {
-                    resultsBoard.text(points + "/" + questionSet + " points! a true 90s kid!");
+                    resultsBoard.text(points + " out of " + questionSet + " points! a true 90s kid!");
                 }
 
                 createComebackBtn(resultsBoard);
@@ -221,7 +223,7 @@ $(function() {
                     console.log(value);
                     if (value === "true") {
                         points++;
-                        console.log(points);
+                        //console.log(points);
                     }
                     if (value === undefined) {
                         createAlertBox($("#triviaBoard"));

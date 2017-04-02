@@ -11,7 +11,7 @@ body:before{
   content: "";
   display: block;
   position: fixed;
-  opacity: 0.55;
+  opacity: 0.65;
   left: 0;
   top: 0;
   width: 100%;
@@ -164,8 +164,8 @@ header {
 @for $i from 1 through 6 {
 	h#{$i} {
 		font-family: "Fontdiner Swanky";
-		color: #626262;
-		text-shadow: 6px 6px 6px lighten($fifthColor, 10%);
+		color: #383838;
+		text-shadow: 6px 6px 6px silver;
 		text-align: center;
 		@media(max-width: 560px){
 			font-size: $bigFont*0.5/$i;
@@ -429,6 +429,7 @@ nav {
 
 #learnSection{
 	@include layoutMixin3(#ee6677);
+	height: auto;
 	min-height: 450px;
 	max-width: 100vw;
 	position:relative;
@@ -766,9 +767,10 @@ footer {
     	font-weight: bold;
 		text-align: center;
 		margin: 0 auto;
-		height: 60%;
+		height: auto;
 		width: 90%;
-		color: darken($thirdColor, 20%);
+		color: #777777;
+		font-weight: bolder;
 		font-size: $mediumFont/2.9;
 		@media(min-width: 600px){
 			font-size: $mediumFont/1.9;
@@ -782,8 +784,8 @@ footer {
 	button {
 		background:  $sixthColor;
 		border-radius: 20%;
-		width: 80px;
-		height: 40px;
+		width: auto;
+		height: auto;
 		font-size: $mediumFont/3;
 		font-family: "Fontdiner Swanky", cursive;
 		transition: 0.8s;
@@ -813,6 +815,85 @@ footer {
 	}
 
 }
+
+@for $i from 1 through 13 {
+	#board#{$i} {
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		//filter: grayscale(100%);
+
+	}
+}
+
+.photoDiv {
+	width: 200px;
+	height: 200px;
+	filter: grayscale(80%);
+	@media(min-width: 600px){
+		height: 300px;
+		width: 300px;
+	}
+	
+}
+#board1{
+	background-image: url("../images/eurodance.jpg");
+}
+#board2{
+	background-image: url("../images/girlpower.jpg");
+
+}
+#board3{
+	background-image: url("../images/boybands.jpg");
+	//color: white;
+	
+}
+#board4{
+	background-image: url("../images/clueless.jpg");
+}
+#board5{
+	background-image: url("../images/newage.jpg");
+	background-position: center center;
+	
+}
+#board6{
+	background-image: url("../images/nirvana2.jpg");
+	
+}
+#board7{
+	background-image: url("../images/beverlyhills(creditfox).jpg");
+}
+#board8{
+	background-image: url("../images/bravo.jpg");
+	
+}
+#board9{
+	background-image: url("../images/zeitgeist.jpg");
+	
+}
+#board10{
+	background-image: url("../images/klan.jpg");
+	
+}
+
+#board11{
+	background-image: url("../images/Banner.png");
+	
+	
+}
+
+#board12{
+	background-image: url("../images/polandlifestyle.jpg");
+	
+}
+#board13{
+	background-image: url("../images/mcd.jpg");
+	
+}
+
+
+
+
 
 
 /* for games */
@@ -909,7 +990,7 @@ footer {
 	//border: 1px solid orange;
 	max-width: 90%;
 	height: auto;
-	max-height: 300px;
+	max-height: 265px;
 	margin: 0 auto;
 	padding: 20px;
 	background: $secondaryColor;
@@ -1075,7 +1156,7 @@ div.boardDiv {
 	@include layoutMixin3($secondaryColor);
 	max-width: 90%;
 	height: auto;
-	max-height: 275px;
+	max-height: 265px;
 	margin: 0 auto;
 	margin-top: 20px;
 	background-color: $secondaryColor;
@@ -1153,6 +1234,8 @@ div.boardDiv {
 .title {
 	color: $sixthColor;
 	font-size: $mediumFont/3;
+	text-decoration: underline;
+
 	@media(min-width: 600px){
 		font-size: $mediumFont/2.2;
 	}
@@ -1175,7 +1258,7 @@ div.boardDiv {
 	label {
 		background: $baseColor;
 		//border: 1px solid $secondaryColor;
-		width: 100%;
+		width: 80%;
 		height: 50px;
 		line-height: 50px;
 		margin-top: 2px;
@@ -1258,7 +1341,7 @@ input[type="radio"] {
 	margin-bottom: 20px;
 	width: 90%;
 	min-height: 300px;
-	@include layoutMixin3($secondaryColor);
+	@include layoutMixin3(transparent);
 	font-family: "Raleway";
 	font-weight: bold;
 	color: $fifthColor;

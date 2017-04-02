@@ -79,18 +79,18 @@
 	        },
 	        {
 	            "title": "Those two hated each other but reconciled:",
-	            "answers": ["nick & brian", "justin and jc", "robbie & gary"],
-	            "correct": "robbie & gary"
+	            "answers": ["nick and brian", "justin and jc", "robbie and gary"],
+	            "correct": "robbie and gary"
 	        },
 	        {
 	            "title": "These two bands are British:",
-	            "answers": ["five & take that", "east 17 & nkotb", "nsync and bsb"],
-	            "correct": "five & take that"
+	            "answers": ["five and take that", "east 17 and nkotb", "nsync and bsb"],
+	            "correct": "five and take that"
 	        },
 	        {
 	            "title": "These two bands are Irish:",
-	            "answers": ["take that & nkotb", "east 17 & 98degrees", "westlife & boyzone"],
-	            "correct": "westlife & boyzone"
+	            "answers": ["take that and nkotb", "east 17 and 98degrees", "westlife and boyzone"],
+	            "correct": "westlife and boyzone"
 	        },
 	        {
 	            "title": "'If you got the feeling' is a song by...",
