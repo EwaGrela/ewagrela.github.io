@@ -209,13 +209,13 @@ header {
 		text-shadow: 6px 6px 6px silver;
 		text-align: center;
 		@media(max-width: 560px){
-			font-size: $bigFont*0.5/$i;
+			font-size: $bigFont*0.4/$i;
 		}
 		@media(min-width: 561px){
-			font-size: $bigFont*0.7/$i;
+			font-size: $bigFont*0.6/$i;
 		}
 		@media(min-width: 796px){
-			font-size: $bigFont*0.9/$i;
+			font-size: $bigFont*0.8/$i;
 		}
 		
 	}
@@ -546,7 +546,7 @@ nav {
 		//border: 1px solid orange;
 		width: 95%;
 		height:auto;
-		@media(min-height: 450px){
+		@media(min-height: 560px){
 			min-height: 320px;
 			@include layoutMixin6($baseColor);
 		}
@@ -574,8 +574,8 @@ nav {
 }
 	
 .games{
-		width: 100px;
-		height: 100px;
+		width: 80px;
+		height: 80px;
 		margin: 5px;
 		background: $sixthColor;
 		border: none;
@@ -584,10 +584,10 @@ nav {
 		font-family: "Fontdiner Swanky";
 		color: #eeeeee;
 		text-shadow: 2px 2px 3px $fifthColor;
-		padding-top: 60px;
+		padding-top: 40px;
 		@media (min-width:420px) {
-			width: 130px;
-			height: 130px;
+			width: 100px;
+			height: 100px;
 			font-size: $mediumFont/2;
 			transition: 1s;
 			&:hover {
@@ -595,13 +595,14 @@ nav {
 			}
 		}
 		@media(min-width:600px){
-			width: 160px;
-			height: 160px;
+			width: 140px;
+			height: 140px;
 			font-size: $mediumFont/1.7;
 		}
 		@media(min-width:1200px){
-			width: 220px;
-			height: 220px;
+			width: 200px;
+			height: 200px;
+			
 			font-size: $mediumFont/1.4;
 		}
 	
@@ -632,11 +633,14 @@ nav {
 
 #triviaSection, #testSection {
 	@include layoutMixin3($baseColor);
-	padding: 0px 20px;
-	max-width: 100vw;
-	display: none;
+	margin: 0 auto;
+	margin-top: 50px;
 	height: auto;
 	max-height: 87.5vh;
+	width: 90vw;
+	max-width: 100vw;
+	display: none;
+
 	//border: 1px solid blue;
 }
 
@@ -979,7 +983,7 @@ footer {
 	@include layoutMixin4($secondaryColor);
 	width: 100%;
 	height: auto;
-	@media(min-height:450px){
+	@media(min-height:560px){
 		max-height: 250px;
 		@include layoutMixin3($secondaryColor);
 	}
@@ -990,10 +994,6 @@ footer {
 .startTest {
 	width: 80px;
 	height: 45px;
-	@media(min-height: 450px){
-		width: 150px;
-		height: 45px;
-	}
 	background-color:  darken($sixthColor, 5%);
 	color: white;
 	font-size: $mediumFont/3;
@@ -1002,21 +1002,27 @@ footer {
 	margin-bottom: 10px;
 	transition: 2s;
 	border: none;
+	@media(min-height:560px){
+		width: 150px;
+		height: 45px;
+		@media(min-width:568px){
+			&:nth-of-type(2n+1){
+			align-self: flex-start;
+			margin-left: 20%;
+
+			}
+			&:nth-of-type(2n){
+				align-self: flex-end;
+				margin-right: 20%;
+				
+			}
+		}
+	}
+	
 	&:hover {
 		transform: scale(1.2)translate(0px, 10px);
 	}
-	@media(min-width:568px){
-		&:nth-of-type(2n+1){
-		align-self: flex-start;
-		margin-left: 20%;
-
-		}
-		&:nth-of-type(2n){
-			align-self: flex-end;
-			margin-right: 20%;
-			
-		}
-	}
+	
 	font-family: "Fontdiner Swanky", cursive;
 		@media( min-width: 420px){
 				width: 180px;
@@ -1039,14 +1045,10 @@ footer {
 
 #testBoard {
 	@include layoutMixin3($baseColor);
-	//border: 1px solid orange;
+	border: 1px solid orange;
 	max-width: 90%;
 	height: auto;
-	max-height: 90%;
 	//border: 1px solid blue;
-	@media(min-height: 450px){
-		max-height: 265px;
-	}
 	margin: 0 auto;
 	padding: 20px;
 	background: $secondaryColor;
@@ -1208,23 +1210,24 @@ div.boardDiv {
 #triviaBoard {
 	
 	@extend %gamesBtn;
-	//border: 1px solid purple;
+	border: 1px solid purple;
 	@include layoutMixin3($secondaryColor);
 	max-width: 90%;
 	height: auto;
-	max-height: 160px;
-	@media(min-height: 450px){
+	/*
+	@media(min-height: 560px){
 		max-height: 265px;
 		@include layoutMixin3($secondaryColor);
 	}
+	*/
+	
 	margin: 0 auto;
-	margin-top: 20px;
 	background-color: $secondaryColor;
 
 }
 
 .startTrivia {
-	width: 80px;
+	width: auto;
 	height: auto;
 	text-align: center;
 	@extend %gamesBtn;
@@ -1246,7 +1249,7 @@ div.boardDiv {
 		align-self: flex-end;
 		margin-right: 10px;
 	}
-	@media(min-height: 450px){
+	@media(min-height: 560px){
 		&:nth-of-type(2n+1){
 		align-self: flex-start;
 		margin-left: 25%;
@@ -1278,20 +1281,14 @@ div.boardDiv {
 	
 	font-family: "Fontdiner Swanky", cursive;
 		@media( min-width: 600px){
-				width: 140px;
-				height: 80px;
 				font-size: $mediumFont/1.9;
 			}
 
 		@media( min-width: 800px){
-			width: 180px;
-			height: 80px;
 			font-size: $mediumFont/1.5;
 			
 		}
 		@media( min-width: 1200px){
-			width: 200px;
-			height: 85px;
 			font-size: $mediumFont;
 			
 		}
@@ -1320,7 +1317,7 @@ div.boardDiv {
 .quizDiv {
 	@include layoutMixin2($secondaryColor);
 	//border: 1px solid red;
-	margin-top: 10px;
+	margin-top: 40px;
 	width: 80%;
 	min-height: 200px;
 	margin: 0 auto;
@@ -1329,7 +1326,7 @@ div.boardDiv {
 		//border: 1px solid $secondaryColor;
 		width: 80%;
 		height: 50px;
-		line-height: 50px;
+		line-height: 45px;
 		margin-top: 2px;
 		font-family: "Raleway";
 		text-transform: uppercase;
@@ -1360,9 +1357,10 @@ input[type="radio"] {
 		color: darken(white, 20%);
 	}
 	border: none;
-	height: 40px;
-	width: 80px;
-	line-height: 40px;
+	height: 30px;
+	width: 60px;
+	margin-top: 10px;
+	line-height: 30px;
 	border-radius: 4%;
 	text-align: center;
 	text-transform: uppercase;
