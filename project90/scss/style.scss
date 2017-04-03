@@ -652,7 +652,7 @@ nav {
 #triviaSection, #testSection {
 	@include layoutMixin3($baseColor);
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-top: 150px;
 	height: auto;
 	max-height: 100vh;
 	width: 80vw;
