@@ -1151,7 +1151,6 @@ div.boardDiv {
 #resultsDiv {
 	width: 100%;
 	height: auto;
-	margin-top: 100px;
 	color: mix($sixthColor, $fifthColor);
 	background: $baseColor;
 	font-family: "Fontdiner Swanky";
@@ -1184,8 +1183,7 @@ div.boardDiv {
 }
 .clickInfo {
 	width: auto;
-	height: 60px;
-	line-height: 60px;
+	height: auto;
 	font-size: $bigFont/3;
 	font-family: "Fontdiner Swanky";
 	color: #efefef;
