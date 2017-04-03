@@ -42,3 +42,10 @@ function createAlertBox(element) {
     hideAlertBtn.appendTo(alertBox);
     hideAlertBtn.text("sorry!");
 }
+
+function createGameOverBoard(element){
+    var gameOver = $("<div>", {class: "gameOver"});
+    gameOver.appendTo(element);
+    $("#gameBoard").remove();
+    gameOver.text("game over!!!")
+}

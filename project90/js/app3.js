@@ -16,6 +16,7 @@ $(function() {
         header.hide();
         footer.hide();
         $(this).hide();
+
         var clickInfo = $("<p>", {class:"clickInfo"});
         clickInfo.addClass("invisible");
         clickInfo.prependTo(gameSection);
@@ -47,10 +48,45 @@ $(function() {
         addRandomClass(classes);
 
     })
+    		
+    gameSection.one("click", ".boardDiv", function(event){
+    		var timeInfo = $("<p>", {class:"clickInfo"});
+    		var clickInfo =$(".clickInfo").eq(0);
+        	timeInfo.insertAfter(clickInfo);
+        	timeInfo.addClass("invisible");
+
+        	var seconds = 100;
+
+        	timeInfo.text("Time remaining: " + seconds +" seconds");
+    		timeInfo.removeClass("invisible");
+    		
+    		
+        	var interval = setInterval(function() {
+            var newSeconds = seconds -1;
+            seconds = newSeconds;
+            console.log(newSeconds);
+            var opaqueDivs = $(".opaque");
+            console.log(opaqueDivs.length);
+            timeInfo.text("Time remaining: " + newSeconds + " seconds");
+            if((newSeconds === 0) && (opaqueDivs.length<20)){
+            	clearInterval(interval);  
+            	createGameOverBoard(gameSection);
+            	createComebackBtn(gameSection);
+            	//timeInfo.remove();
+            	
+            }
+            if(opaqueDivs.length===20){
+            	clearInterval(interval);
+            }
+          
+        }, 1000);
+
+        
+    })
 
     gameSection.on("click", ".boardDiv", function(event) {
         clicks++;
-        var clickInfo = $(".clickInfo");
+        var clickInfo = $(".clickInfo").eq(0);
         clickInfo.removeClass("invisible");
         clickInfo.text("Your click count is: " + clicks);
         //console.log(clicks);
@@ -85,6 +121,8 @@ $(function() {
             resultsDiv.attr("id", "resultsDiv");
             resultsDiv.appendTo(gameSection);
             resultsDiv.text("Congrats! You earned " + finalScore + " points!");
+            //clearInterval(interval);
+            //$(".clickInfo").eq(1).remove();
             createComebackBtn(gameSection);
         }
 

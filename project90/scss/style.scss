@@ -1107,11 +1107,7 @@ footer {
 		}
 	}
 	
-
-
-
-
-#gameBoard {
+#gameBoard, .gameOver {
 	@include gamesBoards($baseColor);
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -1130,6 +1126,21 @@ footer {
 	background: lighten($baseColor, 15%);
 		
 }
+
+.gameOver {
+	height: auto;
+	text-transform: uppercase;
+	font-size: $mediumFont/1.5;
+	color: $fifthColor;
+	border: none;
+	background-color: $baseColor;
+	font-family: "Fontdiner Swanky";
+	margin-bottom: 5px;
+}
+
+
+
+
 
 div.boardDiv {
 		width: 19%;
