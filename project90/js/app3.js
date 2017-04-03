@@ -16,10 +16,13 @@ $(function() {
         header.hide();
         footer.hide();
         $(this).hide();
-
+        var gameInfo = $("<article>", {id: "gameInfo"});
+        gameInfo.prependTo(gameSection);
         var clickInfo = $("<p>", {class:"clickInfo"});
         clickInfo.addClass("invisible");
-        clickInfo.prependTo(gameSection);
+        clickInfo.prependTo(gameInfo);
+        
+
         for (var i = 0; i <20; i++) {
             var newDiv = $("<div>", {
                 class: "boardDiv"
@@ -57,7 +60,7 @@ $(function() {
 
         	var seconds = 100;
 
-        	timeInfo.text("Time remaining: " + seconds +" seconds");
+        	timeInfo.text(" time: " + seconds);
     		timeInfo.removeClass("invisible");
     		
     		
@@ -67,7 +70,7 @@ $(function() {
             console.log(newSeconds);
             var opaqueDivs = $(".opaque");
             console.log(opaqueDivs.length);
-            timeInfo.text("Time remaining: " + newSeconds + " seconds");
+            timeInfo.text(" time: " + newSeconds);
             if((newSeconds === 0) && (opaqueDivs.length<20)){
             	clearInterval(interval);  
             	createGameOverBoard(gameSection);
@@ -88,7 +91,7 @@ $(function() {
         clicks++;
         var clickInfo = $(".clickInfo").eq(0);
         clickInfo.removeClass("invisible");
-        clickInfo.text("Your click count is: " + clicks);
+        clickInfo.text(" clicks: " + clicks);
         //console.log(clicks);
         $(this).removeClass("covered");
         var target = $(this);
@@ -107,8 +110,7 @@ $(function() {
                 }, 1000)
                 divsSameClass.addClass("opaque");
                 points++;
-                //console.log(points, clicks);
-
+                
             }
 
         }
