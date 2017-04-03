@@ -538,6 +538,7 @@ nav {
 	height: auto;
 	min-width: 300px;
 	max-width: 100vw;
+	margin-top: 50px;
 	@include layoutMixin6($baseColor);
 		h1 {
 		font-size: $mediumFont/2;
@@ -1107,13 +1108,11 @@ footer {
 	}
 	
 #gameBoard, .gameOver {
-	@include gamesBoards($baseColor);
-	margin-top: 10px;
-	margin-bottom: 10px;
+	@include gamesBoards(inherit);
 	width: 300px;
 	height: 300px;
 	//position: relative;
-	border: 2px solid $sixthColor;
+	
 	@media (min-width: 420px){
 		width: 320px;
 		height: 320px;
@@ -1194,7 +1193,7 @@ div.boardDiv {
 }
 #gameInfo {
 	@include layoutMixin4($baseColor);
-	width: 300px;
+	width: 50%;
 	height: 60px;
 	margin-top: 4px;
 }
