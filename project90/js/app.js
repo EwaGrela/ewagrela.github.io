@@ -1,5 +1,5 @@
 $(function() {
-
+    console.log("testing");
     //keeping page in position
      $('body').scrollTop(0);
     //showing content of hamburger menu

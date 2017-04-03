@@ -652,7 +652,7 @@ nav {
 #triviaSection, #testSection {
 	@include layoutMixin3($baseColor);
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-bottom: 50px;
 	height: auto;
 	max-height: 100vh;
 	width: 80vw;
@@ -1084,7 +1084,7 @@ footer {
 #testBoard {
 	@include layoutMixin3($baseColor);
 	//border: 1px solid orange;
-	max-width: 90%;
+	max-width: 100%;
 	height: auto;
 	min-height: 50%;
 	max-height: 85%;
@@ -1252,7 +1252,7 @@ div.boardDiv {
 	@extend %gamesBtn;
 	//border: 1px solid purple;
 	@include layoutMixin3($secondaryColor);
-	max-width: 90%;
+	max-width: 100%;
 	height: auto;
 	min-height: 50%;
 	max-height: 85%;
