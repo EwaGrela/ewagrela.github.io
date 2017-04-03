@@ -1,7 +1,7 @@
 //functions for personality test
 $(function() {
 
-    console.log("changes");
+     $('body').scrollTop(0);
     var collectedAnswers = [];
     var testRef = firebase.database().ref("/personality");
     //putting all code inside the reference to the database -so the data is accessed

@@ -540,12 +540,30 @@ nav {
 	min-width: 300px;
 	max-width: 100vw;
 	@include layoutMixin6($baseColor);
-	
+		h1 {
+		font-size: $mediumFont/2;
+		@media(min-width: 600px){
+			font-size: $mediumFont/1.5;
+		}
+		@media(min-width: 1200px){
+			font-size: $mediumFont;
+		}
+	}
+	h2 {
+		font-size: $mediumFont/2.5;
+		@media(min-width: 600px){
+			font-size: $mediumFont/2;
+		}
+		@media(min-width: 1200px){
+			font-size: $mediumFont/1.5;
+		}
+	}
 
 	article {
 		//border: 1px solid orange;
 		width: 95%;
 		height:auto;
+		max-height: 50%;
 		@media(min-height: 560px){
 			min-height: 320px;
 			@include layoutMixin6($baseColor);
@@ -636,12 +654,31 @@ nav {
 	margin: 0 auto;
 	margin-top: 50px;
 	height: auto;
-	max-height: 87.5vh;
-	width: 90vw;
+	max-height: 100vh;
+	width: 80vw;
 	max-width: 100vw;
 	display: none;
 
 	//border: 1px solid blue;
+
+	h1 {
+		font-size: $mediumFont/2;
+		@media(min-width: 600px){
+			font-size: $mediumFont/1.5;
+		}
+		@media(min-width: 1200px){
+			font-size: $mediumFont;
+		}
+	}
+	h2 {
+		font-size: $mediumFont/2.5;
+		@media(min-width: 600px){
+			font-size: $mediumFont/2;
+		}
+		@media(min-width: 1200px){
+			font-size: $mediumFont/1.5;
+		}
+	}
 }
 
 
@@ -1049,7 +1086,8 @@ footer {
 	//border: 1px solid orange;
 	max-width: 90%;
 	height: auto;
-	max-height: 95%;
+	min-height: 50%;
+	max-height: 85%;
 	//border: 1px solid blue;
 	margin: 0 auto;
 	padding: 20px;
@@ -1216,14 +1254,8 @@ div.boardDiv {
 	@include layoutMixin3($secondaryColor);
 	max-width: 90%;
 	height: auto;
-	max-height: 95%;
-	/*
-	@media(min-height: 560px){
-		max-height: 265px;
-		@include layoutMixin3($secondaryColor);
-	}
-	*/
-	
+	min-height: 50%;
+	max-height: 85%;
 	margin: 0 auto;
 	background-color: $secondaryColor;
 

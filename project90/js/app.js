@@ -1,6 +1,7 @@
 $(function() {
 
-    console.log("changing this");
+    //keeping page in position
+     $('body').scrollTop(0);
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggleClass("invisible");
