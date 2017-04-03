@@ -1,9 +1,8 @@
 // events for memory game:
 
 $(function() {
-    console.log("DOM loaded");
     //keeping scroll in position
-     $('body').scrollTop(0);
+    $('body').scrollTop(0);
     var points = 0;
     var clicks = 0;
     initiatingBtn.on("click", function(event) {

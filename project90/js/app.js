@@ -1,5 +1,4 @@
 $(function() {
-    console.log("testing");
     //keeping page in position
      $('body').scrollTop(0);
     //showing content of hamburger menu
@@ -8,7 +7,6 @@ $(function() {
         hamburgerMenu.toggleClass("focus");
     });
     //event button directing to the games
-
     toTheGamesBtn.on("click", function(event) {
         //event.preventDefault();
         var href = $(this).attr("href");
