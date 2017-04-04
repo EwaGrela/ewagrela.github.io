@@ -1,0 +1,89 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: lighten( #669999, 30%);
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 200px;
+}
+h1, h2, h3{
+	text-align: center;
+	color:  darken(#669999, 10%);
+}
+h1 {
+	font-family: "Indie Flower";
+	font-size: 35px;
+	@media(min-width: 560px){
+		font-size: 40px;
+	}
+	@media(min-width: 1100px){
+		font-size: 45px;
+	}
+}
+
+h2 {
+	font-family: "Indie Flower";
+	font-size: 25px;
+	@media(min-width: 560px){
+		font-size: 30px;
+	}
+	@media(min-width: 1100px){
+		font-size: 40px;
+	}
+}
+h3 {
+	font-family: "Indie Flower";
+	font-size: 25px;
+	@media(min-width: 560px){
+		font-size: 30px;
+	}
+	@media(min-width: 1100px){
+		font-size: 35px;
+	}
+}
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	button {
+		border: none;
+		background: #669999;
+		border-radius: 5%;
+		color: white;
+		height: auto;
+		width: auto;
+		font-size: 20px;
+	}
+
+	p {
+		background-color: inherit;
+		margin-top: 20px;
+		font-size: 25px;
+		line-height: 25px;
+		height: 120px;
+		width: 90%;
+		@media(min-width: 560px){
+			font-size: 30px;
+			line-height: 30px;
+		}
+		@media(min-width: 1100px){
+			font-size: 40px;
+			line-height: 40px;
+		}
+		text-align: center;
+		font-family: 'Indie Flower', cursive;
+		color: #336666;
+	}
+
+}
