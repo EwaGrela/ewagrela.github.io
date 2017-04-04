@@ -35,7 +35,7 @@ $(function() {
         var coveringBtn = $("<button>", {
             id: "coveringBtn"
         });
-        coveringBtn.appendTo(gameSection);
+        coveringBtn.insertAfter(gameSection);
         coveringBtn.text("cover");
         coveringBtn.one("click", function(event) {
             //console.log("ok");
