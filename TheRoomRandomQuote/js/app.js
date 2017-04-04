@@ -1,28 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {	
-	console.log("nowe");
-	/*
-	var data = {
-		 quotes: [
-		 		["Hi, doggy","You think about everything, ha ha ha.","God. Forgive me...","How is your sex life?","Denny, two's great, but three's a crowd","They betrayed me, they tricked me, and I don't care anymore.",
-				"I did not hit her, its bullshit, I did not hit her, I DID NOT!"," You're tearing me apart Lisa!"," Oh hi Mark","I did not hit her, it's not true, it's bullshit, I did not hit her. I did not. Oh hi Mark",
-				"Anyway, how is your sex life?","Thank you honey, this is a beautiful party! You invited all my friends. Good thinking!","Denny, two is great, but three is a crowd","Yeah, you can say that again.", "That's too bad. My Lisa's great whenever I get it."],
-		["I'm just sitting up here thinking, you know. I got a question for you", "Leave your stupid comments in your pocket!"," You think girls like to cheat like guys do?","I don't know. I don't know. I'm just... I'm just thinking.","Oh man, I just can't figure women out. Sometimes they're just too smart. Sometimes they're just flat-out stupid. Other times they're just evil.",
-				"You couldn't kill me if you tried."],
-		["Everything goes wrong all at once. Nobody wants to help me. And I'm dying.",
-		"Men and women use and abuse each other all the time; there's nothing wrong with it. Marriage has nothing to do with love.",
-		"I got the results of the test back - I definitely have breast cancer.",
-		"It doesn't matter? How in the hell did you get involved with drugs?","This is not the way you make money!",
-		" It matters a great deal! A man holds a gun on you! You almost got killed and you expect me to forget that happened?","You listen, you little boy!","Somebody had better do something around here!","If you think I'm tired today, wait until you see me tomorrow."]
-
-		 ]		
-		
-	}
-	*/
-	
+	//console.log("nowe");	
 	var quotes = firebase.database().ref("/quotes");
     quotes.once("value").then(function(data) {
         quotes = data.val();
-		console.log(quotes);
+		//console.log(quotes);
 		var askButton = document.querySelectorAll("button");
 		function showQuotes(index){
 			askButton[index].addEventListener("click", function(event){
