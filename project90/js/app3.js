@@ -60,7 +60,7 @@ $(function() {
 
         	var seconds = 100;
 
-        	timeInfo.text(" time: " + seconds);
+        	timeInfo.text(" time left: " + seconds);
     		timeInfo.removeClass("invisible");
     		
     		
@@ -70,7 +70,7 @@ $(function() {
             console.log(newSeconds);
             var opaqueDivs = $(".opaque");
             console.log(opaqueDivs.length);
-            timeInfo.text(" time: " + newSeconds);
+            timeInfo.text(" time left: " + newSeconds);
             if((newSeconds === 0) && (opaqueDivs.length<20)){
             	clearInterval(interval);  
             	createGameOverBoard(gameSection);

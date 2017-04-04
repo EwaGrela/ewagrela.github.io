@@ -538,7 +538,7 @@ nav {
 	height: auto;
 	min-width: 300px;
 	max-width: 100vw;
-	margin-top: 50px;
+	margin-top: 100px;
 	@include layoutMixin6($baseColor);
 		h1 {
 		font-size: $mediumFont/2;
@@ -1109,8 +1109,8 @@ footer {
 	
 #gameBoard, .gameOver {
 	@include gamesBoards(inherit);
-	width: 300px;
-	height: 300px;
+	width: 294px;
+	height: 294px;
 	//position: relative;
 	
 	@media (min-width: 420px){
@@ -1182,10 +1182,13 @@ div.boardDiv {
 .clickInfo {
 	width: auto;
 	height: auto;
-	font-size: $bigFont/3;
+	font-size: $mediumFont/3;
+	@media(min-width:560px){
+		font-size: $bigFont/3;
+	}
 	font-family: "Fontdiner Swanky";
 	background-color: #efefef;
-	color: $fifthColor;
+	color: mix($sixthColor, $fifthColor);
 	margin-left: 10px;
 	border: none;
 	border-radius: 5%;
@@ -1193,7 +1196,7 @@ div.boardDiv {
 }
 #gameInfo {
 	@include layoutMixin4($baseColor);
-	width: 50%;
+	width: 80%;
 	height: 60px;
 	margin-top: 4px;
 }
@@ -1243,7 +1246,7 @@ div.boardDiv {
 }
 
 .covered {
-	background: $baseColor;
+	background: darken($baseColor, 15%);
 }
 
 #scoreBoard {
