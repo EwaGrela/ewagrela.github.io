@@ -1,4 +1,5 @@
-	var paddyText = "Your dream boy is Paddy. Like him, you are romantic, sensitive and kind. You like nature, good food and are loyal to your friends and family" 
+/*
+var paddyText = "Your dream boy is Paddy. Like him, you are romantic, sensitive and kind. You like nature, good food and are loyal to your friends and family" 
 	var justinText = "Your dream boy is Justin. Like him, you are sexy, outgoing and fun. You like pop music, pizza and there is no party without you!"
 	var nickText = "Your dream boy is Nick. Like him you are nice, cute and a bit of a romantic soul. You like long walks on the beach, good wine and soul music"
 	var undecided = "Well, you cannot decide, can you? Each of them is special and so are you."
@@ -8,7 +9,7 @@
 	var harryText ="You are Harry. Brave and true to yourself but sometimes you feel a bit misunderstood and need time on your own"
 	var hermioneText ="You are Hermione. Best known for your intelligence and wit, you are always there to help others out"
 	var ronText =" You are Ron. You might feel overlooked but in the end you shine and will be recognized"
-	var collectedAnswers=[];
+	
 	var quiz = [
 		{
     		questions: [ 
@@ -497,3 +498,8 @@
 	myTitle:"Which Harry Potter character are you?"
 	}
 ];
+
+
+
+*/	
+	

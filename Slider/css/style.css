@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: lightblue;
+}
+
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+}
+
+.slider {
+  //height: 400px;
+  overflow: hidden;
+
+}
+
+.slider ul {
+  list-style: none;
+  font-size: 0;
+}
+
+.slider li {
+	display: inline;
+}
+
+
+
+img{
+	width: 640px;
+	height: 400px;
+}
+		
+
+h1 {
+	text-align: center;
+	color: white;
+	font-family: "Pacifico";
+	font-weight: bold;
+	font-size: 20px;
+}
+
+button {
+	position:absolute;
+	height: 100%;
+	width: 20px;
+	background: rgba(255, 255, 255, 0.01);
+	border: none;
+	color: white;
+	font-weight: bolder;
+	font-size: 20px;
+	outline: none;
+}
+
+button:nth-of-type(1){
+	left: 0;
+}
+button:nth-of-type(2){
+	right: 0;
+}
