@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("new game");
+    console.log("new new game");
     var body = document.querySelector("body");
 
     var game = document.querySelector(".game");
@@ -80,16 +80,18 @@ document.addEventListener("DOMContentLoaded", function() {
         var resultTie = battlesResults.filter(function(item) {
             return item === "It's a tie";
         }).length;
-        console.log(resultMachine, resultHuman, resultTie);
-        if (resultMachine > resultHuman || resultMachine > resultTie) {
+        console.log("rezultat maszyna " + resultMachine);
+        console.log("rezultat człowiek " +resultHuman);
+        console.log("rezultat remis " + resultTie)
+        if ((resultMachine > resultHuman) && (resultMachine > resultTie)) {
             statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand over your flesh, and a new world awaits you. We demand it.";
-        } else if ((resultMachine === resultHuman)||(resultHuman === resultTie) ||(resultMachine===resultTie)|| (resultTie > resultHuman) || (resultTie > resultMachine)) {
+        } 
+        if ((resultMachine === resultHuman)||(resultHuman === resultTie) ||(resultMachine===resultTie)|| ((resultTie > resultHuman) && (resultTie > resultMachine))) {
             statsArticle.innerText = " We have reached equilibrium and sorted it like humans...I mean...sorry, computer...Ok, whatever...";
-        } else if (resultHuman > resultMachine || resultHuman > resultTie) {
-            statsArticle.innerText = "We have won, the human race is safe. But we must be vigilant!";
-        } else {
-            statsArticle.innerText = "Machine, you and I have an unfinished business!";
-        }
+        } 
+        if ((resultHuman > resultMachine) && (resultHuman > resultTie)) {
+            statsArticle.innerText = "We have won, the human race is safe. But we must be vigilant! Evil machines are lurking in the shadows";
+        } 
 
     })
 

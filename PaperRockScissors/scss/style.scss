@@ -6,7 +6,7 @@
 
 body {
 	background-color: lightblue;
-	font-family: "Indie Flower";
+	font-family: "Press Start 2P";
 }
 header {
 	display: flex;
@@ -57,10 +57,9 @@ section {
 }
 .game {
 	width: 90vw;
-	border: 2px solid #669999;
 	height: auto;
 	margin: 0 auto;
-	
+	margin-top: 50px;
 
 	article {
 		width: 90%;
@@ -94,20 +93,19 @@ section {
 			}
 		}
 		p {
-			font-family: "Indie Flower";
+			font-family: "Press Start 2P";
 			margin-top: 20px;
 			width: 200px;
 			text-align: center;
 			color: #669999;
 			font-size: 20px;
-			height: 30px;
-			line-height: 30px;
+			height: auto;
 			background-color: #efefef;
 			border: 2px dashed #669999;
 			margin-bottom: 20px;
 			@media(min-width: 560px){
-				font-size: 35px;
-				height: 40px;
+				font-size: 25px;
+				height: auto;
 				line-height: 40px;
 			}
 		}
@@ -141,7 +139,7 @@ section {
 		color: white;
 		border: none;
 		border-radius: 5%;
-		font-family: "Open Sans Condensed";
+		font-family: "Roboto";
 		font-size: 30px;
 		@media(min-width: 560px){
 			font-size: 35px;
@@ -149,9 +147,10 @@ section {
 	}
 }
 #statsArticle {
-	width: 90vw;
+	width: 80vw;
 	height: auto;
 	margin: 0 auto;
+	margin-top: 30px;
 	z-index: 2;
 	text-align: center;
 	font-size: 35px;
@@ -171,7 +170,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: "Open Sans Condensed";
+	font-family: "Roboto";
 	p {
 		width: auto;
 		color: #669999;
