@@ -18,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function makeStats() {
         var result = resultsParagraph.innerText;
-        console.log(result);
         battlesResults.push(result);
-        console.log(battlesResults);
     }
 
     for (var i = 0; i < button.length; i++) {
@@ -46,18 +44,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
             if (computerChoice === this.id) {
-                console.log("tie");
                 resultsParagraph.innerText = "It's a tie";
                 makeStats();
 
             }
             if ((computerChoice === "paper" && this.id === "rock") || (computerChoice === "scissors" && this.id === "paper") || (computerChoice === "rock" && this.id === "scissors")) {
-                console.log("computer wins");
                 resultsParagraph.innerText = "Machine wins";
                 makeStats();
             }
             if ((computerChoice === "rock" && this.id === "paper") || (computerChoice === "scissors" && this.id === "rock") || (computerChoice === "paper" && this.id === "scissors")) {
-                console.log("you win");
                 resultsParagraph.innerText = "Human wins";
                 makeStats();
             }
