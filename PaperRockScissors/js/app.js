@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if ((resultMachine > resultHuman) && (resultMachine > resultTie)) {
             statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand over your flesh, and a new world awaits you. We demand it.";
             } 
-            if ((resultMachine === resultHuman)||(resultHuman === resultTie) ||(resultMachine===resultTie)|| ((resultTie > resultHuman) && (resultTie > resultMachine))) {
+            if ((resultMachine === resultHuman)&&(resultHuman === resultTie) &&(resultMachine===resultTie)|| ((resultTie > resultHuman) && (resultTie > resultMachine))) {
                 statsArticle.innerText = " We have reached equilibrium and sorted it like humans...I mean...sorry, machines...Ok, whatever...The established truce is shaky, though.";
             } 
             if ((resultHuman > resultMachine) && (resultHuman > resultTie)) {
