@@ -84,16 +84,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }).length;
         console.log("rezultat maszyna " + resultMachine);
         console.log("rezultat człowiek " +resultHuman);
-        console.log("rezultat remis " + resultTie)
-        if ((resultMachine > resultHuman) && (resultMachine > resultTie)) {
+        console.log("rezultat remis " + resultTie);
+        if(battlesResults.length>0){
+            if ((resultMachine > resultHuman) && (resultMachine > resultTie)) {
             statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand over your flesh, and a new world awaits you. We demand it.";
-        } 
-        if ((resultMachine === resultHuman)||(resultHuman === resultTie) ||(resultMachine===resultTie)|| ((resultTie > resultHuman) && (resultTie > resultMachine))) {
-            statsArticle.innerText = " We have reached equilibrium and sorted it like humans...I mean...sorry, machines...Ok, whatever...The established truce is shaky, though.";
-        } 
-        if ((resultHuman > resultMachine) && (resultHuman > resultTie)) {
-            statsArticle.innerText = "We have won, the human race is safe. But we must be vigilant! Evil machines are lurking in the shadows...";
-        } 
+            } 
+            if ((resultMachine === resultHuman)||(resultHuman === resultTie) ||(resultMachine===resultTie)|| ((resultTie > resultHuman) && (resultTie > resultMachine))) {
+                statsArticle.innerText = " We have reached equilibrium and sorted it like humans...I mean...sorry, machines...Ok, whatever...The established truce is shaky, though.";
+            } 
+            if ((resultHuman > resultMachine) && (resultHuman > resultTie)) {
+                statsArticle.innerText = "We have won, the human race is safe. But we must be vigilant! Evil machines are lurking in the shadows...";
+            } 
+        } else {
+            statsArticle.innerText ="Machine, you and I have an unfinished business!";
+        }
+        
 
         //play again
         var replayBtn = document.createElement("a");
