@@ -7,6 +7,7 @@
 body {
 	background-color: lightblue;
 	font-family: "Press Start 2P";
+	width: 100%;
 }
 header {
 	display: flex;
@@ -160,7 +161,21 @@ section {
 	font-weight: bolder;
 	background-color: #efefef;
 	border: 2px dashed #999999;
+
+
 }
+.replay {
+		width: auto;
+		height: auto;
+		font-family: "Roboto";
+		background-color: #669999;
+		color: white;
+		font-size: 25px;
+		border: none;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		text-decoration: none;
+	}
 footer {
 	//border: 1px solid blue;
 	width: 100vw;
@@ -173,10 +188,12 @@ footer {
 	p {
 		width: auto;
 		color: #669999;
-		font-size: 12px;
+		font-size: 25px;
 		@media(min-width: 560px){
-			font-size: 15px;
+			font-size: 35px;
 		}
 
 	}
+
+
 }

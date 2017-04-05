@@ -14,9 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var resultsParagraph = articles[2].querySelector("p");
 
-    var battlesResults = []; //pusheen result of each battle
+    var battlesResults = []; // here push result of each battle
+    var footer = document.querySelector("footer");
+    var footerParagraph = footer.querySelector("p");
 
-    function makeStats() {
+    function makeStats() { //collecting results and pushing it to battleResults
         var result = resultsParagraph.innerText;
         battlesResults.push(result);
     }
@@ -93,7 +95,18 @@ document.addEventListener("DOMContentLoaded", function() {
             statsArticle.innerText = "We have won, the human race is safe. But we must be vigilant! Evil machines are lurking in the shadows";
         } 
 
+        //play again
+        var replayBtn = document.createElement("a");
+        replayBtn.classList.add("replay");
+        footer.insertBefore(replayBtn, footerParagraph);
+        replayBtn.innerText= "replay";
+        replayBtn.setAttribute("href", "https://ewagrela.github.io/PaperRockScissors/");
+
+
+
     })
+
+
 
 
 });
