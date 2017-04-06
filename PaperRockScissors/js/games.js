@@ -12,17 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var gameHeader = game.querySelectorAll("h3");
     
-    var machineChoiceHeader =gameHeader[1];
+    var machineChoiceHeader = gameHeader[1];
 
     var firstArticle = game.querySelector("article");
 
     var articles = document.querySelectorAll("article");
 
-    var choiceDiv = articles[2].children[0];
+    var choiceDiv = articles[1].children[0];
 
     var button = firstArticle.querySelectorAll("button");
 
-    var resultsParagraph = articles[3].querySelector("p");
+    var resultsParagraph = articles[2].querySelector("p");
 
     var battlesResults = []; // here push result of each battle
     var footer = document.querySelector("footer");
@@ -35,12 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var statsBtn = stats.querySelector("button");
 
     //starting game
-    startGameBtn.addEventListener("click", function(event){
-    	header.classList.remove("invisible");
-    	game.classList.remove("invisible");
-    	this.parentNode.removeChild(this);
-    	intro.parentNode.removeChild(intro);
-    })
+    
 
 
     function makeStats() { //collecting results and pushing it to battleResults
@@ -137,8 +132,10 @@ document.addEventListener("DOMContentLoaded", function() {
         
         if( statsArticle.innerText ==="Machine, you and I have an unfinished business! Like hell we do, Human...") {
         	replayBtn.innerText= "fight to establish the winner";
+            replayBtn.setAttribute("href", "game.html");
         } else {
         	replayBtn.innerText= "one year later";
+            replayBtn.setAttribute("href", "index.html");
         }
         
         
