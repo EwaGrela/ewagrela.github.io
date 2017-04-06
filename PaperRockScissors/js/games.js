@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         
         
-        replayBtn.setAttribute("href", "https://ewagrela.github.io/PaperRockScissors/");
+        
 
 
 
