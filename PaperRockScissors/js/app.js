@@ -11,9 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var game = document.querySelector(".game");
 
     var gameHeader = game.querySelectorAll("h3");
-    console.log(gameHeader);
+    
     var machineChoiceHeader =gameHeader[1];
-    console.log(machineChoiceHeader);
 
     var firstArticle = game.querySelector("article");
 
@@ -31,14 +30,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var footerParagraph = footer.querySelector("p");
     var clickCount = 10;
     var roundCounter = document.querySelector("h4");
-    console.log(roundCounter);
 
     var stats = document.querySelector(".stats");
     var statsBtn = stats.querySelector("button");
 
     //starting game
     startGameBtn.addEventListener("click", function(event){
-    	console.log("działam");
     	header.classList.remove("invisible");
     	game.classList.remove("invisible");
     	this.parentNode.removeChild(this);
@@ -101,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //stats events 
     statsBtn.addEventListener("click", function(event) {
-        console.log("ok");
         this.parentNode.removeChild(this);
         var statsArticle = document.createElement("article");
         statsArticle.setAttribute("id", "statsArticle");
@@ -120,21 +116,22 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(resultMachine);
         console.log(resultTie);
         console.log(battlesResults.length)
-        console.log(typeof (resultMachine, resultTie, resultHuman));
-       	if(resultHuman>battlesResults.length/2){
+        var majority = battlesResults.length/2;
+        console.log(majority);
+       	if(resultHuman>majority){
        		statsArticle.innerText = "We have won, the human race is safe for another year. But we must be vigilant! Evil machines are lurking in the shadows...";
 
-       	} else if (resultMachine>battlesResults.length/2){
+       	} 
+       	else if (resultMachine>majority){
        		statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand it over and a new world awaits you. LOL, just kidding. It is our turn though.";
 
-       	} else {
+       	} 
+       	else  {
        		statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...";
 
        	}
        
-        
-
-        //play again
+ 		//play again
         var replayBtn = document.createElement("a");
         replayBtn.classList.add("replay");
         footer.insertBefore(replayBtn, footerParagraph);
