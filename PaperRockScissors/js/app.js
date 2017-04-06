@@ -119,21 +119,19 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("rezultat maszyna " + resultMachine);
         console.log("rezultat człowiek " +resultHuman);
         console.log("rezultat remis " + resultTie);
-        if(battlesResults.length>0){
-            if ((resultMachine > resultHuman) && (resultMachine > resultTie)) {
+        
+            if (resultMachine > (resultHuman + resultTie)) {
             statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand it over and a new world awaits you. LOL, just kidding. It is our turn though.";
             } 
-            if ((resultMachine === resultHuman)&&(resultHuman === resultTie) &&(resultMachine===resultTie)|| ((resultTie > resultHuman) && (resultTie > resultMachine))) {
+            else if (resultTie ===(resultHuman+resultMachine)) {
                 statsArticle.innerText = " We have reached equilibrium and sorted it like humans...I mean...sorry, machines...Ok, whatever...The established truce is shaky, though.";
             } 
-            if ((resultHuman > resultMachine) && (resultHuman > resultTie)) {
+            else if (resultHuman > (resultMachine + resultTie)){
                 statsArticle.innerText = "We have won, the human race is safe for another year. But we must be vigilant! Evil machines are lurking in the shadows...";
             } else {
-            	statsArticle.innerText ="Machine, you and I have an unfinished business!";
+            	statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...";
             } 
-        } else {
-            statsArticle.innerText ="Machine, you and I have an unfinished business!";
-        }
+        
         
 
         //play again
