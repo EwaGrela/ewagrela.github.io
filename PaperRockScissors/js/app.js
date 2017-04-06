@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("game");
+    console.log("bettergame");
     var body = document.querySelector("body");
 
     var header = document.querySelector("header");
@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (var i = 0; i < button.length; i++) {
         button[i].addEventListener("click", function(event) {
-        	console.log("working");
+        
           	clickCount --;
-          	console.log(clickCount);
+          	
           	roundCounter.classList.remove("invisible");
           	machineChoiceHeader.classList.remove("invisible");
           	roundCounter.innerText = "rounds left: " + clickCount;
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var randomValue = ["paper", "rock", "scissors"];
             var randomIndex = Math.floor(Math.random() * randomValue.length);
             var computerChoice = randomValue[randomIndex];
-            console.log(computerChoice);
+        
             if (computerChoice === "paper") {
                 choiceDiv.style.backgroundImage = "url('images/paper.png')";
             }
@@ -118,31 +118,29 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(battlesResults.length)
         var majority = battlesResults.length/2;
         console.log(majority);
-       	if(resultHuman>majority){
+       	if(resultHuman >= majority && resultMachine<majority){
        		statsArticle.innerText = "We have won, the human race is safe for another year. But we must be vigilant! Evil machines are lurking in the shadows...";
 
-       	} 
-       	else if (resultMachine>majority){
+       	} else if (resultMachine >= majority && resultHuman<majority){
        		statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand it over and a new world awaits you. LOL, just kidding. It is our turn though.";
 
        	} 
-       	else  {
+       	else {
        		statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...";
-
        	}
-       
+       	
  		//play again
         var replayBtn = document.createElement("a");
         replayBtn.classList.add("replay");
         footer.insertBefore(replayBtn, footerParagraph);
         
-        
+        /*
         if( statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...") {
         	replayBtn.innerText= "fight to establish the winner";
         } else {
         	replayBtn.innerText= "one year later";
         }
-        
+        */
         
         
         replayBtn.setAttribute("href", "https://ewagrela.github.io/PaperRockScissors/");
