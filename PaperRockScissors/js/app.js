@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var game = document.querySelector(".game");
 
+    var gameHeader = game.querySelectorAll("h3");
+    console.log(gameHeader);
+    var machineChoiceHeader =gameHeader[1];
+    console.log(machineChoiceHeader);
+
     var firstArticle = game.querySelector("article");
 
     var articles = document.querySelectorAll("article");
@@ -52,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
           	clickCount --;
           	console.log(clickCount);
           	roundCounter.classList.remove("invisible");
+          	machineChoiceHeader.classList.remove("invisible");
           	roundCounter.innerText = "rounds left: " + clickCount;
             choiceDiv.classList.remove("invisible");
             resultsParagraph.classList.remove("invisible");
@@ -122,6 +128,8 @@ document.addEventListener("DOMContentLoaded", function() {
             } 
             if ((resultHuman > resultMachine) && (resultHuman > resultTie)) {
                 statsArticle.innerText = "We have won, the human race is safe for another year. But we must be vigilant! Evil machines are lurking in the shadows...";
+            } else {
+            	statsArticle.innerText ="Machine, you and I have an unfinished business!";
             } 
         } else {
             statsArticle.innerText ="Machine, you and I have an unfinished business!";
