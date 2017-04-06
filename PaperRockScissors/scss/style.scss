@@ -58,6 +58,7 @@ section {
 .intro {
 	border: 1px solid white;
 	width: 95vw;
+	font-family: 'Roboto';
 	margin: 0 auto;
 	padding: 20px;
 	justify-content: flex-start;
@@ -65,7 +66,7 @@ section {
 		color: yellow;
 	}
 	article {
-		width: 95%;
+		width: 90%;
 		height: auto;
 		flex-direction: column;
 		justify-content: center;

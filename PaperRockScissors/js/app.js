@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("new new game");
+    console.log("game");
     var body = document.querySelector("body");
 
     var header = document.querySelector("header");
@@ -116,29 +116,38 @@ document.addEventListener("DOMContentLoaded", function() {
         var resultTie = battlesResults.filter(function(item) {
             return item === "It's a tie";
         }).length;
-        console.log("rezultat maszyna " + resultMachine);
-        console.log("rezultat człowiek " +resultHuman);
-        console.log("rezultat remis " + resultTie);
-        
-            if (resultMachine > (resultHuman + resultTie)) {
-            statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand it over and a new world awaits you. LOL, just kidding. It is our turn though.";
-            } 
-            else if (resultTie ===(resultHuman+resultMachine)) {
-                statsArticle.innerText = " We have reached equilibrium and sorted it like humans...I mean...sorry, machines...Ok, whatever...The established truce is shaky, though.";
-            } 
-            else if (resultHuman > (resultMachine + resultTie)){
-                statsArticle.innerText = "We have won, the human race is safe for another year. But we must be vigilant! Evil machines are lurking in the shadows...";
-            } else {
-            	statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...";
-            } 
-        
+        console.log(resultHuman);
+        console.log(resultMachine);
+        console.log(resultTie);
+        console.log(battlesResults.length)
+        console.log(typeof (resultMachine, resultTie, resultHuman));
+       	if(resultHuman>battlesResults.length/2){
+       		statsArticle.innerText = "We have won, the human race is safe for another year. But we must be vigilant! Evil machines are lurking in the shadows...";
+
+       	} else if (resultMachine>battlesResults.length/2){
+       		statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand it over and a new world awaits you. LOL, just kidding. It is our turn though.";
+
+       	} else {
+       		statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...";
+
+       	}
+       
         
 
         //play again
         var replayBtn = document.createElement("a");
         replayBtn.classList.add("replay");
         footer.insertBefore(replayBtn, footerParagraph);
-        replayBtn.innerText= "replay";
+        
+        
+        if( statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...") {
+        	replayBtn.innerText= "fight to establish the winner";
+        } else {
+        	replayBtn.innerText= "one year later";
+        }
+        
+        
+        
         replayBtn.setAttribute("href", "https://ewagrela.github.io/PaperRockScissors/");
 
 
