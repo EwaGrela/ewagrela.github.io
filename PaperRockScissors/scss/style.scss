@@ -60,6 +60,7 @@ section {
 	width: 95vw;
 	font-family: 'Roboto';
 	margin: 0 auto;
+	margin-top: 50px;
 	padding: 20px;
 	justify-content: flex-start;
 	h2 {
@@ -106,7 +107,7 @@ section {
 	height: auto;
 	margin: 0 auto;
 	margin-top: 50px;
-
+	
 	article {
 		width: 90%;
 		height: 90%;
@@ -209,9 +210,10 @@ h4 {
 	margin-top: 30px;
 	z-index: 2;
 	text-align: center;
-	font-size: 35px;
+	font-size: 15px;
+	padding: 5px;
 	@media(min-width: 560px){
-		font-size: 40px;
+		font-size: 25px;
 	}
 	color: white;
 	background-color:black;

@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
         var statsArticle = document.createElement("article");
         statsArticle.setAttribute("id", "statsArticle");
         stats.append(statsArticle);
-        footerParagraph.classList.remove("invisible");
         var resultHuman = battlesResults.filter(function(item) {
             return item === "Human wins";
         }).length;
