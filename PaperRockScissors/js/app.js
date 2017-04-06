@@ -134,13 +134,13 @@ document.addEventListener("DOMContentLoaded", function() {
         replayBtn.classList.add("replay");
         footer.insertBefore(replayBtn, footerParagraph);
         
-        /*
-        if( statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...") {
+        
+        if( statsArticle.innerText ==="Machine, you and I have an unfinished business! Like hell we do, Human...") {
         	replayBtn.innerText= "fight to establish the winner";
         } else {
         	replayBtn.innerText= "one year later";
         }
-        */
+        
         
         
         replayBtn.setAttribute("href", "https://ewagrela.github.io/PaperRockScissors/");
