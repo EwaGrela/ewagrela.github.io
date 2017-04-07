@@ -9,7 +9,12 @@
  @keyframes appear {
  	0% {
  		opacity:0;
- 		transform: scale(0.1)rotate(15deg);
+ 		transform: scale(0.01)rotate(15deg);
+ 		
+ 	}
+ 	10% {
+ 		opacity:0.1;
+ 		transform: scale(0.1)rotate(22deg);
  		
  	}
  	20% {
@@ -17,9 +22,19 @@
  		transform: scale(0.2)rotate(30deg);
  		
  	}
+ 	30% {
+ 		opacity:0.3;
+ 		transform: scale(0.3)rotate(37deg);
+ 		
+ 	}
  	40% {
  		opacity: 0.4;
  		transform: scale(0.4)rotate(45deg);
+ 		
+ 	}
+ 	50% {
+ 		opacity:0.5;
+ 		transform: scale(0.5)rotate(37deg);
  		
  	}
  	60% {
@@ -27,9 +42,19 @@
  		transform: scale(0.6)rotate(30deg);
  		
  	}
+ 	70% {
+ 		opacity:0.7;
+ 		transform: scale(0.7)rotate(22deg);
+ 		
+ 	}
  	80% {
  		opacity: 0.8;
  		transform: scale(0.8)rotate(15deg);
+ 		
+ 	}
+ 	90% {
+ 		opacity:0.9;
+ 		transform: scale(0.9)rotate(7deg);
  		
  	}
  	100% {
