@@ -217,6 +217,7 @@ h4 {
 		width: 80vw;
 		height: auto;
 		margin: 0 auto;
+		margin-top: 10px;
 		text-align: center;
 		font-size: 15px;
 		padding: 5px;
@@ -226,7 +227,9 @@ h4 {
 		color: white;
 		background-color:black;
 		border: 2px dashed white;
-
+		&:first-of-type {
+			color:  #ffff33;
+		}
 
 	}
 }

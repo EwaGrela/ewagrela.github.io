@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var button = firstArticle.querySelectorAll("button");
 
     var resultsParagraph = articles[2].querySelector("p");
-
+    console.log(resultsParagraph);
     var battlesResults = []; // here push result of each battle
     var footer = document.querySelector("footer");
 
-    var footerParagraph = footer.querySelector("p");
+    
     var clickCount = 10;
     var roundCounter = document.querySelector("h4");
 
@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var humansWin = document.getElementById("humansWin");
     var machinesWin = document.getElementById("machinesWin");
     var undecided = document.getElementById("undecided");
-    console.log(humansWin, machinesWin, undecided);
+
+    var statsPar  = document.getElementById("results");
+    console.log(statsPar);
 
     //starting game
     
@@ -100,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //stats events 
     statsBtn.addEventListener("click", function(event) {
         this.parentNode.removeChild(this);
+
         var resultHuman = battlesResults.filter(function(item) {
             return item === "Human wins";
         }).length;
@@ -115,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(battlesResults.length)
         var half = battlesResults.length/2;
         console.log(half);
+        statsPar.classList.remove("invisible");
+        statsPar.innerText ="Human: " + resultHuman + " Machine: " + resultMachine + " Tie: " + resultTie;
        	if(resultHuman >= half && resultMachine<half){
             humansWin.classList.remove("invisible");
             
