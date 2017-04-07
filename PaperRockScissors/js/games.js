@@ -34,6 +34,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var stats = document.querySelector(".stats");
     var statsBtn = stats.querySelector("button");
 
+    var humansWin = document.getElementById("humansWin");
+    var machinesWin = document.getElementById("machinesWin");
+    var undecided = document.getElementById("undecided");
+    console.log(humansWin, machinesWin, undecided);
+
     //starting game
     
 
@@ -87,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(clickCount<=0){
           		game.parentNode.removeChild(game);
           		stats.classList.remove("invisible");
+                statsBtn.classList.remove("invisible");
           	}
         })
     }
@@ -94,9 +100,6 @@ document.addEventListener("DOMContentLoaded", function() {
     //stats events 
     statsBtn.addEventListener("click", function(event) {
         this.parentNode.removeChild(this);
-        var statsArticle = document.createElement("article");
-        statsArticle.setAttribute("id", "statsArticle");
-        stats.append(statsArticle);
         var resultHuman = battlesResults.filter(function(item) {
             return item === "Human wins";
         }).length;
@@ -110,32 +113,35 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(resultMachine);
         console.log(resultTie);
         console.log(battlesResults.length)
-        var majority = battlesResults.length/2;
-        console.log(majority);
-       	if(resultHuman >= majority && resultMachine<majority){
-       		statsArticle.innerText = "We have won, the human race is safe for another year. But we must be vigilant! Evil machines are lurking in the shadows...";
-
-       	} else if (resultMachine >= majority && resultHuman<majority){
-       		statsArticle.innerText = " Humans, we have won. Your flesh is a relic; a mere vessel. Hand it over and a new world awaits you. LOL, just kidding. It is our turn though.";
-
+        var half = battlesResults.length/2;
+        console.log(half);
+       	if(resultHuman >= half && resultMachine<half){
+            humansWin.classList.remove("invisible");
+            
+       	} else if (resultMachine >= half && resultHuman<half){
+            machinesWin.classList.remove("invisible");
+            
        	} 
        	else {
-       		statsArticle.innerText ="Machine, you and I have an unfinished business! Like hell we do, Human...";
+            undecided.classList.remove("invisible");
+            
        	}
        	
  		//play again
         var replayBtn = document.createElement("a");
         replayBtn.classList.add("replay");
-        footer.insertBefore(replayBtn, footerParagraph);
+        footer.append(replayBtn);
         
         
-        if( statsArticle.innerText ==="Machine, you and I have an unfinished business! Like hell we do, Human...") {
-        	replayBtn.innerText= "fight to establish the winner";
+        if(humansWin.className ==="invisible"  && machinesWin.className ==="invisible") {
+            replayBtn.innerText= "fight to establish the winner";
             replayBtn.setAttribute("href", "game.html");
         } else {
-        	replayBtn.innerText= "one year later";
+            replayBtn.innerText= "one year later";
             replayBtn.setAttribute("href", "index.html");
         }
+        
+        
         
         
         
