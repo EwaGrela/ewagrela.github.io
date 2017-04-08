@@ -10,17 +10,13 @@ $(function() {
             id: "gameBoard"
         });
         memoryBoard.addClass("board");
-        memoryBoard.appendTo(gameSection);
+        memoryBoard.appendTo(gameSection); 
+        gameSection.addClass("transparency");
         lowerContent.hide();
         otherSections.hide();
         header.hide();
         footer.hide();
         $(this).hide();
-        var gameInfo = $("<article>", {id: "gameInfo"});
-        gameInfo.prependTo(gameSection);
-        var clickInfo = $("<p>", {class:"clickInfo"});
-        clickInfo.addClass("invisible");
-        clickInfo.prependTo(gameInfo);
         
 
         for (var i = 0; i <20; i++) {
@@ -38,9 +34,14 @@ $(function() {
         coveringBtn.insertAfter(gameSection);
         coveringBtn.text("cover");
         coveringBtn.one("click", function(event) {
-            //console.log("ok");
             boardDiv.addClass("covered");
             $(this).addClass("invisible");
+            var gameInfo = $("<article>", {id: "gameInfo"});
+	        gameInfo.prependTo(gameSection);
+	        var clickInfo = $("<p>", {class:"clickInfo"});
+	        //clickInfo.addClass("invisible");
+	        clickInfo.text(" clicks: " + clicks);
+	        clickInfo.prependTo(gameInfo);
         })
 
         function addRandomClass(classes) {
@@ -58,7 +59,7 @@ $(function() {
         	timeInfo.insertAfter(clickInfo);
         	timeInfo.addClass("invisible");
 
-        	var seconds = 100;
+        	var seconds = 60;
 
         	timeInfo.text(" time left: " + seconds + " secs");
     		timeInfo.removeClass("invisible");
@@ -74,6 +75,7 @@ $(function() {
             if((newSeconds === 0) && (opaqueDivs.length<20)){
             	clearInterval(interval);  
             	createGameOverBoard(gameSection);
+            	gameSection.removeClass("transparency");
             	createComebackBtn(gameSection);
             	//timeInfo.remove();
             	
@@ -90,7 +92,7 @@ $(function() {
     gameSection.on("click", ".boardDiv", function(event) {
         clicks++;
         var clickInfo = $(".clickInfo").eq(0);
-        clickInfo.removeClass("invisible");
+        //clickInfo.removeClass("invisible");
         clickInfo.text(" clicks: " + clicks);
         //console.log(clicks);
         $(this).removeClass("covered");
@@ -122,9 +124,8 @@ $(function() {
             var resultsDiv = $("<div>");
             resultsDiv.attr("id", "resultsDiv");
             resultsDiv.appendTo(gameSection);
+            gameSection.removeClass("transparency");
             resultsDiv.text("Congrats! You earned " + finalScore + " points!");
-            //clearInterval(interval);
-            //$(".clickInfo").eq(1).remove();
             createComebackBtn(gameSection);
         }
 

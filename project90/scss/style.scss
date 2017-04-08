@@ -1111,7 +1111,13 @@ footer {
 			font-size: $mediumFont;
 		}
 	}
-	
+#gameBoard {
+	margin-bottom: 10px;
+}
+.transparency {
+	background-color: rgba(255,255,255, 0.01) !important;
+	border: none;
+}	
 #gameBoard, .gameOver {
 	@include gamesBoards(inherit);
 	width: 294px;
@@ -1201,11 +1207,14 @@ div.boardDiv {
 }
 #gameInfo {
 	@include layoutMixin4($baseColor);
-	width: 290px;
-	@media(min-width:560px){
+	width: 294px;
+	padding: 5px;
+	@media (min-width: 420px){
+		width: 320px;
+	}
+	@media (min-width: 796px){
 		width: 400px;
 	}
-	height: 60px;
 	margin-top: 4px;
 }
 .tamagotchi {
