@@ -31,7 +31,7 @@ $(function() {
         var coveringBtn = $("<button>", {
             id: "coveringBtn"
         });
-        coveringBtn.insertAfter(gameSection);
+        coveringBtn.insertAfter(memoryBoard);
         coveringBtn.text("cover");
         coveringBtn.one("click", function(event) {
             boardDiv.addClass("covered");
