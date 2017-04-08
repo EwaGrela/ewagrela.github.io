@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var game = document.querySelector(".game");
 
     var gameHeader = game.querySelectorAll("h3");
-    
+
     var machineChoiceHeader = gameHeader[1];
 
     var firstArticle = game.querySelector("article");
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var battlesResults = []; // here push result of each battle
     var footer = document.querySelector("footer");
 
-    
+
     var clickCount = 10;
     var roundCounter = document.querySelector("h4");
 
@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var machinesWin = document.getElementById("machinesWin");
     var undecided = document.getElementById("undecided");
 
-    var statsPar  = document.getElementById("results");
+    var statsPar = document.getElementById("results");
     console.log(statsPar);
 
     //starting game
-    
+
 
 
     function makeStats() { //collecting results and pushing it to battleResults
@@ -52,18 +52,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (var i = 0; i < button.length; i++) {
         button[i].addEventListener("click", function(event) {
-        
-          	clickCount --;
-          	
-          	roundCounter.classList.remove("invisible");
-          	machineChoiceHeader.classList.remove("invisible");
-          	roundCounter.innerText = "rounds left: " + clickCount;
+
+            clickCount--;
+
+            roundCounter.classList.remove("invisible");
+            machineChoiceHeader.classList.remove("invisible");
+            roundCounter.innerText = "rounds left: " + clickCount;
             choiceDiv.classList.remove("invisible");
             resultsParagraph.classList.remove("invisible");
             var randomValue = ["paper", "rock", "scissors"];
             var randomIndex = Math.floor(Math.random() * randomValue.length);
             var computerChoice = randomValue[randomIndex];
-        
+
             if (computerChoice === "paper") {
                 choiceDiv.style.backgroundImage = "url('images/paper.png')";
             }
@@ -91,11 +91,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 makeStats();
             }
 
-            if(clickCount<=0){
-          		game.parentNode.removeChild(game);
-          		stats.classList.remove("invisible");
+            if (clickCount <= 0) {
+                game.parentNode.removeChild(game);
+                stats.classList.remove("invisible");
                 statsBtn.classList.remove("invisible");
-          	}
+            }
         })
     }
 
@@ -112,45 +112,35 @@ document.addEventListener("DOMContentLoaded", function() {
         var resultTie = battlesResults.filter(function(item) {
             return item === "It's a tie";
         }).length;
-        console.log(resultHuman);
-        console.log(resultMachine);
-        console.log(resultTie);
-        console.log(battlesResults.length)
-        var half = battlesResults.length/2;
+        var half = battlesResults.length / 2;
         console.log(half);
         statsPar.classList.remove("invisible");
-        statsPar.innerText ="Human: " + resultHuman + " Machine: " + resultMachine + " Tie: " + resultTie;
-       	if(resultHuman >= half && resultMachine<half){
+        statsPar.innerText = "Human: " + resultHuman + " Machine: " + resultMachine + " Tie: " + resultTie;
+        if (resultHuman >= half && resultMachine < half) {
             humansWin.classList.remove("invisible");
-            
-       	} else if (resultMachine >= half && resultHuman<half){
+
+        } else if (resultMachine >= half && resultHuman < half) {
             machinesWin.classList.remove("invisible");
-            
-       	} 
-       	else {
+
+        } else {
             undecided.classList.remove("invisible");
-            
-       	}
-       	
- 		//play again
+
+        }
+
+        //play again
         var replayBtn = document.createElement("a");
         replayBtn.classList.add("replay");
         footer.append(replayBtn);
-        
-        
-        if(humansWin.className ==="invisible"  && machinesWin.className ==="invisible") {
-            replayBtn.innerText= "fight to establish the winner";
+
+
+        if (humansWin.className === "invisible" && machinesWin.className === "invisible") {
+            replayBtn.innerText = "fight to establish the winner";
             replayBtn.setAttribute("href", "game.html");
         } else {
-            replayBtn.innerText= "one year later";
+            replayBtn.innerText = "one year later";
             replayBtn.setAttribute("href", "index.html");
         }
-        
-        
-        
-        
-        
-        
+
 
 
 
