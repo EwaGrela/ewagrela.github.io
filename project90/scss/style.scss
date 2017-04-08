@@ -746,8 +746,8 @@ footer {
 		list-style: none;
 		@include layoutMixin3(transparent);
 		li {
-			color: darken($fifthColor, 5%);
-			text-shadow: 5px 5px 5px lighten($fifthColor, 10%);
+			color: silver;
+			text-shadow: 5px 5px 5px $fifthColor;
 			font-weight: bolder;
 			font-style: italic;
 			margin: 10px;
