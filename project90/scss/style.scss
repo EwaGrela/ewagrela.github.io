@@ -8,7 +8,7 @@
 }
 
 body:before{
-  content: "xD";
+  content: "";
   display: block;
   position: fixed;
   opacity: 0.65;
@@ -1185,8 +1185,9 @@ div.boardDiv {
 	//position: absolute;
 	font-size: $bigFont/3.4;
 	font-family: "Fontdiner Swanky";
-	color: #efefef;
-	background-color: $fifthColor;
+	background-color: #efefef;
+	color: $fifthColor;
+	border: 3px solid $sixthColor;
 	margin: 0 auto;
 	margin-bottom: 50px;
 	border: none;

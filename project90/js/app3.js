@@ -31,7 +31,7 @@ $(function() {
         var coveringBtn = $("<button>", {
             id: "coveringBtn"
         });
-        coveringBtn.insertAfter(memoryBoard);
+        coveringBtn.insertBefore(memoryBoard);
         var time = 10;
          coveringBtn.text("start in: " + time + " secs");
         var interval2 = setInterval(function() {
