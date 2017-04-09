@@ -1384,6 +1384,19 @@ div.boardDiv {
 	text-shadow: none;
 	margin-top: 10px;
 }
+.secondsInfo {
+	font-family: "Fontdiner Swanky";
+	color: $fifthColor;
+	height: auto;
+	width: auto;
+	text-align: center;
+	background-color: $secondaryColor;
+	border: 2px solid $fifthColor;
+	font-size: $mediumFont/3; 
+	@media(min-width: 600px){
+		font-size: $mediumFont/2;
+	}
+}
 
 .quizDiv {
 	@include layoutMixin2($secondaryColor);
