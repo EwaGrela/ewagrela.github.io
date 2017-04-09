@@ -32,18 +32,26 @@ $(function() {
             id: "coveringBtn"
         });
         coveringBtn.insertAfter(memoryBoard);
-        coveringBtn.text("cover");
-        coveringBtn.one("click", function(event) {
-            boardDiv.addClass("covered");
-            $(this).addClass("invisible");
-            var gameInfo = $("<article>", {id: "gameInfo"});
-	        gameInfo.prependTo(gameSection);
-	        var clickInfo = $("<p>", {class:"clickInfo"});
-	        //clickInfo.addClass("invisible");
-	        clickInfo.text(" clicks: " + clicks);
-	        clickInfo.prependTo(gameInfo);
-        })
-
+        var time = 10;
+         coveringBtn.text("start in: " + time + " secs");
+        var interval2 = setInterval(function() {
+            var newTime = time -1;
+            time = newTime;
+            coveringBtn.text("start in: " + time + " secs");
+            if(newTime ===0){
+                clearInterval(interval2);
+                coveringBtn.remove();
+                boardDiv.addClass("covered");
+                $(this).addClass("invisible");
+                var gameInfo = $("<article>", {id: "gameInfo"});
+                gameInfo.prependTo(gameSection);
+                var clickInfo = $("<p>", {class:"clickInfo"});
+                //clickInfo.addClass("invisible");
+                clickInfo.text(" clicks: " + clicks);
+                clickInfo.prependTo(gameInfo);
+            }
+        },1000);
+        
         function addRandomClass(classes) {
             boardDiv.each(function(index) {
                 $(this).addClass(classes[index]);
@@ -52,36 +60,36 @@ $(function() {
         addRandomClass(classes);
 
     })
-    		
+            
     gameSection.one("click", ".boardDiv", function(event){
-    		var timeInfo = $("<p>", {class:"clickInfo"});
-    		var clickInfo =$(".clickInfo").eq(0);
-        	timeInfo.insertAfter(clickInfo);
-        	timeInfo.addClass("invisible");
+            var timeInfo = $("<p>", {class:"clickInfo"});
+            var clickInfo =$(".clickInfo").eq(0);
+            timeInfo.insertAfter(clickInfo);
+            timeInfo.addClass("invisible");
 
-        	var seconds = 60;
+            var seconds = 60;
 
-        	timeInfo.text(" time left: " + seconds + " secs");
-    		timeInfo.removeClass("invisible");
-    		
-    		
-        	var interval = setInterval(function() {
+            timeInfo.text(" time left: " + seconds + " secs");
+            timeInfo.removeClass("invisible");
+            
+            
+            var interval = setInterval(function() {
             var newSeconds = seconds -1;
             seconds = newSeconds;
-            console.log(newSeconds);
+            //console.log(newSeconds);
             var opaqueDivs = $(".opaque");
-            console.log(opaqueDivs.length);
+            //console.log(opaqueDivs.length);
             timeInfo.text(" time left: " + newSeconds + " secs");
             if((newSeconds === 0) && (opaqueDivs.length<20)){
-            	clearInterval(interval);  
-            	createGameOverBoard(gameSection);
-            	gameSection.removeClass("transparency");
-            	createComebackBtn(gameSection);
-            	//timeInfo.remove();
-            	
+                clearInterval(interval);  
+                createGameOverBoard(gameSection);
+                gameSection.removeClass("transparency");
+                createComebackBtn(gameSection);
+                //timeInfo.remove();
+                
             }
             if(opaqueDivs.length===20){
-            	clearInterval(interval);
+                clearInterval(interval);
             }
           
         }, 1000);
