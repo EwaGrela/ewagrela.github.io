@@ -1387,15 +1387,17 @@ div.boardDiv {
 .secondsInfo {
 	font-family: "Fontdiner Swanky";
 	color: $fifthColor;
-	height: auto;
-	width: auto;
+	height: 70px;
+	line-height: 70px;
+	width: 320px;
 	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
 	background-color: $secondaryColor;
 	border: 2px solid $fifthColor;
-	font-size: $mediumFont/3; 
-	@media(min-width: 600px){
-		font-size: $mediumFont/2;
-	}
+	border-radius: 5%;
+	font-size: $mediumFont/2; 
+	
 }
 
 .quizDiv {

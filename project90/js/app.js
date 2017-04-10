@@ -1,10 +1,10 @@
 $(function() {
     //keeping page in position
-     $('body').scrollTop(0);
+    $('body').scrollTop(0);
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
         navigation.toggleClass("invisible");
-        hamburgerMenu.toggleClass("focus");
+        $(this).toggleClass("focus");
     });
     //event button directing to the games
     toTheGamesBtn.on("click", function(event) {
@@ -47,38 +47,39 @@ $(function() {
 
     //events for learn section
     var textRef = firebase.database().ref("/texts");
-        textRef.once("value").then(function(data) {
+    textRef.once("value").then(function(data) {
         texts = data.val();
         console.log(texts);
         learnBtn.on("click", function(event) {
-        var infoBoard = $("<article>", {
-            class: "infoBoard"
-        });
-        infoBoard.appendTo(learnSection);
-        var hideBtn = $("<button>", {
-            class: "hideBtn"
-        });
-        infoBoard.css("z-index", 2);
-        hideBtn.appendTo(infoBoard);
-        var infoParagraph = $("<p>", {
-            class: "infoParagraph"
-        });
-        infoParagraph.prependTo(infoBoard);
-        hideBtn.text("hide");
-        var index = $(this).index();
-        console.log(index);
-        
-        var photoDiv = $("<div>", {class: "photoDiv"});
-        photoDiv.insertAfter(infoParagraph);
-        photoDiv.attr("id", "board" + (index+1)); //ten fragment kodu jeszcze nie wiem, czy wykorzystam - miał być, by dawać zdj. w tle inne każdemu art.
+            var infoBoard = $("<article>", {
+                class: "infoBoard"
+            });
+            infoBoard.appendTo(learnSection);
+            var hideBtn = $("<button>", {
+                class: "hideBtn"
+            });
+            infoBoard.css("z-index", 2);
+            hideBtn.appendTo(infoBoard);
+            var infoParagraph = $("<p>", {
+                class: "infoParagraph"
+            });
+            infoParagraph.prependTo(infoBoard);
+            hideBtn.text("hide");
+            var index = $(this).index();
+            console.log(index);
 
-        infoParagraph.text(texts[index]);
+            var photoDiv = $("<div>", {
+                class: "photoDiv"
+            });
+            photoDiv.insertAfter(infoParagraph);
+            photoDiv.attr("id", "board" + (index + 1)); // used so that different articles have different ilustations
+            infoParagraph.text(texts[index]);
 
-    })
+        })
 
 
     });
-    
+
 
     learnSection.on("click", ".hideBtn", function(event) {
         $(this).parent().remove();
@@ -87,7 +88,7 @@ $(function() {
         learnArt.children("h2").show();
     })
 
-
+    /*trivia game */
     //events for trivia game - dynamic 
 
     var triviaRef = firebase.database().ref("/quizes");
@@ -120,13 +121,13 @@ $(function() {
         })
 
 
-        triviaSection.on("click", ".startTrivia", function(event) {
+        triviaSection.on("click", ".startTrivia", function(event) { //create first question
             $(this).hide();
             $(this).siblings().hide()
             triviaHeaderOne.hide();
             var indicator = $(this).index();
             //console.log(indicator);
-            var index = 0; //index początkowego pytania, będzie wzrastał
+            var index = 0; //index of first question
             var points = 0;
 
             var questions = test[indicator];
@@ -195,27 +196,38 @@ $(function() {
 
             }
 
-            function createResultsBoard() {
-                var resultsBoard = $("<div>", {
-                    class: "resultsBoard"
-                });
-                resultsBoard.prependTo(triviaBoard);
-                if (points < questionSet / 2) {
-                    resultsBoard.text(points + " out of " + questionSet + " points, learn a bit more");
+            // this gives penalty for not giving answers within time wanted
+            var seconds = 10 * questionSet; //you get 10secs per question
+            var secondsInfo = $("<article>", {
+                class: "secondsInfo"
+            });
+            secondsInfo.insertAfter(triviaSection);
+            console.log(secondsInfo.parent());
+            secondsInfo.text("quiz time limit: " + seconds + " secs");
+            var interval = setInterval(function() {
+                var newSeconds = seconds - 1;
+                seconds = newSeconds;
+                secondsInfo.text(" quiz time limit: " + newSeconds + " secs");
+                if (newSeconds === 0) { //
+                    clearInterval(interval);
+                    triviaSection.remove();
+                    secondsInfo.text("Game over!");
+                    points = 0;
+
                 }
-                if (points >= questionSet / 2 && points < questionSet / 1.25) {
-                    resultsBoard.text(points + " out of " + questionSet + " points! not bad at all!");
+                if (index >= createQuestion) {
+                    clearInterval(interval);
+                    $(".quizDiv").hide();
+                    $(".quizDiv").prev().hide();
+
                 }
-                if (points >= questionSet / 1.25) {
-                    resultsBoard.text(points + " out of " + questionSet + " points! a true 90s kid!");
-                }
 
-                createComebackBtn(resultsBoard);
-            }
+            }, 1000);
 
 
 
-            triviaSection.on("click", ".quizButton", function(event) {
+
+            triviaSection.on("click", ".quizButton", function(event) { //collect answers and count points
                 if (index < questionSet) {
                     var checked = $(this).siblings("label").find("input:checked");
                     var value = checked.attr("value");
@@ -233,6 +245,7 @@ $(function() {
                         $(this).parent().prev().hide();
 
                     }
+
                 } else {
 
                     createResultsBoard();
@@ -242,14 +255,38 @@ $(function() {
 
             })
 
+
+            function createResultsBoard() { // do it when question list over
+                var resultsBoard = $("<div>", {
+                    class: "resultsBoard"
+                });
+                clearInterval(interval);
+                secondsInfo.remove();
+                resultsBoard.prependTo(triviaBoard);
+                if (points < questionSet / 2) {
+                    resultsBoard.text(points + " out of " + questionSet + " points, learn a bit more");
+                }
+                if (points >= questionSet / 2 && points < questionSet / 1.25) {
+                    resultsBoard.text(points + " out of " + questionSet + " points! not bad at all!");
+                }
+                if (points >= questionSet / 1.25) {
+                    resultsBoard.text(points + " out of " + questionSet + " points! a true 90s kid!");
+                }
+
+                createComebackBtn(resultsBoard); //allow test repetition
+            }
+
+
+
+
         })
-        
+
         triviaSection.on("click", ".hideAlertBtn", function() {
             //$(this).remove();
             $(this).parent().remove();
         })
-        
-        triviaSection.on("click", ".comeback", function(event) {
+
+        triviaSection.on("click", ".comeback", function(event) { //refresh the page when finished and be able to play again
             location.reload();
         })
 
