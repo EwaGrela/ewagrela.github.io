@@ -198,11 +198,11 @@ $(function() {
 
             // this gives penalty for not giving answers within time wanted
             var seconds = 10 * questionSet; //you get 10secs per question
-            var secondsInfo = $("<article>", {
+            var secondsInfo = $("<section>", {
                 class: "secondsInfo"
             });
             secondsInfo.insertAfter(triviaSection);
-            console.log(secondsInfo.parent());
+            
             secondsInfo.text("quiz time limit: " + seconds + " secs");
             var interval = setInterval(function() {
                 var newSeconds = seconds - 1;
@@ -211,7 +211,10 @@ $(function() {
                 if (newSeconds === 0) { //
                     clearInterval(interval);
                     triviaSection.remove();
-                    secondsInfo.text("Game over!");
+                    secondsInfo.text("Game over! Start over!");
+                    secondsInfo.on("click", function(){
+                    	location.reload();
+                    })
                     points = 0;
 
                 }
