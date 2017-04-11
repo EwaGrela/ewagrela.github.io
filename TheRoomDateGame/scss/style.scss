@@ -1,0 +1,119 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Wendy One', sans-serif;
+}
+
+%layout {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.intro {
+	background-color: black;
+	color: white;
+	height: 100vh;
+	max-width: 100vw;
+	@extend %layout;
+	article {
+		width: 90%;
+		height: 90%;
+		margin-top: 20px;
+		&:first-of-type {
+		@extend %layout;
+		border: 1px solid white;
+			p {
+				width: 70%;
+				font-size: 14px;
+				@media(min-width: 568px){
+					font-size: 18px;
+				}
+				margin: 5px 10px;
+			}
+		}
+
+
+	}
+
+	h2 {
+		font-size: 20px;
+
+	}
+	ul {
+		color: yellow;
+		@extend %layout;
+		align-items: flex-start;
+		list-style: none;
+
+	}
+
+	button {
+		font-size: 20px;
+		background-color: red;
+		color: white;
+		padding: 5px;
+		border: none;
+		border-radius: 5%;
+		margin-bottom: 10px;
+	}
+	
+}
+
+.invisible {
+	display: none;
+}
+
+.game {
+	background-color: darken(green, 10%);
+	max-width: 100vw;
+	height: 100vh;
+	padding-top: 20px;
+	@extend %layout;
+}
+#results {
+	width: 300px;
+	height: 50px;
+
+}
+.container {
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	@media(min-width: 786px){
+		width: 550px;
+		height: 550px;
+	}
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	div {
+		width: 30px;
+		height: 30px;
+		@media(min-width: 786px){
+		width: 55px;
+		height: 55px;
+	}
+		border: 1px solid yellow;
+	}
+
+}
+
+.spoon {
+	background-image: url("../images/spoon.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.dollar {
+	background-image: url("../images/dollar.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
