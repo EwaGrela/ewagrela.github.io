@@ -104,7 +104,32 @@ document.addEventListener("DOMContentLoaded", function(){
    }, 1000)
 
    
-   // usuwanie przedmiotów
+   
+   Game.prototype.removeAllItems = function(className) {
+   		for( var i =0; i<this.board.length; i ++){
+   			this.board[i].classList.remove(className);
+   		}
+   }
+   
+
+   Game.prototype.showMoney = function(){
+   		this.dollar.x = Math.floor(Math.random() * 10);
+        this.dollar.y = Math.floor(Math.random() * 10);
+        var index = this.dollar.x + this.dollar.y *10;
+        this.board[index].classList.add("dollar");
+
+   }
+
+   Game.prototype.hideMoney = function(){
+   		this.dollar.x = Math.floor(Math.random() * 10);
+        this.dollar.y = Math.floor(Math.random() * 10);
+        var index = this.dollar.x + this.dollar.y *10;
+        this.board[index].classList.remove("dollar");
+
+   }
+
+   
+// usuwanie przedmiotów
    Game.prototype.collectItems= function(){
    		//console.log(this.board);
    		for( var i = 0; i<this.board.length; i++){
@@ -166,31 +191,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
    }
    game.collectItems();
-   
-
-   Game.prototype.removeAllItems = function(className) {
-   		for( var i =0; i<this.board.length; i ++){
-   			this.board[i].classList.remove(className);
-   		}
-   }
-   
-
-   Game.prototype.showMoney = function(){
-   		this.dollar.x = Math.floor(Math.random() * 10);
-        this.dollar.y = Math.floor(Math.random() * 10);
-        var index = this.dollar.x + this.dollar.y *10;
-        this.board[index].classList.add("dollar");
-
-   }
-
-   Game.prototype.hideMoney = function(){
-   		this.dollar.x = Math.floor(Math.random() * 10);
-        this.dollar.y = Math.floor(Math.random() * 10);
-        var index = this.dollar.x + this.dollar.y *10;
-        this.board[index].classList.remove("dollar");
-
-   }
-
    
 
 
