@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
-    console.log("działa");
-    //
+    console.log("date game");
+    // findin DOM elements and other viariables
     var startGameButton = document.querySelector(".intro button");
     //console.log(startGameButton);
     var gameSection = document.querySelector(".game");
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     })
 
-    //creating a game 
+    //creating a board for the game
     function drawBoard(){
         for(var i = 0; i<100; i++){
             var boardDiv = document.createElement("div");
@@ -95,52 +95,82 @@ document.addEventListener("DOMContentLoaded", function(){
              game.hideSpoon();   
     }, 4000);
    //ograniczenie czasowe zbierania łyżek
-   var timeForSpoons = 100;
-   results.innerText = timeForSpoons;
+   var timeForSpoons = 40;
+   results.innerText = "You can collect spoons for " + timeForSpoons;
    var timer = setInterval(function(){
    		timeLeft = timeForSpoons -1;
    		timeForSpoons = timeLeft;
-   		results.innerText = timeLeft;
+   		results.innerText = "You can collect spoons for " + timeLeft;
    }, 1000)
+
+   
    // usuwanie przedmiotów
    Game.prototype.collectItems= function(){
    		//console.log(this.board);
    		for( var i = 0; i<this.board.length; i++){
    			this.board[i].addEventListener("click", function(){
-   				console.log(this);
-   				console.log(this.className);
+  
    				if(this.className==="spoon"){
    					this.classList.remove("spoon");
    					collectedSpoons ++;
    					console.log(collectedSpoons);
    					
    				}
-   				if(collectedSpoons ===20){
+   				if(this.className ==="dollar"){
+   					this.classList.remove("dollar");
+   					dollarsEarned++;
+   					console.log(dollarsEarned);
+   				}
+   				if(collectedSpoons>=20 && timeLeft===0){
    						console.log("zebrano łyżki")				
    						clearInterval(interval);
    						clearInterval(interval2);
    						clearInterval(timer);
-   						game.removeAllSpoons();
+   						game.removeAllItems("spoon");
    						var interval3 = setInterval(function() {
               				game.showMoney();
     					}, 1500);
+    					var interval4 = setInterval(function() {
+             				game.hideMoney();   
+   						}, 3000);
+
+   						var timeForDollars = 100;
+					   	results.innerText = "You can earn money for "+ timeForDollars;
+					   	var timer2 = setInterval(function(){
+					   		leftTime = timeForDollars -1;
+					   		timeForDollars = leftTime;
+					   		results.innerText = "You can earn money for "+ leftTime;
+					   })
+					   	if(leftTime ===0 && dollarsEarned<50 ){
+		  					clearInterval(timer2);
+		  					console.log("game over");
+		  				}
+		  				if(leftTime ===0 &&dollarsEarned>=50){
+		  					clearInterval(interval3);
+		  					clearInterval(interval4);
+		  					clearInterval(timer2);
+		  					game.removeAllItems("dollar");
+		  				}
   				}
 
-  				if(timeLeft ===0){
+  				if(timeLeft ===0 && collectedSpoons<20){
   					console.log("game over");
   					clearInterval(timer);
-  					game.removeAllSpoons();
+  					game.removeAllItems("spoon");
+  					
   				}
+  				
 
    			})
    		}
+
    }
    game.collectItems();
    
 
-   Game.prototype.removeAllSpoons = function() {
+   Game.prototype.removeAllItems = function(className) {
    		for( var i =0; i<this.board.length; i ++){
-   			this.board[i].classList.remove("spoon");
+   			this.board[i].classList.remove(className);
    		}
    }
    
@@ -150,6 +180,14 @@ document.addEventListener("DOMContentLoaded", function(){
         this.dollar.y = Math.floor(Math.random() * 10);
         var index = this.dollar.x + this.dollar.y *10;
         this.board[index].classList.add("dollar");
+
+   }
+
+   Game.prototype.hideMoney = function(){
+   		this.dollar.x = Math.floor(Math.random() * 10);
+        this.dollar.y = Math.floor(Math.random() * 10);
+        var index = this.dollar.x + this.dollar.y *10;
+        this.board[index].classList.remove("dollar");
 
    }
 
