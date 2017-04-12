@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	   		timeForSpoons = timeLeft;
 	   		results.innerText = "You can collect spoons for " + timeLeft;
 
-	   		if(timeLeft === 0 &&collectedSpoons<10){
+	   		if(timeLeft === 0 &&collectedSpoons<5){
 		  			clearInterval(timer);
 		  			clearInterval(interval);
 		  			clearInterval(interval2);
@@ -31,14 +31,77 @@ document.addEventListener("DOMContentLoaded", function(){
 		  			
   					
   				}
-  				if(timeLeft ===0 && collectedSpoons>=10){
+  				if(timeLeft ===0 && collectedSpoons>=5){
    					console.log("zebrano łyżki")
    					clearInterval(timer);				
    					clearInterval(interval);
    					clearInterval(interval2);
    					timeLeft = 0;
    					game.removeAllSpoons();
-   					
+   					    var interval3 = setInterval(function() {
+                      game.showMoney();
+                }, 1500);
+                var interval4 = setInterval(function() {
+                       game.hideMoney();   
+                }, 3000);
+
+              var timeForDollars = 50;
+              results.innerText = "You can earn money for "+ timeForDollars;
+              var timer2 = setInterval(function(){
+              leftTime = timeForDollars -1;
+              timeForDollars = leftTime;
+              results.innerText = "You can earn money for "+ leftTime;  
+
+                if(leftTime === 0 && dollarsEarned<2){
+                      clearInterval(timer2);
+                      clearInterval(interval3);
+                        clearInterval(interval4);
+                        leftTime = 0;
+                        game.removeAllMoney();
+                      console.log("game over");
+                }
+                if( leftTime ===0 && dollarsEarned>=2){
+                      clearInterval(interval3);
+                      clearInterval(interval4);
+                      clearInterval(timer2);
+                      leftTime = 0;
+                      game.removeAllMoney();
+                      console.log("congrats, time for roses");
+                      var interval5 = setInterval(function() {
+                        game.showRose();
+                      }, 1000);
+                      var interval6 = setInterval(function() {
+                        game.hideRose();   
+                      }, 2000);
+
+                      var timeForRoses = 50;
+                      results.innerText ="You can pluck roses for " + timeForRoses;
+                      var timer3 = setInterval(function(){
+                          var timeRemaining = timeForRoses -1;
+                          timeForRoses = timeRemaining;
+                          results.innerText = "You can pluck roses for " + timeRemaining;
+                          if(timeRemaining ===0 && pluckedRoses<2){
+                              clearInterval(interval5);
+                              clearInterval(interval6);
+                              clearInterval(timer3);
+                              timeRemaining =0;
+                              game.removeAllRoses();
+                              console.log("game over");
+                          }
+                          if(timeRemaining ===0 && pluckedRoses>=2){
+                              clearInterval(interval5);
+                              clearInterval(interval6);
+                              clearInterval(timer3)
+                              timeRemaining = 0;
+                              game.removeAllRoses();
+                              console.log("date time!")
+                          }
+
+
+                      }, 1000)
+                }
+              }, 1000)
+              
 
   				}	
 
@@ -146,6 +209,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 game.hideJohny(x,y);
                 game.moveJohny(x-1, y);
                 game.collectSpoons();
+                game.earnMoney();
+                game.pluckRoses();
                 
             }
             if (event.keyCode === 39) {
@@ -153,6 +218,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 game.hideJohny(x,y);
                 game.moveJohny(x+1, y);
                 game.collectSpoons();
+                game.earnMoney();
+                game.pluckRoses();
                 
             }
             if (event.keyCode === 38) {
@@ -160,6 +227,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 game.hideJohny(x,y);
                 game.moveJohny(x, y-1);
                 game.collectSpoons();
+                game.earnMoney();
+                game.pluckRoses();
                
             }
             if (event.keyCode === 40) {
@@ -167,6 +236,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 game.hideJohny(x,y);
                 game.moveJohny(x, y+1);
                 game.collectSpoons();
+                game.earnMoney();
+                game.pluckRoses();
             }
     	}
     }
@@ -206,9 +277,9 @@ document.addEventListener("DOMContentLoaded", function(){
    }
 
    Game.prototype.hideMoney = function(){
-   		var dollar = document.querySelectorAll(".dollar");
-    	for( var i = 0; i<spoons.length; i++ ){
-    		spoons[i].classList.remove("dollar");
+   		var dollars = document.querySelectorAll(".dollar");
+    	for( var i = 0; i<dollars.length; i++ ){
+    		dollars[i].classList.remove("dollar");
     		
     	}
 
@@ -220,17 +291,17 @@ document.addEventListener("DOMContentLoaded", function(){
    		}
    }
    Game.prototype.showRose = function(){
-   		this.dollar.x = Math.floor(Math.random() * 10);
-        this.dollar.y = Math.floor(Math.random() * 10);
-        var index = this.dollar.x + this.dollar.y *10;
+   		this.rose.x = Math.floor(Math.random() * 10);
+        this.rose.y = Math.floor(Math.random() * 10);
+        var index = this.rose.x + this.rose.y *10;
         this.board[index].classList.add("rose");
 
    }
 
    Game.prototype.hideRose = function(){
    		var roses = document.querySelectorAll(".rose");
-    	for( var i = 0; i<spoons.length; i++ ){
-    		spoons[i].classList.remove("rose");
+    	for( var i = 0; i<roses.length; i++ ){
+    		roses[i].classList.remove("rose");
     		
     	}
 
@@ -245,9 +316,6 @@ document.addEventListener("DOMContentLoaded", function(){
    
 // usuwanie przedmiotów
    Game.prototype.collectSpoons= function(){
-   		//console.log(this.board);
-   		//console.log(this);
-   		//console.log(this.johny);
    		for ( var i = 0; i<this.board.length; i++){
    			if(this.board[i].className ==="johny spoon" || this.board[i].className ==="spoon johny") {
    				this.board[i].classList.remove("spoon");
@@ -257,119 +325,36 @@ document.addEventListener("DOMContentLoaded", function(){
    			
    		}
 
+   	} 
+   
+
+   Game.prototype.earnMoney= function(){
+   		
+   		for ( var i = 0; i<this.board.length; i++){
+   			if(this.board[i].className ==="johny dollar" || this.board[i].className ==="dollar johny") {
+   				this.board[i].classList.remove("dollar");
+   				dollarsEarned ++;
+   				console.log(dollarsEarned);
+   			}
+   			
+   		}
+
    	}
 
-   
-   game.collectSpoons();
+    Game.prototype.pluckRoses= function(){
+      
+      for ( var i = 0; i<this.board.length; i++){
+        if(this.board[i].className ==="johny rose" || this.board[i].className ==="rose johny") {
+          this.board[i].classList.remove("rose");
+          pluckedRoses++;
+          console.log(pluckedRoses);
+        }
+        
+      }
+
+    }
 
 
-   Game.prototype.collectMoney = function(){
-   		var interval3 = setInterval(function() {
-              game.showMoney();
-    	}, 1500);
-    	var interval4 = setInterval(function() {
-             game.hideMoney();   
-   		}, 3000);
-
-   		var timeForDollars = 50;
-		results.innerText = "You can earn money for "+ timeForDollars;
-		var timer2 = setInterval(function(){
-		leftTime = timeForDollars -1;
-		timeForDollars = leftTime;
-		results.innerText = "You can earn money for "+ leftTime;
-		console.log(leftTime);
-		
-		}, 1000)
-   		for( var i = 0; i<this.board.length; i++){
-   			function collecting2(){
-   				if(this.className ==="dollar"){
-		   					this.classList.remove("dollar");
-		   					dollarsEarned++;
-		   					console.log(dollarsEarned);
-   				}
-
-   				if(leftTime === 0 && dollarsEarned<20){
-					clearInterval(timer2);
-					clearInterval(interval3);
-				  	clearInterval(interval4);
-				  	game.removeAllMoney();
-				  	event.target.removeEventListener("click", collecting2)
-				  	leftTime = 0;
-					console.log("game over");
-				}
-				if( leftTime ===0 && dollarsEarned>=20){
-					clearInterval(interval3);
-					clearInterval(interval4);
-					clearInterval(timer2);
-					game.removeAllMoney();
-					leftTime = 0;
-					game.removeAllItems("dollar");
-					event.target.removeEventListener("click", collecting2)
-					console.log("congrats, time for roses");
-				}
-   			}
-   			this.board[i].addEventListener("click", collecting2);
-   		}
-   }
-var timeout = setTimeout(function(){
-game.collectMoney();
-}, 40000);
-  
-
-
-Game.prototype.collectRoses = function(){
-
-	   	var interval5 = setInterval(function() {
-              game.showRose();
-    	}, 1000);
-    	var interval6 = setInterval(function() {
-             game.hideRose();   
-   		}, 2000);
-
-   		var timeForRoses = 50;
-		results.innerText = "You can pluck roses for "+ timeForRoses;
-		var timer3 = setInterval(function(){
-		timeRemaining = timeForRoses -1;
-		timeForRoses = timeRemaining;
-		results.innerText = "You can pluck roses for "+ timeRemaining;
-		console.log(timeRemaining);
-		
-		}, 1000)
-   		for( var i = 0; i<this.board.length; i++){
-   			function collecting3(){
-   				if(this.className ==="rose"){
-		   					this.classList.remove("rose");
-		   					pluckedRoses++;
-		   					console.log(pluckedRoses);
-   				}
-
-   				if(timeRemaining === 0 && pluckedRoses<20){
-					clearInterval(timer3);
-					clearInterval(interval5);
-				  	clearInterval(interval6);
-				  	
-				  	event.target.removeEventListener("click", collecting3);
-				  	timeRemaining = 0;
-					console.log("game over");
-				}
-				if( timeRemaining ===0 && pluckedRoses>=20){
-					clearInterval(interval5);
-					clearInterval(interval6);
-					clearInterval(timer3);
-					
-					timeRemaining = 0;
-					event.target.removeEventListener("click", collecting3);
-					console.log("congrats, it is done");
-				}
-   			}
-   			this.board[i].addEventListener("click", collecting3);
-   		}
-
-}
-
-var timeout2 = setTimeout(function(){
-	game.collectRoses();
-}, 90000)
 
 
 
