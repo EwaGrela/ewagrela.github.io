@@ -184,8 +184,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         var Game = function() {
-            //this.sounds = [];
-            //this.soundInit();
             this.johny = new Johny(0, 0, "right");
             this.spoon = new Spoon(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
             this.dollar = new Dollar(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
@@ -193,6 +191,8 @@ document.addEventListener("DOMContentLoaded", function() {
             this.board = document.querySelectorAll(".container div");
             this.claudette = new Claudette(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
             this.chrisR = new ChrisR(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
+            //this.sounds = [];
+            //this.soundInit();
         }
 
         var game = new Game();
@@ -201,8 +201,11 @@ document.addEventListener("DOMContentLoaded", function() {
         /*
         Game.prototype.soundInit = function () {
         var sounds = document.querySelectorAll("audio");
-        //tu wpiszesz this.sounds.coin = sounds[0], np
+            this.sounds.spoon = sounds[0];
+            this.sounds.dollar = sounds[1];
+            this.sounds.rose = sounds[2];
         }
+        
         */
         
         //count your position on a board
@@ -400,6 +403,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.board[i].classList.remove("spoon");
                     collectedSpoons++;
                     console.log(collectedSpoons);
+                    //this.sounds.spoon.play();
                     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
 
                 }
