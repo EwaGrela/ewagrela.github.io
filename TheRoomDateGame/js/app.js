@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //enemies attack
         var interval7 = setInterval(function() {
             game.claudetteNagging();
-        }, 4000);
+        }, 3000);
 
         var interval8 = setInterval(function() {
             game.chrisRAttack();
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var interval9 = setInterval(function() {
             game.claudetteGone();
-        }, 8000);
+        }, 6000);
         var interval10 = setInterval(function() {
             game.chrisRGone();
         }, 6000);
@@ -184,6 +184,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         var Game = function() {
+            //this.sounds = [];
+            //this.soundInit();
             this.johny = new Johny(0, 0, "right");
             this.spoon = new Spoon(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
             this.dollar = new Dollar(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
@@ -196,6 +198,13 @@ document.addEventListener("DOMContentLoaded", function() {
         var game = new Game();
 
         /* Metody do gry*/
+        /*
+        Game.prototype.soundInit = function () {
+        var sounds = document.querySelectorAll("audio");
+        //tu wpiszesz this.sounds.coin = sounds[0], np
+        }
+        */
+        
         //count your position on a board
         Game.prototype.countPosition = function(x, y) {
             return (x + y * 10);
