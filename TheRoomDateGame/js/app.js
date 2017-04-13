@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             timeForSpoons = timeLeft;
             results.innerText = "Time left: " + timeLeft;
 
-            if (timeLeft === 0 && collectedSpoons < 5) {
+            if (timeLeft === 0 && collectedSpoons < 10) {
                 clearInterval(timer);
                 clearInterval(interval);
                 clearInterval(interval2);
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
             }
-            if (timeLeft === 0 && collectedSpoons >= 5) {
+            if (timeLeft === 0 && collectedSpoons >= 10) {
                 console.log("zebrano łyżki")
                 clearInterval(timer);
                 clearInterval(interval);
@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 game.removeAllSpoons();
                 var interval3 = setInterval(function() {
                     game.showMoney();
-                }, 1500);
+                }, 2000);
                 var interval4 = setInterval(function() {
                     game.hideMoney();
-                }, 3000);
+                }, 5000);
 
                 var timeForDollars = 50;
                 results.innerText = "Time left: " + timeForDollars;
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     timeForDollars = leftTime;
                     results.innerText = "Time left: " + leftTime;
 
-                    if (leftTime === 0 && dollarsEarned < 2) {
+                    if (leftTime === 0 && dollarsEarned < 11) {
                         clearInterval(timer2);
                         clearInterval(interval3);
                         clearInterval(interval4);
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         console.log("game over");
                         game.gameOver();
                     }
-                    if (leftTime === 0 && dollarsEarned >= 2) {
+                    if (leftTime === 0 && dollarsEarned >= 11) {
                         clearInterval(interval3);
                         clearInterval(interval4);
                         clearInterval(timer2);
@@ -76,10 +76,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         console.log("congrats, time for roses");
                         var interval5 = setInterval(function() {
                             game.showRose();
-                        }, 1000);
+                        }, 1500);
                         var interval6 = setInterval(function() {
                             game.hideRose();
-                        }, 2000);
+                        }, 3500);
 
                         var timeForRoses = 50;
                         results.innerText = "Time left: " + timeForRoses;
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             var timeRemaining = timeForRoses - 1;
                             timeForRoses = timeRemaining;
                             results.innerText = "Time left: " + timeRemaining;
-                            if (timeRemaining === 0 && pluckedRoses < 2) {
+                            if (timeRemaining === 0 && pluckedRoses < 12) {
                                 clearInterval(interval5);
                                 clearInterval(interval6);
                                 clearInterval(timer3);
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 game.gameOver();
 
                             }
-                            if (timeRemaining === 0 && pluckedRoses >= 2) {
+                            if (timeRemaining === 0 && pluckedRoses >= 12) {
                                 clearInterval(interval5);
                                 clearInterval(interval6);
                                 clearInterval(timer3)
@@ -119,30 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000)
 
         drawBoard();
-        var interval = setInterval(function() {
-            game.showSpoon();
-        }, 1500);
-
-        var interval2 = setInterval(function() {
-            game.hideSpoon();
-        }, 4000);
-
-        //enemies attack
-        var interval7 = setInterval(function() {
-            game.claudetteNagging();
-        }, 3000);
-
-        var interval8 = setInterval(function() {
-            game.chrisRAttack();
-        }, 4000);
-
-        var interval9 = setInterval(function() {
-            game.claudetteGone();
-        }, 6000);
-        var interval10 = setInterval(function() {
-            game.chrisRGone();
-        }, 6000);
-
+        
         //creating a board for the game
         function drawBoard() {
             for (var i = 0; i < 100; i++) {
@@ -183,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
 
+
         var Game = function() {
             this.johny = new Johny(0, 0, "right");
             this.spoon = new Spoon(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
@@ -191,22 +169,52 @@ document.addEventListener("DOMContentLoaded", function() {
             this.board = document.querySelectorAll(".container div");
             this.claudette = new Claudette(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
             this.chrisR = new ChrisR(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
-            //this.sounds = [];
-            //this.soundInit();
+            this.sounds = document.querySelectorAll("audio")
+            this.sounds.spoon = this.sounds[0];
+            this.sounds.spoon.volume = 0.5;
+            this.sounds.dollar = this.sounds[1];
+            this.sounds.rose = this.sounds[2];
+            this.sounds.over = this.sounds[3];
+            this.sounds.over.volume = 0.2;
+            this.sounds.date = this.sounds[4];
+            this.sounds.date.volume = 0.7;
+            this.sounds.background = this.sounds[5];
+            this.sounds.background.volume =0.1;
         }
+
+        
+
 
         var game = new Game();
+        game.sounds.background.play();
+        //game action
+        var interval = setInterval(function() {
+            game.showSpoon();
+        }, 1500);
+
+        var interval2 = setInterval(function() {
+            game.hideSpoon();
+        }, 4000);
+
+        //enemies attack
+        var interval7 = setInterval(function() {
+            game.claudetteNagging();
+        }, 3000);
+
+        var interval8 = setInterval(function() {
+            game.chrisRAttack();
+        }, 4000);
+
+        var interval9 = setInterval(function() {
+            game.claudetteGone();
+        }, 6000);
+        var interval10 = setInterval(function() {
+            game.chrisRGone();
+        }, 6000);
+
 
         /* Metody do gry*/
-        /*
-        Game.prototype.soundInit = function () {
-        var sounds = document.querySelectorAll("audio");
-            this.sounds.spoon = sounds[0];
-            this.sounds.dollar = sounds[1];
-            this.sounds.rose = sounds[2];
-        }
         
-        */
         
         //count your position on a board
         Game.prototype.countPosition = function(x, y) {
@@ -403,6 +411,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.board[i].classList.remove("spoon");
                     collectedSpoons++;
                     console.log(collectedSpoons);
+                    this.sounds.spoon.play();
                     //this.sounds.spoon.play();
                     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
 
@@ -419,6 +428,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.board[i].classList.remove("dollar");
                     dollarsEarned++;
                     console.log(dollarsEarned);
+                    this.sounds.dollar.play();
                     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
                 }
 
@@ -432,6 +442,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.board[i].classList.remove("rose");
                     pluckedRoses++;
                     console.log(pluckedRoses);
+                    this.sounds.rose.play();
                     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
                 }
 
@@ -476,6 +487,7 @@ document.addEventListener("DOMContentLoaded", function() {
             introSection.parentNode.removeChild(introSection);
             body.append(gameOverBoard);
             gameOverBoard.innerText = " Game over! No sweet lovin' for you! You are tearing me apart!"
+            this.sounds.over.play();
         }
 
         //date happening:
@@ -487,6 +499,7 @@ document.addEventListener("DOMContentLoaded", function() {
             introSection.parentNode.removeChild(introSection);
             body.append(dateBoard);
             dateBoard.innerText =" The date night is on! Do not drink to much scotchka!"
+            this.sounds.date.play();
         }
 
     })
