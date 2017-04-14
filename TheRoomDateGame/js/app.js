@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("changed");
-    // DOM elements and other viariables
+    console.log("js game");
+    // DOM elements and other variables
     var collectedSpoons = 0;
     var dollarsEarned = 0;
     var pluckedRoses = 0;
@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var introSection = document.querySelector(".intro");
     var gameSection = document.querySelector(".game");
     var gameBoard = gameSection.querySelector(".container");
-    var results = document.getElementById("results");
+    var timingDiv = document.getElementById("timer");
+    var infoRoundParagraph = document.getElementById("quality");
     var stats = document.getElementById("stats");
     var statsSpan = stats.querySelector("span");
     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
@@ -19,18 +20,18 @@ document.addEventListener("DOMContentLoaded", function() {
         this.parentElement.classList.add("invisible");
         gameSection.classList.remove("invisible");
         //ograniczenie czasowe zbierania łyżek
-        var timeForSpoons = 40;
-        results.innerText = "Time left: " + timeForSpoons;
+        var timeForSpoons = 60;
+        timingDiv.innerText = "Time left: " + timeForSpoons;
+
         var timer = setInterval(function() {
             timeLeft = timeForSpoons - 1;
             timeForSpoons = timeLeft;
-            results.innerText = "Time left: " + timeLeft;
+            timingDiv.innerText = "Time left: " + timeLeft;
 
             if (timeLeft === 0 && collectedSpoons < 10) {
                 clearInterval(timer);
                 clearInterval(interval);
                 clearInterval(interval2);
-                console.log("game over");
                 game.gameOver();
                 timeLeft = 0
                 game.removeAllSpoons();
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             }
             if (timeLeft === 0 && collectedSpoons >= 10) {
-                console.log("zebrano łyżki")
+             
                 clearInterval(timer);
                 clearInterval(interval);
                 clearInterval(interval2);
@@ -49,14 +50,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 }, 2000);
                 var interval4 = setInterval(function() {
                     game.hideMoney();
-                }, 5000);
+                }, 8000);
 
-                var timeForDollars = 50;
-                results.innerText = "Time left: " + timeForDollars;
+                var timeForDollars = 60;
+                timingDiv.innerText = "Time left: " + timeForDollars;
+                infoRoundParagraph.innerText ="Money time"
                 var timer2 = setInterval(function() {
                     leftTime = timeForDollars - 1;
                     timeForDollars = leftTime;
-                    results.innerText = "Time left: " + leftTime;
+                    timingDiv.innerText = "Time left: " + leftTime;
 
                     if (leftTime === 0 && dollarsEarned < 11) {
                         clearInterval(timer2);
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         clearInterval(interval4);
                         leftTime = 0;
                         game.removeAllMoney();
-                        console.log("game over");
+                       
                         game.gameOver();
                     }
                     if (leftTime === 0 && dollarsEarned >= 11) {
@@ -73,37 +75,36 @@ document.addEventListener("DOMContentLoaded", function() {
                         clearInterval(timer2);
                         leftTime = 0;
                         game.removeAllMoney();
-                        console.log("congrats, time for roses");
+                       
                         var interval5 = setInterval(function() {
                             game.showRose();
                         }, 1500);
                         var interval6 = setInterval(function() {
                             game.hideRose();
-                        }, 3500);
+                        }, 8000);
 
-                        var timeForRoses = 50;
-                        results.innerText = "Time left: " + timeForRoses;
+                        var timeForRoses = 60;
+                        timingDiv.innerText = "Time left: " + timeForRoses;
+                        infoRoundParagraph.innerText= "Roses time"
                         var timer3 = setInterval(function() {
                             var timeRemaining = timeForRoses - 1;
                             timeForRoses = timeRemaining;
-                            results.innerText = "Time left: " + timeRemaining;
-                            if (timeRemaining === 0 && pluckedRoses < 12) {
+                            timingDiv.innerText = "Time left: " + timeRemaining;
+                            if (timeRemaining === 0 && pluckedRoses < 1) {
                                 clearInterval(interval5);
                                 clearInterval(interval6);
                                 clearInterval(timer3);
                                 timeRemaining = 0;
                                 game.removeAllRoses();
-                                console.log("game over");
                                 game.gameOver();
 
                             }
-                            if (timeRemaining === 0 && pluckedRoses >= 12) {
+                            if (timeRemaining === 0 && pluckedRoses >= 1) {
                                 clearInterval(interval5);
                                 clearInterval(interval6);
                                 clearInterval(timer3)
                                 timeRemaining = 0;
                                 game.removeAllRoses();
-                                console.log("date time!")
                                 game.dateTime();
                             }
 
@@ -179,22 +180,24 @@ document.addEventListener("DOMContentLoaded", function() {
             this.sounds.date = this.sounds[4];
             this.sounds.date.volume = 0.7;
             this.sounds.background = this.sounds[5];
-            this.sounds.background.volume =0.1;
+            this.sounds.background.volume =0.02;
         }
 
         
 
 
         var game = new Game();
+
         game.sounds.background.play();
         //game action
         var interval = setInterval(function() {
             game.showSpoon();
+
         }, 1500);
 
         var interval2 = setInterval(function() {
             game.hideSpoon();
-        }, 4000);
+        }, 10000);
 
         //enemies attack
         var interval7 = setInterval(function() {
@@ -352,13 +355,38 @@ document.addEventListener("DOMContentLoaded", function() {
         Game.prototype.moveAround = function() {
             var self = this;
             document.addEventListener("keydown", movingAround);
-
             function movingAround(event) {
-
                 var x = self.johny.x;
                 var y = self.johny.y;
                 if (event.keyCode === 37) {
                     self.johny.direction = "left";
+                    
+                }
+                if (event.keyCode === 39) {
+                    self.johny.direction = "right";
+                    
+                }
+                if (event.keyCode === 38) {
+                    self.johny.direction = "up";
+                    
+
+                }
+                if (event.keyCode === 40) {
+                    self.johny.direction = "down";
+                    
+                }
+            }
+        }
+        game.moveAround();
+
+        //johny moves on his own!
+        var singleMoveInterval = setInterval(singleMove, 300);
+            function singleMove(){
+                this.game = game;
+                var johny = game.johny;
+                var x = johny.x;
+                var y = johny.y;
+                if( johny.direction ==="left"){
                     game.hideJohny(x, y);
                     game.moveJohny(x - 1, y);
                     game.collectSpoons();
@@ -368,8 +396,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     game.collideWithWall();
 
                 }
-                if (event.keyCode === 39) {
-                    self.johny.direction = "right";
+                if(johny.direction ==="right") {
                     game.hideJohny(x, y);
                     game.moveJohny(x + 1, y);
                     game.collectSpoons();
@@ -378,8 +405,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     game.collideWithEnemy();
                     game.collideWithWall();
                 }
-                if (event.keyCode === 38) {
-                    self.johny.direction = "up";
+
+                if(johny.direction ==="up"){
                     game.hideJohny(x, y);
                     game.moveJohny(x, y - 1);
                     game.collectSpoons();
@@ -387,10 +414,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     game.pluckRoses();
                     game.collideWithEnemy();
                     game.collideWithWall();
-
                 }
-                if (event.keyCode === 40) {
-                    self.johny.direction = "down";
+                if(johny.direction ==="down"){
                     game.hideJohny(x, y);
                     game.moveJohny(x, y + 1);
                     game.collectSpoons();
@@ -400,9 +425,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     game.collideWithWall();
                 }
             }
-        }
-        game.moveAround();
-
 
         //methods removing stuff
         Game.prototype.collectSpoons = function() {
@@ -410,7 +432,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (this.board[i].className === "johny spoon" || this.board[i].className === "spoon johny") {
                     this.board[i].classList.remove("spoon");
                     collectedSpoons++;
-                    console.log(collectedSpoons);
                     this.sounds.spoon.play();
                     //this.sounds.spoon.play();
                     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
@@ -427,7 +448,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (this.board[i].className === "johny dollar" || this.board[i].className === "dollar johny") {
                     this.board[i].classList.remove("dollar");
                     dollarsEarned++;
-                    console.log(dollarsEarned);
                     this.sounds.dollar.play();
                     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
                 }
@@ -441,7 +461,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (this.board[i].className === "johny rose" || this.board[i].className === "rose johny") {
                     this.board[i].classList.remove("rose");
                     pluckedRoses++;
-                    console.log(pluckedRoses);
                     this.sounds.rose.play();
                     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
                 }
@@ -471,7 +490,6 @@ document.addEventListener("DOMContentLoaded", function() {
             y = this.johny.y;
             var index = this.johny.x + this.johny.y * 10;
             if ((x < 0 || x > 9 || y < 0 || y > 9)) {
-                console.log("you outta your mind? where you going?");
                 game.gameOver();
 
             }
@@ -486,8 +504,14 @@ document.addEventListener("DOMContentLoaded", function() {
             gameSection.parentNode.removeChild(gameSection);
             introSection.parentNode.removeChild(introSection);
             body.append(gameOverBoard);
-            gameOverBoard.innerText = " Game over! No sweet lovin' for you! You are tearing me apart!"
+            pictureDiv(gameOverBoard);
+            var paragraph = document.createElement("p");
+            gameOverBoard.append(paragraph);
+            paragraph.innerText = " Game over! No sweet lovin' for you! You are tearing me apart!"
             this.sounds.over.play();
+            this.sounds.background.volume = 0.00;
+            gameOverBoard.querySelector("div").style.backgroundImage = 'url("images/tearingmeapartlisa.jpg")';
+            comeBack(gameOverBoard)
         }
 
         //date happening:
@@ -498,13 +522,33 @@ document.addEventListener("DOMContentLoaded", function() {
             gameSection.parentNode.removeChild(gameSection);
             introSection.parentNode.removeChild(introSection);
             body.append(dateBoard);
-            dateBoard.innerText =" The date night is on! Do not drink to much scotchka!"
+            pictureDiv(dateBoard);
+            var paragraph = document.createElement("p");
+            dateBoard.append(paragraph);
+            paragraph.innerText =" The date night is on! Do not drink to much scotchka!"
             this.sounds.date.play();
+            this.sounds.background.volume = 0.00;
+            dateBoard.querySelector("div").style.backgroundImage = 'url("images/datetime.jpg")';
+            comeBack(dateBoard);
+        }
+
+
+        function pictureDiv(element){
+            var pictureDiv = document.createElement("div");
+            pictureDiv.classList.add("pictureDiv");
+            element.append(pictureDiv);
+        }
+        function comeBack(element){
+            var comeBack = document.createElement("a");
+            element.append(comeBack);
+            comeBack.setAttribute("href", "https://ewagrela.github.io/TheRoomDateGame/");
+            comeBack.innerText = "play again";
+            comeBack.classList.add("comeback");
         }
 
     })
 
-
+        
 
 
 });

@@ -5,7 +5,13 @@
 }
 
 body {
-	font-family: 'Wendy One', sans-serif;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	max-width: 100vw;
+	height: 100%;
+	background-color: #000066;
+
+
 }
 
 %layout {
@@ -17,76 +23,91 @@ body {
 
 .intro {
 	background-color:  #000033;
+	border: 5px solid yellow;
+	border-radius: 4%;
 	color: white;
-	height: 100vh;
-	max-width: 100vw;
+	height: 95vh;
+	max-width: 80vw;
+	margin: 0 auto;
+	margin-top: 20px;
 	@extend %layout;
 	h1{
-		font-size: 25px;
+		font-size: 32px;
 		margin-top: 10px;
-		@media(min-width: 568px){
-			font-size: 30px;
-		}
+		text-shadow: 5px 5px 5px red;
+		
 	}
 	article {
-		margin-top: 20px;
 		@extend %layout;
 		height: auto;
 		&:first-of-type {
-		width: 90%;
-		
+		width: 100%;
+
 			p {
 				width: 70%;
-				font-size: 14px;
+				font-size: 20px;
+				font-weight: bold;
 				line-height: 1.4;
-				@media(min-width: 568px){
-					font-size: 18px;
-				}
 				margin: 5px 10px;
+				
 			}
+			ul {
+				display: flex;
+				
+				width: 65%;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				
+				color: yellow;
+				font-size: 24px;
+			}
+
 		}
-		&:nth-of-type(2){
+		&:nth-of-type(3){
 			display: flex;
 			flex-direction: row;
 			width: 70%;
 			
 		}
-		&:nth-of-type(3){
-			width: 50%;
+		&:nth-of-type(2){
+			width: 80%;
+			margin-top: 10px;
+			
 		}
 	}
 
 	h2 {
 		color: yellow;
-		font-size: 20px;
-		@media(min-width: 568px){
-			font-size: 26px;
-		}
-
+		font-size: 24px;
+		
 	}
 	ol {
-		color: yellow;
+		color: white;
 		@extend %layout;
 		align-items: stretch;
-		width: 90%;
+		width: 70%;
 		li {
-			font-size: 16px;
+			font-size: 23px;
 			line-height: 1.4;
-			@media(min-width: 568px) {
-				font-size: 18px;
-			}
+			
+			
 		}
 
 	}
 
 	button {
-		font-size: 20px;
+		font-size: 25px;
+		height: 65px;
+		width: 65px;
+		font-weight: bolder;
 		background-color: red;
 		color: white;
 		padding: 5px;
 		border: none;
 		border-radius: 5%;
-		margin-bottom: 20px;
+		margin-bottom: 1%;
+		
 	}
 	
 }
@@ -97,7 +118,6 @@ body {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		border-radius: 50%;	
 		width: 45%;
 		height: 100%;
 		span {
@@ -105,7 +125,8 @@ body {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-			color: yellow;
+			color: white;
+			text-shadow: 4px 4px 4px red;
 			height: 49%;
 			width: 90%;
 			
@@ -114,6 +135,7 @@ body {
 				width: 65px;
 				margin-right: 10px;
 				margin-left: 10px;
+				border-radius: 5%;
 
 			}
 		}
@@ -127,7 +149,7 @@ body {
 }
 
 .game {
-	background-color: #000023;
+	background-color: #000033;
 	max-width: 100vw;
 	height: 100vh;
 	padding-top: 20px;
@@ -136,50 +158,71 @@ body {
 #results {
 	width: 300px;
 	height: 50px;
-	font-size: 22px;
+	font-size: 30px;
 	color: white;
 }
-
+.stats {
+	margin-top: 5px;
+	border: 2px solid yellow;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 120px;
+	width: 500px;
+}
 #stats {
-	width: 150px;
-	height: 150px;
+	width: 180px;
+	height: 120px;
 	font-size: 20px;
 	display: flex;
-	margin-top: 10px;
-	margin-bottom: 10px;
 	flex-direction: column;
+	justify-content: space-around;
 	color: white;
 	//border: 1px solid blue;
+	padding: 5px;
 	img{
-		width: 45px;
-		height: 40px;
+		width: 35px;
+		height: 30px;
 	}
-	items {
+	.items {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		//border: 1px solid yellow;
+		margin-top: 5px;
+
+	}
+	#numbers {
+		word-spacing: 20px;
+		font-size: 30px;
+		margin-left: 10px;
 	}
 }
+
+#timer {
+	color: white;
+	font-size: 25px;
+}
+#quality {
+	color: yellow;
+	font-size: 25px;
+	margin-bottom: 50px;
+
+}
 .container {
-	width: 300px;
-	height: 300px;
+	width: 500px;
+	height: 500px;
 	margin: 0 auto;
 	margin-bottom: 10px;
-	@media(min-width: 786px){
-		width: 520px;
-		height: 520px;
-	}
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 
 	div {
-		width: 30px;
-		height: 30px;
-		@media(min-width: 786px){
-		width: 52px;
-		height: 52px;
-	}
+		width: 50px;
+		height: 50px;
+		
 		border: 1px solid yellow;
 	}
 
@@ -221,27 +264,48 @@ body {
 }
 
 .gameOver {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url("../images/tearingmeapartlisa.jpg");
+	background-color: #000033;
 	height: 100vh;
 	width: 100vw;
 	font-size: 40px;
-	color: white;
+	color: #efefef;
 	text-shadow: 4px 4px 4px red;
-	padding: 25%;
 	text-align: center;
 }
-
-.dateTime {
+.pictureDiv{
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("../images/dateTime.jpg");
+	width: 500px;
+	height: 300px;
+	border-radius: 10%;
+	border: 2px solid red;
+}
+.dateTime {	
+	background-color: #000033;
 	height: 100vh;
 	width: 100vw;
 	font-size: 40px;
-	color: white;
+	color: #efefef;
 	text-shadow: 4px 4px 4px red;
-	padding: 25%;
 	text-align: center;
+}
+.dateTime, .gameOver {
+	@extend %layout;
+	p {
+		width: 50%;
+	}
+}
+
+.comeback {
+	background: red;
+	border: none;
+	border-radius: 5%;
+	color: white;
+	font-size: 30px;
+	margin-top: 20px;
+	text-decoration: none;
+	text-shadow: none;
+	width: auto;
+	height: auto;
+	padding: 10px;
 }

@@ -2,9 +2,9 @@
 <html lang="eng-ENG">
    <head>
       <meta charset="UTF-8">
-      <title>Johny goes on a date with Lisa</title>
+      <title>The Room Date Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet"> 
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <audio src="sounds/spoon.wav" preload="auto"></audio>
       <audio src="sounds/coin.wav" preload="auto"></audio>
@@ -18,15 +18,29 @@
       <h1> Date Night</h1>
         <article>
           <p>
-            Meet Johny. Johny is a lovable fella. He is living the American Dream - has a condo, a car, a good job and a loving fiancee he refers to as "my future wife".<br>
-            Together they go on dates where they drink scotchka, eat pizza and do other stuff.<br>
-            Weren't it for his enemies - <strong><big>Chris-R and Claudette</strong></big> - his life would be perfect.
+            <big>Johny</big> is a lovable fella living the American Dream.<br>
+            It is a <big>date night</big> tonight, but to get sweet lovin' he must:
+          
           </p>
-          <p>
-            It is a <em><big>date night</em></big> tonight, but unless Johny completes three tasks, he will get no sweet lovin'.<br> He must <em><big>pick 10 spoons</em></big> from the floor of his apartment, then <em><big> get a promotion ( 11 $)</em></big> and later <em><big>buy a dozen red roses</em></big>. 
-          </p>
+          <ul>
+          	<li>pick up 10 spoons</li>
+          	<li> get a promotion (11 $)</li>
+          	<li> buy a dozen red roses ( that's 12!)</li>
+          </ul>
+        </article>
+        
+        <article>
+          <h2>Rules:</h2>
+          <ol>
+            <li>Change direction using &#8678 &#8679 &#8681 &#8680</li>
+            <li>Collect stuff</li>
+            <li> Do not bump into Chris-R or Claudette!</li>
+            <li>Stay on board!</li>
+            <li>Be fast!</li>
+          </ol>
         </article>
         <article class ="pictograms">
+
           <p>
             <span>good stuff:</span>
             <span>
@@ -43,31 +57,25 @@
             </span>
           </p>
         </article>
-        <article>
-          <h2>Rules:</h2>
-          <ol>
-            <li>Move around using &#8678 &#8679 &#8681 &#8680</li>
-            <li>Collect stuff</li>
-            <li> Do not bump into Claudette or Chris-R!</li>
-            <li>Keep on board!</li>
-            <li>Be fast!</li>
-          </ol>
-        </article>
         <button> play</button>
       </section>
       <section class ="game invisible">
-        <div id= "results"></div>
-        <div id = "stats">
-          <div class="items">
-            <img src = "images/spoon.png">
-            <img src= "images/dollar.png">
-            <img src= "images/rose.png">
-          </div>
-          <span class="items"></span>
-        </div>
-        <div class= "container">
+      	<article class="stats">
+      		<p id ="quality">Spoons time</p>
+      		<div id= "timer"></div>
+        	<div id = "stats">
+	          	<div class="items">
+		            <img src = "images/spoon.png">
+		            <img src= "images/dollar.png">
+		            <img src= "images/rose.png">
+          		</div>
+          		<span class="items" id="numbers"></span>
+           </div>
+      	</article>
+        
+        <article class= "container">
   
-        </div>
+        </article>
       </section>
       <script type="text/javascript" src="js/app.js"></script>
    </body>
