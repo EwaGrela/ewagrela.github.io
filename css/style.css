@@ -65,7 +65,7 @@
 
  }
 body {
-  background:  #66cccc;
+  background:  #ffff77;
   }
  
   
@@ -93,9 +93,9 @@ body {
     width: 11.5%;
     border-radius: 10%;
     padding-bottom: 11.5%;
-    background-color: rgba(0,153,153, 0.8);
-    border: 1px solid rgb(0,204,204);
-    box-shadow: 15px 15px 45px #ffffff;
+    background-color: teal;
+    border: 1px solid  #003333;
+    box-shadow: 15px 15px 45px #ffff33;
     display: inline-block;
     animation-name: appear;
     //animation-delay: 2s;
@@ -110,9 +110,9 @@ body {
     padding-bottom: 25%;
     display: inline-block;
     transition: 2s;
-    background-color: rgba(0,102,102, 0.6);
-    border: 1px solid rgb(0,102,102);
-    box-shadow: 24px 24px 60px #ffffff;
+    background-color: #005555;
+    border: 1px solid  #003333;
+    box-shadow: 24px 24px 60px #ffff33;
     animation-name: appear;
     //animation-delay: 2s;
     animation-timing-function: ease;
