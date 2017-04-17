@@ -227,22 +227,6 @@ body {
   font-weight: bold;
   text-align: center;
 }
-.square-big p:nth-of-type(2) {
-  position: absolute;
-  top: 35%;
-  left: 15%;
-  width: 100%;
-  transform: rotate(-90deg);
-  color: #002222;
-  font-family: "Raleway";
-  font-size: 12px;
-  z-index: 4;
-  font-weight: bold;
-  text-align: center;
-}
-.invisible {
-  opacity: 0;
-}
 
 .square p:first-of-type {
   position: absolute;
@@ -255,19 +239,7 @@ body {
   font-weight: bold;
   text-align: center;
 }
-.square p:nth-of-type(2){
-  position: absolute;
-  top: 10%;
-  left:55%;
-  transform: rotate(-90deg);
-  color: #001111;
-  font-family: "Raleway";
-  font-size: 10px;
-  z-index: 4;
-  font-weight: bold;
-  text-align: center;
 
-}
 @media(min-width: 560px){
     .square p:first-of-type {
       font-size: 14px;
