@@ -22,7 +22,7 @@ $(function(){
 	
 	section.css("width", imageWidth+"px");
 	slider.css("width", imageWidth+"px").css("height", imageHeight+"px");
-	list.css("width", numberOfSlides*imageWidth+"px").css("position", "relative");;
+	list.css("width", (numberOfSlides*imageWidth)+"px").css("position", "relative");;
 	list.css("left", "-"+imageWidth+"px");
 	var index = 1;
 	next.on("click", function(event){
@@ -30,7 +30,7 @@ $(function(){
 				left: "-="+imageWidth+"px"
 				},1000, function(){
 					index++;
-					if(index===(numberOfSlides)){
+					if(index>=(numberOfSlides+1)){
 						index=1;
 						list.css("left", "-"+imageWidth+"px");
 					}
@@ -46,7 +46,7 @@ $(function(){
 			left: "+="+imageWidth+"px"
 		}, 1000, function(){
 			index--;
-			if(index===0){
+			if(index<=0){
 				index = numberOfSlides;
 				list.css("left","-"+(imageWidth*numberOfSlides)+"px");
 			}
