@@ -65,7 +65,7 @@
 
  }
 body {
-  background:  #ffff77;
+  background:  #acacac;
   }
  
   
@@ -93,12 +93,13 @@ body {
     width: 11.5%;
     border-radius: 10%;
     padding-bottom: 11.5%;
-    background-color: teal;
-    border: 1px solid  #003333;
-    box-shadow: 15px 15px 45px #ffff33;
+    background-color:  #005555;
+    border: 2px solid   #004444;
+    box-shadow: 15px 15px 45px #666;
     display: inline-block;
     animation-name: appear;
     //animation-delay: 2s;
+    transition: 2s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -110,26 +111,32 @@ body {
     padding-bottom: 25%;
     display: inline-block;
     transition: 2s;
-    background-color: #005555;
-    border: 1px solid  #003333;
-    box-shadow: 24px 24px 60px #ffff33;
+    background-color: #006666;
+    border: 2px solid  #007777;
+    box-shadow: 24px 24px 60px #666;
     animation-name: appear;
     //animation-delay: 2s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-direction: normal;
+    z-index: 2;
 }
 
+.square:hover {
+  //transform: rotateX(180deg);
+  transform: scale(1.2);
+  background-color: #006666;
+}
 .square-big:hover {
   //transform: rotateX(180deg);
   transform: scale(1.1);
+  background-color: #005555;
 }
   
 #square1 {
   position: absolute;
   top: 0.5%;
   left: 20.5%; 
-  transition: 2s;
   animation-duration: 2s;
 }
 
