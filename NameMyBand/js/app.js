@@ -30,7 +30,7 @@ $(function(){
             boybandGood: ["In Harmony", "The Voices", "Five 4 U", "Right Direction","White Knights"],
             boybandBad: ["Bad Boyz", "ShakeDat", "InDaMix", "The Guyz", "DragonBallz", "Night Riderzz"],
             girlbandGood:["The Harmonies", "Sweet Harmony", "Back 2 Basic", "Angel Voices", "Foundation", "The Angelics"],
-            girlbandBad: ["Basic Bitches", "Sweet & Sour", "Chilli Babes", "PwrGrlz"]
+            girlbandBad: ["2HotU", "Sweet'N'Spicy", "Chilli Babe$", "PwrGrlz", "Diabolique"]
 
         }
     }

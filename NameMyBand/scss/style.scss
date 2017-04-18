@@ -65,16 +65,23 @@ body:before{
 		text-align: center;
 		font-family: 'Raleway', sans-serif;
 	}
-	article, .appDiv {
+	article {
 		@include layoutMixin2($baseColor);
 		width: 85vw;
 		min-height: 290px;
 		max-height: 80vh;
 		border-radius: 5%;
-		padding-top: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	
 	}
 	.appDiv{
+		@include layoutMixin2($baseColor);
+		width: 75vw;
+		min-height: 250px;
+		max-height: 70vh;
+		border-radius: 5%;
+		padding-top: 20px;
 		@media(min-width: 600px){
 			@include layoutMixin1($baseColor);
 		}
@@ -97,7 +104,15 @@ body:before{
 		font-family: 'Raleway', sans-serif;
 		height: 50px;
 		width: 200px;
-		font-size: $mediumFont/3;
+		@media(min-width: 600px){
+			width: 150px;
+			font-size: $mediumFont/2.5;
+		}
+
+		@media(min-width: 850px){
+			width: 200px;
+		}
+		font-size: $mediumFont/2;
 		border: none;
 		border-radius: 5%;
 		margin-top: 10px;
