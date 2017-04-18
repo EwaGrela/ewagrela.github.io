@@ -1,0 +1,39 @@
+    {
+        "bandName":[
+            {
+        "bandQuestions": [
+            {
+              "title": "Are you a family band?",
+              "answers": ["yes", "no"]
+            },
+            { "title": "What kind of music do you guys play?",
+                "answers": ["pop", "dance", "grunge"]
+            },
+            { "title": "Are we talking discopolo or eurodance here?",
+                "answers": ["discopolo", "eurodance"]
+            },
+            { "title": "Girlband or boyband?",
+                "answers": ["girlband", "boyband"]
+            },
+            { "title": "Are you good guys or bad boys?",
+                "answers": ["good guys", "bad boys"]
+            },
+            { "title": "Are you good girls or bad b&*^$%s?",
+                "answers": ["nice 'n wholesome", "wild 'n nasty"]
+            }
+        ],
+        "bandResults":{
+            "family":["Guys, guys! It is really simple. Just put 'the' before your family name in plural and you're all set!"],
+            "grunge":["Mudslide", "Drops of Mercury", "Samsara", "Puddles of Dirt"],
+            "discopolo": ["Xero", "Vizzer", "Vixxer", "Fixer", "Audio Tele", "Play Power"],
+            "eurodance": ["Captain Obvious", "25/7", "Unlimited 3", "Mister Hollywood"],
+            "boybandGood": ["In Harmony", "The Voices", "Five 4 U", "Right Direction","White Knights"],
+            "boybandBad": ["Bad Boyz", "ShakeDat", "InDaMix", "The Guyz", "DragonBallz", "Night Riderzz"],
+            "girlbandGood":["The Harmonies", "Sweet Harmony", "Back 2 Basic", "Angel Voices", "Foundation", "The Angelics"],
+            "girlbandBad": ["2Hot4U", "Sweet'N'Spicy", "Chilli Babe$", "PwrGrlz", "Diabolique"]
+
+        }
+    }
+        ]
+    }
+    
