@@ -1,5 +1,5 @@
 $(function(){
-    console.log("jquery");  
+     
     var bandNames = {
         questions: [
             {
@@ -36,7 +36,7 @@ $(function(){
     }
     var bandNamingSection = $(".bandNamingSection");
     var startingButton = $(".bandNamingSection button");
-    console.log(startingButton);
+   
     startingButton.on("click", function(){
         console.log("hello");
         $(this).hide();
@@ -45,21 +45,20 @@ $(function(){
         createQuestion(0);
     })
     var questions = bandNames.questions;
-    console.log(questions);
-    console.log(questions[0].title);
     var results = bandNames.results;
-    console.log(results);
     function createQuestion(index){
         var answers = questions[index].answers;
         var article = $("<article>");
+        var buttonDiv = $("<div>", {class: "appDiv"});
         article.appendTo($(".bandNamingSection"));
+        buttonDiv.appendTo(article)
         var title = $("<h3>");
-        title.appendTo(article);
+        title.prependTo(article);
         title.text(questions[index].title);
         console.log(answers);
         for( var i =0; i<answers.length; i++){
             var button = $("<button>");
-            button.appendTo(article); 
+            button.appendTo(buttonDiv); 
 
             button.each(function(){
                 $(this).text(answers[i]);
@@ -76,8 +75,7 @@ function generateResults(){
 }
 
 bandNamingSection.on("click", ".yes", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.family.length);
         $(".resultsArticle").text(results.family[randomIndex]);
@@ -86,15 +84,13 @@ bandNamingSection.on("click", ".yes", function(){
 });
 
 bandNamingSection.on("click", ".no", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        $(this).parent().parent().hide();
         createQuestion(1);
         createHomeBtns($(".resultsArticle"));
 
 })
 bandNamingSection.on("click", ".grunge", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.grunge.length);
         $(".resultsArticle").text(results.grunge[randomIndex]);
@@ -102,23 +98,23 @@ bandNamingSection.on("click", ".grunge", function(){
 
 })
 bandNamingSection.on("click", ".dance", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        
+        $(this).parent().parent().hide();
         createQuestion(2);
         createHomeBtns($(".resultsArticle"));
 })
 
 bandNamingSection.on("click", ".pop", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        
+        $(this).parent().parent().hide();
         createQuestion(3);
         createHomeBtns($(".resultsArticle"));
 
 })
 
 bandNamingSection.on("click", ".discopolo", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.discopolo.length);
         $(".resultsArticle").text(results.discopolo[randomIndex]);
@@ -127,8 +123,7 @@ bandNamingSection.on("click", ".discopolo", function(){
 
 
 bandNamingSection.on("click", ".eurodance", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.eurodance.length);
         $(".resultsArticle").text(results.eurodance[randomIndex]);
@@ -136,22 +131,21 @@ bandNamingSection.on("click", ".eurodance", function(){
 })
 
 bandNamingSection.on("click", ".boyband", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        $(this).parent().parent().hide();
         createQuestion(4)
         createHomeBtns($(".resultsArticle"));
 })
 
 bandNamingSection.on("click", ".girlband", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        
+        $(this).parent().parent().hide();
         createQuestion(5)
         createHomeBtns($(".resultsArticle"));
 })
 
 bandNamingSection.on("click", ".nice", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.girlbandGood.length);
         $(".resultsArticle").text(results.girlbandGood[randomIndex]);
@@ -159,8 +153,8 @@ bandNamingSection.on("click", ".nice", function(){
 })
 
 bandNamingSection.on("click", ".wild", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.girlbandBad.length);
         $(".resultsArticle").text(results.girlbandBad[randomIndex]);
@@ -168,8 +162,7 @@ bandNamingSection.on("click", ".wild", function(){
 })
 
 bandNamingSection.on("click", ".good", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.boybandGood.length);
         $(".resultsArticle").text(results.boybandGood[randomIndex]);
@@ -177,8 +170,7 @@ bandNamingSection.on("click", ".good", function(){
 })
 
 bandNamingSection.on("click", ".bad", function(){
-        console.log("ok");
-        $(this).parent().hide();
+        $(this).parent().parent().hide();
         generateResults();
         var randomIndex = Math.floor(Math.random() * results.boybandBad.length);
         $(".resultsArticle").text(results.boybandBad[randomIndex]);
