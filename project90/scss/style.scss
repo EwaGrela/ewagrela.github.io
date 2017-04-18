@@ -474,7 +474,7 @@ nav {
 
 
 #learnSection{
-	@include layoutMixin3(#ee6677);
+	@include layoutMixin3($baseColor);
 	height: auto;
 	min-height: 450px;
 	max-width: 100vw;
@@ -876,10 +876,10 @@ footer {
 
 	button {
 		background:  $sixthColor;
-		border-radius: 20%;
+		border-radius: 5%;
 		width: auto;
 		height: auto;
-		font-size: $mediumFont/3.5;
+		font-size: $mediumFont/6;
 		font-family: "Fontdiner Swanky", cursive;
 		transition: 0.8s;
 		&:hover {
@@ -888,12 +888,12 @@ footer {
 		@media(min-width: 600px){
 			width: 100px;
 			height: 50px;
-			font-size: $mediumFont/2.2;
+			font-size: $mediumFont/4;
 		}
 		@media(min-width: 1200px){
 			width: 150px;
 			height: 75px;
-			font-size: $mediumFont/1.55;
+			font-size: $mediumFont/2.5;
 		}
 		
 		margin: 5px;
