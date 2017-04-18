@@ -186,8 +186,8 @@ bandNamingSection.on("click", ".bad", function(){
 })
 
 function createHomeBtns(element) {
-        var button = $("<button>", {class:"back"});
-        button.attr("href", "#");
+        var button = $("<a>", {class:"back"});
+        button.attr("href", "https://ewagrela.github.io/NameMyBand/");
         button.appendTo(element);
         button.text("back")
 

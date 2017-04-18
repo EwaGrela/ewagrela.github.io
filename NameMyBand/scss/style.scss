@@ -81,7 +81,7 @@ body:before{
 		text-align: center;
 
 	}
-	button {
+	button, .back {
 		background-color: $fifthColor;
 		color: $baseColor;
 		text-transform: uppercase;
@@ -94,6 +94,10 @@ body:before{
 		border: none;
 		border-radius: 5%;
 		margin-top: 10px;
+		text-decoration: none;
+	}
+	.back {
+		line-height: 50px;
 	}
 
 	.resultsArticle {
