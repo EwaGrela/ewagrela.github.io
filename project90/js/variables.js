@@ -15,7 +15,7 @@
 	var toTheGamesBtn = $("header").find("button").not(".hamburger");
 	var gameSection = $("#gameSection");
 	var lowerContent = gameSection.children();
-	var initiatingBtn = $("button#memoryGame");
+	var initiatingMemory = $("button#memoryGame");
 	var hamburgerMenu = $(".hamburger");
 	var hamburgerMenuFocused = $(".hamburger.focus");
 	var toTheGamesBtn = $("header").find("button").not(".hamburger");
