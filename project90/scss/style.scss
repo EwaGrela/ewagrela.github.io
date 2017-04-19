@@ -739,7 +739,7 @@ nav {
 		font-family: 'Raleway', sans-serif;
 	}
 	article {
-		@include layoutMixin2($baseColor);
+		@include layoutMixin3($baseColor);
 		width: 85vw;
 		min-height: 290px;
 		max-height: 80vh;
@@ -765,6 +765,13 @@ nav {
 		color: $sixthColor;
 		font-size: $mediumFont/2;
 		text-align: center;
+		@media(min-width: 600px){
+			font-size: $mediumFont/1.5;
+		}
+		@media(min-width: 1200px){
+			font-size: $mediumFont;
+		}
+		
 
 
 	}
@@ -797,7 +804,7 @@ nav {
 
 	.bandResultsArticle {
 		font-family: 'Carter One', cursive;
-		text-transform: uppercase;
+		//text-transform: uppercase;
 		font-size: $mediumFont/2;
 		@media(min-width: 600px){
 			font-size: $mediumFont/1.5;
