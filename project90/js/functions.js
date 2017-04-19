@@ -26,7 +26,7 @@ function createComebackBtn(element) {
         
 
 var alertText = "Scary Spice is not amused you missed the question";
-var background = "url('images/scaryspice.png')";
+var background = "url('images/mini_scaryspice.png')";
 function createAlertBox(element) {
     var alertBox = $("<div>", {
           class: "alertBox"

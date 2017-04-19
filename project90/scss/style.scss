@@ -19,7 +19,7 @@ body:before{
   height: 100%;
   z-index: -10;
   background-color: $baseColor;
-  background-image: url("../images/furby-974707_1920.jpg");
+  background-image: url("../images/mini_furby-974707_1920.jpg");
   background-repeat:  no-repeat;
   background-position:  center center;
   -webkit-background-size: cover;
@@ -648,17 +648,17 @@ nav {
 
 #triviaGame {
 	@extend %gamesBtn;
-	background-image: url("../images/nerd.png");	
+	background-image: url("../images/mini_nerd.png");	
 }
 
 #psychoTest {
 	@extend %gamesBtn;
-	background-image: url("../images/2000px-Inkblot.svg_.png");
+	background-image: url("../images/mini_2000px-Inkblot.svg_.png");
 }
 
 #nameBand {
 	@extend %gamesBtn;
-	background-image: url("../images/Band.png");
+	background-image: url("../images/mini_Band.png");
 	padding-top: 40px;
 	@media(min-width: 600px){
 		padding-top: 60px;
@@ -1059,57 +1059,57 @@ footer {
 	
 }
 #board1{
-	background-image: url("../images/eurodance.jpg");
+	background-image: url("../images/mini_eurodance.jpg");
 }
 #board2{
-	background-image: url("../images/girlpower.jpg");
+	background-image: url("../images/mini_girlpower.jpg");
 
 }
 #board3{
-	background-image: url("../images/boybands.jpg");
+	background-image: url("../images/mini_boybands.jpg");
 	//color: white;
 	
 }
 #board4{
-	background-image: url("../images/clueless.jpg");
+	background-image: url("../images/mini_clueless.jpg");
 }
 #board5{
-	background-image: url("../images/newage.jpg");
+	background-image: url("../images/mini_newage.jpg");
 	background-position: center center;
 	
 }
 #board6{
-	background-image: url("../images/nirvana2.jpg");
+	background-image: url("../images/mini_nirvana2.jpg");
 	
 }
 #board7{
-	background-image: url("../images/beverlyhills(creditfox).jpg");
+	background-image: url("../images/mini_beverlyhills(creditfox).jpg");
 }
 #board8{
-	background-image: url("../images/bravo.jpg");
+	background-image: url("../images/mini_bravo.jpg");
 	
 }
 #board9{
-	background-image: url("../images/zeitgeist.jpg");
+	background-image: url("../images/mini_zeitgeist.jpg");
 	
 }
 #board10{
-	background-image: url("../images/klan.jpg");
+	background-image: url("../images/mini_klan.jpg");
 	
 }
 
 #board11{
-	background-image: url("../images/Banner.png");
+	background-image: url("../images/mini_Banner.png");
 	
 	
 }
 
 #board12{
-	background-image: url("../images/polandlifestyle.jpg");
+	background-image: url("../images/mini_polandlifestyle.jpg");
 	
 }
 #board13{
-	background-image: url("../images/mcd.jpg");
+	background-image: url("../images/mini_mcd.jpg");
 	
 }
 
@@ -1352,47 +1352,47 @@ div.boardDiv {
 }
 .tamagotchi {
 	
-	background-image: url("../images/tamagotchi.png");
+	background-image: url("../images/mini_tamagotchi.png");
 }
 
 .beverlyHills {
 	
-	background-image: url("../images/brenda.jpg");
+	background-image: url("../images/mini_brenda.jpg");
 }
 
 .kellyFamily {
 	
-	background-image: url("../images/paddy.jpg");
+	background-image: url("../images/mini_paddy.jpg");
 }
 
 .euroDance {
 	
-	background-image: url("../images/captain.jpeg");
+	background-image: url("../images/mini_captain.jpeg");
 }
 .boyband {
 	
-	background-image: url("../images/bsb.jpeg");
+	background-image: url("../images/mini_bsb.jpeg");
 }
 .girlband {
 	
-	background-image: url("../images/spice.jpg");
+	background-image: url("../images/mini_spice.jpg");
 }
 .macdonald {
 	
-	background-image: url("../images/burger.jpeg");
+	background-image: url("../images/mini_burger.jpeg");
 }
 .furby {
 	
-	background-image: url("../images/Furby_picture.jpg");
+	background-image: url("../images/mini_Furby_picture.jpg");
 }
 
 .nirvana {
 	
-	background-image: url("../images/nirvana.jpg");
+	background-image: url("../images/mini_nirvana.jpg");
 }
 .fashion {
 	
-	background-image: url("../images/clueless.jpg");
+	background-image: url("../images/mini_clueless.jpg");
 }
 
 .covered {
@@ -1598,7 +1598,7 @@ input[type="radio"] {
 	@include layoutMixin2($baseColor);
 	justify-content: flex-end;
 	p{
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Cherry Cream Soda', cursive;
 		font-size: $mediumFont/2;
 		@media(min-width: 600px){
 			font-size: $mediumFont/1.5;
@@ -1616,8 +1616,7 @@ input[type="radio"] {
 		border-radius: 10%;
 		margin-bottom: 10px;
 		font-size: $mediumFont/2;
-		font-family: 'Raleway', sans-serif;
-		font-weight: bolder;
+		font-family: 'Cherry Cream Soda', cursive;
 		color: #cccccc;
 		background: $fifthColor;
 	}
