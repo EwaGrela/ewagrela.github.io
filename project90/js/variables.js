@@ -39,3 +39,7 @@
 	var notTestSections = $("section").not("#testSection");
 	var notTriviaSections = $("section").not("#triviaSection");
 	var boardDiv = $(".boardDiv");
+	var initiatingBtn = $("#nameBand");
+    var bandNamingSection = $(".bandNamingSection");
+    var notBandNameSections = $("section").not(bandNamingSection);
+    var startingButton = $(".bandNamingSection button");
