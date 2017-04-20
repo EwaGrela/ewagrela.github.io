@@ -24,8 +24,6 @@ $(function() {
             $(this).parent().prev().hide();
             createQuestion(0);
         })
-        var bandQuestions = bandNames.bandQuestions;
-        var bandResults = bandNames.bandResults;
 
         function createQuestion(index) {
             var answers = bandQuestions[index].answers;
@@ -46,6 +44,8 @@ $(function() {
                 button.each(function() {
                     $(this).text(answers[i]);
                     $(this).addClass(answers[i]);
+                    $(this).addClass("nameGenerator");
+                    $(this).attr("data", answers[i]);
                 })
             }
 
@@ -58,7 +58,113 @@ $(function() {
             });
             bandResultsArticle.appendTo(bandNamingSection);
         }
+        function createHomeBtns(element) {
+            var button = $("<a>", {
+                class: "back"
+            });
+            button.attr("href", "https://ewagrela.github.io/project90/");
+            button.appendTo(element);
+            button.text("home")
 
+        }
+          /*
+        bandNamingSection.on("click", ".nameGenerator", function(){
+    
+            $(this).parent().parent().hide();
+            if($(this).hasClass("yes")){
+               
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.family.length);
+                $(".bandResultsArticle").text(bandResults.family[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+
+            } else {
+    
+                createQuestion(1);
+                createHomeBtns($(".bandResultsArticle"));
+            }
+
+            if($(this).hasClass("grunge")){
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.grunge.length);
+                $(".bandResultsArticle").text(bandResults.grunge[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+
+            } 
+            if ($(this).hasClass("dance")) {
+               
+                createQuestion(2);
+                createHomeBtns($(".bandResultsArticle"));
+
+            } 
+            if($(this).hasClass("pop")) {
+                
+                createQuestion(3);
+                createHomeBtns($(".bandResultsArticle"));
+            }
+
+            if($(this).hasClass("eurodance")){
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.eurodance.length);
+                $(".bandResultsArticle").text(bandResults.eurodance[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+
+            } 
+            if($(this).hasClass("discopolo")) {
+                
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.discopolo.length);
+                $(".bandResultsArticle").text(bandResults.discopolo[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+            }
+
+            if($(this).hasClass("boys")){
+                
+                createQuestion(4)
+                createHomeBtns($(".bandResultsArticle"));
+            } 
+            if($(this).hasClass("girls")){
+                
+                createQuestion(5)
+                createHomeBtns($(".bandResultsArticle"));
+            }
+
+            if($(this).hasClass("good")){
+               
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.boybandGood.length);
+                $(".bandResultsArticle").text(bandResults.boybandGood[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+
+            } 
+            if( $(this).hasClass("bad")){
+                
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.boybandBad.length);
+                $(".bandResultsArticle").text(bandResults.boybandBad[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+
+            }
+
+            if($(this).hasClass("wild")) {
+                
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.girlbandBad.length);
+                $(".bandResultsArticle").text(bandResults.girlbandBad[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+
+            } 
+            if($(this).hasClass("nice")){
+                
+                generatebandResults();
+                var randomIndex = Math.floor(Math.random() * bandResults.girlbandGood.length);
+                $(".bandResultsArticle").text(bandResults.girlbandGood[randomIndex]);
+                createHomeBtns($(".bandResultsArticle"));
+            }
+        })
+        */
+        
+      
         bandNamingSection.on("click", ".yes", function() {
             $(this).parent().parent().hide();
             generatebandResults();
@@ -161,16 +267,8 @@ $(function() {
             $(".bandResultsArticle").text(bandResults.boybandBad[randomIndex]);
             createHomeBtns($(".bandResultsArticle"));
         })
-
-        function createHomeBtns(element) {
-            var button = $("<a>", {
-                class: "back"
-            });
-            button.attr("href", "https://ewagrela.github.io/project90/");
-            button.appendTo(element);
-            button.text("home")
-
-        }
+        
+        
     });
 
 
