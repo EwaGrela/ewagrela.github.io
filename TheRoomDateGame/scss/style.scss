@@ -26,7 +26,8 @@ body {
 	border: 5px solid yellow;
 	border-radius: 4%;
 	color: white;
-	height: 95vh;
+	height: 575px;
+	width: 1100px;
 	max-width: 90vw;
 	margin: 0 auto;
 	margin-top: 20px;
@@ -34,7 +35,9 @@ body {
 	h1{
 		font-size: 46px;
 		margin-top: 10px;
-		text-shadow: 5px 5px 5px red;
+		line-height: 50px;
+		height: 50px;
+		text-shadow: 5px 5px 5px #ffff00;
 		font-family: 'Amatic SC', cursive;
 		
 	}
@@ -44,7 +47,7 @@ body {
 		&:first-of-type {
 		@extend %layout;
 		width: 100%;
-
+		height: 200px;
 			p {
 				width: 70%;
 				font-size: 20px;
@@ -59,23 +62,23 @@ body {
 			span {
 				font-family: 'Amatic SC', cursive;
 				font-size: 35px; 
-				text-shadow: 4px 4px 4px red;
+				text-shadow: 4px 4px 4px #00ff77;
+				&:last-of-type{
+					text-shadow: 4px 4px 4px mix(hotpink, red);
+				
+				}
 			}
 			
 
 		}
-		&:nth-of-type(3){
-			display: flex;
-			flex-direction: row;
-			width: 80%;
-			
-		}
+
 		&:nth-of-type(2){
 			width: 80%;
 			margin-top: 10px;
 			color: #000033;
 			font-weight: bolder;
 			background-color: #ffff77;
+			height: 300px;
 			border: 4px solid darken(#ffff77, 20%);
 			border-radius: 5%;
 			font-family: 'Amatic SC', cursive;
@@ -91,6 +94,8 @@ body {
 		margin: 0 auto;
 		align-items: flex-start;
 		width: auto;
+		height: 100%;
+		
 		li {
 			font-size: 28px;
 			line-height: 1.4;
@@ -103,9 +108,9 @@ body {
 	}
 
 	button {
-		font-size: 40px;
-		height: 60px;
-		width: 120px;
+		font-size: 25px;
+		height: 40px;
+		width: 100px;
 		font-family: 'Amatic SC', cursive;
 		font-weight: bolder;
 		background-color: darken(mix(hotpink, red), 10%);
@@ -113,7 +118,8 @@ body {
 		border: none;
 		border: 3px solid darken(mix(hotpink, red), 30%);
 		border-radius: 5%;
-		margin-bottom: 1%;
+		margin-bottom: 5px;
+		margin-top: 5px;
 		
 	}
 	
@@ -149,7 +155,7 @@ body {
 			font-family: 'Amatic SC', cursive;
 			color: #000033;
 			font-weight: bolder;
-			height: auto;
+			height: 55px;
 			width: 90%;
 			
 			img{
@@ -251,7 +257,6 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	border: 2px solid yellow;
-	border-top: none;
 	div {
 		width: 50px;
 		height: 50px;
