@@ -5,37 +5,73 @@
       <title>CV</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="css/style.css">
-       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
    </head>
    <body>
-   <section class="sideInfo">
-     <div class="photo">
+   <section class="upperSection">
+    <div>
+      
+    </div>
+     <div class="photo items">
        <p>{</p>
-       <div></div>
+       <div id ="photo"></div>
        <p>}</p>
      </div>
-     <article class="personalInfo">
+     <article class="personalInfo items">
        <h2>#ewaGrela {</h2>
        <p>intelligence: high;</p>
-       <p>work-ethic: strong;</p>
        <p>personality: likeable,</p>
        <p>skills: fine;</p>
-       <h2>};</h2>
+       <h2>}</h2>
      </article>
-     <article class="skills">
-      <h2>var newFrontEndDev = {</h2>
+     <article class="characteristics items">
+      <h2>var newDev = {</h2>
       <p>name: Ewa,</p>
-      <p> gender: female,</p>
       <p>likesToCode: true,</p>
-      <p>skills: [html, css, sass, rwd, javascript, jQuery, php, wordpress],</p>
-      <p>wantsToLearn: [ruby, angular, react]</p>
+      <p>isLazy: false,</p>
+      <p>
+       skills: [ HTML, CSS, JS, jQuery],
+      </p>
+      <p>uses:[ Gulp, RWD, GIT ],</p>
+      <p>learns: [ Ruby, Angular, React ]</p>
       <h2>};</h2>
      </article>
-     <a href="https://ewagrela.github.io/">projects</a>
    </section>
-   <section class="proffessionalInfo">
-     
+   <section class="lowerSection">
+   <article class="introduction">
+      <h2>Who Am I?</h2>
+     <p>
+       Relatively new to Frontend, I have been learning it for 8 months, but so far I know it is something I would like to do for some time or maybe even lifetime!
+     </p>
+     <p> It gives me a sense of empowerment, I can build things from scratch and make them interactive. It is also so much fun!
+     </p> 
+     <p>
+       My absolutely favourite thing is learning JavaScript. I find it both quirky and challenging, but jQuery is easy and fun. 
+     </p>
+     <button>next</button> 
+   </article>
+   <article class="projectsArticle">
+    <h2>Talk is cheap...</h2>
+    <h3>...show me the code</h3>
+    <div>
+      <p>
+        <a href ="projects.html"><img src="images/project.png"></a>
+      </p>
+       <p>
+         <a href ="https://github.com/EwaGrela"><img src="images/github-10-xxl.png"></a>
+       </p>
+    </div>
+    
+    <button>next</button>
+   </article>
+    <article class="quiz">
+      <h2>I like what I see, but...</h2>
+      <h3>...how do I know I want to work with you?</h3>
+      <p>I pride myself I can get along with most people, but sure, let's find out!</p>
+      <button class="quizBtn">compability quiz</button>
+      <a href= "#">home</a>
+    </article>
    </section>
  
    <script type="text/javascript" src="js/app.js"></script>
