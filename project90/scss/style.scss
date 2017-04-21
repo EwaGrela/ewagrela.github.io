@@ -724,7 +724,7 @@ nav {
 	article {
 		@include layoutMixin3($baseColor);
 		width: 85vw;
-		min-height: 290px;
+		min-height: 260px;
 		max-height: 80vh;
 		border-radius: 5%;
 		padding-top: 10px;
@@ -734,7 +734,7 @@ nav {
 	.appDiv{
 		@include layoutMixin2($baseColor);
 		width: 75vw;
-		min-height: 250px;
+		min-height: 230px;
 		max-height: 70vh;
 		border-radius: 5%;
 		padding-top: 20px;
@@ -748,6 +748,7 @@ nav {
 		color: $sixthColor;
 		font-size: $mediumFont/2;
 		text-align: center;
+		margin-top: 20px;
 		@media(min-width: 600px){
 			font-size: $mediumFont/1.5;
 		}
@@ -774,6 +775,12 @@ nav {
 
 		@media(min-width: 850px){
 			width: 200px;
+			font-size: $mediumFont/2;
+		}
+		@media(min-width: 1200px){
+			width: 250px;
+			height: 65px;
+			font-size: $mediumFont/1.5;
 		}
 		font-size: $mediumFont/2;
 		border: none;
@@ -798,25 +805,30 @@ nav {
 }
 
 .back {
-		line-height: 30px;
+		padding-top: 3px;
 		background-color: $fifthColor;
 		color: $baseColor;
 		text-transform: uppercase;
 		text-align: center;
 		font-weight: bolder;
-		padding: 3px;
 		font-family: 'Raleway', sans-serif;
-		height: 30px;
-		width: 100px;
+		height: 20px;
+		width: 80px;
+		border-radius: 5%;
+		font-size: $mediumFont/3;
 		@media(min-width: 600px){
 			width: 120px;
+			height: 30px;
+			padding-top: 7px;
 			font-size: $mediumFont/2.5;
 		}
 
 		@media(min-width: 850px){
-			width: 140px;
+			width: 160px;
+			height: 40px;
+			padding-top: 10px;
 		}
-		font-size: $mediumFont/2;
+		
 		border: none;
 		border-radius: 5%;
 		margin-bottom: 10px;
