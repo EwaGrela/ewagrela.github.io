@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         this.parentElement.classList.add("invisible");
         gameSection.classList.remove("invisible");
         //ograniczenie czasowe zbierania łyżek
-        var timeForSpoons = 60;
+        var timeForSpoons = 10;
         timingDiv.innerText = "Time left: " + timeForSpoons;
 
         var timer = setInterval(function() {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             timeForSpoons = timeLeft;
             timingDiv.innerText = "Time left: " + timeLeft;
 
-            if (timeLeft === 0 && collectedSpoons < 10) {
+            if (timeLeft === 0 && collectedSpoons < 1) {
                 clearInterval(timer);
                 clearInterval(interval);
                 clearInterval(interval2);
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
             }
-            if (timeLeft === 0 && collectedSpoons >= 10) {
+            if (timeLeft === 0 && collectedSpoons >= 1) {
              
                 clearInterval(timer);
                 clearInterval(interval);
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     game.hideMoney();
                 }, 8000);
 
-                var timeForDollars = 60;
+                var timeForDollars = 10;
                 timingDiv.innerText = "Time left: " + timeForDollars;
                 infoRoundParagraph.innerText ="Money time"
                 var timer2 = setInterval(function() {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     timeForDollars = leftTime;
                     timingDiv.innerText = "Time left: " + leftTime;
 
-                    if (leftTime === 0 && dollarsEarned < 11) {
+                    if (leftTime === 0 && dollarsEarned < 1) {
                         clearInterval(timer2);
                         clearInterval(interval3);
                         clearInterval(interval4);
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
                        
                         game.gameOver();
                     }
-                    if (leftTime === 0 && dollarsEarned >= 11) {
+                    if (leftTime === 0 && dollarsEarned >= 1) {
                         clearInterval(interval3);
                         clearInterval(interval4);
                         clearInterval(timer2);
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             game.hideRose();
                         }, 8000);
 
-                        var timeForRoses = 60;
+                        var timeForRoses = 10;
                         timingDiv.innerText = "Time left: " + timeForRoses;
                         infoRoundParagraph.innerText= "Roses time"
                         var timer3 = setInterval(function() {

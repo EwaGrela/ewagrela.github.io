@@ -134,11 +134,11 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 20%;
+		width: 22%;
 		height: 120px;
 		border-radius: 5%;
-		margin-right: 20px;
-		margin-left: 20px;
+		margin-right: 15px;
+		margin-left: 15px;
 		background: mix(green, teal, 10%);
 		border: 3px solid darken(mix(green, teal, 10%), 10%);
 		&:nth-of-type(2){
@@ -285,7 +285,7 @@ body {
 }
 
 .rose {
-	background-image: url("../images/rose.png");
+	background-image: url("../images/rose3.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 }
