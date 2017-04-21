@@ -1,9 +1,8 @@
 $(function() {
     //js for the quasi app
-    console.log("changed logic");
     initiatingBtn.on("click", function(){
-        bandNamingSection.show();
-        bandNamingSection.css("display", "flex"); 
+        bandNamingSection.removeClass("invisible");
+        bandNamingSection.attr("id", "bandNamingSection");
         notBandNameSections.hide();
         header.hide();
         footer.hide();

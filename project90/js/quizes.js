@@ -17,7 +17,8 @@ $(function() {
             header.hide();
             notTriviaSections.hide();
             footer.hide();
-            triviaSection.css("display", "flex"); //cannot use show(), because it overrides flex display
+            triviaSection.attr("id", "triviaSection");
+            triviaSection.removeClass("invisible");
             triviaBoard.attr("id", "triviaBoard");
             for (var i = 0; i < 3; i++) {
                 var button = $("<button></button>");
@@ -226,7 +227,8 @@ $(function() {
             header.hide();
             notTestSections.hide();
             footer.hide();
-            testSection.css("display", "flex"); //cannot use show(), because it overrides flex display
+            testSection.attr("id", "testSection");
+            testSection.removeClass("invisible");
             var testBoard = $("<div>");
             testBoard.addClass("board");
             testBoard.appendTo(testSection);
