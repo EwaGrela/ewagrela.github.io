@@ -697,7 +697,7 @@
                 "answers": ["good guys", "bad boyz"]
             },
             { "title": "Are you nice or wild?",
-                "answers": ["nice 'n wholesome", "wild 'n nasty"]
+                "answers": ["nice", "wild"]
             }
         ],
         "bandResults":{

@@ -153,8 +153,7 @@ header {
 		&:nth-child(3) {
 			text-align: center;
 			align-self: center;
-			//border: 1px solid yellow;
-			
+		
 		}
 
 		&:nth-child(4) {
@@ -268,7 +267,6 @@ margin-top: 10px;
 }
 
 nav {
-	//border: 1px solid red;
 	font-family: 'Cherry Cream Soda', cursive;
 	display: flex;
 	margin-right: 10px;
@@ -285,7 +283,6 @@ nav {
 	ul {
 		@include layoutMixin1(transparent);
 		list-style-type: none;
-		//border: 1px solid blue;
 		width: 100%;
 		height: 80%;
 		margin-right: 20px;
@@ -332,7 +329,6 @@ nav {
 
 #infoSection {
 	@include layoutMixin2($baseColor);
-	//border: 2px solid orange;
 	position: relative;
 	max-width: 100vw;
 	height:auto;
@@ -346,7 +342,6 @@ nav {
 }
 
 #about {
-	//border: 1px solid black;
 	min-height: 50%;
 	width: 65%;
 	margin-bottom: 20px;
@@ -355,7 +350,6 @@ nav {
 	@media(min-width: 600px){
 		padding: 20px 50px;
 	}
-	//border: 1px solid yellow;
 	position: relative;
 	@include layoutMixin2($baseColor);
 		button {
@@ -476,20 +470,17 @@ nav {
 	min-height: 450px;
 	max-width: 100vw;
 	position:relative;
-	//border: 1px solid green;
 	
 }
 
 #learn {
 	@include layoutMixin6($baseColor);
-	//border: 1px solid yellow;
 	width: 100%;
 	border-radius: 2%;
 	min-height: 450px;
 	
 	
 	div {
-		//border: 1px solid blue;
 		min-height: 70%;
 		width: 100%;
 		display: flex;
@@ -537,7 +528,6 @@ nav {
 
 
 #gameSection {
-	//border: 1px solid blue;
 	height: auto;
 	min-width: 300px;
 	max-width: 100vw;
@@ -564,7 +554,6 @@ nav {
 	}
 
 	article:not(#gameInfo){
-		//border: 1px solid orange;
 		width: 95%;
 		height:auto;
 		max-height: 50%;
@@ -676,9 +665,6 @@ nav {
 	width: 80vw;
 	max-width: 100vw;
 	display: none;
-
-	//border: 1px solid blue;
-
 	h1 {
 		font-size: $mediumFont/2;
 		@media(min-width: 600px){
@@ -773,7 +759,7 @@ nav {
 
 
 	}
-	button, .back {
+	button {
 		background-color: $fifthColor;
 		color: $baseColor;
 		text-transform: uppercase;
@@ -796,13 +782,10 @@ nav {
 		margin-top: 10px;
 		text-decoration: none;
 	}
-	.back {
-		line-height: 50px;
-	}
+	
 
 	.bandResultsArticle {
 		font-family: 'Carter One', cursive;
-		//text-transform: uppercase;
 		font-size: $mediumFont/2;
 		@media(min-width: 600px){
 			font-size: $mediumFont/1.5;
@@ -815,7 +798,32 @@ nav {
 	}
 }
 
+.back {
+		line-height: 30px;
+		background-color: $fifthColor;
+		color: $baseColor;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: bolder;
+		padding: 3px;
+		font-family: 'Raleway', sans-serif;
+		height: 30px;
+		width: 100px;
+		@media(min-width: 600px){
+			width: 120px;
+			font-size: $mediumFont/2.5;
+		}
 
+		@media(min-width: 850px){
+			width: 140px;
+		}
+		font-size: $mediumFont/2;
+		border: none;
+		border-radius: 5%;
+		margin-bottom: 10px;
+		text-decoration: none;
+		
+	}
 
 footer {
 	height: 100vh;
@@ -832,7 +840,6 @@ footer {
 		height: 90%;
 		min-height: 450px;
 		border: none;
-		//border: 1px solid blue;
 		@media(min-width: 796px){
 			@include layoutMixin1(transparent);
 			
@@ -840,8 +847,6 @@ footer {
 	}
 	article {
 		@include layoutMixin6(transparent);
-		
-		//border: 2px solid orange;
 		width: 90%;
 		height: 90%;
 		@media(min-width: 796px){
@@ -904,7 +909,6 @@ footer {
 	width: 100%;
 	height: 450px;
 	background-color: rgba(204,204,204,0.90);
-	//border: 1px solid orange;
   	background-repeat:  no-repeat;
   	background-position:  center center;
   	background-size: cover;
@@ -915,7 +919,6 @@ footer {
 
 
 	.infoParagraph {	
-		//border: 1px solid red;
 		padding: 10px;
     	font-family: 'Raleway', sans-serif;
     	font-weight: bold;
@@ -970,7 +973,6 @@ footer {
 		background-size: cover;
 		background-position: top center;
 		background-repeat: no-repeat;
-		//filter: grayscale(100%);
 
 	}
 }
@@ -998,7 +1000,7 @@ footer {
 }
 #board3{
 	background-image: url("../images/boybands.jpg");
-	//color: white;
+	
 	
 }
 #board4{
@@ -1054,7 +1056,6 @@ footer {
 	max-width: 100vw;
 	max-height: 100vh;
 	background: inherit;
-	//border: 2px solid $baseColor;
 	@include layoutMixin3($baseColor);
 
 	#start {
@@ -1092,7 +1093,6 @@ footer {
 		max-height: 250px;
 		@include layoutMixin3($secondaryColor);
 	}
-	//border: 1px solid blue;
 	
 }
 
@@ -1151,12 +1151,11 @@ footer {
 
 #testBoard {
 	@include layoutMixin3($baseColor);
-	//border: 1px solid orange;
+	width: 100%;
 	max-width: 100%;
 	height: auto;
 	min-height: 50%;
 	max-height: 85%;
-	//border: 1px solid blue;
 	margin: 0 auto;
 	padding: 20px;
 	background: $secondaryColor;
@@ -1185,8 +1184,6 @@ footer {
 	@include gamesBoards(inherit);
 	width: 294px;
 	height: 294px;
-	//position: relative;
-	
 	@media (min-width: 420px){
 		width: 320px;
 		height: 320px;
@@ -1243,7 +1240,6 @@ div.boardDiv {
 #coveringBtn{
 	width: 200px;
 	height: 50px;
-	//position: absolute;
 	font-size: $bigFont/3.4;
 	font-family: 'Cherry Cream Soda', cursive;
 	background-color: #efefef;
@@ -1298,7 +1294,7 @@ div.boardDiv {
 
 .euroDance {
 	
-	background-image: url("../images/mini_captain.jpeg");
+	background-image: url("../images/captain.jpg");
 }
 .boyband {
 	
@@ -1347,8 +1343,8 @@ div.boardDiv {
 #triviaBoard {
 	
 	@extend %gamesBtn;
-	//border: 1px solid purple;
 	@include layoutMixin3($secondaryColor);
+	width: 100%;
 	max-width: 100%;
 	height: auto;
 	min-height: 50%;
@@ -1463,14 +1459,12 @@ div.boardDiv {
 
 .quizDiv {
 	@include layoutMixin2($secondaryColor);
-	//border: 1px solid red;
 	margin-top: 10px;
 	width: 80%;
 	height: auto;
 	margin: 0 auto;
 	label {
 		background: $baseColor;
-		//border: 1px solid $secondaryColor;
 		width: 80%;
 		height: 40px;
 		line-height: 40px;
@@ -1520,7 +1514,6 @@ input[type="radio"] {
 	top: 0;
 	left: 0;
 	z-index: 2;
-	//border: 1px solid black;
 	text-align: center;
 	animation-name: appear;
 	animation-duration: .75s;
@@ -1553,12 +1546,10 @@ input[type="radio"] {
 	}
 }
 .resultsBoard {
-	//border: 1px solid red;
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	width: 90%;
-	//min-height: 300px;
 	height: auto;
 	@include layoutMixin3(transparent);
 	font-family: 'Raleway', sans-serif;
