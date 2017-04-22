@@ -740,14 +740,14 @@
             }
         ],
         "bandResults":{
-            "family":["Guys, guys! It is really simple. Just put 'the' before your family name in plural and you're all set!"],
-            "grunge":["Mudslide", "Drops of Mercury", "Samsara", "Puddles of Dirt", "Middle of Anywhere"],
+            "family":["Guys, guys! It is really simple. Just put 'the' before your family name in plural and you're all set!", " 'The + {your family name} + family'. You're welcome."],
+            "grunge":["Mudslide", "Drops of Mercury", "Samsara", "Puddles of Dirt", "Middle of Anywhere", "Walking Trees", "Silent Hills"],
             "discopolo": ["Xero", "Vizzer", "Vixxer", "Fixer", "Audio Tele", "Play Power"],
-            "eurodance": ["Captain Obvious", "25/7", "Unlimited 3", "Mister Hollywood", "FSX"],
-            "boybandGood": ["In Harmony", "The Voices", "Five 4 U", "Right Direction","White Knights"],
-            "boybandBad": ["Bad Boyz", "ShakeDat", "InDaMix", "The Guyz", "DragonBallz", "Night Riderzz"],
-            "girlbandGood":["The Harmonies", "Sweet Harmony", "Back 2 Basic", "Angel Voices", "Foundation", "The Angelics", "Angel Of Mine"],
-            "girlbandBad": ["2Hot4U", "Sweet'N'Spicy", "Chilli Babe$", "PwrGrlz", "Diabolique", "BadGrlz", "Gurlz"]
+            "eurodance": ["U94 ", "25/7", "Unlimited 3", "Mr Hollywood", "FSX", "Captain Jeff", ""],
+            "boybandGood": ["In Harmony", "The Voices", "Five 4 U", "Right Direction","White Knights","Boys R Guys"],
+            "boybandBad": ["Bad Boyz", "ShakeDat", "InThaMix", "The Guyz", "DragonBallz", "Night Riderzz"],
+            "girlbandGood":["The Harmonies", "Sweet Harmony", "Back 2 Basic", "Angel Voices", "Sweethearts", "The Angelics", "Angel Of Mine"],
+            "girlbandBad": ["2Hot4U", "$weet'N'$picy", "Chilli Babe$", "Pwr Grlz", "Diabolique", "Bad Grlz", "Gurlz", "Wild Ones"]
 
         }
     }

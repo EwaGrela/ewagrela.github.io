@@ -1,6 +1,5 @@
 // events for memory game:
 $(function() {
-    console.log("ok");
     //keeping scroll in position
     $('body').scrollTop(0);
     var points = 0;
