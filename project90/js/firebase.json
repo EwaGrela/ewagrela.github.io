@@ -26,13 +26,13 @@
 	            "correct": "the kelly family"
 	        },
 	        {
-	            "title": "Which TV show did not run in the 90s?",
+	            "title": "Which TV show did NOT run in the 90s?",
 	            "answers": ["sex and the city", "gossip girl", "friends"],
 	            "correct": "gossip girl"
 	        },
 	        {
 	            "title": "What is the other name of grunge birthplace?",
-	            "answers": ["the rainy state", "the evergreen state", "garden state"],
+	            "answers": ["the rainy state", "the evergreen state", " the garden state"],
 	            "correct": "the evergreen state"
 	        },
 	        {
@@ -51,7 +51,7 @@
 	            "correct": "furby and tamagotchi"
 	        },
 	        {
-	            "title": "What year was JavaScript invented in?",
+	            "title": "What year were JavaScript & PHP invented in?",
 	            "answers": ["1996", "1992", "1995"],
 	            "correct": "1995"
 	        },
@@ -59,13 +59,30 @@
 	            "title": "Where did Robbie Williams start his career?",
 	            "answers": ["take that", "boyzone", "east-17"],
 	            "correct": "take that"
+	        },
+	        
+	        { 	"title":"What was the name of the TV show hosted by Krzysztof Ibisz?",
+	        	"answers":["Czar par","Randka w ciemno","Familiada"],
+	        	"correct":"Czar par"
+
 	        }
 	    ],
 
-	    [{
+	    [	{
 	            "title": "Which boyband sung 'Quit playing games'?",
 	            "answers": ["backstreet boys", "nsync", "take that"],
 	            "correct": "backstreet boys"
+	        },
+	        
+	        {	"title": "What was the name of 'Wheel of fortune' hostess?",
+	        	"answers": ["Ilona Felicjanska","Magda Masny","Agnieszka Maciag"],
+	        	"correct": "Magda Masny"
+
+	        },
+	        {	"title":"First Polish boyband was called...?",
+	        	"answers":["JUST5","FiveBoys","The Boys"],
+	        	"correct": "JUST5"
+
 	        },
 	        {
 	            "title": "Who did not decide to go solo?",
@@ -82,6 +99,11 @@
 	            "answers": ["nick and brian", "justin and jc", "robbie and gary"],
 	            "correct": "robbie and gary"
 	        },
+	       	{
+	       		"title": "Name the Polish soap opera aired first in 1997?",
+	       		"answers": ["Klan","W labiryncie","Barwy szczęścia"],
+	       		"correct": "Klan"
+	       	},
 	        {
 	            "title": "These two bands are British:",
 	            "answers": ["five and take that", "east 17 and nkotb", "nsync and bsb"],
@@ -113,18 +135,24 @@
 	            "correct": "four"
 	        }
 	    ],
-	    [{
+	    [	{
 	            "title": "What was the name of Paddy Kelly's brother?",
 	            "answers": ["aaron", "bobbie", "angelo"],
 	            "correct": "angelo"
 	        },
+	        { "title": "This song was by far the most often covered:",
+	        	"answers":["Baby, baby", "What is love", "Rhythm of the night"],
+	        	"correct": "Rhythm of the night"
+
+	        },
+
 	        {
 	            "title": "Which band sung 'Blackhole sun?",
 	            "answers": ["soundgarden", "the smashing pumpkins", "nirvana"],
 	            "correct": "soundgarden"
 	        },
 	        {
-	            "title": "Whose brother dated Lindsay Lohan in early 2000s?",
+	            "title": "Which 90s star's brother dated Lindsay Lohan?",
 	            "answers": ["nick carter's", "justin timberlake's", "mark owen's"],
 	            "correct": "nick carter's"
 	        },
@@ -162,7 +190,18 @@
 	            "title": "Nirvana's  Dave Grohl founded another band - name it:",
 	            "answers": ["Our Lady Peace", "Foo Fighters", " The Smashing Pumpkins"],
 	            "correct": "Foo Fighters"
+	        },
+	        { 	"title":"Which British boyband sang a song in Polish?",
+	        	"answers":["take that", "east17", "worlds apart"],
+	        	"correct":"worlds apart"
+
+	        },
+	        { 	"title":"This popstar met with Polish president and ministers in 1996",
+	        	"answers":["Michael Jackson", "Kurt Cobain", "Mc Hammer"],
+	        	"correct":"Michael Jackson"
+
 	        }
+
 	    ]
 
 	],
@@ -271,7 +310,7 @@
 
 	            },
 	            {
-	                "title": "Describe your personal style",
+	                "title": "Describe your personal style:",
 	                "answers": [{
 	                        "answer": "skinny jeans, crop top",
 	                        "result": "justin"
@@ -433,7 +472,7 @@
 
 	            },
 	            {
-	                "title": "Describe your style",
+	                "title": "Describe your style:",
 	                "answers": [{
 	                        "answer": "boho/hippie",
 	                        "result": "phoebe"
@@ -487,7 +526,7 @@
 	        "results": ["phoebe", "monica", "rachel"],
 	        "descriptions": [
 							"You are Phoebe! Might seem strange and peculiar but you are always there to help your friends out",
-							"You are Monica! Down to earth and maybe a little anal, but loyal and trustworthy",
+							"You are Monica! Down to earth and maybe a little bit too uptight, but loyal and trustworthy",
 							"You are Rachel. It might seem you are a bit of an entitled princess but you will always finally get your act together",
 							"Well, you cannot decide, can you? Each of them is special and so are you."
 							],
