@@ -87,7 +87,6 @@ $(function() {
                 createGameOverBoard(gameSection);
                 gameSection.removeClass("transparency");
                 createComebackBtn(gameSection);
-                //timeInfo.remove();
                 
             }
             if(opaqueDivs.length===20){
