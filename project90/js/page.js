@@ -71,7 +71,8 @@ $(function() {
                 class: "photoDiv"
             });
             photoDiv.insertAfter(infoParagraph);
-            photoDiv.attr("id", "board" + (index + 1)); // used so that different articles may have different ilustations
+            // used so that different articles may have different ilustations;
+            photoDiv.attr("id", "board" + (index + 1)); 
             infoParagraph.text(texts[index]);
 
         })

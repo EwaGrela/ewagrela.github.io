@@ -1,5 +1,5 @@
 $(function() {
-    //js for the quasi app
+    //the game begins once the button is hit and the section is made visible
     initiatingBtn.on("click", function(){
         bandNamingSection.removeClass("invisible");
         bandNamingSection.attr("id", "bandNamingSection");
@@ -9,6 +9,7 @@ $(function() {
     });
    
     var bandNameRef = firebase.database().ref("/bandName");
+    //the code is put inside the reference to the database so it is accessed
     bandNameRef.once("value").then(function(data) {
         bandName = data.val();
         console.log(bandName);
@@ -50,7 +51,6 @@ $(function() {
 
         }
 
-        //functions for the quasi app
         function createHomeBtns() {
             var button = $("<a>", {
                 class: "back"
@@ -73,7 +73,7 @@ $(function() {
         function deletePreviousQuestion(element) {
             element.parent().parent().hide();
         }
-
+        //depending on the attributes of the buttons, a different scenario takes place and different results are generated
         bandNamingSection.on("click", ".nameGenerator", function(){
             console.log($(this));
             console.log("ok");

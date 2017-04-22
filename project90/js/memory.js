@@ -4,7 +4,7 @@ $(function() {
     $('body').scrollTop(0);
     var points = 0;
     var clicks = 0;
-    //console.log(initiatingMemory);
+    //starting game : drawing a oard and randomizing cards
     initiatingMemory.on("click", function(event) {
         console.log("working");
         var memoryBoard = $("<div>", {
@@ -18,8 +18,6 @@ $(function() {
         header.hide();
         footer.hide();
         $(this).hide();
-        
-
         for (var i = 0; i <20; i++) {
             var newDiv = $("<div>", {
                 class: "boardDiv"
@@ -61,32 +59,27 @@ $(function() {
         addRandomClass(classes);
 
     })
-            
+    // the countdown and the game starts once the first element on board is clicked 
     gameSection.one("click", ".boardDiv", function(event){
             var timeInfo = $("<p>", {class:"clickInfo"});
             var clickInfo =$(".clickInfo").eq(0);
             timeInfo.insertAfter(clickInfo);
             timeInfo.addClass("invisible");
-
             var seconds = 60;
-
             timeInfo.text(" time left: " + seconds + " secs");
-            timeInfo.removeClass("invisible");
-            
-            
+            timeInfo.removeClass("invisible");      
             var interval = setInterval(function() {
             var newSeconds = seconds -1;
             seconds = newSeconds;
-            //console.log(newSeconds);
             var opaqueDivs = $(".opaque");
-            //console.log(opaqueDivs.length);
             timeInfo.text(" time left: " + newSeconds + " secs");
+            //end the game if run out of time and not all cards are uncovered
             if((newSeconds === 0) && (opaqueDivs.length<20)){
                 clearInterval(interval);  
                 createGameOverBoard(gameSection);
                 gameSection.removeClass("transparency");
                 createComebackBtn(gameSection);
-                
+             //if all are uncovered within time, clear interval
             }
             if(opaqueDivs.length===20){
                 clearInterval(interval);
@@ -125,7 +118,7 @@ $(function() {
 
         }
         var opaqueDivs = $(".opaque");
-        //console.log(opaqueDivs.length);
+       //calculate final results if you complete the game within time
         var finalScore = (points * 10) - clicks;
         if (opaqueDivs.length === 20) {
             $("#gameBoard").hide();
@@ -138,11 +131,9 @@ $(function() {
         }
 
     })
-
+    //if you want to play more, refresh the site
     gameSection.on("click", ".comeback", function(){
         location.reload();
         
     })
-
-
 })

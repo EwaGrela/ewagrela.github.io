@@ -986,6 +986,7 @@ footer {
 		background-size: cover;
 		background-position: top center;
 		background-repeat: no-repeat;
+		filter: grayscale(90%);
 
 	}
 }
@@ -997,7 +998,6 @@ footer {
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
-	filter: grayscale(80%);
 	@media(min-width: 600px){
 		height: 300px;
 		width: 300px;

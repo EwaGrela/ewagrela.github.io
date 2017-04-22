@@ -2,13 +2,12 @@ $(function() {
      $('body').scrollTop(0);
 
     /*trivia game */
-    //events for trivia game - dynamic 
-
+  
     var triviaRef = firebase.database().ref("/quizes");
-    triviaRef.once("value").then(function(data) { //put it inside the reference to the database, so the code is accessed
+    //put the code regarding quizes inside the reference to the database, so it is accessed
+    triviaRef.once("value").then(function(data) { 
         test = data.val();
         console.log(test);
-
         triviaBtn.on("click", function(event) {
             //console.log("trivia");
             var triviaBoard = $("<div>");
@@ -34,16 +33,14 @@ $(function() {
 
         })
 
-
-        triviaSection.on("click", ".startTrivia", function(event) { //create first question
+         //create first question after choosing one of the buttons starting quiz
+        triviaSection.on("click", ".startTrivia", function(event) {
             $(this).hide();
             $(this).siblings().hide()
             triviaHeaderOne.hide();
             var indicator = $(this).index();
-            //console.log(indicator);
             var index = 0; //index of first question
             var points = 0;
-
             var questions = test[indicator];
             var questionSet = questions.length;
             $(this).parent().prev().hide();
@@ -116,7 +113,6 @@ $(function() {
                 class: "secondsInfo"
             });
             secondsInfo.insertAfter(triviaSection);
-            
             secondsInfo.text("quiz time limit: " + seconds + " secs");
             var interval = setInterval(function() {
                 var newSeconds = seconds - 1;
@@ -141,18 +137,16 @@ $(function() {
 
             }, 1000);
 
-
-
-
-            triviaSection.on("click", ".quizButton", function(event) { //collect answers and count points
+            //each time a 'next' button is hit, the answers are collected, points are counted
+            triviaSection.on("click", ".quizButton", function(event) { 
                 if (index < questionSet) {
                     var checked = $(this).siblings("label").find("input:checked");
                     var value = checked.attr("value");
                     console.log(value);
                     if (value === "true") {
                         points++;
-                        //console.log(points);
                     }
+                //not giving answer is not reccomended, you can't move forward and the time still is running
                     if (value === undefined) {
                         createAlertBox($("#triviaBoard"));
                     } else {
@@ -162,7 +156,7 @@ $(function() {
                         $(this).parent().prev().hide();
 
                     }
-
+            //once there are no more questions to answer, the results are published
                 } else {
 
                     createResultsBoard();
@@ -172,8 +166,8 @@ $(function() {
 
             })
 
-
-            function createResultsBoard() { // do it when question list over
+            //this function creates results board and show the calculated results
+            function createResultsBoard() { 
                 var resultsBoard = $("<div>", {
                     class: "resultsBoard"
                 });
@@ -189,21 +183,21 @@ $(function() {
                 if (points >= questionSet / 1.25) {
                     resultsBoard.text(points + " out of " + questionSet + " points! a true 90s kid!");
                 }
-
-                createComebackBtn(resultsBoard); //allow test repetition
+                //allow test repetition, if you want to play again
+                createComebackBtn(resultsBoard); 
             }
 
 
 
 
         })
-
+        //alerts need to be removed after you decide to move on with the quiz
         triviaSection.on("click", ".hideAlertBtn", function() {
-            //$(this).remove();
             $(this).parent().remove();
         })
 
-        triviaSection.on("click", ".comeback", function(event) { //refresh the page when finished and be able to play again
+        //refresh the page when finished and be able to play again
+        triviaSection.on("click", ".comeback", function(event) { 
             location.reload();
         })
 
@@ -213,11 +207,11 @@ $(function() {
     });
 
 
-//functions & events for personality test
-
-    var collectedAnswers = [];
+//functions & events for personality test - works similarly, but the results are counted differently
+    
+    var collectedAnswers = []; //this array stores your answers
     var testRef = firebase.database().ref("/personality");
-    //putting all code inside the reference to the database so the data can be accessed
+    //putting all code  regarding the quiz inside the reference to the database so the data can be accessed
     testRef.once("value").then(function(data) {
         quiz = data.val();
         console.log(quiz);
@@ -321,7 +315,7 @@ $(function() {
                 }
 
             }
-
+            //hittins "next" button created next question, while the answers are pushed into the array and evaluated
             testSection.on("click", ".quizButton", function(event) {
                 var labels = $(this).siblings("label");
                 //console.log(labels);
@@ -331,6 +325,7 @@ $(function() {
                 //console.log(labelText);
                 var dataText = checked.parent().attr("data");
                 if (index < questionSet) {
+                    //you cannot move on if no answer is given
                     if (dataText === undefined) {
                         createAlertBox($("#testBoard"));
                     } else {
@@ -341,13 +336,13 @@ $(function() {
                         $(this).parent().hide();
                         $(this).parent().prev().hide();
                     }
-
+                //once the questions are all answered, the results are generated
                 } else {
                     showResults();
                 }
 
             })
-            //console.log(index);
+            //this function counts the occurences of each answer and generates your result
             function showResults() {
                 var resultsBoard = $("<div>", {
                     class: "resultsBoard"
@@ -384,7 +379,6 @@ $(function() {
 
 
         testSection.on("click", ".hideAlertBtn", function() {
-            //$(this).remove();
             $(this).parent().remove();
         })
 

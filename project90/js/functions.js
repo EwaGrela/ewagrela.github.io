@@ -1,7 +1,7 @@
 /* 
 reusable functions
 */
-//functions used everywhere
+
 function randomize(elements) {
     for (var i = 0; i < elements.length; i++) {
         var j = Math.floor(Math.random() * elements.length);
@@ -24,7 +24,6 @@ function createComebackBtn(element) {
         }
 
         
-
 var alertText = "Scary Spice is not amused you missed the question";
 var background = "url('images/scaryspice.png')";
 function createAlertBox(element) {
