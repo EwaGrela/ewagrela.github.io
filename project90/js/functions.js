@@ -2,28 +2,6 @@
 reusable functions
 */
 
-function getFirebaseData(){
-        var triviaRef = firebase.database().ref("/quizes");
-        triviaRef.once("value").then(function(data) { 
-        test = data.val();
-        console.log(test);
-        });
-
-        var testRef = firebase.database().ref("/personality");
-        testRef.once("value").then(function(data) {
-        quiz = data.val();
-        console.log(quiz);
-        });
-
-        var textRef = firebase.database().ref("/texts");
-        textRef.once("value").then(function(data) {
-        texts = data.val();
-        console.log(texts);
-        });
-
-        
-    }
-
 function randomize(elements) {
     for (var i = 0; i < elements.length; i++) {
         var j = Math.floor(Math.random() * elements.length);
