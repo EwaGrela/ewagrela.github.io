@@ -128,8 +128,9 @@ $(function() {
                     points = 0;
 
                 }
-                if (index >= createQuestion) {
+                if (index >= questionSet) {
                     clearInterval(interval);
+                    console.log(newSeconds);
                     $(".quizDiv").hide();
                     $(".quizDiv").prev().hide();
 
@@ -160,7 +161,6 @@ $(function() {
                 } else {
                     createResultsBoard();
                 }
-
 
 
             })
@@ -369,18 +369,19 @@ $(function() {
                 createComebackBtn(resultsBoard);
             }
 
-        })
+        });
 
 
         testSection.on("click", ".hideAlertBtn", function() {
             $(this).parent().remove();
-        })
+        });
 
         testSection.on("click", ".comeback", function(event) {
             location.reload();
-        })
+        });
 
-    })
+
+    });
 
 
 

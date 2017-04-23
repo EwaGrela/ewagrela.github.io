@@ -4,7 +4,7 @@ $(function() {
     $('body').scrollTop(0);
     var points = 0;
     var clicks = 0;
-    //starting game : drawing a oard and randomizing cards
+    //starting game : drawing a board and randomizing cards
     initiatingMemory.on("click", function(event) {
         console.log("working");
         var memoryBoard = $("<div>", {
