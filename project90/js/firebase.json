@@ -41,9 +41,9 @@
 	            "correct": "brenda and kelly"
 	        },
 	        {
-	            "title": "Justin Timberlake's first band was...",
-	            "answers": ["nkotb", "bsb", "nsync"],
-	            "correct": "nsync"
+	            "title": "Name the taxi driver from the cult Polish soap opera 'Klan' ",
+	            "answers": ["Rysiek", "Zdzisiek", "Stasiek"],
+	            "correct": "Rysiek"
 	        },
 	        {
 	            "title": "Which were the electronic toys kept as pets?",
@@ -85,9 +85,9 @@
 
 	        },
 	        {
-	            "title": "Who did not decide to go solo?",
-	            "answers": ["nick carter", "justin timberlake", "jason orange"],
-	            "correct": "jason orange"
+	            "title": "What was Rysiek Lubicz's catchphrase?",
+	            "answers": ["wash your hands", "let's eat", "hurry up"],
+	            "correct": "wash your hands"
 	        },
 	        {
 	            "title": "Who covered George Michael's 'Freedom'?",
@@ -95,9 +95,9 @@
 	            "correct": "robbie williams"
 	        },
 	        {
-	            "title": "Those two hated each other, but reconciled:",
-	            "answers": ["nick and brian", "justin and jc", "robbie and gary"],
-	            "correct": "robbie and gary"
+	            "title": "This TV series from the 80s was a big hit in 90s Poland:",
+	            "answers": ["Dynasty", "Melrose Place", "Dr House"],
+	            "correct": "Dynasty"
 	        },
 	       	{
 	       		"title": "Name the Polish soap opera aired first in 1997?",
@@ -125,14 +125,14 @@
 	            "correct": "1995"
 	        },
 	        {
-	            "title": "Touche are a boyband from...",
-	            "answers": ["germany", "belgium", "france"],
-	            "correct": "germany"
+	            "title": "How many members did the Kelly Family have?",
+	            "answers": ["five", "six", "a lot"],
+	            "correct": "a lot"
 	        },
 	        {
-	            "title": "How many members did 98degrees have?",
-	            "answers": ["five", "three", "four"],
-	            "correct": "four"
+	            "title": "In which country did the Backstreet Boys become famous last?",
+	            "answers": ["USA", "Germany", "Poland"],
+	            "correct": "USA"
 	        }
 	    ],
 	    [	{
@@ -140,8 +140,8 @@
 	            "answers": ["aaron", "bobbie", "angelo"],
 	            "correct": "angelo"
 	        },
-	        { "title": "This song was by far the most often covered:",
-	        	"answers":["Baby, baby", "What is love", "Rhythm of the night"],
+	        { "title": "This song by Corona is the most often covered:",
+	        	"answers":["Coco jambo", "What is love", "Rhythm of the night"],
 	        	"correct": "Rhythm of the night"
 
 	        },
@@ -152,7 +152,7 @@
 	            "correct": "soundgarden"
 	        },
 	        {
-	            "title": "Which 90s star's brother dated Lindsay Lohan?",
+	            "title": "Whose brother dated Lindsay Lohan?",
 	            "answers": ["nick carter's", "justin timberlake's", "mark owen's"],
 	            "correct": "nick carter's"
 	        },
@@ -167,9 +167,9 @@
 	            "correct": "nick carter"
 	        },
 	        {
-	            "title": "Kurt Cobain's wife's name was...",
-	            "answers": ["jessica simpson", "geri halliwell", "courtney love"],
-	            "correct": "courtney love"
+	            "title": "What was the name of Rysiek Lubicz's wife?",
+	            "answers": ["beata", "monika", "grażyna"],
+	            "correct": "grażyna"
 	        },
 	        {
 	            "title": "Which band had a duet with Queen?",
@@ -182,21 +182,21 @@
 	            "correct": "1998"
 	        },
 	        {
-	            "title": "Name the pop dance festival held in Germany and Austria?",
+	            "title": "Name the pop/dance festival held in Germany and Austria?",
 	            "answers": ["The Doom", "The Dance Off", "The Dome"],
 	            "correct": "The Dome"
 	        },
 	        {
-	            "title": "Nirvana's  Dave Grohl founded another band - name it:",
+	            "title": "Nirvana's Dave Grohl founded another band:",
 	            "answers": ["Our Lady Peace", "Foo Fighters", " The Smashing Pumpkins"],
 	            "correct": "Foo Fighters"
 	        },
-	        { 	"title":"Which British boyband sang a song in Polish?",
+	        { 	"title":"Which British band attempted to sing in Polish?",
 	        	"answers":["take that", "east17", "worlds apart"],
 	        	"correct":"worlds apart"
 
 	        },
-	        { 	"title":"This popstar met with Polish president and ministers in 1996",
+	        { 	"title":"Who met with Polish president and ministers in 1996?",
 	        	"answers":["Michael Jackson", "Kurt Cobain", "Mc Hammer"],
 	        	"correct":"Michael Jackson"
 
@@ -745,7 +745,7 @@
             "discopolo": ["Xero", "Vizzer", "Vixxer", "Fixer", "Audio Tele", "Play Power"],
             "eurodance": ["U94 ", "25/7", "Unlimited 3", "Mr Hollywood", "FSX", "Captain Jeff", ""],
             "boybandGood": ["In Harmony", "The Voices", "Five 4 U", "Right Direction","White Knights","Boys R Guys"],
-            "boybandBad": ["Bad Boyz", "ShakeDat", "InThaMix", "The Guyz", "DragonBallz", "Night Riderzz"],
+            "boybandBad": ["Bad Boyz", "ShakeDat", "InThaMix", "The Guyz", "5ive", "Night Riderzz"],
             "girlbandGood":["The Harmonies", "Sweet Harmony", "Back 2 Basic", "Angel Voices", "Sweethearts", "The Angelics", "Angel Of Mine"],
             "girlbandBad": ["2Hot4U", "$weet'N'$picy", "Chilli Babe$", "Pwr Grlz", "Diabolique", "Bad Grlz", "Gurlz", "Wild Ones"]
 
