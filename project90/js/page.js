@@ -45,40 +45,36 @@ $(function() {
     })
 
     //events for learn section
-    var textRef = firebase.database().ref("/texts");
-    textRef.once("value").then(function(data) {
-        texts = data.val();
-        console.log(texts);
-        learnBtn.on("click", function(event) {
-            var infoBoard = $("<article>", {
-                class: "infoBoard"
-            });
-            infoBoard.appendTo(learnSection);
-            var hideBtn = $("<button>", {
-                class: "hideBtn"
-            });
-            infoBoard.css("z-index", 2);
-            hideBtn.appendTo(infoBoard);
-            var infoParagraph = $("<p>", {
-                class: "infoParagraph"
-            });
-            infoParagraph.prependTo(infoBoard);
-            hideBtn.text("hide");
-            var index = $(this).index();
-            console.log(index);
+    getFirebaseData();
+    learnBtn.on("click", function(event) {
+        var infoBoard = $("<article>", {
+            class: "infoBoard"
+        });
+        infoBoard.appendTo(learnSection);
+        var hideBtn = $("<button>", {
+            class: "hideBtn"
+        });
+        infoBoard.css("z-index", 2);
+        hideBtn.appendTo(infoBoard);
+        var infoParagraph = $("<p>", {
+            class: "infoParagraph"
+        });
+        infoParagraph.prependTo(infoBoard);
+        hideBtn.text("hide");
+        var index = $(this).index();
+        console.log(index);
 
-            var photoDiv = $("<div>", {
-                class: "photoDiv"
-            });
-            photoDiv.insertAfter(infoParagraph);
-            // used so that different articles may have different ilustations;
-            photoDiv.attr("id", "board" + (index + 1)); 
-            infoParagraph.text(texts[index]);
+        var photoDiv = $("<div>", {
+            class: "photoDiv"
+        });
+        photoDiv.insertAfter(infoParagraph);
+        // used so that different articles may have different ilustations;
+        photoDiv.attr("id", "board" + (index + 1));
+        infoParagraph.text(texts[index]);
 
-        })
+    })
 
 
-    });
 
 
     learnSection.on("click", ".hideBtn", function(event) {
