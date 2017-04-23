@@ -1,6 +1,6 @@
 $(function() {
      $('body').scrollTop(0);
-
+    console.log("trivia & test");
     /*trivia game */
   
     var triviaRef = firebase.database().ref("/quizes");
@@ -108,7 +108,7 @@ $(function() {
             }
 
             // this gives penalty for not giving answers within time wanted
-            var seconds = 10 * questionSet; //you get 10secs per question
+            var seconds = 5 * questionSet; //you get 5 secs per question
             var secondsInfo = $("<section>", {
                 class: "secondsInfo"
             });
