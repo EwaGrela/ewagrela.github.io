@@ -127,10 +127,10 @@ $(function() {
             createComebackBtn(gameSection);
         }
 
-    })
+    });
     //if you want to play more, refresh the site
     gameSection.on("click", ".comeback", function(){
-        location.reload();
-        
-    })
-})
+        location.reload();    
+    });
+
+});

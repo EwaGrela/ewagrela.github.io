@@ -179,7 +179,7 @@ $(function() {
                 if (points >= questionSet / 2 && points < questionSet / 1.25) {
                     resultsBoard.text(points + " out of " + questionSet + " points! not bad at all!");
                 }
-                if (points >= questionSet / 1.25) {
+                if (points >= questionSet / 1.3) {
                     resultsBoard.text(points + " out of " + questionSet + " points! a true 90s kid!");
                 }
                 //allow test repetition, if you want to play again
