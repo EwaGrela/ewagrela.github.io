@@ -13,15 +13,14 @@ function randomize(elements) {
 }
 
 function createComebackBtn(element) {
-        
-            var button = $("<a>", {
-                class: "comeback"
-            });
-            button.appendTo(element);
-            var button = $(".comeback");
-            button.text("again");
-            button.attr("href", "https://ewagrela.github.io/project90/");         
-        }
+    var button = $("<a>", {
+    class: "comeback"
+    });
+    button.appendTo(element);
+    var button = $(".comeback");
+    button.text("again");
+    button.attr("href", "https://ewagrela.github.io/project90/");         
+}
 
         
 var alertText = "Scary Spice is not amused you missed the question";

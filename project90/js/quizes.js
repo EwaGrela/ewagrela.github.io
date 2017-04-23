@@ -158,7 +158,6 @@ $(function() {
                     }
             //once there are no more questions to answer, the results are published
                 } else {
-
                     createResultsBoard();
                 }
 
@@ -187,9 +186,6 @@ $(function() {
                 createComebackBtn(resultsBoard); 
             }
 
-
-
-
         })
         //alerts need to be removed after you decide to move on with the quiz
         triviaSection.on("click", ".hideAlertBtn", function() {
@@ -201,13 +197,11 @@ $(function() {
             location.reload();
         })
 
-
-
-
     });
 
 
-//functions & events for personality test - works similarly, but the results are counted differently
+/*functions & events for personality test - works similarly, but the results are counted differently 
+*/
     
     var collectedAnswers = []; //this array stores your answers
     var testRef = firebase.database().ref("/personality");
@@ -385,9 +379,6 @@ $(function() {
         testSection.on("click", ".comeback", function(event) {
             location.reload();
         })
-
-
-
 
     })
 

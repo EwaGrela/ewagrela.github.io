@@ -45,7 +45,6 @@ $(function() {
                 var gameInfo = $("<article>", {id: "gameInfo"});
                 gameInfo.prependTo(gameSection);
                 var clickInfo = $("<p>", {class:"clickInfo"});
-                //clickInfo.addClass("invisible");
                 clickInfo.text(" clicks: " + clicks);
                 clickInfo.prependTo(gameInfo);
             }
@@ -93,9 +92,7 @@ $(function() {
     gameSection.on("click", ".boardDiv", function(event) {
         clicks++;
         var clickInfo = $(".clickInfo").eq(0);
-        //clickInfo.removeClass("invisible");
         clickInfo.text(" clicks: " + clicks);
-        //console.log(clicks);
         $(this).removeClass("covered");
         var target = $(this);
         var timeout = setTimeout(function() {
