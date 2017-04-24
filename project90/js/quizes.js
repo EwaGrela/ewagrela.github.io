@@ -107,8 +107,15 @@ $(function() {
 
             }
 
-            // this gives penalty for not giving answers within time wanted
-            var seconds = 5 * questionSet; //you get 5 secs per question
+            // penalty for not giving answers within time, depending on level it gets harder, there is less time
+            if($(this).index() ===0){
+                var seconds = 10*questionSet; 
+
+            } else if ($(this).index()===1){
+                var seconds = 8*questionSet;
+            } else {
+                var seconds = 5*questionSet;
+            }
             var secondsInfo = $("<section>", {
                 class: "secondsInfo"
             });
