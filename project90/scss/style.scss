@@ -19,7 +19,8 @@ body:before{
   height: 100%;
   z-index: -10;
   background-color: $baseColor;
-  background-image: url("../images/mini_furby-974707_1920.jpg");
+  //background-image: url("../images/mini_furby-974707_1920.jpg");
+  background-image: url("../images/windows.jpg");
   background-repeat:  no-repeat;
   background-position:  center center;
   background-size: cover;
@@ -165,13 +166,13 @@ header {
 			font-size: $bigFont/3;
 			width: 100px;
 			height: 50px;
-			background: $fifthColor;
+			background: lighten($fifthColor, 10%);
 			animation-name: appear;
 			animation-duration: 1.5s;
 			animation-iteration-count: 1;
 			animation-timing-function: ease-in-out;
 			&:hover {
-				background: lighten($fifthColor, 10%);
+				background: lighten($fifthColor, 15%);
 			}
 			border: none;
 			border-radius: 10%;
@@ -229,7 +230,7 @@ margin-top: 10px;
   height: 35px;
   border: 0;
   z-index: 2;
-  border-top: 5px solid lighten($fifthColor, 10%);
+  border-top: 5px solid #ffff66;
   background: transparent;
   position: relative;
   transition: 0.3s transform linear;
@@ -242,7 +243,7 @@ margin-top: 10px;
   top: 0;
   left: 0;
   width: 100%;
-  border-top: 5px solid lighten($fifthColor, 10%);
+  border-top: 5px solid #ffff66;
   transform: translateY(10px);
 }
 
@@ -258,6 +259,10 @@ margin-top: 10px;
 
 .hamburger.focus::after {
   transform: rotate(-90deg) translateX(-10px);
+  border-top: 5px solid $fifthColor;
+}
+.hamburger.focus::before {
+	border-top: 5px solid $fifthColor;
 }
 
 
@@ -876,7 +881,7 @@ footer {
 		list-style: none;
 		@include layoutMixin3(transparent);
 		li {
-			color: silver;
+			color: #ffff77;
 			text-shadow: 5px 5px 5px $fifthColor;
 			font-weight: bolder;
 			font-style: italic;
@@ -946,12 +951,12 @@ footer {
 			font-size: $mediumFont/1.9;
 		}
 		@media(min-width: 1200px){
-			font-size: $mediumFont/1.45;
+			font-size: $mediumFont/1.60;
 		}
 
 	}
 
-	button {
+	button:not(.hideBtn) {
 		background:  $sixthColor;
 		border-radius: 5%;
 		width: auto;
@@ -978,6 +983,34 @@ footer {
 		color: white;
 		
 	}
+	.hideBtn {
+
+		background:  $sixthColor;
+		border-radius: 5%;
+		width: auto;
+		height: auto;
+		font-size: $mediumFont/6;
+		font-family: 'Cherry Cream Soda', cursive;
+		transition: 0.8s;
+		&:hover {
+			background: lighten($sixthColor, 10%);
+		}
+		@media(min-width: 600px){
+			width: 75px;
+			height: 30px;
+			font-size: $mediumFont/4.2;
+		}
+		@media(min-width: 1200px){
+			width: 100px;
+			height: 50px;
+			font-size: $mediumFont/3;
+		}
+		
+		margin: 5px;
+		border: none;
+		color: white;
+
+	}
 
 }
 
@@ -992,16 +1025,13 @@ footer {
 }
 
 .photoDiv {
-	width: 200px;
-	height: 200px;
+	width: 180px;
+	height: 180px;
 	animation-name: appear;
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
-	@media(min-width: 600px){
-		height: 300px;
-		width: 300px;
-	}
+	
 	
 }
 #board1{
