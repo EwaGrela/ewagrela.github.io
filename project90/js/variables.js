@@ -1,10 +1,13 @@
 	/* 
 	memory game classes
 	*/
+
+
 	var classes = ["tamagotchi", "beverlyHills", "kellyFamily", "euroDance", "boyband", "girlband",
 	    "macdonald", "furby", "nirvana", "fashion", "tamagotchi", "beverlyHills", "kellyFamily", "euroDance", "boyband", "girlband",
 	    "macdonald", "furby", "nirvana", "fashion"
 	];
+	
 
 	/*
 	variables for DOM elements
