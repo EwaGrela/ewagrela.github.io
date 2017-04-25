@@ -19,8 +19,8 @@ body:before{
   height: 100%;
   z-index: -10;
   background-color: $baseColor;
-  //background-image: url("../images/mini_furby-974707_1920.jpg");
-  background-image: url("../images/rainbows.png");
+  background-image: url("../images/furby-974707_640.jpg");
+  //background-image: url("../images/rainbows.png");
   background-repeat:  no-repeat;
   background-position:  center center;
   background-size: cover;
@@ -29,7 +29,7 @@ body:before{
 body {
 	max-width: 100vw;
 	width: 100%;
-	background-color: lighten($sixthColor, 20%);
+	background-color: lighten($sixthColor, 40%);
 
 
 }
@@ -150,12 +150,7 @@ header {
 	max-height: 100vh;
 	max-width: 100vw;
 	h1 {
-		color: $seventhColor;
-		text-shadow: 6px 6px 7px #ff0066;
-		span {
-			color: #ff0066;
-			text-shadow: 6px 6px 7px $seventhColor;
-		}
+		color: mix($sixthColor, #555);
 	}
 	.header-item {
 		font-family: 'Cherry Cream Soda', cursive;
@@ -862,8 +857,8 @@ footer {
 	color: white;
 	
 	h1,h2 {
-		color: #ffff99;
-		text-shadow: 5px 5px 6px #ff0066;
+		color: mix($sixthColor, #666);
+		text-shadow: 5px 5px 6px silver;
 	}
 	section {
 		@include layoutMixin2(transparent);
@@ -894,7 +889,7 @@ footer {
 		list-style: none;
 		@include layoutMixin3(transparent);
 		li {
-			color: #ffff77;
+			color: lighten(#ffff77, 20%);
 			text-shadow: 5px 5px 5px $fifthColor;
 			font-weight: bolder;
 			font-style: italic;
