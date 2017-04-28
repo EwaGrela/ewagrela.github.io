@@ -50,6 +50,7 @@ var compability ={
 
 	var questions = compability.questions;
 	var recordedAnswers = [];
+	var points = 0;
 	var index = 0 //index pytania;
 	var otherSections = $("section");
 	var body = $("body");
@@ -57,12 +58,13 @@ var compability ={
 	var gridSection = $(".grid-section");
 	var content = $(".content");
 	var buttons = grid.find("button").not(".contentBtn");
-
+	var gridLinks = grid.find("a");
 	var firstButton = $("button#diamond1");
 
 	firstButton.on("click", function(){
 		content.eq(0).removeClass("invisible");
 		buttons.addClass("invisible");
+		gridLinks.addClass("invisible");
 
 	});
 
@@ -82,28 +84,32 @@ var compability ={
 	quizStartingBtn.one("click", function(){
 		console.log("ok, works");
 		$(this).addClass("invisible");
-		content.eq(1).removeClass("invisible");
-		buttons.addClass("invisible");
+		content.removeClass("invisible");
+		buttons.parent().parent().addClass("invisible");
+		//buttons.addClass("invisible");
+		//gridLinks.addClass("invisible");
 		createQuestion(0);
 	})
 	
 	function createQuestion(index) {
-		var paragraph = $("<p>", {class: "quizParagraph"});
-		paragraph.appendTo($(".quiz"));
+		var article = $("<article>", {class: "quizArticle"});
+		article.appendTo(content);
+		var paragraph = $("<p>", {class: "quizPar"});
 		var title = $("<h3>", {class:"title"});
-		title.appendTo(paragraph);
+		title.appendTo(article);
+		paragraph.insertAfter(title);
 		title.text(questions[index].title);
 		var answers = questions[index].answers;
 		for ( var i = 0; i<answers.length; i++){
 			var labels = $("<label>");
-			labels.insertAfter(title);
+			labels.appendTo(paragraph);
 		}
 		var quizBtns = $("<button>");
 		quizBtns.addClass("quizBtns");
-		quizBtns.appendTo(paragraph);
+		quizBtns.appendTo(article);
 		quizBtns.text("ok");
 		
-		var labels = paragraph.find("label");
+		var labels = article.find("label");
 		for( var i =0; i<labels.length; i++){
 			$(labels[i]).text(answers[i]);
 		}
@@ -117,7 +123,7 @@ var compability ={
 		
 		var inputs = paragraph.find("input");
 		inputs.each(function(){
-			console.log(questions[index].correct);
+			//console.log(questions[index].correct);
 			if($(this).parent().text()=== questions[index].correct){
 				$(this).attr("value", "true");
 			} else {
@@ -132,30 +138,42 @@ var compability ={
 	body.on("click", ".quizBtns", function(event){
 		console.log("yay");
 		index ++;
+		$(this).parent().remove();
 		if(index<questions.length) {
-			console.log(index);
-			console.log($(this).parent().parent());
+			//console.log(index);
+			//console.log($(this).parent().parent());
 			var checkedInput = $(this).siblings().children("input:checked")
 			console.log(checkedInput);
 			var result = checkedInput.attr("value");
 			recordedAnswers.push(result);
 			console.log(recordedAnswers);
-			$(this).parent().parent().remove();
 			createQuestion(index);
+			if(result ==="true") {
+				points ++;
+				console.log(points);
+			}
 		} else {
 			//alert("koniec");
-			$(this).parent().parent().remove();
+			//$(this).parent().parent().remove();
 			createResultsBoard();
 		}
 	})
 
 	function createResultsBoard() {
-		var article = $("<article>");
-		article.addClass("quizArticle");
-		article.appendTo($(".quizSection"));
-		var paragraph = $("<p>", {class:"quizParagraph"});
-		paragraph.appendTo(article);
-		paragraph.text("Over");
+		var board = $("<article>");
+		board.appendTo(content);
+		var paragraph = $("<p>");
+		paragraph.appendTo(board);
+		if(points<5){
+			var result = "We are not compatible, but we can work it out"
+		} else if (points>=5 && points<8) {
+			var result ="Not a match made in heaven, but it is ok"
+		} else if (points>=8){
+			var result = "Seems like we will be getting along ver well"
+		}
+		paragraph.text(result);
 	}
+
+	
 	
 })

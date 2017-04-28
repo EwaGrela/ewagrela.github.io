@@ -136,26 +136,43 @@ body {
 }
 
 .content {
-	width: 52%;
-	padding-bottom: 52%;
+	width: 100%;
+	//padding-bottom: 52%;
+	height: 100%;
+	//margin: 0 auto;
 	display: flex;
-	border: 5px solid #005656;
-	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	//border: 5px solid #005656;
+	//position: absolute;
 	border-radius: 5%;
-	top: 8%;
-	left: 10.5%;
-	p {
-		position: absolute;
-		transform: rotate(-45deg);
-		width: 100%;
-		height: 100%;
+	//top: 8%;
+	//left: 10.5%;
+	.quizArticle {
+		//position: absolute;
+		//transform: rotate(-45deg);
+		width: 70%;
+		height: 70%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
 		//left: 15%;
 		//top: 25%;
-		background-color: #006767;
-		
-		button {
-			position: absolute;
-		}
+		background-color: #006767;	
+	}
+	.quizPar {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: stretch;
+		width: 70%;
+		height: 70%;
+	}
+	.title {
+		text-align: center;
 	}
 }
 
