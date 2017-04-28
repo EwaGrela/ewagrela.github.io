@@ -1,6 +1,7 @@
 $(function(){
 	console.log("ok");
 
+	var button 
 var compability ={
 		questions: [
 			{title:"Tea or coffee?",
@@ -52,40 +53,43 @@ var compability ={
 	var index = 0 //index pytania;
 	var otherSections = $("section");
 	var body = $("body");
-	var firstButton = $(".introduction").find("button");
-	console.log(firstButton);
+	var grid = $(".grid");
+	var gridSection = $(".grid-section");
+	var content = $(".content");
+	var buttons = grid.find("button").not(".contentBtn");
+
+	var firstButton = $("button#diamond1");
+
 	firstButton.on("click", function(){
-		console.log("works");
-		$(this).hide();
-		$(this).parent().hide();
-		$(this).parent().next().css("display", "flex");
-		
+		content.eq(0).removeClass("invisible");
+		buttons.addClass("invisible");
+
+	});
+
+	var nextBtn = $(".contentBtn");
+	nextBtn.on("click", function(){
+		$(this).parent().addClass("invisible");
+		$(this).parent().next().removeClass("invisible");
 	})
 
-	var secondButton = $(".projectsArticle").find("button");
-	secondButton.on("click", function(){
-		$(this).hide();
-		$(this).parent().hide();
-		$(this).parent().next().css("display", "flex");	
+	var backBtn = $(".back");
+	backBtn.on("click", function(){
+		location.reload();
 	})
 
-	var quizStartingBtn = $(".quiz").find("button");
+	var quizStartingBtn = $("button#diamond3");
 	console.log(quizStartingBtn);
 	quizStartingBtn.one("click", function(){
 		console.log("ok, works");
-		$(this).parent().hide();
-		otherSections.remove();
-		var quizSection = $("<section>");
-		quizSection.appendTo(body);
-		quizSection.addClass("quizSection");
+		$(this).addClass("invisible");
+		content.eq(1).removeClass("invisible");
+		buttons.addClass("invisible");
 		createQuestion(0);
 	})
 	
 	function createQuestion(index) {
-		var article = $("<article>", {class:"quizArticle"});
-		article.appendTo($(".quizSection"));
 		var paragraph = $("<p>", {class: "quizParagraph"});
-		paragraph.appendTo(article);
+		paragraph.appendTo($(".quiz"));
 		var title = $("<h3>", {class:"title"});
 		title.appendTo(paragraph);
 		title.text(questions[index].title);
