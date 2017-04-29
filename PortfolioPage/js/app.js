@@ -12,7 +12,7 @@ var compability ={
 			answers: ["orderly", "creatively", "why not both!"],
 			correct: "why not both!"
 			},
-			{ title: "Which takeout would you order?",
+			{ title: "Which take-away would you order?",
 			answers:["pizza", "chinese", "indian"],
 			correct: "indian"
 			},
@@ -90,7 +90,8 @@ var compability ={
 	})
 	
 	function createQuestion(index) {
-		var article = $("<article>", {class: "quizArticle"});
+		if(index<questions.length) {
+			var article = $("<article>", {class: "quizArticle"});
 		article.appendTo(content);
 		var paragraph = $("<p>", {class: "quizPar"});
 		var title = $("<h3>", {class:"title"});
@@ -120,42 +121,68 @@ var compability ={
 		})
 		
 		var inputs = paragraph.find("input");
+		
+
 		inputs.each(function(){
 			if($(this).parent().text()=== questions[index].correct){
 				$(this).attr("value", "true");
 			} else {
 				$(this).attr("value", "false");
 			}
+
 		})
 
+		inputs.on("change", function(){
+			$(this).parent().addClass("checked");
+            $(this).parent().siblings("label").removeClass();
+		});
+
+		}  else {
+			showResults();
+		}
+		
 
 
 	}
 
 	body.on("click", ".quizBtns", function(event){
 		console.log("yay");
-		index ++;
-		$(this).parent().remove();
+		//index ++;
+		
 		if(index<questions.length) {
-			var checkedInput = $(this).siblings().children("input:checked")
+			//var checkedInput = $(this).siblings().children("input:checked");
+			var checkedInput = $(this).prev().children("label").children("input:checked");
 			console.log(checkedInput);
 			var result = checkedInput.attr("value");
+			console.log(result);
 			recordedAnswers.push(result);
 			console.log(recordedAnswers);
-			createQuestion(index);
-			if(result ==="true") {
-				points ++;
-				console.log(points);
+			if(result ===undefined){
+				createAlert();
 			}
+			if(result ==="true") {
+				index ++;
+				points ++;
+				$(this).parent().remove();
+				console.log(points);
+				createQuestion(index);
+			}
+			if(result ==="false"){
+				index ++;
+				$(this).parent().remove();
+				createQuestion(index);
+			}
+			
+
 		} else {
 			showResults();
 		}
 	})
 
 	function showResults() {
-		var board = $("<article>");
+		var board = $("<article>", {class: "alertBox"});
 		board.appendTo(content);
-		var paragraph = $("<p>");
+		var paragraph = $("<p>", {class: "title"});
 		paragraph.appendTo(board);
 		if(points<questions.length){
 			var result = "It seems we are quite different, but this may mean we will learn a lot from each other and this can be very useful. It is best to check!"
@@ -166,6 +193,25 @@ var compability ={
 		}
 		paragraph.text(result);
 	}
+
+	function createAlert(){
+		var board = $("<article>", {class: "alertBox"});
+		board.appendTo(content);
+		var paragraph = $("<p>", {class: "title"});
+		paragraph.appendTo(board);
+		paragraph.text("In order to proceed, please choose answer!")
+		createComebackBtn(board);
+	}
+
+	function createComebackBtn(element){
+		var button = $("<button>", {class:"back"});
+		button.appendTo(element)
+		button.text("ok")
+	}
+
+	content.on("click", ".back", function(){
+		$(this).parent().remove();
+	})
 
 	
 	
