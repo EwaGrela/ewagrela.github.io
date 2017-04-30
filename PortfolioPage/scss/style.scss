@@ -53,7 +53,7 @@ body {
     border-radius: 5%;
     padding-bottom: 25%;
     display: inline-block;
-    transition: 2s;
+    transition: 3s;
     background-color: #006666;
     border: 2px solid  #007777;
     
@@ -61,13 +61,13 @@ body {
 
 .diamond:hover {
   //transform: rotateX(180deg);
-  transform: scale(1.2);
-  background-color: #006666;
+  
+  background-color: #009988;
 }
 .diamond-big:hover {
   //transform: rotateX(180deg);
-  transform: scale(1.1);
-  background-color: #005555;
+  
+  background-color: #008989;
 }
   
 #diamond1 {
@@ -149,16 +149,63 @@ body {
 	border-radius: 5%;
 	//top: 8%;
 	//left: 10.5%;
+  .introductionArticle {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 4px solid #006767;
+    background-color: #dedede;
+    p {
+      width: 50%;
+      text-align: center;
+      font-size: 12px;
+
+      @media(min-width: 568px){
+        font-size: 18px;
+      }
+      @media(min-width: 1024px){
+        font-size: 25px;
+      }
+    }
+    a {
+      width: 75px;
+      height: 30px;
+      background-color: #007878;
+      font-size: 15px;
+      line-height:30px;
+      text-align: center;
+      border-radius: 5%;
+      color: #efefef;
+      text-decoration: none;
+    }
+
+    button {
+      width: auto;
+      height: 30px;
+      background-color: #007878;
+      color: #efefef;
+      font-size: 15px;
+      border: none;
+      border-radius: 5%;
+    }
+
+  }
 	.quizArticle, .alertBox {
 		position: absolute;
 		//transform: rotate(-45deg);
-		width: 70%;
-		height: 70%;
+		width: 60%;
+		height: 60%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		background-color: #006767;	
+		border: 4px solid #006767;
+    	
+    background-color: #008787;
 	}
 	.alertBox {
 		z-index: 2;
@@ -167,45 +214,61 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		align-items: stretch;
-		width: 60%;
-		height: 60%;
-		//border: 1px solid red;
+		align-items: center;
+		width: 70%;
+		height: 70%;
+		border: 4px solid #007878;
+    background-color: #ededed;
 		margin: 0 auto;
+
 	}
 	.title {
 		text-align: center;
 		color: #efefef;
-		font-size: 28px;
+		font-size: 15px;
+    @media(min-width:568px){
+      font-size: 21px;
+    }
 		//text-decoration: underline;
 	}
 	label {
-		background-color: #008787;
-		width: 100%;
+		background-color: #dedede;
+		width: 90%;
 		height: 40px;
 		line-height: 40px;
-		font-size: 20px;
+		font-size: 12px;
+    @media(min-width: 568px){
+      font-size: 16px;
+    }
 		text-align: left;
-		color: #efefef;
+		color: #004545;
 	}
 	input {
 		opacity: 0.01;
 	}
 
 	.back, .quizBtns {
-		width: 100px;
-		height: 50px;
+		width: 50px;
+		height: 25px;
+    @media(min-width: 568px){
+      width: 70px;
+      height: 35px;
+    }
 		border: none;
-		border-radius: 5%;
+		border-radius: 7%;
 		background-color: #ececec;
 		margin: 0 auto;
 		color: #007676;
-		font-size: 25px;
+		font-size: 15px;
+    @media(min-width: 568px){
+      font-size: 21px;
+    }
 	}
 }
 
 .checked {
-	border: 2px solid #ffff77;
+	border: 3px solid #007676;
+  
 }
 
 .invisible {
