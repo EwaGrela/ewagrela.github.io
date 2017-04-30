@@ -60,3 +60,4 @@ var compability ={
 	var firstButton = $("button#diamond1");
 	var thirdButton = $("button#diamond3");
 	console.log(thirdButton);
+	
