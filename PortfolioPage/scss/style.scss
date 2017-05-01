@@ -26,14 +26,17 @@ body {
     //background-color: #005656;
 }
  
-.grid {
+.grid, #grid {
     padding-bottom: 100%;
     position: relative;
     height: 50vh;
     transform: rotate(45deg);
     transform-origin: 39%;
     background-color: #efefef;
+    border-top: 7px solid #777;
+    border-left: 7px solid #777;
 }
+
 
 
 /*styles for main page */
@@ -103,6 +106,8 @@ body {
 }
 
 #diamond5 {
+  width: 8.5%;
+  padding-bottom: 8.5%;
   position: absolute;
   top: 47%;
   left: 48.5%;
@@ -118,7 +123,10 @@ body {
   transform: rotate(315deg);
   color: white;
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 9px;
+   @media(min-width: 568px){
+  	font-size: 14px;
+  }
   font-weight: bold;
   text-align: center;
 }
@@ -130,7 +138,10 @@ body {
   transform: rotate(315deg);
   color: white;
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 9px;
+   @media(min-width: 568px){
+  	font-size: 14px;
+  }
   font-weight: bold;
   text-align: center;
 }
@@ -152,66 +163,116 @@ body {
 #introductionArticle, #moreInfoArticle {
 	line-height: 1.5;
 	
-	width: 100%;
+	width: 70%;
 	height: 90%;
 }
   .introductionArticle {
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 75%;
+    transform: rotate(15deg);
+    overflow: hidden;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     border: 4px solid #006767;
     background-color: #dedede;
     p {
-      width: 70%;
+      width: 60%;
+      color: #555;
       text-align: center;
-      font-size: 14px;
-	 padding-top: 10px;
+      font-size: 12px;
+      margin: 1%;
+      padding: 5px;
+      transform: rotate(-15deg);
       @media(min-width: 568px){
         font-size: 18px;
       }
       @media(min-width: 1024px){
         font-size: 25px;
       }
+      &:first-letter {
+        color: #007777;
+        font-size: 18px;
+        font-weight: bolder;
+        @media(min-width: 568px){
+          font-size: 24px;
+        }
+        @media(min-width: 1024px){
+          font-size: 30px;
+        }
+      }
+    }
+    .moreInfo, .back {
+      width: 140%;
+      height: 50px;
+      background-color: #006767;
+      transform: rotate(-15deg);
+    }
+    div {
+      width: 120%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #006767;
+      transform: rotate(-15deg);
+      text-transform: uppercase;
+      //font-weight: bolder;
     }
     a {
       width: 75px;
-      height: 75px;
-      background-color: #007878;
-      font-size: 15px;
-      line-height:75px;
+      height: 25px;
+      //background-color: #007878;
+      margin: 0.5%;
+      font-size: 16px;
+      line-height:25px;
       text-align: center;
       border-radius: 5%;
-      color: #efefef;
+      color: #ffffff;
       text-decoration: none;
+      //transform: rotate(-15deg);
+    }
+  
+    button {
+      width: 50px;
+      height: 25px;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 16px;
+      margin: 0.5%;
+      border: none;
+      //border-radius: 5%;
+      
+      //transform: rotate(-15deg);
+      //align-self: flex-end;
+     
+      
     }
 
-    button {
-      width: 100px;
-      height: 50px;
-      background-color: #007878;
-      color: #efefef;
-      font-size: 25px;
-      border: none;
-      border-radius: 5%;
-      margin-bottom: 10px;
+    .photoDiv {
+    	width: 100px;
+    	height: 100px;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center;
+    	background-image: url("../images/temporary.jpg");
+    	border-radius: 50%;
     }
 
   }
 	.quizArticle, .alertBox {
 		position: absolute;
 		//transform: rotate(-45deg);
-		width: 60%;
-		height: 60%;
+    overflow: hidden;
+		width: 65%;
+		height: 65%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		border: 4px solid #006767;
-    	
+		border: 4px solid #006767;	
     background-color: #008787;
 	}
 	.alertBox {
@@ -238,31 +299,39 @@ body {
     }
 		//text-decoration: underline;
 	}
+  #result {
+    width: 60%;
+    margin: 0 auto;
+  }
 	label {
-		background-color: #dedede;
+		background-color: #a9a9a9;
 		width: 90%;
-		height: 40px;
-		line-height: 40px;
-		font-size: 12px;
+		height: 30px;
+		line-height: 30px;
+
+		font-size: 9px;
+    font-weight: bolder;
     @media(min-width: 568px){
       font-size: 16px;
+      height: 40px;
+      line-height: 40px;
     }
 		text-align: left;
-		color: #004545;
+		color: #efefef;
 	}
 	input {
 		opacity: 0.01;
 	}
 
-	.back, .quizBtns {
+	 .quizBtns {
 		width: 50px;
 		height: 25px;
+    border: 2px solid #006767;
     @media(min-width: 568px){
       width: 70px;
       height: 35px;
     }
 		border: none;
-		border-radius: 7%;
 		background-color: #ececec;
 		margin: 0 auto;
 		color: #007676;
@@ -282,6 +351,21 @@ body {
 	display: none;
 }
 
+.comeback, .back {
+  width: 105%;
+  height: 25px;
+  @media(min-width: 568px){
+  	height: 50px;
+  	font-size: 25px;
+  }
+  background-color: #efefef;
+  border: 2px solid #009999;
+  color: #006767;
+  border: none;
+  font-size: 15px;
+  font-weight: bolder;
+  
+}
 
 
 /* styles for projects */
@@ -376,128 +460,149 @@ body {
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-direction: normal;
-    z-index: 2;
+    
+}
+.square-medium {
+    width: 20.5%;
+    border-radius: 5%;
+    padding-bottom: 20.5%;
+    display: inline-block;
+    transition: 2s;
+    background-color: #006666;
+    border: 2px solid  #007777;
+    animation-name: appear;
+    //animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
 .square:hover {
   //transform: rotateX(180deg);
-  transform: scale(1.2);
-  background-color: #006666;
+  //transform: scale(1.2);
+  background-color: #009966;
 }
 .square-big:hover {
   //transform: rotateX(180deg);
-  transform: scale(1.1);
-  background-color: #005555;
+  //transform: scale(1.1);
+  background-color: #00cc66;
+}
+.square-medium:hover {
+  background-color: mix(#00cc66, #009966);
 }
   
 #square1 {
   position: absolute;
-  top: 0.5%;
-  left: 20.5%; 
+  top: 9.5%;
+  left: 10.5%; 
   animation-duration: 2s;
   //background-color: red;
 }
 
 #square2 {
   position: absolute;
-  top: 0.5%;
-  left: 47.5%; 
+  top: 5.5%;
+  left: 32.5%; 
   animation-duration: 2s;
   //background-color: yellow;
 }
 
 #square3 {
   position: absolute;
-  top: 27.5%;
-  left: 20.5%; 
+  top: 32.5%;
+  left: 5.5%; 
   animation-duration: 2.5s;
 }
 
 #square4 {
   position: absolute;
-  top: 27.5%;
-  left: 34%; 
+  top: 32.5%;
+  left: 19%; 
   animation-duration: 2.5s;
 }
 
 #square5 {
   position: absolute;
-  top:27.5%;
-  left: 47.5%;
+  top:32.5%;
+  left: 32.5%;
   animation-duration: 3s;
   
 }
 #square6 {
   position: absolute;
-  top: 41%;
-  left:20.5%;
+  top: 46%;
+  left:5.5%;
   animation-duration: 3s;
   
 }
 #square7 {
   position: absolute;
-  top: 41%;
-  left: 34%;
+  top: 46%;
+  left: 19%;
   animation-duration: 3s;
   
 }
 #square8 {
+  width: 7.5%;
+  padding-bottom: 7.5%;
   position: absolute;
-  top: 54.5%;
-  left: 20.5%;
+  top: 59.5%;
+  left: 5.5%;
+  
   animation-duration: 3.5s;
   
 }
 #square9 {
   position: absolute;
-  top: 54.5%;
-  left: 34%;
+  top: 59.5%;
+  left: 15%;
   animation-duration: 3.5s;
+
   
 }
-#square10 {
-  position: absolute;
-  left: 61%;
-  top: 54.5%;
 
-  animation-duration: 3.5s;
-}
-#square11 {
-  position: absolute;
-  left: 61%;
-  top: 68%;
 
-  animation-duration: 4s;
-  
-}
-#square12 {
-  position: absolute;
-  left: 20.5%;
-  top: 68%;
-  animation-duration: 4s;
-  background-color: #009999;
-}
-
-.square-big p:first-of-type {
+.square-big p {
   position: absolute;
   top: 25%;
   left:50%;
   transform: rotate(315deg);
   color: white;
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 9px;
+   @media(min-width: 568px){
+  	font-size: 14px;
+  }
   font-weight: bold;
   text-align: center;
 }
 
-.square p:first-of-type {
+.square-medium p {
+  position: absolute;
+  top: 25%;
+  left:45%;
+  transform: rotate(315deg);
+  color: white;
+  font-family: "Roboto";
+  font-size: 9px;
+   @media(min-width: 568px){
+  	font-size: 14px;
+  }
+  font-weight: bold;
+  text-align: center;
+}
+
+.square p {
   position: absolute;
   top: 25%;
   left:25%;
   transform: rotate(315deg);
   color: white;
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 9px;
+  @media(min-width: 568px){
+  	font-size: 14px;
+  }
   font-weight: bold;
   text-align: center;
 }

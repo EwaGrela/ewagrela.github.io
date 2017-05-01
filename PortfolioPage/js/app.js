@@ -1,22 +1,24 @@
 $(function(){
-	console.log("ok");
-
- 
+	console.log("ok")
 	
 	firstButton.on("click", function(){
-		content.removeClass("invisible");
-		buttons.addClass("invisible");
-		gridLinks.addClass("invisible");
+		hideGrid();
 		$(this).parent().parent().parent().remove()
 		var article = $("<article>", {class:"introductionArticle", id:"introductionArticle"});
 		article.appendTo(content);
-		var paragraph = $("<p>Hello world! My name is Ewa and I am an aspiring front-end developer. I recently graduated from Coders Lab programming school. I am looking for opportunities in the IT industry. This site is my personal portfolio. There are several projects I made throughout the course so feel free to take a look at them by clicking on the 'My projects' button. My adventure with programming started in April 2016. I was working as a school receptionist in The British School back then. to find out what made me change my career path, you need to click the button for more details</p>")
+		var paragraph = $("<p>Hello world! My name is Ewa and I am an aspiring front-end developer. I recently graduated from Coders Lab programming school. I am looking for opportunities in the IT industry. This site is my personal portfolio. Feel free to take a look at my work by clicking the 'My projects' button. My adventure with programming started in Spring 2016. I was working as a school receptionist in The British School back then...</p>")
 		paragraph.appendTo(article);
 		var button = $("<button class='moreInfo'>more</button>");
 		button.insertAfter(paragraph);
 		
 	});
 
+	function hideGrid(){
+		content.removeClass("invisible");
+		buttons.addClass("invisible");
+		gridLinks.addClass("invisible");
+		
+	}
 	content.on("click", ".moreInfo", function(){
 		$(this).prev().remove();
 		$(this).next().remove();
@@ -28,7 +30,7 @@ $(function(){
 	function createMoreContent(){
 		var article = $("<article>", {class: "introductionArticle", id: "moreInfoArticle"});
 		article.appendTo(content);
-		var paragraph = $("<p> In Spring 2016 I started the advanced Excel course and I really liked it. However, this seemed not enough, I started thinking about learning the 'true' programming. I began with simple tutorials on Codecademy and decided time has come to move forward and give it a shot for real. I applied for the Coders Lab course and loved every minute of it! That is how a florist/receptionist became an aspiring front-end developer </p>");
+		var paragraph = $("<p> In Spring 2016 I started the advanced Excel course and I really liked it. However, this seemed not enough, I started thinking about learning the 'real' programming. I began with simple tutorials on Codecademy and decided time had come to give it a shot for real. I applied for the Coders Lab course and loved every minute of it!</p>");
 		paragraph.appendTo(article);
 		createBackBtn(article);
 	}
@@ -40,14 +42,19 @@ $(function(){
 		buttons.parent().parent().addClass("invisible");
 		var article = $("<article>", {class: "introductionArticle"});
 		article.appendTo(content);
-		var paragraph1 = $("<p>First things first - the best way to find out if I am the one you are looking for, is taking a look at my code. So, if you haven't yet, click on the link below. Click on the squares and you will be directed to the projects I was able to complete so far. </p>");
+		var paragraph1 = $("<p>First things first - the best way to find out if I am the one you are looking for, is taking a look at my code. So, if you haven't yet, click the link below</p>");
 		paragraph1.appendTo(article);
 		var linkToProjects = $("<a  href= 'projects.html' class='myWork'> my work</a>");
-		linkToProjects.insertAfter(paragraph1)
-		var paragraph2 = $("<p>Assuming you actually like the things I do and how I do them - I think it is time for us to find out if our personalities and habits match. I prepared a little quiz and once you're done, you'll know. Generally, treat this quiz as a demo of my quiz creating abilities. I pride myself in getting along with almost anyone, so we should be fine no matter what the result is </p>")
-		paragraph2.insertAfter(linkToProjects);
-		var button = $("<button class='quizInitiator'>take a quiz</button>");
-		button.appendTo(article);
+		//linkToProjects.insertAfter(paragraph1)
+		var div = $("<div>");
+		div.appendTo(article);
+		var paragraph2 = $("<p>Assuming you actually like the things I do and how I do them - I think it is time for us to find out if our personalities and habits match. I prepared a little quiz and once you're done, you'll know.</p>")
+		paragraph2.insertBefore(div);
+		var button = $("<button class='quizInitiator'>quiz</button>");
+		//button.appendTo(article);
+		linkToProjects.appendTo(div);
+		button.appendTo(div);
+
 	});
 
 	
@@ -55,10 +62,8 @@ $(function(){
 content.on("click", ".quizInitiator", function(){
 		console.log("ok, works");
 		$(this).addClass("invisible");
-		$(this).parent().remove();
-		
-		//content.removeClass("invisible");
-		//buttons.parent().parent().addClass("invisible");
+		console.log($(this).parent().parent().children());
+		$(this).parent().parent().children().remove();
 		createQuestion(0);
 	})
 	
@@ -155,14 +160,14 @@ content.on("click", ".quizInitiator", function(){
 	function showResults() {
 		var board = $("<article>", {class: "alertBox"});
 		board.appendTo(content);
-		var paragraph = $("<p>", {class: "title"});
+		var paragraph = $("<p>", {class: "title", id:"result"});
 		paragraph.appendTo(board);
 		if(points<questions.length/2){
-			var result = "It seems we are quite different, but this may mean we will learn a lot from each other and this can be very useful. It is best to check!"
+			var result = points + " out of " + questions.length + ": It seems we are quite different, but this might be something really good for both of us. It may mean we will learn a lot from each other and this can be very useful. I pride myself in getting along with almost anyone, I am agreeable. It is best to check!"
 		} else if (points>=questions.length/2 && points<(questions.length/10)*8) {
-			var result ="We are not 100% compatible and this is great. We are just as similar to not disagree over petty matters and just as different to learn from our differences."
+			var result = points + " out of " + questions.length+": We are not 100% compatible and this is actually great! We are just as similar to not disagree over petty matters or tick each other off and just as different to learn from it. Way to go, call me as soon as you can!"
 		} else if (points>=(questions.length/10)*8){
-			var result = "Seems like we are a match made in heaven and we will be getting along just ideally."
+			var result = points + " out of " + questions.length+": Seems like we are a match made in heaven and we will be getting along just ideally."
 		}
 		paragraph.text(result);
 		createBackBtn(board);
@@ -192,6 +197,26 @@ content.on("click", ".quizInitiator", function(){
 	
 	content.on("click", ".comeback", function(){
 		location.reload();
+	})
+
+	fifthButton.on("click", function(){
+		console.log("create contact site");
+		var article = $("<article>", {class: "introductionArticle"});
+		var title = $("<h3>Contact info:</h3>", {class: "title"});
+		title.appendTo(article)
+		var div = $("<div>", {class: "photoDiv"});
+		div.appendTo(article);
+		article.appendTo(content);
+		hideGrid();
+		$(this).parent().parent().remove();
+		var ul = $("<ul>");
+		ul.appendTo(article);
+		var firstLi = $("<li>telephone: 692 315 863</li>");
+		firstLi.appendTo(ul);
+		var secondLi = $("<li>e-mail: ewa_trojanowska@wp.pl</li>");
+		secondLi.appendTo(ul);
+		var thirdLi = $("<li><a href='https://github.com/EwaGrela'>my github</a></li>");
+		thirdLi.appendTo(ul);
 	})
 	
 })

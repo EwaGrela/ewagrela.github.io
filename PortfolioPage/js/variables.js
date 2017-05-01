@@ -17,28 +17,28 @@ var compability ={
 			answers: ["passion", "perfection", "50/50"],
 			correct: "50/50"
 			},
-			{ title: "Your ideal coworker is...?",
+			{ title: "Your ideal coworker is?",
 			answers: ["extroverted", "introverted", "whatever"],
 			correct: "extroverted"
 			},
-			{ title: "You think talkative people are...",
-			answers: ["silly", "honest", "I do not mind them"],
+			{ title: "You think talkative people are:",
+			answers: ["silly", "honest", "I don't mind them"],
 			correct: "honest"
 			},
-			{ title: "People graduating from bootcamps...",
-			answers: ["know the basics, hardworking", "never will be true programmers", "ignorant posers"],
-			correct: "know the basics, hardworking"
+			{ title: "People graduating from bootcamps are:",
+			answers: ["hardworking", "not true programmers", "ignorant posers"],
+			correct: "hardworking"
 			},
 			{ title: "You are looking for...",
-			answers: ["HTML/CSS coder", "JavaScript Dev/FrontEndDev", "someone...?"],
-			correct: "JavaScript Dev/FrontEndDev"
+			answers: ["HTML/CSS coder", "JS/FrontEnd Dev", "someone...?"],
+			correct: "JS/FrontEndDev"
 			},
-			{ title: "Do you know what DRY and KISS is?",
+			{ title: "Do you know what DRY and KISS stand for?",
 			answers: ["sure!", "let me google that!", "err...what?!"],
 			correct: "sure"
 			},
 			{ title: "FrontEndDevs are...",
-			answers: ["not as smart as BackEndDevs", "creative and awesome", "what is a FrontEndDev?"],
+			answers: ["not as smart as BackEndDevs", "creative and awesome", "err...who?"],
 			correct: "creative and awesome"
 			},
 
@@ -60,4 +60,6 @@ var compability ={
 	var firstButton = $("button#diamond1");
 	var thirdButton = $("button#diamond3");
 	console.log(thirdButton);
+	var fifthButton = $("button#diamond5");
+	console.log(fifthButton);
 	
