@@ -26,7 +26,7 @@ body {
     //background-color: #005656;
 }
  
-.grid, #grid {
+.grid {
     padding-bottom: 100%;
     position: relative;
     height: 50vh;
@@ -41,6 +41,7 @@ body {
 
 /*styles for main page */
 
+
 .diamond {
     width: 11.5%;
     border-radius: 10%;
@@ -48,7 +49,8 @@ body {
     background-color:  #005555;
     border: 2px solid   #004444;
     display: inline-block;
-   
+    transition: 2s;
+    
 }
  
 .diamond-big {
@@ -56,21 +58,21 @@ body {
     border-radius: 5%;
     padding-bottom: 25%;
     display: inline-block;
-    transition: 3s;
+    transition: 2s;
     background-color: #006666;
     border: 2px solid  #007777;
+    
     
 }
 
 .diamond:hover {
-  //transform: rotateX(180deg);
   
-  background-color: #009988;
+  background-color: #0066cc;
 }
 .diamond-big:hover {
   //transform: rotateX(180deg);
   
-  background-color: #008989;
+  background-color: #006699;
 }
   
 #diamond1 {
@@ -116,7 +118,7 @@ body {
 }
 
 
-.diamond-big p:first-of-type {
+.diamond-big p {
   position: absolute;
   top: 25%;
   left:50%;
@@ -127,11 +129,14 @@ body {
    @media(min-width: 568px){
   	font-size: 14px;
   }
+  @media(min-width: 1024px){
+  	font-size: 18px;
+  }
   font-weight: bold;
   text-align: center;
 }
 
-.diamond p:first-of-type {
+.diamond p {
   position: absolute;
   top: 25%;
   left:25%;
@@ -142,9 +147,14 @@ body {
    @media(min-width: 568px){
   	font-size: 14px;
   }
+  @media(min-width: 1024px){
+  	font-size: 18px;
+  }
   font-weight: bold;
   text-align: center;
 }
+
+
 
 .content {
 	width: 100%;
@@ -209,6 +219,8 @@ body {
       height: 50px;
       background-color: #006767;
       transform: rotate(-15deg);
+      font-size: 20px;
+      text-transform: uppercase;
     }
     div {
       width: 120%;
@@ -226,7 +238,7 @@ body {
       height: 25px;
       //background-color: #007878;
       margin: 0.5%;
-      font-size: 16px;
+      font-size: 18px;
       line-height:25px;
       text-align: center;
       border-radius: 5%;
@@ -240,7 +252,7 @@ body {
       height: 25px;
       background-color: transparent;
       color: #ffffff;
-      font-size: 16px;
+      font-size: 18px;
       margin: 0.5%;
       border: none;
       //border-radius: 5%;
@@ -259,13 +271,14 @@ body {
     	background-position: center;
     	background-image: url("../images/temporary.jpg");
     	border-radius: 50%;
+    	border: 3px solid #006565;
     }
 
   }
 	.quizArticle, .alertBox {
 		position: absolute;
 		//transform: rotate(-45deg);
-    overflow: hidden;
+    	overflow: hidden;
 		width: 65%;
 		height: 65%;
 		margin: 0 auto;
@@ -273,7 +286,7 @@ body {
 		flex-direction: column;
 		justify-content: space-around;
 		border: 4px solid #006767;	
-    background-color: #008787;
+    	background-color: #008787;
 	}
 	.alertBox {
 		z-index: 2;
@@ -351,19 +364,66 @@ body {
 	display: none;
 }
 
+.tiltedTitle {
+	width: 110%;
+	height: 50px;
+	background-color: #006767;
+	color: #efefef;
+	text-align: center;
+	transform: rotate(-15deg);
+	margin: 1%;
+	line-height: 50px;
+}
+.tiltedList {
+	width: 110%;
+	height: 100px !important;
+	background-color: #005656;
+	color: #fefefe;
+	transform: rotate(-15deg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1%;
+	ul {
+		width: 40%;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		text-transform: lowercase;
+
+		li {
+			font-size: 10px;
+			@media(min-width: 568px){
+				font-size: 16px;
+			}
+			@media(min-width: 1024px){
+				font-size: 20px;
+			}
+		}
+		a {
+			font-size: inherit;
+		}
+	}
+	
+	
+}
+
 .comeback, .back {
   width: 105%;
   height: 25px;
   @media(min-width: 568px){
   	height: 50px;
-  	font-size: 25px;
+  	font-size: 24px;
   }
   background-color: #efefef;
   border: 2px solid #009999;
   color: #006767;
   border: none;
-  font-size: 15px;
-  font-weight: bolder;
+  font-size: 18px;
+  text-transform: uppercase;
   
 }
 
@@ -480,15 +540,15 @@ body {
 .square:hover {
   //transform: rotateX(180deg);
   //transform: scale(1.2);
-  background-color: #009966;
+  background-color: #0066cc;
 }
 .square-big:hover {
   //transform: rotateX(180deg);
   //transform: scale(1.1);
-  background-color: #00cc66;
+  background-color: #006699;
 }
 .square-medium:hover {
-  background-color: mix(#00cc66, #009966);
+  background-color: mix(#006699, #0066cc);
 }
   
 #square1 {
@@ -573,6 +633,9 @@ body {
    @media(min-width: 568px){
   	font-size: 14px;
   }
+  @media(min-width: 1024px){
+  	font-size: 18px;
+  }
   font-weight: bold;
   text-align: center;
 }
@@ -587,6 +650,9 @@ body {
   font-size: 9px;
    @media(min-width: 568px){
   	font-size: 14px;
+  }
+  @media(min-width: 1024px){
+  	font-size: 18px;
   }
   font-weight: bold;
   text-align: center;

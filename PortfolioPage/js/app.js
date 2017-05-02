@@ -44,7 +44,7 @@ $(function(){
 		article.appendTo(content);
 		var paragraph1 = $("<p>First things first - the best way to find out if I am the one you are looking for, is taking a look at my code. So, if you haven't yet, click the link below</p>");
 		paragraph1.appendTo(article);
-		var linkToProjects = $("<a  href= 'projects.html' class='myWork'> my work</a>");
+		var linkToProjects = $("<a  href= 'projects.html' class='myWork'>works</a>");
 		//linkToProjects.insertAfter(paragraph1)
 		var div = $("<div>");
 		div.appendTo(article);
@@ -202,20 +202,22 @@ content.on("click", ".quizInitiator", function(){
 	fifthButton.on("click", function(){
 		console.log("create contact site");
 		var article = $("<article>", {class: "introductionArticle"});
-		var title = $("<h3>Contact info:</h3>", {class: "title"});
+		var title = $("<h3 class='tiltedTitle'>Contact info:</h3>");
 		title.appendTo(article)
 		var div = $("<div>", {class: "photoDiv"});
 		div.appendTo(article);
 		article.appendTo(content);
 		hideGrid();
 		$(this).parent().parent().remove();
+		var div2 = $("<div class='tiltedList'>")
+		div2.appendTo(article);
 		var ul = $("<ul>");
-		ul.appendTo(article);
+		ul.appendTo(div2);
 		var firstLi = $("<li>telephone: 692 315 863</li>");
 		firstLi.appendTo(ul);
 		var secondLi = $("<li>e-mail: ewa_trojanowska@wp.pl</li>");
 		secondLi.appendTo(ul);
-		var thirdLi = $("<li><a href='https://github.com/EwaGrela'>my github</a></li>");
+		var thirdLi = $("<li><a href='https://github.com/EwaGrela'>github</a></li>");
 		thirdLi.appendTo(ul);
 	})
 	
