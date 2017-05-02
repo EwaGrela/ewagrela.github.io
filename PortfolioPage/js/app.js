@@ -44,16 +44,18 @@ $(function(){
 		article.appendTo(content);
 		var paragraph1 = $("<p>First things first - the best way to find out if I am the one you are looking for, is taking a look at my code. So, if you haven't yet, click the link below</p>");
 		paragraph1.appendTo(article);
-		var linkToProjects = $("<a  href= 'projects.html' class='myWork'>works</a>");
-		//linkToProjects.insertAfter(paragraph1)
 		var div = $("<div>");
 		div.appendTo(article);
+		var linkToProjects = $("<a  href= 'projects.html' class='myWork'>works</a>");
+		//linkToProjects.insertAfter(paragraph1)
+		var div2 = $("<div>");
+		div2.appendTo(article);
 		var paragraph2 = $("<p>Assuming you actually like the things I do and how I do them - I think it is time for us to find out if our personalities and habits match. I prepared a little quiz and once you're done, you'll know.</p>")
-		paragraph2.insertBefore(div);
+		paragraph2.insertBefore(div2);
 		var button = $("<button class='quizInitiator'>quiz</button>");
 		//button.appendTo(article);
 		linkToProjects.appendTo(div);
-		button.appendTo(div);
+		button.appendTo(div2);
 
 	});
 
@@ -167,7 +169,7 @@ content.on("click", ".quizInitiator", function(){
 		} else if (points>=questions.length/2 && points<(questions.length/10)*8) {
 			var result = points + " out of " + questions.length+": We are not 100% compatible and this is actually great! We are just as similar to not disagree over petty matters or tick each other off and just as different to learn from it. Way to go, call me as soon as you can!"
 		} else if (points>=(questions.length/10)*8){
-			var result = points + " out of " + questions.length+": Seems like we are a match made in heaven and we will be getting along just ideally."
+			var result = points + " out of " + questions.length+": Seems like we are a match made in heaven and we will be getting along just ideally. This is something that cannot be ignored. Dial 692 315 863 and let us meet as soon as possible!"
 		}
 		paragraph.text(result);
 		createBackBtn(board);
@@ -213,12 +215,11 @@ content.on("click", ".quizInitiator", function(){
 		div2.appendTo(article);
 		var ul = $("<ul>");
 		ul.appendTo(div2);
-		var firstLi = $("<li>telephone: 692 315 863</li>");
+		var firstLi = $("<li>+ 48 692 315 863</li>");
 		firstLi.appendTo(ul);
-		var secondLi = $("<li>e-mail: ewa_trojanowska@wp.pl</li>");
+		var secondLi = $("<li>ewa_trojanowska@wp.pl</li>");
 		secondLi.appendTo(ul);
-		var thirdLi = $("<li><a href='https://github.com/EwaGrela'>github</a></li>");
-		thirdLi.appendTo(ul);
+		
 	})
 	
 })

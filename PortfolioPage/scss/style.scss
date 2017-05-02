@@ -105,6 +105,27 @@ body {
   left: 37%; 
   animation-duration: 2.5s;
   //background-color: pink;
+  p {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/icon-github.png");
+    width: 20px;
+    height: 20px;
+    @media(min-width: 420px){
+      width: 30px;
+      height: 30px;
+    }
+    @media(min-width: 568px){
+      width: 40px;
+      height: 40px;
+    }
+    @media(min-width: 1024px){
+      width: 50px;
+      height: 50px;
+    }
+    
+  }
 }
 
 #diamond5 {
@@ -114,6 +135,28 @@ body {
   top: 47%;
   left: 48.5%;
   animation-duration: 3s;
+
+   p {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/contact.png");
+    width: 20px;
+    height: 20px;
+    @media(min-width: 420px){
+      width: 30px;
+      height: 30px;
+    }
+    @media(min-width: 568px){
+      width: 40px;
+      height: 40px;
+    }
+    @media(min-width: 1024px){
+      width: 50px;
+      height: 50px;
+    }
+    
+  }
   
 }
 
@@ -376,7 +419,7 @@ body {
 }
 .tiltedList {
 	width: 110%;
-	height: 100px !important;
+	height: 50px !important;
 	background-color: #005656;
 	color: #fefefe;
 	transform: rotate(-15deg);
@@ -386,22 +429,25 @@ body {
 	align-items: center;
 	margin: 1%;
 	ul {
-		width: 40%;
+		width: 35%;
 		list-style-type: none;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: flex-start;
+		align-items: center;
 		text-transform: lowercase;
+    
 
 		li {
 			font-size: 10px;
+     
 			@media(min-width: 568px){
 				font-size: 16px;
 			}
 			@media(min-width: 1024px){
 				font-size: 20px;
 			}
+
 		}
 		a {
 			font-size: inherit;
@@ -618,6 +664,13 @@ body {
   left: 15%;
   animation-duration: 3.5s;
 
+  
+}
+#square10 {
+  position: absolute;
+  top: 59.5%;
+  left: 37.5%;
+  animation-duration: 3.5s;
   
 }
 
