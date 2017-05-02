@@ -817,7 +817,7 @@ nav {
 	}
 }
 
-.back {
+.back, .videoLink {
 		padding-top: 3px;
 		background-color: $fifthColor;
 		color: $baseColor;
@@ -826,9 +826,10 @@ nav {
 		font-weight: bolder;
 		font-family: 'Raleway', sans-serif;
 		height: 20px;
-		width: 80px;
+		width: 180px;
 		border-radius: 5%;
 		font-size: $mediumFont/3;
+		margin: 2%;
 		@media(min-width: 600px){
 			width: 120px;
 			height: 30px;

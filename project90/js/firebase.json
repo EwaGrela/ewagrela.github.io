@@ -69,7 +69,7 @@
 	    ],
 
 	    [	{
-	            "title": "Which boyband sung 'Quit playing games'?",
+	            "title": "Which boyband sang 'Quit playing games'?",
 	            "answers": ["backstreet boys", "nsync", "take that"],
 	            "correct": "backstreet boys"
 	        },
@@ -147,7 +147,7 @@
 	        },
 
 	        {
-	            "title": "Which band sung 'Blackhole sun?",
+	            "title": "Which band sang 'Blackhole sun?",
 	            "answers": ["soundgarden", "the smashing pumpkins", "nirvana"],
 	            "correct": "soundgarden"
 	        },
@@ -743,12 +743,23 @@
             "family":["Guys, guys! It is really simple. Just put 'the' before your family name in plural and you're all set!", " 'The + {your family name} + family'. You're welcome."],
             "grunge":["Mudslide", "Drops of Mercury", "Samsara", "Puddles of Dirt", "Middle of Anywhere", "Walking Trees", "Silent Hills"],
             "discopolo": ["Xero", "Vizzer", "Vixxer", "Fixer", "Audio Tele", "Play Power"],
-            "eurodance": ["U94 ", "25/7", "Unlimited 3", "Mr Hollywood", "FSX", "Captain Jeff", ""],
+            "eurodance": ["U94 ", "25/7", "Unlimited 3", "Mr Hollywood", "FSX", "Captain Jeff"],
             "boybandGood": ["In Harmony", "The Voices", "Five 4 U", "Right Direction","White Knights","Boys R Guys"],
             "boybandBad": ["Bad Boyz", "ShakeDat", "InThaMix", "The Guyz", "5ive", "Night Riderzz"],
             "girlbandGood":["The Harmonies", "Sweet Harmony", "Back 2 Basic", "Angel Voices", "Sweethearts", "The Angelics", "Angel Of Mine"],
             "girlbandBad": ["2Hot4U", "$weet'N'$picy", "Chilli Babe$", "Pwr Grlz", "Diabolique", "Bad Grlz", "Gurlz", "Wild Ones"]
 
+        },
+
+        "bandvideos":{
+        	"family":["https://www.youtube.com/watch?v=Ve0AS8Voc4M"],
+            "grunge":["https://www.youtube.com/watch?v=hTWKbfoikeg"],
+            "discopolo": ["https://www.youtube.com/watch?v=gShaZuHjFPY"],
+            "eurodance": ["https://www.youtube.com/watch?v=CkxmdNlvnks"],
+            "boybandGood": ["https://www.youtube.com/watch?v=7eul_Vt6SZY"],
+            "boybandBad": ["https://www.youtube.com/watch?v=qZUn-KtTNmA"],
+            "girlbandGood":["https://www.youtube.com/watch?v=sQgd6MccwZc"],
+            "girlbandBad": ["https://www.youtube.com/watch?v=9ro0FW9Qt-4"]
         }
     }
 ]
