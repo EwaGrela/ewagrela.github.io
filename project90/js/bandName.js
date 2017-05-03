@@ -54,7 +54,7 @@ $(function() {
         }
 
         function createHomeBtns() {
-            var div = $("<div>");
+            var div = $("<div class='buttonsDiv'>");
             var button = $("<a>", {
                 class: "back"
             });
@@ -80,7 +80,7 @@ $(function() {
         }
 
         function createLinkToVideo(element){
-            var linkToRandomVideo = $("<a class='videoLink' target ='_blank'>video</a>");
+            var linkToRandomVideo = $("<a class='videoLink' target ='_blank'> an example</a>");
             linkToRandomVideo.appendTo(element);
         }
         //depending on the attributes of the buttons, a different scenario takes place and different results are generated

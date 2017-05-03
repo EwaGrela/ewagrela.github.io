@@ -752,14 +752,14 @@
         },
 
         "bandvideos":{
-        	"family":["https://www.youtube.com/watch?v=Ve0AS8Voc4M"],
-            "grunge":["https://www.youtube.com/watch?v=hTWKbfoikeg"],
-            "discopolo": ["https://www.youtube.com/watch?v=gShaZuHjFPY"],
-            "eurodance": ["https://www.youtube.com/watch?v=CkxmdNlvnks"],
-            "boybandGood": ["https://www.youtube.com/watch?v=7eul_Vt6SZY"],
-            "boybandBad": ["https://www.youtube.com/watch?v=qZUn-KtTNmA"],
-            "girlbandGood":["https://www.youtube.com/watch?v=sQgd6MccwZc"],
-            "girlbandBad": ["https://www.youtube.com/watch?v=9ro0FW9Qt-4"]
+        	"family":["https://www.youtube.com/watch?v=Ve0AS8Voc4M", "https://www.youtube.com/watch?v=vBjrbVoBF9c", "https://www.youtube.com/watch?v=NHozn0YXAeE","https://www.youtube.com/watch?v=B5MAF4Mf-BY", "https://www.youtube.com/watch?v=AIGGVIkcyWU"],
+            "grunge":["https://www.youtube.com/watch?v=hTWKbfoikeg", "https://www.youtube.com/watch?v=MS91knuzoOA","https://www.youtube.com/watch?v=3mbBbFH9fAg","https://www.youtube.com/watch?v=vabnZ9-ex7o","https://www.youtube.com/watch?v=v0nn-kNH1ZI"],
+            "discopolo": ["https://www.youtube.com/watch?v=gShaZuHjFPY", "https://www.youtube.com/watch?v=JLfnWq4R_p8","https://www.youtube.com/watch?v=axw8roic0KE","https://www.youtube.com/watch?v=rAz93ck6cRk","https://www.youtube.com/watch?v=yDb8dONh6Ww"],
+            "eurodance": ["https://www.youtube.com/watch?v=CkxmdNlvnks", "https://www.youtube.com/watch?v=gwVxXEYrgZk","https://www.youtube.com/watch?v=Ma24wmAjRGo","https://www.youtube.com/watch?v=WMPM1q_Uyxc","https://www.youtube.com/watch?v=flc5dSM3OC4"],
+            "boybandGood": ["https://www.youtube.com/watch?v=7eul_Vt6SZY", "https://www.youtube.com/watch?v=kxsFwoh3cik","https://www.youtube.com/watch?v=uNmGl3qAAZg","https://www.youtube.com/watch?v=0Gl2QnHNpkA&list=RDuNmGl3qAAZg&index=20","https://www.youtube.com/watch?v=tyANFcnrM8I"],
+            "boybandBad": ["https://www.youtube.com/watch?v=qZUn-KtTNmA","https://www.youtube.com/watch?v=is6gtilerPk","https://www.youtube.com/watch?v=qpqAXZI0s0s","https://www.youtube.com/watch?v=6M6samPEMpM","https://www.youtube.com/watch?v=opQQ2mbXuwI"],
+            "girlbandGood":["https://www.youtube.com/watch?v=sQgd6MccwZc", "https://www.youtube.com/watch?v=0WItFGucXT4"],
+            "girlbandBad": ["https://www.youtube.com/watch?v=9ro0FW9Qt-4", "https://www.youtube.com/watch?v=yzvPfeObiu0","https://www.youtube.com/watch?v=gJLIiF15wjQ","https://www.youtube.com/watch?v=G4QzM9KqCQU", "https://www.youtube.com/watch?v=Vjw92oUduEM&list=PL5xzJjJGNNhXvNSoR0EdU_1J4eUGpLNeD"]
         }
     }
 ]
