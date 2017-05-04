@@ -237,7 +237,7 @@ margin-top: 10px;
   height: 35px;
   border: 0;
   z-index: 2;
-  border-top: 5px solid $seventhColor;
+  border-top: 5px solid lighten($fifthColor, 25%);
   background: transparent;
   position: relative;
   transition: 0.3s transform linear;
@@ -250,7 +250,7 @@ margin-top: 10px;
   top: 0;
   left: 0;
   width: 100%;
-  border-top: 5px solid #ffff66;
+  border-top: 5px solid lighten($fifthColor, 25%);
   transform: translateY(10px);
 }
 
@@ -1579,6 +1579,11 @@ input[type="radio"] {
 	animation-duration: .75s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+	background-image: url("../images/scaryspice.png");
+	background-color: rgba(255,255,255,0.95);
 	@include layoutMixin2($baseColor);
 	justify-content: flex-end;
 	p{

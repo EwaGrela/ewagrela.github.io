@@ -2,7 +2,6 @@ $(function() {
     $('body').scrollTop(0);
     console.log("trivia & test update");
     /*trivia game */
-
     var triviaRef = firebase.database().ref("/quizes");
     //put the code regarding quizes inside the reference to the database, so it is accessed
     triviaRef.once("value").then(function(data) {
@@ -61,13 +60,13 @@ $(function() {
                     });
                     quizDiv.insertAfter(h5);
                     h5.text(questions[index].title);
-                    for (var i = 0; i < answers.length; i++) { //w ten sposób tworzysz tyle labeli ile masz odpowiedzi
+                    for (var i = 0; i < answers.length; i++) { //create equal number of labels and answers
                         var label = $("<label>");
                         label.appendTo(quizDiv);
                     }
                     var labels = quizDiv.find("label");
                     for (var i = 0; i < labels.length; i++) {
-                        $(labels[i]).text(answers[i]); //tekst labelki odpowiada w kolejności tekstowi z tablicy z odpowiedziami
+                        $(labels[i]).text(answers[i]); //label text corresponds to the answer text
 
                     }
                     labels.each(function(index2, value) {
@@ -81,7 +80,7 @@ $(function() {
                     var inputs = quizDiv.find("input");
                     inputs.on("change", function(event) {
                         $(this).parent().addClass("checked");
-                        $(this).parent().siblings("label").removeClass(); //w ten sposób kolorujemy zaznaczoną labelkę i tylko nią
+                        $(this).parent().siblings("label").removeClass(); //ensure you only color the chosen answer
                     });
                     inputs.each(function(index3, value) {
                         var labText = $(this).parent().text();
@@ -107,14 +106,14 @@ $(function() {
 
             }
 
-            // penalty for not giving answers within time, depending on level it gets harder, there is less time
-            if($(this).index() ===0){
-                var seconds = 10*questionSet; 
+            // penalty for not giving answers within time, depending on level there is less time
+            if ($(this).index() === 0) {
+                var seconds = 10 * questionSet;
 
-            } else if ($(this).index()===1){
-                var seconds = 8*questionSet;
+            } else if ($(this).index() === 1) {
+                var seconds = 8 * questionSet;
             } else {
-                var seconds = 5*questionSet;
+                var seconds = 5 * questionSet;
             }
             var secondsInfo = $("<section>", {
                 class: "secondsInfo"
