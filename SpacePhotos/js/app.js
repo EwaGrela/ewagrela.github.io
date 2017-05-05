@@ -1,13 +1,9 @@
 $(function(){
-	//variables
+	
+	
 	var url = "https://api.nasa.gov/planetary/apod?api_key=KccPwISO0s0riweKaFrZWI36je61zICPmtHqVt86"
 	var welcomeSection = $("#welcomeSection");
-	var gallerySection = $("#gallerySection");
-	var gallery = $("#pictureGallery");
-	var newUrl = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=HQ1pvJvn0Hj1mDjGjiEXtboTU2jM6mQmxPkaOV3S"
 	
-	//functions
-	function insertPhotos(images) {
 	function insertContent(photos) {
     	$.each(photos, function(indexPhoto, photo) {
         	welcomeSection.css("background-image", "url("+photo.url+")");
@@ -15,6 +11,7 @@ $(function(){
   	}
   	
   	insertContent()
+
 
 	$.ajax({
 		method : "GET",
@@ -30,12 +27,17 @@ $(function(){
 
 
 
-	
-	
+	var gallerySection = $("#gallerySection");
+	console.log(gallerySection);
 
-	
+	var gallery = $("#pictureGallery");
+
+	var newUrl = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=HQ1pvJvn0Hj1mDjGjiEXtboTU2jM6mQmxPkaOV3S"
+	function insertPhotos(images) {
     	$.each(images, function(index, image) {
-
+    		//console.log(image, index);
+    		//console.log(image.img_src);
+    		console.log(image.earth_date);
     		if(index<3){
     			var img = $("<img>");
     			img.attr("src", image.img_src);
@@ -60,12 +62,14 @@ $(function(){
 	});
 	
 	var loadingBtn = $("<button id='loadingBtn'>");
+	//var loadingBtn = $("button");
+	//console.log(loadingBtn);
 	loadingBtn.text("load more");
-	loadingBtn.insertAfter(gallery);
+	loadingBtn.insertBefore(gallery);
 	loadingBtn.one("click", function(event){
 		$(this).remove();
 		var invisiblePics = $("img").not(":visible");
-		invisiblePics = invisiblePics.slice(4,25); //so that no more than 24 pics are on the site
+		invisiblePics = invisiblePics.slice(4,25);
 		
 		for(var i=0; i<invisiblePics.length; i++){
 			$(invisiblePics[i]).show();
@@ -76,6 +80,7 @@ $(function(){
 	function insertMorePhotos(images) {
     	$.each(images, function(index, image) {
     			var img = $("<img>");
+    			//img.text(image.earth_date);
     			img.attr("src", image.img_src);
     			img.appendTo(gallery);
     			img.hide();
@@ -90,6 +95,8 @@ $(function(){
 		method : "GET",
 		url: newUrl,
 		dataType: 'json',
+	//data: myObject
+	//data: JSON.stringify(myObject)
 	}).done(function(response){
 		insertMorePhotos(response.photos);
 	}).fail(function(error){
