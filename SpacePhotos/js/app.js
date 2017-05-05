@@ -1,5 +1,5 @@
 $(function(){
-	
+	console.log("ok");
 	
 	var url = "https://api.nasa.gov/planetary/apod?api_key=KccPwISO0s0riweKaFrZWI36je61zICPmtHqVt86"
 	var welcomeSection = $("#welcomeSection");
@@ -28,8 +28,6 @@ $(function(){
 
 
 	var gallerySection = $("#gallerySection");
-	console.log(gallerySection);
-
 	var gallery = $("#pictureGallery");
 
 	var newUrl = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=HQ1pvJvn0Hj1mDjGjiEXtboTU2jM6mQmxPkaOV3S"
@@ -54,7 +52,7 @@ $(function(){
 		url: newUrl,
 		dataType: 'json',
 	}).done(function(response){
-		console.log(response.photos)
+		
 		insertPhotos(response.photos);
 	}).fail(function(error){
 		console.log(error);
@@ -62,8 +60,6 @@ $(function(){
 	});
 	
 	var loadingBtn = $("<button id='loadingBtn'>");
-	//var loadingBtn = $("button");
-	//console.log(loadingBtn);
 	loadingBtn.text("load more");
 	loadingBtn.insertBefore(gallery);
 	loadingBtn.one("click", function(event){
