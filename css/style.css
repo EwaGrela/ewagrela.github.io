@@ -65,211 +65,252 @@
 
  }
 body {
-  background:  #acacac;
+  background:  #efefef;
   }
- 
-  
 
-.container {
+  .container {
   max-width: 1000px;
   padding: 0 30px;
   margin: 0 auto;
 }
+
 .grid-section {
-    overflow: hidden;
-    padding-bottom: 200px;
-    
+  overflow: hidden;
+  padding-bottom: 200px;
 }
- 
+
 .grid {
-    padding-bottom: 100%;
-    position: relative;
-    height: 50vh;
-    transform: rotate(45deg);
-    transform-origin: 39%;
+  padding-bottom: 100%;
+  position: relative;
+  height: 50vh;
+  transform: rotate(45deg);
+  transform-origin: 39%;
+  background-color: #efefef;
+  border-top: 7px solid #777;
+  border-left: 7px solid #777;
 }
- 
 .square {
-    width: 11.5%;
-    border-radius: 10%;
-    padding-bottom: 11.5%;
-    background-color:  #005555;
-    border: 2px solid   #004444;
-    box-shadow: 15px 15px 45px #666;
-    display: inline-block;
-    animation-name: appear;
-    //animation-delay: 2s;
-    transition: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-direction: normal;
+  width: 11.5%;
+  border-radius: 10%;
+  padding-bottom: 11.5%;
+  background-color: #005555;
+  border: 2px solid   #004444;
+  display: inline-block;
+  animation-name: appear;
+  transition: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
 }
- 
+
 .square-big {
-    width: 25%;
-    border-radius: 5%;
-    padding-bottom: 25%;
-    display: inline-block;
-    transition: 2s;
-    background-color: #006666;
-    border: 2px solid  #007777;
-    box-shadow: 24px 24px 60px #666;
-    animation-name: appear;
-    //animation-delay: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    z-index: 2;
+  width: 25%;
+  border-radius: 5%;
+  padding-bottom: 25%;
+  display: inline-block;
+  transition: 2s;
+  background-color: #006666;
+  border: 2px solid  #007777;
+  animation-name: appear;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.square-medium {
+  width: 20.5%;
+  border-radius: 5%;
+  padding-bottom: 20.5%;
+  display: inline-block;
+  transition: 2s;
+  background-color: #006666;
+  border: 2px solid  #007777;
+  animation-name: appear;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
 }
 
 .square:hover {
-  //transform: rotateX(180deg);
-  transform: scale(1.2);
-  background-color: #006666;
+  background-color: #0066cc;
 }
+
 .square-big:hover {
-  //transform: rotateX(180deg);
-  transform: scale(1.1);
-  background-color: #005555;
+  background-color: #006699;
 }
-  
+
+.square-medium:hover {
+  background-color: #0066b3;
+}
+
 #square1 {
   position: absolute;
-  top: 0.5%;
-  left: 20.5%; 
+  top: 9.5%;
+  left: 10.5%;
   animation-duration: 2s;
 }
 
 #square2 {
   position: absolute;
-  top: 0.5%;
-  left: 47.5%; 
+  top: 5.5%;
+  left: 32.5%;
   animation-duration: 2s;
 }
 
 #square3 {
   position: absolute;
-  top: 27.5%;
-  left: 20.5%; 
+  top: 32.5%;
+  left: 5.5%;
   animation-duration: 2.5s;
 }
 
 #square4 {
   position: absolute;
-  top: 27.5%;
-  left: 34%; 
+  top: 32.5%;
+  left: 19%;
   animation-duration: 2.5s;
 }
 
 #square5 {
   position: absolute;
-  top:27.5%;
-  left: 47.5%;
+  top: 32.5%;
+  left: 32.5%;
   animation-duration: 3s;
-  
 }
+
 #square6 {
   position: absolute;
-  top: 41%;
-  left:20.5%;
+  top: 46%;
+  left: 5.5%;
   animation-duration: 3s;
-  
 }
+
 #square7 {
   position: absolute;
-  top: 41%;
-  left: 34%;
+  top: 46%;
+  left: 19%;
   animation-duration: 3s;
-  
 }
+
 #square8 {
+  width: 7.5%;
+  padding-bottom: 7.5%;
   position: absolute;
-  top: 54.5%;
-  left: 20.5%;
+  top: 59.5%;
+  left: 5.5%;
   animation-duration: 3.5s;
-  
 }
+
 #square9 {
   position: absolute;
-  top: 54.5%;
-  left: 34%;
+  top: 59.5%;
+  left: 15%;
   animation-duration: 3.5s;
-  
 }
+
 #square10 {
   position: absolute;
-  left: 61%;
-  top: 54.5%;
+  top: 59.5%;
+  left: 37.5%;
   animation-duration: 3.5s;
 }
-#square11 {
+
+.square-big p {
   position: absolute;
-  left: 61%;
-  top: 68%;
-  animation-duration: 4s;
+  top: 25%;
+  left: 50%;
+  transform: rotate(315deg);
+  color: white;
+  font-family: "Raleway";
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 568px) {
+  .square-big p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .square-big p {
+    font-size: 18px;
+  }
+}
+
+.square-medium p {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  transform: rotate(315deg);
+  color: white;
+  font-family: "Raleway";
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 568px) {
+  .square-medium p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .square-medium p {
+    font-size: 18px;
+  }
+}
+
+.square p {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: rotate(315deg);
+  color: white;
+  font-family: "Raleway";
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 568px) {
+  .square p {
+    font-size: 14px;
+  }
+}
+ 
+  
+.github {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon-github.png");
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media(min-width: 420px){
+  .github{
+    width: 20px;
+    height: 20px;
+  }
   
 }
-#square12 {
-  position: absolute;
-  left: 20.5%;
-  top: 68%;
-  animation-duration: 4s;
+@media(min-width: 568px){
+  .github{
+    width: 30px;
+    height: 30px;
+  } 
 }
 
-.square-big p:first-of-type {
-  position: absolute;
-  top: 25%;
-  left:50%;
-  transform: rotate(315deg);
-  color: white;
-  font-family: "Raleway";
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.square p:first-of-type {
-  position: absolute;
-  top: 25%;
-  left:25%;
-  transform: rotate(315deg);
-  color: white;
-  font-family: "Raleway";
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-}
-
-@media(min-width: 560px){
-    .square p:first-of-type {
-      font-size: 14px;
-  }
-}
 @media(min-width: 768px){
-   .square p:first-of-type {
-      font-size: 16px;
-    }
-}
-
-@media(min-width: 560px){
-    .square-big p:first-of-type {
-      font-size: 16px;
-  }
-@media(min-width: 768px){
-   .square-big p:first-of-type {
-      font-size: 18px;
-    }
-}
-
-
-
-footer {
-  background: #88B04B;;
-  height: 25vh;
-  width: 100vw;
-  font-family: "Raleway";
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .github{
+    width: 40px;
+    height: 40px;
+  } 
 }
