@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
  
-
+body {
+  font-family: "Raleway";
+}
  
  @keyframes appear {
  	0% {
@@ -103,6 +105,36 @@ body {
   animation-direction: normal;
 }
 
+.diamond {
+  width: 9.5%;
+  padding-bottom: 9.5%;
+  background-color: #00a5a5;
+  border-radius: 5%;
+}
+.diamond-big {
+  width: 20%;
+  padding-bottom: 20%;
+  background-color: #00b4b4;
+  border-radius: 5%;
+}
+
+.diamond-medium{
+  width: 15%;
+  padding-bottom: 15%;
+  background-color: #00c9c9;
+  border-radius: 5%;
+}
+.invisible {
+  display: none;
+}
+.diamond-medium p, .diamond-big p, .diamond p{
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  color: #004545;
+  transform: rotate(-45deg);
+}
+
 .square-big {
   width: 25%;
   border-radius: 5%;
@@ -150,13 +182,23 @@ body {
   animation-duration: 2s;
 }
 
+#diamond1{
+  position: absolute;
+  top: 12%;
+  left: 13%;
+}
+
 #square2 {
   position: absolute;
   top: 5.5%;
   left: 32.5%;
   animation-duration: 2s;
 }
-
+#diamond2 {
+  position: absolute;
+  top: 8%;
+  left: 35%
+}
 #square3 {
   position: absolute;
   top: 32.5%;
@@ -164,11 +206,22 @@ body {
   animation-duration: 2.5s;
 }
 
+#diamond3{
+  position: absolute;
+  top: 33.5%;
+  left: 6.5%
+}
+
 #square4 {
   position: absolute;
   top: 32.5%;
   left: 19%;
   animation-duration: 2.5s;
+}
+#diamond4{
+  position: absolute;
+  top: 33.5%;
+  left: 20%;
 }
 
 #square5 {
@@ -178,11 +231,22 @@ body {
   animation-duration: 3s;
 }
 
+#diamond5{
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+
 #square6 {
   position: absolute;
   top: 46%;
   left: 5.5%;
   animation-duration: 3s;
+}
+#diamond6{
+  position: absolute;
+  top: 47%;
+  left: 6.5%;
 }
 
 #square7 {
@@ -190,6 +254,11 @@ body {
   top: 46%;
   left: 19%;
   animation-duration: 3s;
+}
+#diamond7{
+  position: absolute;
+  top: 47%;
+  left: 20%;
 }
 
 #square8 {
@@ -207,12 +276,22 @@ body {
   left: 15%;
   animation-duration: 3.5s;
 }
+#diamond9 {
+  position: absolute;
+  top: 62%;
+  left: 17.5%;
+}
 
 #square10 {
   position: absolute;
   top: 59.5%;
   left: 37.5%;
   animation-duration: 3.5s;
+}
+#diamond10 {
+  position: absolute;
+  top: 60.5%;
+  left: 38.5%;
 }
 
 .square-big p {
