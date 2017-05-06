@@ -950,7 +950,7 @@ footer {
 	position: absolute;
 	top: 0;
 	left:0;
-	@include layoutMixin2($baseColor);
+	@include layoutMixin3($baseColor);
 
 
 	.infoParagraph {	
@@ -1076,10 +1076,11 @@ footer {
 	
 }
 #board7{
-	background-image: url("../images/beverlyhills(creditfox).jpg");
+	background-image: url("../images/mini_brenda.jpg");
 }
 #board8{
 	background-image: url("../images/bravo.jpg");
+	background-size: contain;
 	
 }
 #board9{
@@ -1092,7 +1093,8 @@ footer {
 }
 
 #board11{
-	background-image: url("../images/Banner.png");
+	background-image: url("../images/bsbnsync.jpeg");
+	background-size: contain;
 	
 	
 }
@@ -1222,15 +1224,15 @@ footer {
 	position: relative;
 }
 #testBoard h3 {
-		text-transform: uppercase;
+		//text-transform: uppercase;
 		text-decoration: underline;
 		text-align: center;
 		color: mix($fifthColor, $sixthColor, 10%);
 		font-family: 'Cherry Cream Soda', cursive;
-		font-size: $mediumFont/2;
+		font-size: $mediumFont/2.4;
 		text-shadow: none;
 		@media (min-width: 560px){
-			font-size: $mediumFont;
+			font-size: $mediumFont/1.5;
 		}
 	}
 #gameBoard {

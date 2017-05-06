@@ -1,6 +1,7 @@
 $(function() {
     $('body').scrollTop(0);
     console.log("trivia & test update");
+    //console.log(testBoard);
     /*trivia game */
     var triviaRef = firebase.database().ref("/quizes");
     //put the code regarding quizes inside the reference to the database, so it is accessed
@@ -260,7 +261,8 @@ $(function() {
             parent.remove();
             randomize(questions);
             var testTitle = $("<h3>");
-            testTitle.prependTo(testBoard);
+            testTitle.prependTo($("#testBoard"));
+            console.log(test);
             testTitle.text(test.myTitle);
             createQuestions();
 
