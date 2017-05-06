@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM loaded");
     var grid = document.querySelector(".grid");
-    console.log(grid);
+    
     var links = grid.querySelectorAll("a");
-    console.log(links);
+   
+
     for( var i =0; i<links.length; i++){
       
        links[i].addEventListener("mouseover", function(event){
@@ -18,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var timeout2 = setTimeout(function(){
                 diamond.setAttribute("data", "hovered");
                diamond.classList.add("invisible");
-               //diamond.parentNode.removeChild(diamond);
-            }, 2200);
+            }, 2500);
 
        })
        

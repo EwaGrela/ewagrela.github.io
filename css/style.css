@@ -127,12 +127,59 @@ body {
 .invisible {
   display: none;
 }
-.diamond-medium p, .diamond-big p, .diamond p{
+.diamond-medium p, .diamond-big p {
   position: absolute;
-  left: 25%;
-  top: 25%;
-  color: #004545;
+  top: 20%;
+  left: 20%;
+  color: #ffff99;
+  font-weight: bolder;
   transform: rotate(-45deg);
+  font-size: 7px;
+}
+.diamond p {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #ffff99;
+  font-weight: bolder;
+  transform: rotate(-45deg);
+  font-size: 7px;
+}
+@media(min-width: 420px){
+  .diamond-medium p, .diamond-big p {
+    font-size: 8px;
+    top: 20%;
+    left: 20%
+  }
+}
+@media(min-width: 420px){
+  .diamond p {
+    font-size: 8px;
+    top: 10%;
+    left: 10%
+  }
+}
+@media(min-width: 568px){
+  .diamond-medium p, .diamond-big p, .diamond p {
+    font-size: 10px;
+    top: 20%;
+    left: 20%
+  }
+}
+@media(min-width: 796px){
+  .diamond-medium p, .diamond-big p, .diamond p {
+    font-size: 11px;
+    top: 20%;
+    left: 20%
+  }
+}
+@media(min-width: 1024px){
+  .diamond-medium p, .diamond-big p, .diamond p {
+    font-size: 14px;
+    top: 25%;
+    left: 22%;
+    
+  }
 }
 
 .square-big {
