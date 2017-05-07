@@ -166,7 +166,7 @@ header {
 			text-transform: uppercase;
 			margin-bottom: 130px;
 			color: $secondaryColor;
-			font-size: $bigFont/3;
+			font-size: $bigFont/4;
 			width: 100px;
 			height: 50px;
 			border: 3px solid #ffff77;
@@ -183,12 +183,12 @@ header {
 			@media(min-width: 600px){
 				width: 150px;
 				height: 75px;
-				font-size: $bigFont/2;
+				font-size: $bigFont/3;
 			}
 			@media(min-width: 1200px){
 				width: 180px;
 				height: 90px;
-				font-size: $bigFont/1.5;
+				font-size: $bigFont/2;
 			}
 
 
@@ -394,7 +394,9 @@ nav {
 			border-radius: 5%;
 		}
 	p{
+
 		display: none;
+
 	}
 	p:nth-of-type(2n+1){
 		 width: auto; 
@@ -725,6 +727,10 @@ nav {
 		width: 80%;
 		color: #666;
 		font-size: $mediumFont/3;
+		&:first-letter {
+			color: $sixthColor;
+			font-family: 'Cherry Cream Soda', cursive;
+		}
 		@media(min-width: 600px){
 			font-size: $mediumFont/2;
 		}
@@ -963,12 +969,16 @@ footer {
 		width: 90%;
 		color: mix($sixthColor, #666);
 		font-weight: bolder;
-		font-size: $mediumFont/2.9;
+		font-size: $mediumFont/3;
+		&:first-letter {
+			color: $sixthColor;
+			font-family: 'Cherry Cream Soda', cursive;
+		}
 		@media(min-width: 600px){
-			font-size: $mediumFont/1.9;
+			font-size: $mediumFont/2.2;
 		}
 		@media(min-width: 1200px){
-			font-size: $mediumFont/1.60;
+			font-size: $mediumFont/1.8;
 		}
 
 	}
@@ -1006,21 +1016,22 @@ footer {
 		border-radius: 5%;
 		width: auto;
 		height: auto;
-		font-size: $mediumFont/6;
+		font-size: $mediumFont/3.2;
 		font-family: 'Cherry Cream Soda', cursive;
 		transition: 0.8s;
+
 		&:hover {
 			background: lighten($sixthColor, 10%);
 		}
 		@media(min-width: 600px){
 			width: 75px;
 			height: 30px;
-			font-size: $mediumFont/4.2;
+			font-size: $mediumFont/3;
 		}
 		@media(min-width: 1200px){
 			width: 100px;
 			height: 50px;
-			font-size: $mediumFont/3;
+			font-size: $mediumFont/2;
 		}
 		
 		margin: 5px;
@@ -1042,8 +1053,17 @@ footer {
 }
 
 .photoDiv {
-	width: 180px;
-	height: 180px;
+	width: 150px;
+	height: 150px;
+	//border: 3px solid $fifthColor;
+	@media(min-width: 420px){
+		width: 200px;
+		height: 200px;
+	}
+	@media(min-width: 960px){
+		width: 250px;
+		height: 250px;
+	}
 	animation-name: appear;
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
@@ -1224,13 +1244,11 @@ footer {
 	position: relative;
 }
 #testBoard h3 {
-		//text-transform: uppercase;
-		text-decoration: underline;
 		text-align: center;
-		color: mix($fifthColor, $sixthColor, 10%);
+		color: $fifthColor;
+		text-shadow: 3px 3px darken($baseColor, 10%);
 		font-family: 'Cherry Cream Soda', cursive;
 		font-size: $mediumFont/2.4;
-		text-shadow: none;
 		@media (min-width: 560px){
 			font-size: $mediumFont/1.5;
 		}

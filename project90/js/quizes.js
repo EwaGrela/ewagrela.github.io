@@ -210,7 +210,7 @@ $(function() {
     /*functions & events for personality test - works similarly, but the results are counted differently 
      */
 
-    var collectedAnswers = []; //this array stores your answers
+    var collectedAnswers = []; //this array stores your answers, later they are counted
     var testRef = firebase.database().ref("/personality");
     //putting all code  regarding the quiz inside the reference to the database so the data can be accessed
     testRef.once("value").then(function(data) {
@@ -280,14 +280,14 @@ $(function() {
                     });
                     quizDiv.insertAfter(h5);
                     h5.text(questions[index].title);
-                    for (var i = 0; i < answers.length; i++) { //w ten sposób tworzysz tyle labeli ile masz odpowiedzi
+                    for (var i = 0; i < answers.length; i++) { //create equal number of labels and answers
                         var label = $("<label>");
                         label.appendTo(quizDiv);
                     }
 
                     var labels = quizDiv.find("label");
                     for (var i = 0; i < labels.length; i++) {
-                        $(labels[i]).text(answers[i].answer); //tekst labelki odpowiada w kolejności tekstowi z tablicy z odpowiedziami
+                        $(labels[i]).text(answers[i].answer); //answer text corresponds with label
                         $(labels[i]).attr("data", answers[i].result);
                     }
 
