@@ -12,13 +12,13 @@ $(function() {
     //the code is put inside the reference to the database so it is accessed
     bandNameRef.once("value").then(function(data) {
         var bandName = data.val();
-        console.log(bandName);
+        //console.log(bandName);
         var bandNames = bandName[0];
-        console.log(bandNames);
+        //console.log(bandNames);
         var bandQuestions = bandNames.bandQuestions;
         var bandResults = bandNames.bandResults;
         var bandVideos = bandNames.bandvideos;
-        console.log(bandQuestions, bandResults, bandVideos);
+        //console.log(bandQuestions, bandResults, bandVideos);
         
 
         startingButton.on("click", function() {

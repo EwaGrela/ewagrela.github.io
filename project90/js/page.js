@@ -49,7 +49,7 @@ $(function() {
     var textRef = firebase.database().ref("/texts");
     textRef.once("value").then(function(data) {
         var texts = data.val();
-        console.log(texts);
+        //console.log(texts);
         learnBtn.on("click", function(event) {
             var infoBoard = $("<article>", {
                 class: "infoBoard"
@@ -58,7 +58,6 @@ $(function() {
             var hideBtn = $("<button>", {
                 class: "hideBtn"
             });
-            infoBoard.css("z-index", 2);
             hideBtn.appendTo(infoBoard);
             var infoParagraph = $("<p>", {
                 class: "infoParagraph"
@@ -66,7 +65,7 @@ $(function() {
             infoParagraph.prependTo(infoBoard);
             hideBtn.text("hide");
             var index = $(this).index();
-            console.log(index);
+            //console.log(index);
 
             var photoDiv = $("<div>", {
                 class: "photoDiv"

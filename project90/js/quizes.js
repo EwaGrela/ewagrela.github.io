@@ -1,13 +1,13 @@
 $(function() {
     $('body').scrollTop(0);
-    console.log("trivia & test update");
+    //console.log("trivia & test update");
     //console.log(testBoard);
     /*trivia game */
     var triviaRef = firebase.database().ref("/quizes");
     //put the code regarding quizes inside the reference to the database, so it is accessed
     triviaRef.once("value").then(function(data) {
         var test = data.val();
-        console.log(test);
+        //console.log(test);
         triviaBtn.on("click", function(event) {
             //console.log("trivia");
             var triviaBoard = $("<div>");
@@ -215,7 +215,7 @@ $(function() {
     //putting all code  regarding the quiz inside the reference to the database so the data can be accessed
     testRef.once("value").then(function(data) {
         var quiz = data.val();
-        console.log(quiz);
+        //console.log(quiz);
         //starting personality test
         startingBtn.on("click", function(event) {
             $(this).hide();
@@ -262,7 +262,7 @@ $(function() {
             randomize(questions);
             var testTitle = $("<h3>");
             testTitle.prependTo($("#testBoard"));
-            console.log(test);
+            //console.log(test);
             testTitle.text(test.myTitle);
             createQuestions();
 
@@ -302,7 +302,7 @@ $(function() {
                     var inputs = quizDiv.find("input");
                     inputs.on("change", function(event) {
                         $(this).parent().addClass("checked");
-                        $(this).parent().siblings("label").removeClass(); //w ten sposób kolorujemy zaznaczoną labelkę i tylko nią
+                        $(this).parent().siblings("label").removeClass(); //colour only the chosen label
                     });
 
                     var button = $("<button>", {
