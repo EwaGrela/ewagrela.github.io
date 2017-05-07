@@ -93,6 +93,10 @@ $(function() {
                 })
 
                 var inputs = quizDiv.find("input");
+                inputs.on("change", function(event){
+                    $(this).parent().addClass("checked");
+                    $(this).parent().siblings("label").removeClass();
+                });
                 var button = $("<button>", {
                     class: "quizButton"
                 });

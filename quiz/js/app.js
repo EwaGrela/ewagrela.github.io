@@ -15,7 +15,6 @@ $(function() {
 
     var triviaBtn = $("#triviaGame").find("button");
 
-
     var triviaSection = $("#triviaSection");
 
     var sections = $("section").not(triviaSection);
@@ -88,6 +87,10 @@ $(function() {
                 })
 
                 var inputs = quizDiv.find("input");
+                inputs.on("change", function(event){
+                    $(this).parent().addClass("checked");
+                    $(this).parent().siblings("label").removeClass();
+                })
                 inputs.each(function(index3, value) {
                     var labText = $(this).parent().text();
                     var correctAns = questions[index].correct;
