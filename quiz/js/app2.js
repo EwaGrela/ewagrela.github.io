@@ -1,5 +1,14 @@
 $(function() {
+    console.log("DOM loaded");
 
+    var startingBtn = $("#psychoTest").find("button");
+    var testSection = $("#testSection");
+    var sections = $("section").not(testSection);
+    var header = $("header");
+    var footer = $("footer");
+    var h1 = testSection.find("h1");
+    var gamesSection = $("#gamesSection");
+    var collectedAnswers = [];
 
     function randomize(elements) {
         for (var i = 0; i < elements.length; i++) {
@@ -11,18 +20,10 @@ $(function() {
         return elements;
     }
 
-    var startingBtn = $("#psychoTest").find("button");
-    var testSection = $("#testSection");
-    var sections = $("section").not(testSection);
-    var header = $("header");
-    var footer = $("footer");
-    var h1 = testSection.find("h1");
-    var gamesSection = $("#gamesSection");
-    var collectedAnswers = [];
 
     var psychoTest = firebase.database().ref("/psychotest");
     psychoTest.once("value").then(function(data) {
-        quiz = data.val();
+        var quiz = data.val();
         console.log(quiz);
         startingBtn.on("click", function(event) {
             $(this).hide();
@@ -73,14 +74,14 @@ $(function() {
                 });
                 quizDiv.insertAfter(h5);
                 h5.text(questions[index].title);
-                for (var i = 0; i < answers.length; i++) { //w ten sposób tworzysz tyle labeli ile masz odpowiedzi
+                for (var i = 0; i < answers.length; i++) {
                     var label = $("<label>");
                     label.appendTo(quizDiv);
                 }
 
                 var labels = quizDiv.find("label");
                 for (var i = 0; i < labels.length; i++) {
-                    $(labels[i]).text(answers[i].answer); //tekst labelki odpowiada w kolejności tekstowi z tablicy z odpowiedziami
+                    $(labels[i]).text(answers[i].answer);
                     $(labels[i]).attr("data", answers[i].result);
                 }
 
@@ -93,7 +94,7 @@ $(function() {
                 })
 
                 var inputs = quizDiv.find("input");
-                inputs.on("change", function(event){
+                inputs.on("change", function(event) {
                     $(this).parent().addClass("checked");
                     $(this).parent().siblings("label").removeClass();
                 });
@@ -145,7 +146,7 @@ $(function() {
                 class: "alertBox"
             });
             alertBox.prependTo(testBoard);
-            alertBox.text("in order to proceed, you have to choose an answer! otherwise, you shall not pass");
+            alertBox.text("in order to proceed, you have to choose an answer!");
             var hideAlertBtn = $("<button>", {
                 class: "hideAlertBtn"
             });

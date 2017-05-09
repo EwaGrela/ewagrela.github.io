@@ -1,7 +1,11 @@
 $(function() {
-
+    console.log("DOM loaded");
     var header = $("header");
     var footer = $("footer");
+    var triviaBtn = $("#triviaGame").find("button");
+    var triviaSection = $("#triviaSection");
+    var sections = $("section").not(triviaSection);
+    var gamesSection = $("#gamesSection");
 
     function randomize(elements) {
         for (var i = 0; i < elements.length; i++) {
@@ -13,18 +17,12 @@ $(function() {
         return elements;
     }
 
-    var triviaBtn = $("#triviaGame").find("button");
 
-    var triviaSection = $("#triviaSection");
-
-    var sections = $("section").not(triviaSection);
-
-    var gamesSection = $("#gamesSection");
 
     var triviaTest = firebase.database().ref("/trivia");
     triviaTest.once("value").then(function(data) {
 
-        test = data.val();
+        var test = data.val();
         console.log(test);
 
         var indicator = Math.floor(Math.random() * test.length);
@@ -87,10 +85,10 @@ $(function() {
                 })
 
                 var inputs = quizDiv.find("input");
-                inputs.on("change", function(event){
+                inputs.on("change", function(event) {
                     $(this).parent().addClass("checked");
                     $(this).parent().siblings("label").removeClass();
-                })
+                });
                 inputs.each(function(index3, value) {
                     var labText = $(this).parent().text();
                     var correctAns = questions[index].correct;
@@ -150,7 +148,7 @@ $(function() {
                 class: "alertBox"
             });
             alertBox.prependTo(triviaBoard);
-            alertBox.text("in order to proceed, you have to choose an answer! otherwise, you shall not pass");
+            alertBox.text("in order to proceed, you have to choose an answer!");
             var hideAlertBtn = $("<button>", {
                 class: "hideAlertBtn"
             });
