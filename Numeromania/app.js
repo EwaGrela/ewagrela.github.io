@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var truNum = parseInt(initialNum, 10);
             number = truNum + 1;
             numberPlaceholder.innerText = number;
-            allInfoPar[0].innerHTML = " The number you drew is <span></span>";
+            allInfoPar[0].innerHTML = " The next number is <span></span>";
         	var span = allInfoPar[0].firstElementChild;
         	span.innerText = number;
             isDivisibleByFive(number);
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var truNum = parseInt(initialNum, 10);
             number = truNum - 1;
             numberPlaceholder.innerText = number;
-            allInfoPar[0].innerHTML = " The number you drew is <span></span>";
+            allInfoPar[0].innerHTML = " The previous number is <span></span>";
         	var span = allInfoPar[0].firstElementChild;
         	span.innerText = number;
             isDivisibleByFive(number);
