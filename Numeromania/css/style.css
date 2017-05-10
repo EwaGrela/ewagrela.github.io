@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    
+    background-color: #003366;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+section {
+    height: auto;
+    width: 95vw;
+    //border: 4px solid #005656;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.invisible {
+    display: none;
+}
+
+h1, h2 {
+    margin: 10px auto;
+    font-family: 'Orbitron', sans-serif;
+    
+    text-shadow: 3px 3px #110011;
+    text-align: center;
+    //border: 1px solid white;
+}
+
+h1 {
+
+    font-size: 25px;
+    color:  #ffcc33;
+}
+h2 {
+    font-size: 20px;
+    color: #ffff33;
+}
+
+
+
+@media(min-width: 568px){
+    h1 {
+        font-size: 35px;
+    }
+}
+@media(min-width: 568px){
+    h2 {
+        font-size: 30px;
+    }
+}
+
+
+.container {
+    //border: 2px solid white;
+    width: 60vw;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+article {
+    //border: 2px solid yellow;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.resultsOfDraw {
+    color: #ffff99;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+    //border: 2px solid red;
+    width: 70%;
+    text-align: center;
+}
+
+.invisible {
+    display: none;
+}
+
+.numberInfo {
+    width: 100%;
+    line-height: 0.9;
+    font-size: 24px;
+}
+
+.numberInfo span {
+    color: yellow;
+    font-size: 28px;
+}
+
+@media(min-width: 568px){
+    .numberInfo {
+        font-size: 30px;
+    }
+}
+
+#randomizer, #numberPlaceholder {
+    width: 150px;
+    height: 150px;
+    background-color: #006699;
+    border-radius: 50%;
+    //margin-top: 10%;
+    border: none;
+    color: #ffff88;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 3px #ff3399;
+}
+
+#numberPlaceholder {
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    font-size: 80px;
+    text-shadow: 3px 3px  #ff3366;
+    //border: 3px solid purple;
+    box-shadow: 7px 7px #0099cc;
+}
+
+.back {
+    width: 100px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5%;
+    color: #ffff99;
+    font-size: 20px;
+    background-color:  #0066cc;
+    font-family: 'Orbitron', sans-serif;
+}
