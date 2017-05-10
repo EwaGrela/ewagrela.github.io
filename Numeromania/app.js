@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     /* DOM elements*/
 
     var header1 = document.querySelector("h1");
+    
     var header2 = document.querySelector("h2");
+
     var randomizingButton = document.getElementById("randomizer");
 
     var articles = document.querySelectorAll(".container article");
@@ -13,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var numberPlaceholder = document.getElementById("numberPlaceholder");
 
     var backButton = document.querySelector(".back");
+
+    var next = document.getElementById("next");
+    var prev = document.getElementById("prev");
 
     /*
     paragraphs informing of number properties
@@ -37,6 +42,16 @@ document.addEventListener("DOMContentLoaded", function() {
         
     });
 
+    next.addEventListener("click", function(){
+        console.log("next");
+        addUp();
+    })
+
+    prev.addEventListener("click", function(){
+        console.log("prev");
+        subtractDown();
+    })
+
     backButton.addEventListener("click", function(){
         console.log(this.parentElement.previousElementSibling.previousElementSibling);
         header1.classList.remove("invisible");
@@ -60,7 +75,44 @@ document.addEventListener("DOMContentLoaded", function() {
         sumDivisors(randomNum);
         isPerfect(randomNum);
         isPrime(randomNum);
+        
     }
+
+    function addUp(){
+            var initialNum = numberPlaceholder.innerText;
+            console.log(initialNum);
+            var truNum = parseInt(initialNum, 10);
+            number = truNum + 1;
+            numberPlaceholder.innerText = number;
+            allInfoPar[0].innerHTML = " The number you drew is <span></span>";
+        	var span = allInfoPar[0].firstElementChild;
+        	span.innerText = number;
+            isDivisibleByFive(number);
+	        isEven(number);
+	        showDivisors(number);
+	        sumDivisors(number);
+	        isPerfect(number);
+	        isPrime(number);
+        }
+
+        function subtractDown() {
+            var initialNum = numberPlaceholder.innerText;
+            console.log(initialNum);
+            var truNum = parseInt(initialNum, 10);
+            number = truNum - 1;
+            numberPlaceholder.innerText = number;
+            allInfoPar[0].innerHTML = " The number you drew is <span></span>";
+        	var span = allInfoPar[0].firstElementChild;
+        	span.innerText = number;
+            isDivisibleByFive(number);
+	        isEven(number);
+	        showDivisors(number);
+	        sumDivisors(number);
+	        isPerfect(number);
+	        isPrime(number);
+        }
+
+
     function isDivisibleByFive(number){
         if(number % 5 ===0){
          
