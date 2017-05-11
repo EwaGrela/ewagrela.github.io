@@ -16,7 +16,7 @@ $(function(){
         	welcomeSection.css("background-image", "url("+photo.url+")");
         	header1.text(photo.title);
         	header2.text(photo.date);
-        	paragraph.text(photo.url);
+        	header3.text(photo.url);
     	});
   	}
   	
