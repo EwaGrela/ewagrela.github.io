@@ -5,7 +5,7 @@ $(function(){
 	var welcomeSection = $("#welcomeSection");
 	var header1 = welcomeSection.find("h1");
 	var header2 = welcomeSection.find("h2");
-	var paragraph = welcomeSection.find("p");
+	var header3 = welcomeSection.find("h3");
 	//console.log(header1, header2);
 	function insertContent(photos) {
     	$.each(photos, function(indexPhoto, photo) {
@@ -16,7 +16,7 @@ $(function(){
         	welcomeSection.css("background-image", "url("+photo.url+")");
         	header1.text(photo.title);
         	header2.text(photo.date);
-        	paragraph.text(photo.explanation);
+        	paragraph.text(photo.url);
     	});
   	}
   	
