@@ -3,10 +3,20 @@ $(function(){
 	
 	var url = "https://api.nasa.gov/planetary/apod?api_key=KccPwISO0s0riweKaFrZWI36je61zICPmtHqVt86"
 	var welcomeSection = $("#welcomeSection");
-	
+	var header1 = welcomeSection.find("h1");
+	var header2 = welcomeSection.find("h2");
+	var paragraph = welcomeSection.find("p");
+	//console.log(header1, header2);
 	function insertContent(photos) {
     	$.each(photos, function(indexPhoto, photo) {
+    		console.log(photo);
+    		console.log(photo.title);
+    		console.log(photo.explanation);
+    		console.log(photo.date);
         	welcomeSection.css("background-image", "url("+photo.url+")");
+        	header1.text(photo.title);
+        	header2.text(photo.date);
+        	paragraph.text(photo.explanation);
     	});
   	}
   	
