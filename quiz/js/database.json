@@ -294,7 +294,7 @@
 	        				"Your dream boy is Nick. Like him you are nice, cute and a bit of a romantic soul. You like long walks on the beach, good wine and soul music",
 	        				"Your dream boy is Paddy. Like him, you are romantic, sensitive and kind. You like nature, good food and are loyal to your friends and family",
 							"Well, you cannot decide, can you? Each of them is special and so are you."],
-	        "my title": "Find your 90s boyfriend"
+	        "myTitle": "Find your 90s boyfriend"
 	    },
 	    {
 	        "questions": [{
@@ -458,7 +458,7 @@
 							"You are Rachel. It might seem you are a bit of an entitled princess but you will always finally get your act together",
 							"Well, you cannot decide, can you? Each of them is special and so are you."
 							],
-	        "my title": "Which Friends female character are you?"
+	        "myTitle": "Which Friends female character are you?"
 	    },
 	    {
 	        "questions": [{
@@ -622,7 +622,7 @@
 							"You are Ron. You might feel overlooked but in the end you shine and will be recognized",
 							"Well, you cannot decide, can you? Each of them is special and so are you."
 							],
-	        "my title": "Which Harry Potter character are you?"
+	        "myTitle": "Which Harry Potter character are you?"
 	    }
 	]
 }
