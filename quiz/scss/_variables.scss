@@ -15,39 +15,48 @@ $headerColor: #ccff33;
 	}
 }
 
-@mixin layoutMixin1() {
+@mixin layoutMixin1($color) {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	background-color: $color;
 }
 
-@mixin layoutMixin2() {
+@mixin layoutMixin2($color) {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	background-color: $color;
+
 }
 
-@mixin layoutMixin3() {
+@mixin layoutMixin3($color) {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: $color;
+
 }
-@mixin layoutMixin4() {
+@mixin layoutMixin4($color) {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	background-color: $color;
+
 }
 
 
-@mixin gamesBoards() {
+@mixin gamesBoards($color) {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-content: space-around;
 	flex-wrap: wrap;
+	background-color: $color;
+
 }
 

@@ -1,0 +1,642 @@
+{
+	"trivia": [
+		{
+		"questions":	[
+		{"title":"what were the names of the two most popular boybands of the 90s?",
+		"answers":["bsb and nsync","1-D and 5ive","take that and nkotb"],
+		"correct": "bsb and nsync"}, 
+		{"title":"which girlband released their hit single 'wannabe' in 1996?",
+		"answers":["spice girls","funky diamonds","solid harmony"],
+		"correct":"spice girls"}, 
+		{"title":"which band was a grunge band from seattle?",
+		"answers":["captain jack", "stone temple pilots", "pearl jam"],
+		"correct":"pearl jam"},
+		{"title":"what was the name of the dance music genre popular in the 90s?",
+		"answers":["eurodance","edm","deep house"],
+		"correct":"eurodance"},
+		{"title":"what was the name of irish band consisting of family members?",
+		"answers":["the moffats", "hanson","the kelly family"],
+		"correct":"the kelly family"},
+		{"title":"which of these soap operas did not run in the 90s?",
+		"answers":["sex and the city", "gossip girl", "friends"],
+		"correct":"gossip girl"},
+		{"title":"what is the  other name of a state which is a birthplace of grunge music?",
+		"answers":["the rainy state", "the evergreen state", "garden state"],
+		"correct":"the evergreen state"},
+		{"title":"two frenemies from the popular 90s soap opera 'beverly hills 90210' were named...",
+		"answers":["blair and serena", "brenda and kelly", "monica and rachel"],
+		"correct":"brenda and kelly"},
+		{"title":"justin timberlake's first band was...",
+		"answers":["nkotb", "bsb", "nsync"],
+		"correct":"nsync"},
+		{"title":"what were the names of electronic toys kept as pets?",
+		"answers":["furigi and tamaru", "furby and tamagotchi", "tamagoru and fibura"],
+		"correct":"furby and tamagotchi"},
+		{"title":"what year was JavaScript invented in?",
+		"answers":["1996", "1992", "1995"],
+		"correct":"1995"},
+		{"title":"what was the name of the british boyband where robbie williams started his career?",
+		"answers":["take that", "boyzone", "east-17"],
+		"correct":"take that"}
+		],
+		"myTitle": "90s Trivia"
+		}
+		,
+		{
+			"questions": [{"title":"which boyband sung 'quit playing games'?",
+		"answers":["backstreet boys", "nsync", "take that"],
+		"correct":"backstreet boys"},
+		{"title":"which of these boys did not decide to go solo?",
+		"answers":["nick carter", "justin timberlake", "owen williams"],
+		"correct":"owen williams"},
+		{"title":"who covered george michael's 'freedom' after leaving his band?",
+		"answers":["nick carter", "justin timberlake", "robbie williams"],
+		"correct":"robbie williams"},
+		{"title":"those two bandmates really hated each other but reconciled in 2010. they are...",
+		"answers":["nick carter & brian littrel", "justin timberlake and jc chasez", "robbie williams & gary barlow"],
+		"correct":"robbie williams & gary barlow"},
+		{"title":"those two bands are british:",
+		"answers":["five & take that", "east 17 & nkotb", "nsync and bsb"],
+		"correct": "five & take that"},
+		{"title":"these two bands are irish:",
+		"answers":["take that & nkotb", "east 17 & 98degrees", "westlife & boyzone"],
+		"correct": "westlife & boyzone"},
+		{"title":"'if you got the feeling' is a song by...",
+		"answers":["five", "east 17", "backstreet boys"],
+		"correct": "five"},
+		{"title":"backstreet boys' first hit single was released in...",
+		"answers":["1995", "1994", "1997"],
+		"correct": "1995"},
+		{"title":"touche are a boyband from...",
+		"answers":["germany", "belgium", "france"],
+		"correct": "germany"},
+		{"title":"how many members did 98degrees have?",
+		"answers":["five", "three", "four"],
+		"correct": "four"}
+		],
+		"myTitle": "Boybands Trivia"
+		},
+		{
+		"questions": [{"title":"what was the name of paddy kelly's brother?",
+		"answers":["aaron", "bobbie", "angelo"],
+		"correct":"angelo"},
+		{"title":"which band sung 'blackhole sun?",
+		"answers":["soundgarden", "the smashing pumpkins", "nirvana"],
+		"correct":"soundgarden"},
+		{"title":"whose brother dated lindsay lohan in early 2000s?",
+		"answers":["nick carter's", "justin timberlake's", "mark owen's"],
+		"correct":"nick carter's"},
+		{"title":"member of which irish boyband came out to the public?",
+		"answers":["nsync", "take that", "boyzone"],
+		"correct":"boyzone"},
+		{"title":"who dated paris hilton?",
+		"answers":["lance bass", "nick carter", "justin timberlake"],
+		"correct": "nick carter"},
+		{"title":"kurt cobain's wife's name was...",
+		"answers":["jessica simpson", "geri halliwell", "courtney love"],
+		"correct": "courtney love"},
+		{"title":"which band had a duet with queen?",
+		"answers":["five", "boyzone", "take that"],
+		"correct": "five"},
+		{"title":"furby was invented in...",
+		"answers":["1995", "1998", "1997"],
+		"correct": "1998"},
+		{"title":"what is the name of pop dance festival held in Germany and Austria?",
+		"answers":["The Doom", "The Dance Off", "The Dome"],
+		"correct": "The Dome"},
+		{"title":"Nirvana's artist Dave Grohl founded another band in 1995. It was...",
+		"answers":["Our Lady Peace", "Foo Fighters", "Smashing Pumpkins"],
+		"correct": "Foo Fighters"}
+		],
+
+			"myTitle": "90s popculture"
+		}
+		,
+		{
+			"questions": [{"title":"who was the dark haired female lead in gossip girl",
+		"answers":["blair", "serena", "jenny"],
+		"correct":"blair"},
+		{"title":"who was blair's boyfriend in season one?",
+		"answers":["nate archibald", "chuck bass", "carter baizen"],
+		"correct":"nate archibald"},
+		{"title":"serena's mother's name is...",
+		"answers":["lilly", "rose", "charlotte"],
+		"correct":"lilly"},
+		{"title":"chuck bass' dog's name is...",
+		"answers":["chipmunk", "monkey", "buzzer"],
+		"correct":"monkey"},
+		{"title":"serena's grandmother's name is...",
+		"answers":["cece van der woodsen", "cece vanderbildt", "cece rhodes"],
+		"correct": "cece rhodes"},
+		{"title":"how many times was serena's mother married?",
+		"answers":["four", "seven", "three"],
+		"correct": "seven"},
+		{"title":"who was the real gossip girl",
+		"answers":["dorota", "eric", "dan"],
+		"correct": "dan"},
+		{"title":"gossip girl aired in poland for the firts time in...",
+		"answers":["2005", "2008", "2007"],
+		"correct": "2008"},
+		{"title":"what are blair's favourite flowers",
+		"answers":["petunias", "peonies", "roses"],
+		"correct": "peonies"},
+		{"title":"serena van der woodsen's middle name is...",
+		"answers":["catherine", "lillian", "celia"],
+		"correct": "celia"}
+		],
+		"myTitle": "XoXo Gossip Girl"
+		}
+		
+	],
+	"psychotest": [{
+	        "questions": [{
+	                "title": "your favourite food?",
+	                "answers": [{
+	                        "answer": "pizza",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "home cooked food",
+	                        "result": "paddy"
+	                    },
+	                    {
+	                        "answer": "sushi",
+	                        "result": "nick"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "city or countryside?",
+	                "answers": [{
+	                        "answer": "definitely countryside!",
+	                        "result": "paddy"
+	                    },
+	                    {
+	                        "answer": "i love city",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "both",
+	                        "result": "nick"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "favourite music?",
+	                "answers": [{
+	                        "answer": "pop rock",
+	                        "result": "nick"
+	                    },
+	                    {
+	                        "answer": "pop, folk, rock...",
+	                        "result": "paddy"
+	                    },
+	                    {
+	                        "answer": "rnb and pop",
+	                        "result": "justin"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your ideal boyfriend would be?",
+	                "answers": [{
+	                        "answer": "sexy and fun",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "shy and sweet",
+	                        "result": "nick"
+	                    },
+	                    {
+	                        "answer": "romantic and serious",
+	                        "result": "paddy"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your ideal date?",
+	                "answers": [{
+	                        "answer": "film night, making out",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "long walk on the beach",
+	                        "result": "nick"
+	                    },
+	                    {
+	                        "answer": "playing guitar and singing",
+	                        "result": "paddy"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "are looks important?",
+	                "answers": [{
+	                        "answer": "of course they are!",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "not most important, but yes",
+	                        "result": "nick"
+	                    },
+	                    {
+	                        "answer": "personality matters the most",
+	                        "result": "paddy"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "describe your personal style",
+	                "answers": [{
+	                        "answer": "skinny jeans, crop top",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "short dress and high heels",
+	                        "result": "nick"
+	                    },
+	                    {
+	                        "answer": "romantic flowing dresses",
+	                        "result": "paddy"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your favourite 90s film",
+	                "answers": [{
+	                        "answer": "matrix",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "philadelphia",
+	                        "result": "nick"
+	                    },
+	                    {
+	                        "answer": "titanic",
+	                        "result": "paddy"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your favourite song is...",
+	                "answers": [{
+	                        "answer": "i want you back",
+	                        "result": "justin"
+	                    },
+	                    {
+	                        "answer": "quit playing games",
+	                        "result": "nick"
+	                    },
+	                    {
+	                        "answer": "angel",
+	                        "result": "paddy"
+	                    }
+	                ]
+
+	            }
+	        ],
+	        "results": ["justin", "nick", "paddy"],
+	        "descriptions": ["Your dream boy is Justin. Like him, you are sexy, outgoing and fun. You like pop music, pizza and there is no party without you!",
+	        				"Your dream boy is Nick. Like him you are nice, cute and a bit of a romantic soul. You like long walks on the beach, good wine and soul music",
+	        				"Your dream boy is Paddy. Like him, you are romantic, sensitive and kind. You like nature, good food and are loyal to your friends and family",
+							"Well, you cannot decide, can you? Each of them is special and so are you."],
+	        "myTitle": "Find your 90s boyfriend"
+	    },
+	    {
+	        "questions": [{
+	                "title": "your friends say you are",
+	                "answers": [{
+	                        "answer": "weird but in a good way",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "down-to-earth",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "a bit spoilt but nice",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "what are you like at work?",
+	                "answers": [{
+	                        "answer": "easily distracted",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "disciplined and hardworking",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "lazy but i get things done",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "favourite music?",
+	                "answers": [{
+	                        "answer": "folk, psychodelic rock",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "pop and rock",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "pop, dance, hip hop",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your ideal boyfriend would be?",
+	                "answers": [{
+	                        "answer": "spiritual, mysterious",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "reliable and serious",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "handsome and rich",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your favourite food",
+	                "answers": [{
+	                        "answer": "fruits and vegetables",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "steak and salad",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "sushi",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your relationship with parents is...?",
+	                "answers": [{
+	                        "answer": "very loose",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "we are close ",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "they totally dominate me",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "describe your style",
+	                "answers": [{
+	                        "answer": "boho/hippie",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "casual elegance",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "dressed to the 9s",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your favourite book?",
+	                "answers": [{
+	                        "answer": "life of pi",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "girl with dragon tatoo",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "i do not like books",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your partner should...",
+	                "answers": [{
+	                        "answer": "understand me deeply",
+	                        "result": "phoebe"
+	                    },
+	                    {
+	                        "answer": "support me in achieving my goals",
+	                        "result": "monica"
+	                    },
+	                    {
+	                        "answer": "cater to me",
+	                        "result": "rachel"
+	                    }
+	                ]
+
+	            }
+	        ],
+	        "results": ["phoebe", "monica", "rachel"],
+	        "descriptions": [
+							"You are Phoebe! Might seem strange and peculiar but you are always there to help your friends out",
+							"You are Monica! Down to earth and maybe a little anal, but loyal and trustworthy",
+							"You are Rachel. It might seem you are a bit of an entitled princess but you will always finally get your act together",
+							"Well, you cannot decide, can you? Each of them is special and so are you."
+							],
+	        "myTitle": "Which Friends female character are you?"
+	    },
+	    {
+	        "questions": [{
+	                "title": "you are best known for your...",
+	                "answers": [{
+	                        "answer": "bravery and recklesness",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "intelligence and wit",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "loyalty and sense of humour",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "what were you like at school?",
+	                "answers": [{
+	                        "answer": "excelled at 1-2 subjects",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "straight A student",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "average student",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your favourite color?",
+	                "answers": [{
+	                        "answer": "red, gold, black",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "blue, green, silver",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "orange, yellow, brown",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your ideal partner would be?",
+	                "answers": [{
+	                        "answer": "someone independent and understanding",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "someone making me smile",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "someone helping me reach my potential",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your favourite food?",
+	                "answers": [{
+	                        "answer": "home made food",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "healthy and nutritious",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "all food, i love food!",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your relationship with parents is...?",
+	                "answers": [{
+	                        "answer": "i look up to them",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "we are very different but i love them",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "we are every close",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your dream profession?",
+	                "answers": [{
+	                        "answer": "journalist, traveller, enterpreneur",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "scientist, activist, web developer, doctor",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "chef, footballer, celebrity",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "best film ever?",
+	                "answers": [{
+	                        "answer": "matrix",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "animatrix",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "star trek",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            },
+	            {
+	                "title": "your favourite animal?",
+	                "answers": [{
+	                        "answer": "deer, eagle, lion",
+	                        "result": "harry"
+	                    },
+	                    {
+	                        "answer": "cat, otter, bee",
+	                        "result": "hermione"
+	                    },
+	                    {
+	                        "answer": "dog, horse, bull",
+	                        "result": "ron"
+	                    }
+	                ]
+
+	            }
+	        ],
+	        "results": ["harry", "hermione", "ron"],
+	        "descriptions": [
+							"You are Harry. Brave and true to yourself but sometimes you feel a bit misunderstood and need time on your own",
+							"You are Hermione. Best known for your intelligence and wit, you are always there to help others out",
+							"You are Ron. You might feel overlooked but in the end you shine and will be recognized",
+							"Well, you cannot decide, can you? Each of them is special and so are you."
+							],
+	        "myTitle": "Which Harry Potter character are you?"
+	    }
+	]
+}

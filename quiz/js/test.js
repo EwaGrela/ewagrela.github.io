@@ -1,8 +1,6 @@
 $(function() {
-    console.log("DOM loaded");
-
     var startingBtn = $("#psychoTest").find("button");
-    var testSection = $("#testSection");
+    var testSection = $(".testSection");
     var sections = $("section").not(testSection);
     var header = $("header");
     var footer = $("footer");
@@ -24,11 +22,10 @@ $(function() {
     var psychoTest = firebase.database().ref("/psychotest");
     psychoTest.once("value").then(function(data) {
         var quiz = data.val();
-        console.log(quiz);
         startingBtn.on("click", function(event) {
             $(this).hide();
             sections.hide();
-            testSection.show();
+            testSection.removeClass("invisible");
             var testBoard = $("<div>");
             testBoard.addClass("board");
             testBoard.appendTo(testSection);
@@ -118,7 +115,6 @@ $(function() {
             var checked = labels.find("input:checked");
             //console.log(checked);
             var labelText = checked.parent().text();
-            console.log(labelText);
             var dataText = checked.parent().attr("data");
             if (index < questionSet) {
                 if (dataText === undefined) {
@@ -151,7 +147,7 @@ $(function() {
                 class: "hideAlertBtn"
             });
             hideAlertBtn.appendTo(alertBox);
-            hideAlertBtn.text("hide me")
+            hideAlertBtn.text("ok")
         }
 
         testSection.on("click", ".hideAlertBtn", function() {
@@ -179,7 +175,6 @@ $(function() {
             var result2 = collectedAnswers.filter(function(item) {
                 return item === quiz[indicator].results[2];
             }).length;
-            console.log(result0, result1, result2);
             if (result0 > result1 && result0 > result2) {
                 resultsParagraph.text(quiz[indicator].descriptions[0]);
             } else if (result1 > result0 && result1 > result2) {
@@ -189,7 +184,7 @@ $(function() {
             } else {
                 resultsParagraph.text(quiz[indicator].descriptions[3]);
             }
-
+            console.log(collectedAnswers);
         }
 
     });

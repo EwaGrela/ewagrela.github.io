@@ -1,9 +1,9 @@
 $(function() {
-    console.log("DOM loaded");
+    //console.log("DOM loaded");
     var header = $("header");
     var footer = $("footer");
     var triviaBtn = $("#triviaGame").find("button");
-    var triviaSection = $("#triviaSection");
+    var triviaSection = $(".triviaSection");
     var sections = $("section").not(triviaSection);
     var gamesSection = $("#gamesSection");
 
@@ -21,23 +21,18 @@ $(function() {
 
     var triviaTest = firebase.database().ref("/trivia");
     triviaTest.once("value").then(function(data) {
-
         var test = data.val();
-        console.log(test);
-
         var indicator = Math.floor(Math.random() * test.length);
-        console.log(indicator);
-        var questions = test[indicator];
-        console.log(questions);
-        console.log(test.length);
-
-        var questionSet = questions.length; //to użyte aby dało się dodawać pytania, nie musi być 11, można inną tablicę podać
+        var quiz = test[indicator];
+        var questions = quiz.questions;
+        var quizTitle = quiz.myTitle;
+        var quizSet = questions.length; //to użyte aby dało się dodawać pytania, nie musi być 11, można inną tablicę podać
         var index = 0; //index początkowego pytania, będzie wzrastał
         var points = 0; //liczba punktów na starcie gry, równa zero;
 
         triviaBtn.on("click", function(event) {
             $(this).parent().hide();
-            triviaSection.show();
+            triviaSection.removeClass("invisible");
             sections.hide();
             var triviaBoard = $("<div>");
             triviaBoard.addClass("board");
@@ -53,7 +48,7 @@ $(function() {
 
 
         function createQuestion() {
-            if (index < questionSet) {
+            if (index < quizSet) {
                 var h5 = $("<h5>", {
                     class: "title"
                 });
@@ -112,21 +107,24 @@ $(function() {
         }
 
         triviaSection.on("click", "#startTrivia", function(event) {
-            //sections.hide();
             $(this).hide();
             randomize(questions);
+            var testTitle = $("<h3>");
+            testTitle.prependTo(triviaBoard);
+            testTitle.text(quiz.myTitle);
             createQuestion();
 
         })
 
 
         triviaSection.on("click", ".quizButton", function(event) {
-            if (index < questionSet) {
+            if (index < quizSet) {
                 var checked = $(this).siblings("label").find("input:checked");
                 var value = checked.attr("value");
-                //console.log(value);
+                console.log(value);
                 if (value === "true") {
                     points++;
+                    console.log(points);
                 }
                 if (value === undefined) {
                     createAlertBox();
@@ -153,7 +151,7 @@ $(function() {
                 class: "hideAlertBtn"
             });
             hideAlertBtn.appendTo(alertBox);
-            hideAlertBtn.text("hide me")
+            hideAlertBtn.text("ok")
         }
 
         triviaSection.on("click", ".hideAlertBtn", function() {
@@ -167,14 +165,14 @@ $(function() {
             });
             resultsBoard.appendTo(triviaSection);
             triviaSection.children().not(resultsBoard).hide();
-            if (points < questionSet / 2) {
-                resultsBoard.text(points + " out of " + questionSet + " points, learn a bit more");
+            if (points < quizSet / 2) {
+                resultsBoard.text(points + " out of " + quizSet + " points, learn a bit more");
             }
-            if (points >= questionSet / 2 && points < questionSet / 1.25) {
-                resultsBoard.text(points + " out of " + questionSet + " points! not bad at all!");
+            if (points >= quizSet / 2 && points < quizSet / 1.25) {
+                resultsBoard.text(points + " out of " + quizSet + " points! not bad at all!");
             }
-            if (points >= questionSet / 1.25) {
-                resultsBoard.text(points + " out of " + questionSet + " points! good for you!");
+            if (points >= quizSet / 1.25) {
+                resultsBoard.text(points + " out of " + quizSet + " points! good for you!");
             }
 
         }

@@ -24,24 +24,26 @@ section {
 	}
 }
 
-
+.invisible{
+	display: none;
+}
 #gamesSection {
-	background: $fourthColor;
-	@include layoutMixin4();
+	//background: $fourthColor;
+	@include layoutMixin4($fourthColor);
 	max-width: 100vw;
 	min-height: 100vh;
 	#gameChoice {
 		width: 100%;
 		min-height: 450px;
 	
-		@include layoutMixin2();
+		@include layoutMixin2($fourthColor);
 		@media(min-width: 1200px){
-			@include layoutMixin1()
+			@include layoutMixin1($fourthColor)
 		}
 		
 		.games {
-			background: $baseColor;
-			@include layoutMixin3();
+			//background: $baseColor;
+			@include layoutMixin3($baseColor);
 			box-shadow: 10px 10px $thirdColor;
 			margin: 10px;
 			width: 60%;
@@ -181,12 +183,12 @@ section {
 }
 
 
-#triviaSection, #testSection {
-	@include layoutMixin3();
+.triviaSection, .testSection {
+	@include layoutMixin3($secondaryColor);
 	padding-top: 20px;
 	max-width: 100vw;
 	height: 100vh;
-	display: none;
+	
 	h1 {
 		text-transform: uppercase;
 		text-align: center;
@@ -204,9 +206,9 @@ section {
 .board {
 	max-width: 100vw;
 	height: 100vh;
-	background: inherit;
+	//background: inherit;
 	//border: 2px solid $baseColor;
-	@include layoutMixin4();
+	@include layoutMixin4($secondaryColor);
 
 	#start {
 		width: 100px;
@@ -247,8 +249,8 @@ section {
 	background-repeat: no-repeat;
 	background-size: contain;
 	border: none;
-	background-color: $secondaryColor;
-	color: $thirdColor;
+	background-color: $thirdColor;
+	color: $secondaryColor;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: $mediumFont/2;
@@ -269,30 +271,30 @@ section {
 	position: relative;
 	max-width: 100vw;
 }
-#testBoard h3 {
+#testBoard h3, #triviaBoard h3 {
 		text-shadow: 3px 2px $thirdColor;
 		text-align: center;
 		color: $fifthColor;
-		font-size: $mediumFont/1.4;
+		font-size: $mediumFont/1.8;
 		@media (min-width: 560px){
-			font-size: $mediumFont;
+			font-size: $mediumFont/1.2;
 		}
 	}
 
 .alertBox {
-	@include layoutMixin3();
+	@include layoutMixin3($fifthColor);
 	position: absolute;
 	top: 0;
 	left:0;
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	background: $fifthColor;
+	//background: $fifthColor;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	padding-top: 10px;
-	font-size: 25px;
+	font-size: 30px;
 	text-transform: uppercase;
 	.hideAlertBtn {
 		width: 100px;
@@ -302,7 +304,7 @@ section {
 		background: $fourthColor;
 		color: $secondaryColor;
 		border: none;
-		font-size: 15px;
+		font-size: 25px;
 		font-weight: bold;
 		text-transform: uppercase;
 	}
@@ -323,8 +325,8 @@ section {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-color: $secondaryColor;
-	color: $thirdColor;
+	background-color: $thirdColor;
+	color: $secondaryColor;
 	font-size: $mediumFont/2;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -359,7 +361,7 @@ section {
 }
 
 .quizDiv {
-	@include layoutMixin2();
+	@include layoutMixin2($secondaryColor);
 	//border: 1px solid red;
 	margin-top: 10px;
 	width: 80vw;
@@ -434,7 +436,7 @@ input {
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	text-align:center;
-	@include  layoutMixin3();
+	@include  layoutMixin3($baseColor);
 	p {
 		font-size: inherit;
 		font-weight: inherit;
