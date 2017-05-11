@@ -6,17 +6,24 @@ $(function(){
 	var header1 = welcomeSection.find("h1");
 	var header2 = welcomeSection.find("h2");
 	var header3 = welcomeSection.find("h3");
+	var buttonMore = welcomeSection.find("button");
+	var descriptionSection = $("#descriptionSection");
+	var descriptionPar = $("#descriptionArticle").find("p");
+	buttonMore.on("click", function(event) {
+        //event.preventDefault();
+        var href = $(this).attr("href");
+        $("html, body").animate({
+            scrollTop: $(href).offset().top
+        }, 2000);
+    });
 	//console.log(header1, header2);
 	function insertContent(photos) {
     	$.each(photos, function(indexPhoto, photo) {
-    		console.log(photo);
-    		console.log(photo.title);
-    		console.log(photo.explanation);
-    		console.log(photo.date);
         	welcomeSection.css("background-image", "url("+photo.url+")");
         	header1.text(photo.title);
         	header2.text(photo.date);
         	header3.text(photo.url);
+        	descriptionPar.text(photo.explanation);
     	});
   	}
   	
