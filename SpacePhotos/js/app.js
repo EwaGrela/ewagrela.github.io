@@ -43,7 +43,7 @@ $(function(){
 	});
 
 
-
+/*
 	var gallerySection = $("#gallerySection");
 	var gallery = $("#pictureGallery");
 
@@ -69,7 +69,6 @@ $(function(){
 		url: newUrl,
 		dataType: 'json',
 	}).done(function(response){
-		
 		insertPhotos(response.photos);
 	}).fail(function(error){
 		console.log(error);
@@ -117,6 +116,6 @@ $(function(){
 		console.log("błąd");
 	});
 
-	
+*/	
 	
 })
