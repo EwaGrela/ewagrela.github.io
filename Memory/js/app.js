@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("this is a copy you are using");
+ 
     var buttons = document.querySelectorAll("button");
 
     var startButton = document.getElementById("startButton");
@@ -64,10 +64,20 @@ document.addEventListener("DOMContentLoaded", function() {
             var hidingTheCardsBtn = document.createElement("button");
             hidingTheCardsBtn.classList.add("eventButtons");
             buttonContainer.appendChild(hidingTheCardsBtn);
-            hidingTheCardsBtn.innerText ="hide them";
-
-            hidingTheCardsBtn.addEventListener("click", hideCards);
-
+            //hidingTheCardsBtn.addEventListener("click", hideCards);
+            var time = 15;
+            hidingTheCardsBtn.innerText = "Starts in " + time + " secs";
+            var interval = setInterval(function(){
+            	var newTime = time - 1;
+            	time = newTime;
+            	console.log(time);
+            	hidingTheCardsBtn.innerText = "Starts in " + time + " secs";
+            	if(time === 0){
+            		clearInterval(interval);
+            		hideCards();
+            	}
+            	
+            }, 1000);
             var divs = divContainer.children;
 
                 function hideCards() {
@@ -95,12 +105,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 function scorePoints() {
                     var divsMyClass = divContainer.querySelectorAll("."+ this.className); //wszystkie z moją klasą
-                    console.log(this.className);
-                    console.log(divsMyClass);
                     for(var i = 0; i<divsMyClass.length; i++){
                         console.log(divsMyClass[i].className);
                         if(divsMyClass[0].className ===divsMyClass[1].className){
-                            divsMyClass[0].classList.add("hidden"); // inna klasa, jakaś z animacją
+                            divsMyClass[0].classList.add("hidden"); 
                             divsMyClass[1].classList.add("hidden");
 
                         }
