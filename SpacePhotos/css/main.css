@@ -31,11 +31,12 @@ section {
 h1 {
 	font-size: 25px;
 	text-align: center;
-	color: #efefef;
+	color: #ffff33;
 	text-shadow: 4px 4px #ff00aa;
 }
 h2 {
 	font-size: 20px;
+	color: #ffff33;
 	text-align: center;
 	text-shadow: 4px 4px #aa00ff;
 }
@@ -51,7 +52,7 @@ h2 {
 
 h3 {
 	width: 50%;
-	color: #660077;
+	color: #ffff33;
 	text-align: center;
 	text-shadow: 2px 2px #ffff99;
 	font-weight: bolder;
