@@ -23,7 +23,7 @@ $(function(){
         	header1.text(photo.title);
         	header2.text(photo.date);
         	header3.text(photo.url);
-        	descriptionPar.text(photo.explanation);
+        	descriptionPar.text("photo source: " + photo.explanation);
     	});
   	}
   	
@@ -42,7 +42,7 @@ $(function(){
 		console.log("błąd");
 	});
 
-
+//commented out so the APOD loads faster
 /*
 	var gallerySection = $("#gallerySection");
 	var gallery = $("#pictureGallery");
