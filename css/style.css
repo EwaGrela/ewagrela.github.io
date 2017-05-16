@@ -174,20 +174,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../images/icon-github.png");
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-@media(min-width: 420px){
-  .github{
-    width: 20px;
-    height: 20px;
-  }
-  
-}
+
 @media(min-width: 568px){
   .github{
     width: 30px;
