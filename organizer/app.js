@@ -74,7 +74,7 @@ function runTimer() {
 }
 
 startButton.addEventListener("click", startUsing);
-buttons.forEach(button =>button.addEventListener("click", runTimer));
+buttons.forEach(button => button.addEventListener("click", runTimer));
 document.customForm.addEventListener("submit", function(event){
 	event.preventDefault();
 	const minutes = this.minutes.value;

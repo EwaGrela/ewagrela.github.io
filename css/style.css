@@ -8,7 +8,203 @@ body {
   font-family: "Raleway";
 }
  
- @keyframes appear {
+ 
+body {
+  background:  #efefef;
+  }
+
+  .container {
+  max-width: 1000px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.grid-section {
+  overflow: hidden;
+  padding-bottom: 200px;
+}
+
+.grid {
+  padding-bottom: 100%;
+  position: relative;
+  height: 50vh;
+  transform: rotate(45deg);
+  transform-origin: 39%;
+  background-color: #efefef;
+  border-top: 7px solid #777;
+  border-left: 7px solid #777;
+}
+
+ .square {
+  width: 20%;
+  border-radius: 10%;
+  padding-bottom: 20%;
+  background-color: #005555;
+  border: 2px solid   #004343;
+  display: inline-block;
+  animation-name: appear;
+  transition: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+.square-big, .square-medium {
+  width: 33%;
+  border-radius: 5%;
+  padding-bottom: 33%;
+  display: inline-block;
+  transition: 2s;
+  background-color: #006666;
+  border: 2px solid  #007777;
+  
+}
+
+
+
+.square:hover {
+  background-color: #0066cc;
+}
+
+.square-big:hover {
+  background-color: #006699;
+}
+
+.square-medium:hover {
+  background-color: #0066b3;
+}
+
+.square-big p, .square-medium p, .square p {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: rotate(315deg);
+  color: white;
+  text-shadow: 2px 2px 2px #004444;
+  font-family: "Raleway";
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+#square1 {
+	//background-color: red;
+	position: absolute;
+	top:0.5%;
+	left: 2.25%;
+}
+#square2 {
+	//background-color: green;
+	position: absolute;
+	top:0.5%;
+	left: 36.5%;
+}
+#square3 {
+	//background-color: blue;
+	position: absolute;
+	left: 38%;
+	top: 38%;
+	
+}
+#square4 {
+	//background-color: pink;
+	position: absolute;
+	top: 35%;
+	left: 64%;	
+}
+#square5 {
+	//background-color: lightblue;
+	position: absolute;
+	left: 1.5%;
+	top: 35%;	
+}
+
+#square6 {
+	//background-color: yellow;
+	position: absolute;
+	left: 37%;
+	top: 65%;
+}
+#square7 {
+	//background-color: orange;
+	position: absolute;
+	top: 60%;
+	left: 60%;
+}
+#square8 {
+	position: absolute;
+	//background-color: #00ffff;
+	left: 58%;
+	top: 85%;
+}
+#square9 {
+	position: absolute;
+	//background-color: #ff00ff;
+	left: 82%;
+	top: 82%;
+}
+#square10 {
+	position: absolute;
+	//background-color: #ffff88;
+	top: 57.5%;
+	left: 85%;
+}
+
+
+#square11 {
+	position: absolute;
+	//background-color: #ff99ff;
+	top: 120%;
+	left: 78%;
+	width: 18%;
+	padding-bottom: 18%;
+}
+#square12 {
+	position: absolute;
+	//background-color: #ff11ff;
+	top: 78%;
+	left: 120%;
+	width: 18%;
+	padding-bottom: 18%;
+}
+
+  
+.github {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon-github.png");
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media(min-width: 420px){
+  .github{
+    width: 20px;
+    height: 20px;
+  }
+  
+}
+@media(min-width: 568px){
+  .github{
+    width: 30px;
+    height: 30px;
+  } 
+}
+
+@media(min-width: 768px){
+  .github{
+    width: 40px;
+    height: 40px;
+  } 
+}
+
+/* for wider screens*/
+@media(min-width: 596px){
+	@keyframes appear {
  	0% {
  		opacity:0;
  		transform: scale(0.01)rotate(15deg);
@@ -66,32 +262,8 @@ body {
  	}
 
  }
-body {
-  background:  #efefef;
-  }
 
-  .container {
-  max-width: 1000px;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.grid-section {
-  overflow: hidden;
-  padding-bottom: 200px;
-}
-
-.grid {
-  padding-bottom: 100%;
-  position: relative;
-  height: 50vh;
-  transform: rotate(45deg);
-  transform-origin: 39%;
-  background-color: #efefef;
-  border-top: 7px solid #777;
-  border-left: 7px solid #777;
-}
-.square {
+ .square {
   width: 11.5%;
   border-radius: 10%;
   padding-bottom: 11.5%;
@@ -104,8 +276,6 @@ body {
   animation-iteration-count: 1;
   animation-direction: normal;
 }
-
-
 .square-big {
   width: 25%;
   border-radius: 5%;
@@ -147,7 +317,6 @@ body {
 }
 
 #square1 {
-  position: absolute;
   top: 4.5%;
   left: 10.5%;
   animation-duration: 2s;
@@ -156,14 +325,12 @@ body {
 
 
 #square2 {
-  position: absolute;
   top: 0.5%;
   left: 32.5%;
   animation-duration: 2s;
 }
 
 #square3 {
-  position: absolute;
   top: 27.5%;
   left: 5.5%;
   animation-duration: 2.5s;
@@ -172,7 +339,6 @@ body {
 
 
 #square4 {
-  position: absolute;
   top: 27.5%;
   left: 19%;
   animation-duration: 2.5s;
@@ -180,7 +346,6 @@ body {
 
 
 #square5 {
-  position: absolute;
   top: 27.5%;
   left: 32.5%;
   animation-duration: 3s;
@@ -189,15 +354,13 @@ body {
 
 
 #square6 {
-  position: absolute;
   top: 41%;
   left: 5.5%;
   animation-duration: 3s;
 }
 
 
-#square7 {
-  position: absolute;
+#square7 { 
   top: 41%;
   left: 19%;
   animation-duration: 3s;
@@ -207,14 +370,13 @@ body {
 #square8 {
   width: 7.5%;
   padding-bottom: 7.5%;
-  position: absolute;
   top: 64.5%;
   left: 5.5%;
   animation-duration: 3.5s;
 }
 
 #square9 {
-  position: absolute;
+  
   top: 54.5%;
   left: 15%;
   animation-duration: 3.5s;
@@ -222,7 +384,6 @@ body {
 
 
 #square10 {
-  position: absolute;
   top: 54.5%;
   left: 37.5%;
   animation-duration: 3.5s;
@@ -231,14 +392,12 @@ body {
 #square11 {
   width: 7.5%;
   padding-bottom: 7.5%;
-  position: absolute;
   top: 54.5%;
   left: 5.5%;
   animation-duration: 3.5s;
 }
 
 #square12 {
-  position: absolute;
   top: 4.5%;
   left: 59%;
   animation-duration: 2.5s;
@@ -251,17 +410,6 @@ body {
 
 
 
-.square-big p {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: rotate(315deg);
-  color: white;
-  font-family: "Raleway";
-  font-size: 9px;
-  font-weight: bold;
-  text-align: center;
-}
 
 @media (min-width: 568px) {
   .square-big p {
@@ -275,17 +423,7 @@ body {
   }
 }
 
-.square-medium p {
-  position: absolute;
-  top: 25%;
-  left: 45%;
-  transform: rotate(315deg);
-  color: white;
-  font-family: "Raleway";
-  font-size: 9px;
-  font-weight: bold;
-  text-align: center;
-}
+
 
 @media (min-width: 568px) {
   .square-medium p {
@@ -299,17 +437,6 @@ body {
   }
 }
 
-.square p {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  transform: rotate(315deg);
-  color: white;
-  font-family: "Raleway";
-  font-size: 8px;
-  font-weight: bold;
-  text-align: center;
-}
 
 @media (min-width: 568px) {
   .square p {
@@ -317,36 +444,6 @@ body {
   }
 }
  
-  
-.github {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../images/icon-github.png");
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-@media(min-width: 420px){
-  .github{
-    width: 20px;
-    height: 20px;
-  }
-  
-}
-@media(min-width: 568px){
-  .github{
-    width: 30px;
-    height: 30px;
-  } 
-}
 
-@media(min-width: 768px){
-  .github{
-    width: 40px;
-    height: 40px;
-  } 
 }
