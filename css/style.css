@@ -237,10 +237,18 @@ body {
   animation-duration: 3.5s;
 }
 
+#square12 {
+  position: absolute;
+  top: 4.5%;
+  left: 59%;
+}
+
 #square11 p {
   top : 25%;
   left: 0;
 }
+
+
 
 .square-big p {
   position: absolute;
