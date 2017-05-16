@@ -132,11 +132,14 @@ body {
 	left: 60%;
 }
 #square8 {
-	position: absolute;
-	//background-color: #00ffff;
-	left: 58%;
-	top: 85%;
+  position: absolute;
+  //background-color: #ff11ff;
+  top: 78%;
+  left: 120%;
+  width: 18%;
+  padding-bottom: 18%;
 }
+
 #square9 {
 	position: absolute;
 	//background-color: #ff00ff;
@@ -150,8 +153,13 @@ body {
 	left: 85%;
 }
 
-
 #square11 {
+  position: absolute;
+  //background-color: #00ffff;
+  left: 58%;
+  top: 85%;
+}
+#square12 {
 	position: absolute;
 	//background-color: #ff99ff;
 	top: 120%;
@@ -159,14 +167,7 @@ body {
 	width: 18%;
 	padding-bottom: 18%;
 }
-#square12 {
-	position: absolute;
-	//background-color: #ff11ff;
-	top: 78%;
-	left: 120%;
-	width: 18%;
-	padding-bottom: 18%;
-}
+
 
   
 .github {
