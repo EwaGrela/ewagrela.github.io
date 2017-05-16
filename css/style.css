@@ -241,6 +241,7 @@ body {
   position: absolute;
   top: 4.5%;
   left: 59%;
+  animation-duration: 3.5s;
 }
 
 #square11 p {
