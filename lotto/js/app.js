@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(e){
+    const body = document.querySelector("body");
     const section = document.querySelector("section");
     const articleLotto = document.querySelector("article");
     const articleBalls = document.getElementsByTagName("article")[1];
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     function createButtonForMachineDraw(){
     	const startDraw = document.createElement("button");
     	startDraw.classList.add("startDraw");
-    	section.insertBefore(startDraw, articleBalls);
+    	body.append(startDraw);
     	startDraw.textContent ="release the balls";
     	startDraw.addEventListener("click", machineDraw);
     	startDraw.addEventListener("click", compareArrays);
