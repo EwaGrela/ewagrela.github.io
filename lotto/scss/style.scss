@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	
+	height: auto;
+	width: 100vw;
+	background-color:  #6666cc;
+    font-family: 'Allerta', sans-serif;
+
+
+}
+
+section {
+	margin: 0 auto;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	@media(min-width: 1024px){
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	height: auto;
+	border: 4px solid gold;
+	padding-bottom: 15px;
+}
+h1,h2 {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	//border: 1px solid red;
+	
+	color:  #ffff33;
+	text-shadow: 4px 4px #ee0099;
+    font-family: 'Bungee', cursive;
+}
+h1 {
+	font-size: 35px;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	color: #ffff99;
+	text-align: center;
+	text-shadow: 2px 2px purple;
+	font-size: 25px;
+}
+article {
+	height: 90%;
+	width: 250px;
+	margin-top: 30px;
+	@media(min-width: 568px){
+		width:450px;
+	}
+	
+	//border: 2px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.invisible {
+	display: none;
+}
+.board {
+	background-color: #008899;
+	width: 210px;
+	height: 210px;
+	border: 1px solid #efefef;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.boardDiv {
+	background-color: darken( #3366cc,20%);
+	width: 28px;
+	height: 28px;
+	color: #fefefe;
+	text-align: center;
+	font-size: 15px;
+	padding-top: 6px;
+}
+
+.crossedOut {
+	background-color:  darken( #3366cc,35%);
+}
+
+.startDraw {
+	background: gold;
+	color: #333;
+	border: none;
+	border-radius: 5%;
+	font-size: 20px;
+	font-weight: bolder;
+	color:  #3366cc;
+	width: 200px;
+	height: 45px;
+	margin-top: 50px;
+}
+
+.ball {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	line-height: 35px;
+	color: #666;
+	font-weight: bold;
+	padding-left: 10px;
+	transform: rotate(180deg);
+	&:first-of-type {
+		background-color: yellow;
+		border: darken(yellow, 10%);
+	}
+	&:nth-of-type(2){
+		background-color: pink;
+		border: darken(pink, 10%);
+	}
+	&:nth-of-type(3){
+		background-color: blue;
+		border: darken(blue, 10%);
+	}
+	
+	&:nth-of-type(4){
+		background-color: green;
+		border: darken(green, 10%);
+	}
+	
+	&:nth-of-type(5) {
+		background-color: violet;
+		border: darken(violet, 10%);
+	}
+	&:last-of-type {
+		background-color: orange;
+	}
+	
+}
+
+#ballContainer {
+	border: 2px solid #fefefe;
+	background-color: inherit;
+	transform: rotate(180deg);
+	border-bottom: none;
+	width: 52px;
+	height: 210px;
+	
+}
+
+.resultsBoard {
+	background-color: gold;
+	text-align: center;
+	color:  #3366cc;
+	height: 80px;
+	width: 100%;
+	font-size: 30px;
+	//border: 2px solid white;
+}
