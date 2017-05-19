@@ -8,8 +8,9 @@
 }
 
 body {
-	background: $fourthColor;
-
+	background-color: $baseColor;
+	width: 100%;
+	height: 100%;
 }
 
 section {
@@ -29,16 +30,17 @@ section {
 }
 #gamesSection {
 	//background: $fourthColor;
-	@include layoutMixin4($fourthColor);
+	@include layoutMixin4($secondaryColor);
 	max-width: 100vw;
 	min-height: 100vh;
+	//border: 3px solid yellow;
 	#gameChoice {
 		width: 100%;
 		min-height: 450px;
-	
-		@include layoutMixin2($fourthColor);
+		margin-top: 20px;
+		@include layoutMixin2($thirdColor);
 		@media(min-width: 1200px){
-			@include layoutMixin1($fourthColor)
+			@include layoutMixin1($thirdColor)
 		}
 		
 		.games {
@@ -59,10 +61,10 @@ section {
 			h4 {
 				margin-bottom: 10px;
 				text-transform: uppercase;
-				color: $fifthColor;
-				text-shadow: 2px 2px $thirdColor;
+				color: $fourthColor;
+				text-shadow: 2px 2px $secondaryColor;
 				&:hover {
-					color: $fourthColor;
+					color: $fifthColor;
 				}
 				text-align: center;
 				font-size: $mediumFont/1.8;
@@ -78,7 +80,7 @@ section {
 		//padding-top: 20px;
 		text-transform: uppercase;
 		min-height: 70px;
-		text-shadow: 5px 4px $fifthColor;
+		
 		width: 100%;
 		color: white;
 		text-align: center;
@@ -90,6 +92,7 @@ section {
 	h1 {
 		
 		font-size: $bigFont/2.5;
+		text-shadow: 4px 4px $fifthColor;
 		@media(min-width:420px) {
 			font-size: $bigFont/2;
 		}
@@ -99,8 +102,10 @@ section {
 	}
 
 	h2 {
-		color: $secondaryColor;
+		color: $thirdColor;
+		margin-top: 5px;
 		font-size: $mediumFont/2.2;
+		text-shadow: 3px 3px $fifthColor;
 		text-align: center;
 		@media(min-width:420px){
 			font-size: $mediumFont/2;
@@ -113,8 +118,8 @@ section {
 
 	p {
 		font-family: 'Candal', sans-serif;
-		color: $secondaryColor;
-		text-shadow: 5px 4px $thirdColor;
+		color: $fifthColor;
+		text-shadow: 3px 2px $fourthColor;
 		font-size: $mediumFont/3.6;
 		text-align: center;
 		width: 70%;
