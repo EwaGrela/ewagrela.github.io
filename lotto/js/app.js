@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     
         for( let i =0; i<6; i++){
             const idx = Math.floor(Math.random() * numbers.length)
-            chosenByMachine.push(numbers[idx]);
+            chosenByMachine.push(parseInt(numbers[idx], 10));
             numbers.splice(idx,1);
 
         }
@@ -110,11 +110,12 @@ document.addEventListener("DOMContentLoaded", function(e){
         const arr2 = drawnNums;
             for(let i = 0; i<arr1.length; i++){
                 for(let j= 0; j<arr2.length; j++){
-                    if(arr1[i]===arr2[j]){
+                    if(arr1[i]===arr2[j]){ 
                         common.push(arr1[i]);
                     }
                 }
             }
+            console.log(arr1, arr2, common);
             function generateResult(){
                 const resultsBoard = document.createElement("article");
                 section.append(resultsBoard);
