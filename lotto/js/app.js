@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             boardEls[i].textContent = number;
         }
     }
-    createNumberBoard(49); //ten for now, we are checking how to eliminate the same -done! :)
+    createNumberBoard(49); 
 
     const board = document.querySelector(".board");
     const boardEls = document.querySelectorAll(".boardEl");
