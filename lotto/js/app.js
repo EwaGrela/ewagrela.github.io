@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     drawNumbers();
 
+
     function machineDraw(){
         const numbers = [];
         for( let i =0; i<boardDivs.length; i++){
