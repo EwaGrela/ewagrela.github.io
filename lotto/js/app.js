@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(e){
     const body = document.querySelector("body");
     const section = document.querySelector("section");
-    const articleLotto = document.querySelector("article");
+    const articleLotto = document.getElementsByTagName("article")[0];
+    console.log(articleLotto);
     const articleBalls = document.getElementsByTagName("article")[1];
     const numbers = [];
     const balls = document.getElementsByClassName("ball");
@@ -9,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function(e){
     const chosenByMachine = [];
     function createNumberBoard(number){
         const board = document.createElement("div");
-        board.classList.add("board")
+        board.classList.add("board");
         articleLotto.append(board);
         for( let i = 0; i<number; i ++){
             const div = document.createElement("div");
-            div.classList.add("boardDiv")
+            div.classList.add("boardDiv");
             board.append(div);
         }
         const boardDivs = document.getElementsByClassName("boardDiv");
@@ -39,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
             } 
             if(drawnNums.length=== 6){
-                //board.classList.remove("board"); //not a very elegant solution, but this will remove the problem with overriding styles
                 boardDivs.forEach( boardDiv => boardDiv.removeAttribute("data-number")); 
                 let startDraw = document.querySelector(".startDraw");
                 if(startDraw === null){ // you have to prevent creating the button if it is already there!
@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function(e){
                 } else {
                     return;
                 }
-                //hideElement(board);
+                
 
             }
-            //return drawnNums;
+            
         }
         
         return drawnNums;
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     function createButtonForMachineDraw(){
     	const startDraw = document.createElement("button");
     	startDraw.classList.add("startDraw");
-    	body.append(startDraw);
+    	body.insertBefore(startDraw, section);
     	startDraw.textContent ="release the balls";
     	startDraw.addEventListener("click", machineDraw);
     	startDraw.addEventListener("click", compareArrays);
@@ -127,31 +127,39 @@ document.addEventListener("DOMContentLoaded", function(e){
                 resultsBoard.append(paragraph);
                 resultsBoard.classList.add("resultsBoard");
                 resultsBoard.classList.add("invisible");
-                if( common.length< 3){
-                    paragraph.textContent ="Outta luck, only " + common.length + " and no money ";
+                if( common.length===0){
+                    paragraph.textContent ="Oh, dear!  " + common.length + " balls and zero cash ";
+                } else if( common.length >0 && common.length< 3){
+                    paragraph.textContent ="Outta luck, only " + common.length + " , still no cash ";
                 } else if(common.length ===3) {
-                    paragraph.textContent ="Not bad, you have " + common.length + " , here's twenty ";
+                    paragraph.textContent ="Not bad, " + common.length + " , here's your twenty ";
                 } else if(common.length ===4){
-                    paragraph.textContent ="Not bad, you have " + common.length + " , here's your hundred ";
+                    paragraph.textContent ="Not bad, " + common.length + " , here's your hundred ";
                 } else if( common.length ===5){
-                    paragraph.textContent ="Not bad, you have " + common.length + " , here's your thousand ";
+                    paragraph.textContent ="Not bad, " + common.length + " , here's your thousand ";
                 }
                 else if(common.length===6){
                     paragraph.textContent ="A true winner " + common.length + " here's your million";
                 }
             }
         const timeout = setTimeout(()=>{
+            makeComebackBtn();
             document.querySelector(".resultsBoard").classList.remove("invisible"); //well, you cannot acces this outside the code
         }, 8000)
         generateResult();
-        makeComebackBtn();
+        
 
-        function makeComebackBtn(){
-            console.log("make a button in the morning");
-        }
+        
     }
     
-    
+    function makeComebackBtn(){
+        console.log("make a button in the morning");
+        const comebackBtn = document.createElement("a");
+        comebackBtn.classList.add("comebackBtn");
+        section.append(comebackBtn);
+        comebackBtn.textContent ="again"
+        comebackBtn.setAttribute("href", "https://ewagrela.github.io/lotto/");
+    }
     
 
 })

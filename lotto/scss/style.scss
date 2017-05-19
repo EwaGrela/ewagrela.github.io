@@ -35,8 +35,8 @@ h1,h2 {
 	margin-top: 10px;
 	//border: 1px solid red;
 	
-	color:  #ffff33;
-	text-shadow: 4px 4px #ee0099;
+	color: mix(gold, pink, 80%);
+	text-shadow: 3px 3px darken(gold, 20%);
     font-family: 'Bungee', cursive;
 }
 h1 {
@@ -48,8 +48,9 @@ h2 {
 h3 {
 	color: #ffff99;
 	text-align: center;
-	text-shadow: 2px 2px purple;
+	text-shadow: 2px 2px darken(gold, 25%);
 	font-size: 25px;
+	margin-bottom: 5px;
 }
 article {
 	height: 90%;
@@ -70,10 +71,10 @@ article {
 	display: none;
 }
 .board {
-	background-color: #008899;
+	background-color: darken(gold, 10%);
 	width: 210px;
 	height: 210px;
-	border: 1px solid #efefef;
+	border: 1px solid darken(gold, 10%);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -98,10 +99,9 @@ article {
 .startDraw {
 	background: gold;
 	border: none;
-	border-radius: 5%;
 	font-size: 20px;
 	font-weight: bolder;
-	color:  #3366cc;
+	color:  #333366;
 	width: 100%;
 	height: 45px;
 	margin: 0 auto;
@@ -153,7 +153,7 @@ article {
 }
 
 #ballContainer {
-	border: 2px solid #fefefe;
+	border: 2px solid darken( gold, 5%);
 	background-color: inherit;
 	transform: rotate(180deg);
 	border-bottom: none;
@@ -167,10 +167,26 @@ article {
 
 .resultsBoard {
 	background-color: gold;
+	border: 3px solid darken(gold, 10%);
+	border-left: none;
+	border-right: none;
 	text-align: center;
-	color:  #3366cc;
+	color:  #333366;
 	height: 80px;
 	width: 100%;
 	font-size: 30px;
 	//border: 2px solid white;
+}
+
+.comebackBtn {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 15px;
+	font-size: 20px;
+	text-align: center;
+	background-color: mix(hotpink, gold);
+	text-decoration: none;
+	color: #333366;
+	border: 3px solid darken(mix(hotpink, gold), 10%);
 }
