@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function(e){
     	console.log("I work");
         var board = document.createElement("div");
         board.classList.add("board");
-        articleLotto.append(board);
+        articleLotto.appendChild(board);
         for( var i = 0; i<number; i ++){
             var boardEl = document.createElement("button");
             boardEl.classList.add("boardEl");
-            board.append(boardEl);
+            board.appendChild(boardEl);
         }
         var boardEls = document.getElementsByClassName("boardEl");
         for( var i =0; i<boardEls.length; i++){
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     function makeAlert() {
     	var alertBox = document.createElement("div");
-    	board.append(alertBox);
+    	board.appendChild(alertBox);
     	alertBox.classList.add("alertBox");
     	alertBox.textContent = "you already chose 6!";
     	/*
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     function createButtonForMachineDraw(){
     	var startDraw = document.createElement("button");
     	startDraw.classList.add("startDraw");
-    	section.append(startDraw);
+    	section.appendChild(startDraw);
     	startDraw.textContent ="release the balls";
     	startDraw.addEventListener("click", machineDraw);
     	startDraw.addEventListener("click", compareArrays);
@@ -136,9 +136,9 @@ document.addEventListener("DOMContentLoaded", function(e){
             console.log(arr1, arr2, common); /* you can monitor your arrays in console*/
             function generateResult(){
                 var resultsBoard = document.createElement("article");
-                section.append(resultsBoard);
+                section.appendChild(resultsBoard);
                 var paragraph = document.createElement("p");
-                resultsBoard.append(paragraph);
+                resultsBoard.appendChild(paragraph);
                 resultsBoard.classList.add("resultsBoard");
                 resultsBoard.classList.add("invisible");
                 if( common.length===0){
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     function makeComebackBtn(){
         var comebackBtn = document.createElement("a");
         comebackBtn.classList.add("comebackBtn");
-        section.append(comebackBtn);
+        section.appendChild(comebackBtn);
         comebackBtn.textContent ="again"
         comebackBtn.setAttribute("href", "https://ewagrela.github.io/lotto/");
     }
