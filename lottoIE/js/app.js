@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", function(e){
     var board = document.querySelector(".board");
     var boardEls = document.querySelectorAll(".boardEl");
     function drawNumbers(){
-        boardEls.forEach(boardEl => boardEl.addEventListener("click", selectNums));
+        //boardEls.forEach(boardEl => boardEl.addEventListener("click", selectNums));
+        for (var i = 0; i<boardEls.length; i++){
+        	boardEls[i].addEventListener("click", selectNums);
+        }
         function selectNums(){
             var number = parseInt(this.dataset.number, 10);
             if(this.hasAttribute("data-number")){
@@ -39,8 +42,13 @@ document.addEventListener("DOMContentLoaded", function(e){
                 this.classList.add("crossedOut");
             } 
             if(drawnNums.length=== 6){
-                boardEls.forEach( boardEl => boardEl.removeAttribute("data-number")); 
-                boardEls.forEach(boardEl => boardEl.addEventListener("click", makeAlert));
+                //boardEls.forEach( boardEl => boardEl.removeAttribute("data-number")); 
+
+                //boardEls.forEach(boardEl => boardEl.addEventListener("click", makeAlert));
+                for ( var i = 0; i<boardEls.length; i++){
+                	boardEls[i].removeAttribute("data-number");
+                	boardEls[i].addEventListener("click", makeAlert);
+                }
                 var startDraw = document.querySelector(".startDraw");
                 if(startDraw === null){ // you have to prevent creating the button if it is already there!
                     createButtonForMachineDraw();
