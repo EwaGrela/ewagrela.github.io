@@ -1,5 +1,6 @@
 
-const startButton = document.getElementById("start");
+const startButtons = document.querySelectorAll(".start");
+console.log(startButtons);
 const timerDisplay = document.getElementById("timerDisplay");
 const displayingTime = document.querySelector(".displayingTime");
 const endTime = document.getElementById("endTime");
@@ -8,8 +9,19 @@ const alert = document.querySelector("audio");
 let countdown; // make a global (sort of) variable, so you can clear interval
 let interval;
 function startUsing(){
-	this.parentElement.classList.add("invisible")
+	this.parentElement.classList.add("invisible");
 	this.parentElement.classList.remove("intro");
+	console.log(this.id);
+	const articles = document.querySelectorAll("[data-id]");
+	console.log(articles);
+	for( let i =0; i<articles.length; i ++){
+
+		console.log(articles[i].dataset.id);
+		if(this.id ===articles[i].dataset.id){
+			articles[i].classList.remove("invisible");
+			articles[i].classList.add("flex");
+		}
+	}
 }
 
 function alertMe(){
@@ -72,9 +84,10 @@ function runTimer() {
 	const time = parseInt(this.dataset.time, 10);
 	timer(time);
 }
-
-startButton.addEventListener("click", startUsing);
+startButtons.forEach(startButton => startButton.addEventListener("click", startUsing));
+//startButton.addEventListener("click", startUsing);
 buttons.forEach(button => button.addEventListener("click", runTimer));
+
 document.customForm.addEventListener("submit", function(event){
 	event.preventDefault();
 	const minutes = this.minutes.value;

@@ -46,10 +46,10 @@ h1 {
 	font-family: 'Indie Flower', cursive;
 }
 
-#start, .stop {
+.start, .stop {
 	background: #003366;
 	color: #efefef;
-	width: 100px;
+	width: auto;
 	height: 45px;
 	border: none;
 	margin-top: 20px;
@@ -58,10 +58,13 @@ h1 {
 	text-transform: uppercase;
 }
 
-.timer {
+.flex {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
+}
+
+.timer {
 	width: 100vw;
 	height: 100px;
 }
@@ -80,7 +83,7 @@ h1 {
 }
 
 .item {
-	width: 16%;
+	width: 23%;
 	height: 50px;
 	background: #007799;
 	border: none;
@@ -109,7 +112,7 @@ h1 {
 	}
 }
 form {
-	width: 16%;
+	width: 20%;
 	height: 50px;
 }
 form input {
