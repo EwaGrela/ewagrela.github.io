@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     var drawnNums = [];
     var chosenByMachine = [];
     function createNumberBoard(number){
+    	console.log("I work");
         var board = document.createElement("div");
         board.classList.add("board");
         articleLotto.append(board);
@@ -70,10 +71,16 @@ document.addEventListener("DOMContentLoaded", function(e){
     	var alertBox = document.createElement("div");
     	board.append(alertBox);
     	alertBox.classList.add("alertBox");
-    	alertBox.textContent = "you already chose 6!"
+    	alertBox.textContent = "you already chose 6!";
+    	/*
     	var timeout = setTimeout(()=>{
     		alertBox.parentNode.removeChild(alertBox);
     	}, 1500);
+    	*/
+    	var timeout = setTimeout(function() {
+    		alertBox.parentNode.removeChild(alertBox);
+    	}, 1500);
+    	
     }
 
     function machineDraw(){
@@ -149,10 +156,16 @@ document.addEventListener("DOMContentLoaded", function(e){
                     paragraph.textContent ="A true winner " + common.length + " here's your million";
                 }
             }
+        var timeout = setTimeout(function() {
+        	makeComebackBtn();
+        	document.querySelector(".resultsBoard").classList.remove("invisible"); //well, you cannot acces this outside the code
+        }, 8000);
+        /*
         var timeout = setTimeout(()=>{
             makeComebackBtn();
             document.querySelector(".resultsBoard").classList.remove("invisible"); //well, you cannot acces this outside the code
-        }, 8000)
+        }, 8000);
+        */
         generateResult();       
     }
     
