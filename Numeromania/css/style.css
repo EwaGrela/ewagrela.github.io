@@ -88,10 +88,13 @@ article:nth-of-type(2) button {
     border: none;
     border-radius: 50%;
     background-color: #0077ff;
-    color: #efefef;
-    font-size: 20px;
+    color: #ffff88;
+    text-shadow: 2px 2px navy;
+    font-size: 30px;
+    font-weight: bolder;
     align-self: flex-end;
 }
+
 #prev {
     box-shadow: -3px -3px white;
 }
