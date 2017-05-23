@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         comebackBtn.classList.add("comebackBtn");
         section.appendChild(comebackBtn);
         comebackBtn.textContent ="again"
-        comebackBtn.setAttribute("href", "https://ewagrela.github.io/lotto/");
+        comebackBtn.setAttribute("href", "https://ewagrela.github.io/lottoIE/");
     }
     
 
