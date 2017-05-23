@@ -72,12 +72,8 @@ document.addEventListener("DOMContentLoaded", function(e){
     	board.appendChild(alertBox);
     	alertBox.classList.add("alertBox");
     	alertBox.textContent = "you already chose 6!";
-    	/*
-    	var timeout = setTimeout(()=>{
-    		alertBox.parentNode.removeChild(alertBox);
-    	}, 1500);
-    	*/
-    	var timeout = setTimeout(function() {
+    	
+    	setTimeout(function() {
     		alertBox.parentNode.removeChild(alertBox);
     	}, 1500);
     	
@@ -156,16 +152,10 @@ document.addEventListener("DOMContentLoaded", function(e){
                     paragraph.textContent ="A true winner " + common.length + " here's your million";
                 }
             }
-        var timeout = setTimeout(function() {
+        setTimeout(function() {
         	makeComebackBtn();
         	document.querySelector(".resultsBoard").classList.remove("invisible"); //well, you cannot acces this outside the code
         }, 8000);
-        /*
-        var timeout = setTimeout(()=>{
-            makeComebackBtn();
-            document.querySelector(".resultsBoard").classList.remove("invisible"); //well, you cannot acces this outside the code
-        }, 8000);
-        */
         generateResult();       
     }
     
