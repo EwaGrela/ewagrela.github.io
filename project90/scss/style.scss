@@ -872,7 +872,7 @@ footer {
 	
 	h1,h2 {
 		color: mix($sixthColor, #666);
-		text-shadow: 5px 5px 6px silver;
+		text-shadow: 4px 3px 1px silver;
 	}
 	section {
 		@include layoutMixin2(transparent);
