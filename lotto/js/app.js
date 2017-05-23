@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     	board.append(alertBox);
     	alertBox.classList.add("alertBox");
     	alertBox.textContent = "you already chose 6!"
-    	const timeout = setTimeout(()=>{
+    	setTimeout(()=>{
     		alertBox.parentNode.removeChild(alertBox);
     	}, 1500);
     }
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                     paragraph.textContent ="A true winner " + common.length + " here's your million";
                 }
             }
-        const timeout = setTimeout(()=>{
+        setTimeout(()=>{
             makeComebackBtn();
             document.querySelector(".resultsBoard").classList.remove("invisible"); //well, you cannot acces this outside the code
         }, 8000)
