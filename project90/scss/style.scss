@@ -11,14 +11,14 @@ body:before{
   content: "";
   display: block;
   position: fixed;
-  opacity: 0.65;
+  opacity: 0.86;
   left: 0;
   top: 0;
   width: 100%;
   max-width: 100vw;
   height: 100%;
   z-index: -10;
-  background-color: $baseColor;
+  background-color: #cbcbcb;
   background-image: url("../images/furby-974707_640.jpg");
   //background-image: url("../images/rainbows.png");
   background-repeat:  no-repeat;
@@ -29,8 +29,7 @@ body:before{
 body {
 	max-width: 100vw;
 	width: 100%;
-	background-color: lighten($sixthColor, 40%);
-
+	
 
 }
 section {
@@ -212,8 +211,8 @@ header {
 @for $i from 1 through 6 {
 	h#{$i} {
 		font-family: 'Cherry Cream Soda', cursive;
-		color: mix(#383838, $fifthColor, 45%);
-		text-shadow: 6px 6px 6px silver;
+		color: mix(#383838, $fifthColor, 75%);
+		text-shadow: 4px 4px 1px silver;
 		text-align: center;
 		@media(max-width: 560px){
 			font-size: $bigFont*0.4/$i;
