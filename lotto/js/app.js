@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function(e){
                 drawnNums.push(number);
                 this.removeAttribute("data-number");
                 this.classList.add("crossedOut");
-
             } 
             if(drawnNums.length=== 6){
                 boardEls.forEach( boardEl => boardEl.removeAttribute("data-number")); 
@@ -142,10 +141,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             makeComebackBtn();
             document.querySelector(".resultsBoard").classList.remove("invisible"); //well, you cannot acces this outside the code
         }, 8000)
-        generateResult();
-        
-
-        
+        generateResult();       
     }
     
     function makeComebackBtn(){
