@@ -6,6 +6,7 @@ const displayingTime = document.querySelector(".displayingTime");
 const endTime = document.getElementById("endTime");
 const buttons = document.querySelectorAll("[data-time]"); //choose all that has data-time attr, not just the buttons
 const alert = document.querySelector("audio");
+const backBtns = document.querySelectorAll(".backBtn");
 let countdown; // make a global (sort of) variable, so you can clear interval
 let interval;
 function startUsing(){
@@ -85,7 +86,6 @@ function runTimer() {
 	timer(time);
 }
 startButtons.forEach(startButton => startButton.addEventListener("click", startUsing));
-//startButton.addEventListener("click", startUsing);
 buttons.forEach(button => button.addEventListener("click", runTimer));
 
 document.customForm.addEventListener("submit", function(event){
@@ -93,4 +93,8 @@ document.customForm.addEventListener("submit", function(event){
 	const minutes = this.minutes.value;
 	this.reset();
 	timer(minutes*60);
-})
+});
+
+backBtns.forEach(backBtn =>backBtn.addEventListener("click", function(event){
+	location.reload();
+}))
