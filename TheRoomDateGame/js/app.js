@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("js game");
+    console.log("we cant stop we wont stop");
     // DOM elements and other variables
     var collectedSpoons = 0;
     var dollarsEarned = 0;
@@ -17,10 +17,32 @@ document.addEventListener("DOMContentLoaded", function() {
     statsSpan.innerText = collectedSpoons + " " + dollarsEarned + " " + pluckedRoses;
 
     // starting game;
-    startGameButton.addEventListener("click", function() {
+    startGameButton.addEventListener("click", playGame); 
+    function playGame() {
         this.parentElement.classList.add("invisible");
         gameSection.classList.remove("invisible");
-        //ograniczenie czasowe zbierania łyżek
+        //spoons show and hide
+        var interval = setInterval(function() {
+            game.showItem("spoon")
+        }, 1500);
+
+        var interval2 = setInterval(function() {
+            game.hideItem("spoon")
+        }, 10000);
+
+        //enemies attack & retreat
+        setInterval(function() {
+            game.claudetteAttack();    
+        }, 3000);
+        
+        setInterval(function() {
+            game.chrisRAttack();
+        }, 4000);
+    
+        setInterval(function() {
+            game.enemiesGone();
+        }, 6000); 
+
         var timeForSpoons = 50;
         timingDiv.innerText = "Time left: " + timeForSpoons;
 
@@ -39,17 +61,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
             }
             if (timeLeft === 0 && collectedSpoons >= 10) {
-             
                 clearInterval(timer);
                 clearInterval(interval);
                 clearInterval(interval2);
                 timeLeft = 0;
                 game.removeItems("spoon");
                 var interval3 = setInterval(function() {
-                    game.showMoney();
+                    //game.showMoney();
+                    game.showItem("dollar");
                 }, 2000);
                 var interval4 = setInterval(function() {
-                    game.hideMoney();
+                    //game.hideMoney();
+                    game.hideItem("dollar");
                 }, 8000);
 
                 var timeForDollars = 45;
@@ -59,13 +82,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     leftTime = timeForDollars - 1;
                     timeForDollars = leftTime;
                     timingDiv.innerText = "Time left: " + leftTime;
-
                     if (leftTime === 0 && dollarsEarned < 11) {
                         clearInterval(timer2);
                         clearInterval(interval3);
                         clearInterval(interval4);
                         leftTime = 0;
-                        
                         game.removeItems("dollar");
                         game.gameOver();
                     }
@@ -77,10 +98,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         
                         game.removeItems("dollar");
                         var interval5 = setInterval(function() {
-                            game.showRose();
+                            game.showItem("rose");
                         }, 1500);
                         var interval6 = setInterval(function() {
-                            game.hideRose();
+                            game.hideItem("rose");
                         }, 8000);
 
                         var timeForRoses = 40;
@@ -95,8 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 clearInterval(interval6);
                                 clearInterval(timer3);
                                 timeRemaining = 0;
-                                game.removeItems("rose");
-                                
+                                game.removeItems("rose");     
                                 game.gameOver();
 
                             }
@@ -105,21 +125,15 @@ document.addEventListener("DOMContentLoaded", function() {
                                 clearInterval(interval6);
                                 clearInterval(timer3)
                                 timeRemaining = 0;
-                               
                                 game.removeItems("rose");
                                 game.dateTime();
                             }
-
-
                         }, 1000)
                     }
                 }, 1000)
-
-
             }
-
-
         }, 1000)
+
 
         drawBoard();
         
@@ -190,35 +204,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         game.sounds.background.play();
         //game action
-        var interval = setInterval(function() {
-            game.showSpoon();
-
-        }, 1500);
-
-        var interval2 = setInterval(function() {
-            game.hideSpoon();
-        }, 10000);
-
-        //enemies attack
-        var interval7 = setInterval(function() {
-            game.claudetteNagging();
-        }, 3000);
-
-        var interval8 = setInterval(function() {
-            game.chrisRAttack();
-        }, 4000);
-
-        var interval9 = setInterval(function() {
-            game.claudetteGone();
-        }, 6000);
-        var interval10 = setInterval(function() {
-            game.chrisRGone();
-        }, 6000);
-
+   
 
         /* Metody do gry*/
-        
-        
         //count your position on a board
         Game.prototype.countPosition = function(x, y) {
             return (x + y * 10);
@@ -251,21 +239,50 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // objects appering on board methods 
+        Game.prototype.showItem = function(className){
+            if(className ==="spoon"){
+                this.spoon.x = Math.floor(Math.random() * 10);
+                this.spoon.y = Math.floor(Math.random() * 10);
+                var index = this.spoon.x + this.spoon.y * 10;
+                this.board[index].classList.add("spoon");
+            }
 
-        Game.prototype.showSpoon = function() {
-            this.spoon.x = Math.floor(Math.random() * 10);
-            this.spoon.y = Math.floor(Math.random() * 10);
-            var index = this.spoon.x + this.spoon.y * 10;
-            this.board[index].classList.add("spoon");
+            if(className ==="dollar") {
+                this.dollar.x = Math.floor(Math.random() * 10);
+                this.dollar.y = Math.floor(Math.random() * 10);
+                var index = this.dollar.x + this.dollar.y * 10;
+                this.board[index].classList.add("dollar");
+            }
 
+            if(className ==="rose") {
+                this.rose.x = Math.floor(Math.random() * 10);
+                this.rose.y = Math.floor(Math.random() * 10);
+                var index = this.rose.x + this.rose.y * 10;
+                this.board[index].classList.add("rose");
+            }
         }
 
+        Game.prototype.hideItem = function(className){
+            if(className ==="spoon"){
+                var spoons = document.querySelectorAll(".spoon");
+                for (var i = 0; i < spoons.length; i++) {
+                    spoons[i].classList.remove("spoon");
 
-        Game.prototype.hideSpoon = function() {
-            var spoons = document.querySelectorAll(".spoon");
-            for (var i = 0; i < spoons.length; i++) {
-                spoons[i].classList.remove("spoon");
+                }
+            }
+            if(className ==="dollar"){
+                var dollars = document.querySelectorAll(".dollar");
+                for (var i = 0; i < dollars.length; i++) {
+                    dollars[i].classList.remove("dollar");
 
+                }
+            }
+            if( className ==="rose") {
+                var roses = document.querySelectorAll(".rose");
+                for (var i = 0; i < roses.length; i++) {
+                    roses[i].classList.remove("rose");
+
+                }
             }
         }
 
@@ -274,46 +291,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.board[i].classList.remove(className);
             }
         }
-
-       
-
-        Game.prototype.showMoney = function() {
-            this.dollar.x = Math.floor(Math.random() * 10);
-            this.dollar.y = Math.floor(Math.random() * 10);
-            var index = this.dollar.x + this.dollar.y * 10;
-            this.board[index].classList.add("dollar");
-
-        }
-
-        Game.prototype.hideMoney = function() {
-            var dollars = document.querySelectorAll(".dollar");
-            for (var i = 0; i < dollars.length; i++) {
-                dollars[i].classList.remove("dollar");
-
-            }
-
-        }
-
-
-        Game.prototype.showRose = function() {
-            this.rose.x = Math.floor(Math.random() * 10);
-            this.rose.y = Math.floor(Math.random() * 10);
-            var index = this.rose.x + this.rose.y * 10;
-            this.board[index].classList.add("rose");
-
-        }
-
-        Game.prototype.hideRose = function() {
-            var roses = document.querySelectorAll(".rose");
-            for (var i = 0; i < roses.length; i++) {
-                roses[i].classList.remove("rose");
-
-            }
-
-        }
- 
-
-        Game.prototype.claudetteNagging = function() {
+        
+        
+        Game.prototype.claudetteAttack = function() {
             this.claudette.x = Math.floor(Math.random() * 10);
             this.claudette.y = Math.floor(Math.random() * 10);
             var index = this.claudette.x + this.claudette.y * 10;
@@ -326,22 +306,20 @@ document.addEventListener("DOMContentLoaded", function() {
             var index = this.chrisR.x + this.chrisR.y * 10;
             this.board[index].classList.add("chrisR");
         }
-
-        Game.prototype.claudetteGone = function() {
+        
+        Game.prototype.enemiesGone = function() {
             var claudettes = document.querySelectorAll(".claudette");
             for (var i = 0; i < claudettes.length; i++) {
                 claudettes[i].classList.remove("claudette");
             }
-        }
 
-        Game.prototype.chrisRGone = function() {
             var chrises = document.querySelectorAll(".chrisR");
             for (var i = 0; i < chrises.length; i++) {
                 chrises[i].classList.remove("chrisR");
             }
+
         }
-
-
+      
         Game.prototype.moveAround = function() {
             var self = this;
             document.addEventListener("keydown", movingAround);
@@ -515,7 +493,7 @@ document.addEventListener("DOMContentLoaded", function() {
             comeBack.classList.add("comeback");
         }
 
-    })
+    }
 
         
 

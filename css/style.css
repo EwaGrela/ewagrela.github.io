@@ -79,7 +79,7 @@ body {
   left: 25%;
   transform: rotate(315deg);
   color: white;
-  text-shadow: 2px 2px 2px #004444;
+  text-shadow: 6px 6px 4px #004444;
   font-family: "Raleway";
   font-size: 12px;
   font-weight: bold;

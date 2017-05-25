@@ -34,6 +34,7 @@ body {
 	@extend %layout;
 	h1{
 		font-size: 46px;
+		font-weight: bolder;
 		margin-top: 10px;
 		line-height: 50px;
 		height: 50px;
@@ -82,7 +83,12 @@ body {
 			border: 4px solid darken(#ffff77, 20%);
 			border-radius: 5%;
 			font-family: 'Amatic SC', cursive;
-			
+			display: flex;
+			align-items: center;
+			h4 {
+				font-size: 35px;
+				color: #ffffff;
+			}
 			
 		}
 	}
@@ -124,56 +130,45 @@ body {
 	
 }
 
-.pictograms {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	p{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 22%;
-		height: 120px;
-		border-radius: 5%;
-		margin-right: 15px;
-		margin-left: 15px;
-		background: mix(green, teal, 10%);
-		border: 3px solid darken(mix(green, teal, 10%), 10%);
-		&:nth-of-type(2){
-			background: mix(hotpink, red);
-			border: 3px solid darken(mix(hotpink,red), 10%);
-		}
-		span {
-			font-size: 30px;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			font-family: 'Amatic SC', cursive;
-			color: #000033;
-			font-weight: bolder;
-			height: 55px;
-			width: 100%;
-			
-			img{
-				height:55px;
-				width: 55px;
-				margin-right: 5px;
-				margin-left: 5px;
-				border-radius: 10%;
+.pictograms>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 22%;
+  height: 120px;
+  border-radius: 5%;
+  margin-right: 15px;
+  margin-left: 15px;
+  background: #008073;
+  border: 3px solid #004d45;
+}
 
-			}
-			#spoon {
-				
-				margin-left: 0px;
-			}
-		}
+.pictograms>div:nth-of-type(2) {
+  background: #ff355a;
+  border: 3px solid #ff0230;
+}
 
-				
+.imageContainer {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Amatic SC', cursive;
+  color: #000033;
+  font-weight: bolder;
+  height: 55px;
+	  width: 100%;
+	  img {
+	  height: 55px;
+	  width: 55px;
+	  margin-right: 5px;
+	  margin-left: 5px;
+	  border-radius: 10%;
 	}
 }
+
 
 .invisible {
 	display: none;
