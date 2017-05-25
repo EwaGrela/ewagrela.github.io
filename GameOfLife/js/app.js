@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var startButton = document.querySelector("#start");
 
+    var refreshButton = document.getElementById("refresh");
+
     startButton.addEventListener("click", startProgram);
 
     function startProgram() {
@@ -234,10 +236,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         var playButton = document.getElementById("play");
-        console.log(playButton);
+        
 
         var pauseButton = document.getElementById("pause");
-        console.log(pauseButton);
+        
 
         playButton.addEventListener("click", function() {
             var interval = setInterval(stepOneGame, 200);
@@ -260,10 +262,15 @@ document.addEventListener("DOMContentLoaded", function() {
         inputBoardHeight.value = "";
         playButton.classList.remove("hidden");
         pauseButton.classList.remove("hidden");
+        refreshButton.classList.remove("hidden");
         inputBoardWidth.parentNode.removeChild(inputBoardWidth);
         inputBoardHeight.parentNode.removeChild(inputBoardHeight);
         this.parentNode.removeChild(this);
     }
 
+    refreshButton.addEventListener("click", refreshPage);
+    function refreshPage(){
+        location.reload();
+    }
 
 });

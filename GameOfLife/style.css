@@ -1,25 +1,38 @@
 * {
     box-sizing: border-box;
-    font-family: 'Fredericka the Great', cursive, "DejaVu Sans Mono";
+    max-width: 100vw;
 }
+body:before{
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  z-index: -10;
+  background-color: #cbcbcb;
+  background-image: url("images/Jungle.jpg");
+  background-repeat:  no-repeat;
+  background-position:  center center;
+  background-size: cover;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #009900;
-    background-image: url("images/Jungle.jpg");
-    background-repeat: no-repeat;
-    background-position: cover;
-    width: 100%;
-    height: 100%;
-    font-family: 'Fredericka the Great', cursive, "DejaVu Sans Mono";
+	max-width: 100vw;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
 }
+  
 
 #inputBoardWidth,
 #inputBoardHeight,
 #start {
     margin: 0 auto;
     margin-top: 20px;
-    font-family: 'Fredericka the Great', cursive, "DejaVu Sans Mono";
+    font-family: 'Kumar One', cursive;
 }
 
 .flexbox {
@@ -30,6 +43,14 @@ body {
     min-width: 100px;
 }
 
+.flexbox2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 99vw;
+}
+
 .info {
     width: 400px;
     height: 220px;
@@ -37,6 +58,7 @@ body {
     margin-top: 20px;
     padding: 20px 20px 20px 20px;
     background-color: rgba(255, 255, 255, 0.8);
+    border: 1px dashed green;
     color: black;
     font-weight: bold;
     font-size: 0.85em;
@@ -89,6 +111,7 @@ button {
     text-transform: uppercase;
     color: #ace600;
     font-size: 1.35em;
+    font-family: 'Kumar One', cursive;
 }
 .hidden {
     visibility: hidden;
