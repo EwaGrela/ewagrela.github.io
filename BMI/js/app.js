@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function createRefreshBtn(element){
-    	const refreshBtn = document.createElement("button");
+    	const refreshBtn = document.createElement("a");
     	element.append(refreshBtn);
     	refreshBtn.classList.add("refreshBtn")
     	refreshBtn.textContent = "refresh";
