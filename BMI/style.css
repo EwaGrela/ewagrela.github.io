@@ -98,7 +98,7 @@ input[type=submit]{
 #resultParagraph {
 	font-size: 40px;
 	text-align: center;
-	color: #004545;
+	color: #454545;
 	font-family: 'Pacifico', cursive;
 }
   
@@ -106,7 +106,6 @@ input[type=submit]{
 	width: 70%;
 	min-height: 110px;
 	height: auto;
-	//border: 2px dashed #003333;
 	display: flex;
 	justify-content: center;
 	align-items: center;
