@@ -305,6 +305,9 @@ body {
 	color: #efefef;
 	text-shadow: 4px 4px 4px mix(hotpink, red);
 	text-align: center;
+	div {
+		background-image: url("../images/tearingmeapartlisa.jpg");
+	}
 }
 .pictureDiv{
 	background-size: cover;
@@ -322,6 +325,9 @@ body {
 	color: #efefef;
 	text-shadow: 4px 4px 4px mix(hotpink, red);
 	text-align: center;
+	div {
+		background-image: url("../images/datetime.jpg")
+	}
 }
 .dateTime, .gameOver {
 	@extend %layout;

@@ -457,7 +457,6 @@ document.addEventListener("DOMContentLoaded", function() {
             paragraph.innerText = " Game over! No sweet lovin' for you! You are tearing me apart!"
             this.sounds.over.play();
             this.sounds.background.volume = 0.00;
-            gameOverBoard.querySelector("div").style.backgroundImage = 'url("images/tearingmeapartlisa.jpg")';
             comeBack(gameOverBoard)
         }
 
@@ -475,7 +474,6 @@ document.addEventListener("DOMContentLoaded", function() {
             paragraph.innerText =" The date night is on! Do not drink to much scotchka!"
             this.sounds.date.play();
             this.sounds.background.volume = 0.00;
-            dateBoard.querySelector("div").style.backgroundImage = 'url("images/datetime.jpg")';
             comeBack(dateBoard);
         }
 
