@@ -41,9 +41,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     makeAlert();
                 } else {
                     if (drawnNums.indexOf(number) < 0) {
-                        console.log(drawnNums.indexOf(number), number);
                         drawnNums.push(number);
-
                     }
                     console.log(drawnNums);
                     this.removeAttribute("data-number");
@@ -63,9 +61,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     drawnNums.splice(indx, 1);
                 }
 
-
-
-
             }
             console.log(drawnNums, drawnNums.length);
 
@@ -77,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     return;
                 }
 
-
             }
 
         }
@@ -88,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
     drawNumbers();
 
     function makeAlert() {
-        alert("llslslsl");
         const alertBox = document.createElement("div");
         board.append(alertBox);
         alertBox.classList.add("alertBox");
