@@ -183,7 +183,21 @@ article {
 	}
 }
 
-
+.numbersBoard {
+	width: 210px;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	div {
+		height: 30px;
+		width: 30px;
+		line-height: 30px;
+		text-align: center;
+		background: mix(#dedede, gold);
+		border: 2px solid darken(gold, 20%);
+		color: purple;
+	}
+}
 
 .comebackBtn {
 	width: 100px;
