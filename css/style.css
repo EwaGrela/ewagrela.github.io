@@ -49,9 +49,9 @@ body {
   animation-direction: normal;
 }
 .square-big, .square-medium {
-  width: 33%;
+  width: 30%;
   border-radius: 5%;
-  padding-bottom: 33%;
+  padding-bottom: 30%;
   display: inline-block;
   transition: 2s;
   background-color: #006666;
@@ -90,14 +90,14 @@ body {
 #square1 {
 	//background-color: red;
 	position: absolute;
-	top:0.5%;
-	left: 2.25%;
+	top: 4.25%;
+	left: 4.5%;
 }
 #square2 {
 	//background-color: green;
 	position: absolute;
-	top:0.5%;
-	left: 36.5%;
+	top:4.5%;
+	left: 37.5%;
 }
 #square3 {
 	//background-color: blue;
@@ -109,33 +109,39 @@ body {
 #square4 {
 	//background-color: pink;
 	position: absolute;
-	top: 35%;
-	left: 64%;	
+	top: 38%;
+	left: 62%;	
+
+}
+#square4 p, #square11 p {
+  text-align: left;
+  left: 15%;
+  top: 15%;
 }
 #square5 {
 	//background-color: lightblue;
 	position: absolute;
-	left: 1.5%;
-	top: 35%;	
+	left: 5%;
+	top: 38%;	
 }
 
 #square6 {
 	//background-color: yellow;
 	position: absolute;
-	left: 37%;
-	top: 65%;
+	left: 38%;
+	top: 62.5%;
 }
 #square7 {
 	//background-color: orange;
 	position: absolute;
-	top: 60%;
-	left: 60%;
+	top: 62%;
+	left: 62%;
 }
 #square8 {
   position: absolute;
   //background-color: #ff11ff;
-  top: 78%;
-  left: 120%;
+  top: 85%;
+  left: 118%;
   width: 18%;
   padding-bottom: 18%;
 }
@@ -143,27 +149,27 @@ body {
 #square9 {
 	position: absolute;
 	//background-color: #ff00ff;
-	left: 82%;
-	top: 82%;
+	left: 84%;
+	top: 84%;
 }
 #square10 {
 	position: absolute;
 	//background-color: #ffff88;
-	top: 57.5%;
+	top: 58.5%;
 	left: 85%;
 }
 
 #square11 {
   position: absolute;
   //background-color: #00ffff;
-  left: 58%;
-  top: 85%;
+  left: 60%;
+  top: 86%;
 }
 #square12 {
 	position: absolute;
 	//background-color: #ff99ff;
-	top: 120%;
-	left: 78%;
+	top: 119%;
+	left: 85%;
 	width: 18%;
 	padding-bottom: 18%;
 }
@@ -408,13 +414,13 @@ body {
 
 @media (min-width: 568px) {
   .square-big p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1024px) {
   .square-big p {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -422,13 +428,13 @@ body {
 
 @media (min-width: 568px) {
   .square-medium p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1024px) {
   .square-medium p {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
