@@ -6,7 +6,7 @@ $(function() {
     var triviaSection = $(".triviaSection");
     var sections = $("section").not(triviaSection);
     var gamesSection = $("#gamesSection");
-
+    console.log(localStorage);
     function randomize(elements) {
         for (var i = 0; i < elements.length; i++) {
             var j = Math.floor(Math.random() * elements.length);
@@ -18,12 +18,16 @@ $(function() {
     }
 
 
-
     var triviaTest = firebase.database().ref("/trivia");
     triviaTest.once("value").then(function(data) {
         var test = data.val();
+        console.log(test.length);
         var indicator = Math.floor(Math.random() * test.length);
+        console.log(indicator);
+
         var quiz = test[indicator];
+    
+       
         var questions = quiz.questions;
         var quizTitle = quiz.myTitle;
         var quizSet = questions.length; //to użyte aby dało się dodawać pytania, nie musi być 11, można inną tablicę podać
@@ -174,13 +178,19 @@ $(function() {
             if (points >= quizSet / 1.25) {
                 resultsBoard.text(points + " out of " + quizSet + " points! good for you!");
             }
+            makeComebackBtn(resultsBoard);
 
         }
 
-
+        
 
     });
-
+    function makeComebackBtn(element){
+            var comebackBtn = $("<a>", {class: "comebackBtn"});
+            comebackBtn.attr("href", "https://ewagrela.github.io/quiz/");
+            comebackBtn.text("again")
+            comebackBtn.appendTo(element);
+    }
 
 
 })

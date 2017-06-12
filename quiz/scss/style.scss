@@ -448,3 +448,14 @@ input {
 
 	}
 }
+.comebackBtn {
+	background-color: $fifthColor;
+	width: auto;
+	height: auto;
+	font-size: $mediumFont/2;
+	border: none;
+	border-radius: 5%;
+	margin-top: 5px;
+	color: $secondaryColor;
+	text-decoration: none;
+}

@@ -1,4 +1,5 @@
 $(function() {
+    
     var startingBtn = $("#psychoTest").find("button");
     var testSection = $(".testSection");
     var sections = $("section").not(testSection);
@@ -7,7 +8,7 @@ $(function() {
     var h1 = testSection.find("h1");
     var gamesSection = $("#gamesSection");
     var collectedAnswers = [];
-
+    console.log(localStorage);
     function randomize(elements) {
         for (var i = 0; i < elements.length; i++) {
             var j = Math.floor(Math.random() * elements.length);
@@ -185,11 +186,19 @@ $(function() {
                 resultsParagraph.text(quiz[indicator].descriptions[3]);
             }
             console.log(collectedAnswers);
+            makeComebackBtn(resultsBoard);
         }
+
+        
 
     });
 
-
+	function makeComebackBtn(element){
+        	var comebackBtn = $("<a>", {class: "comebackBtn"});
+        	comebackBtn.text(again);
+        	comebackBtn.attr("href", "https://ewagrela.github.io/quiz/");
+        	comebackBtn.appendTo(element)
+    }
 
 
 })
