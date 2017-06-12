@@ -195,7 +195,7 @@ $(function() {
 
 	function makeComebackBtn(element){
         	var comebackBtn = $("<a>", {class: "comebackBtn"});
-        	comebackBtn.text(again);
+        	comebackBtn.text("again");
         	comebackBtn.attr("href", "https://ewagrela.github.io/quiz/");
         	comebackBtn.appendTo(element)
     }
