@@ -1,450 +1,368 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
- 
-body {
-  font-family: "Raleway";
-}
- 
- 
-body {
-  background:  #efefef;
-  }
-
-  .container {
-  max-width: 1000px;
-  padding: 0 30px;
-  margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background: #efefef;
+    font-family: "Raleway";
+}
+.container {
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
 .grid-section {
-  overflow: hidden;
-  padding-bottom: 200px;
+    overflow: hidden;
+    padding-bottom: 200px;
 }
-
 .grid {
-  padding-bottom: 100%;
-  position: relative;
-  height: 50vh;
-  transform: rotate(45deg);
-  transform-origin: 39%;
-  background-color: #efefef;
-  border-top: 7px solid #777;
-  border-left: 7px solid #777;
+    padding-bottom: 100%;
+    position: relative;
+    height: 50vh;
+    transform: rotate(45deg);
+    transform-origin: 39%;
+    background-color: #efefef;
+    border-top: 7px solid #777;
+    border-left: 7px solid #777;
 }
-
- .square {
-  width: 20%;
-  border-radius: 10%;
-  padding-bottom: 20%;
-  background-color: #005555;
-  border: 2px solid   #004343;
-  display: inline-block;
-  animation-name: appear;
-  transition: 2s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
+.invisible {
+    display: none;
 }
-.square-big, .square-medium {
-  width: 30%;
-  border-radius: 5%;
-  padding-bottom: 30%;
-  display: inline-block;
-  transition: 2s;
-  background-color: #006666;
-  border: 2px solid  #007777;
-  
+.square {
+    width: 20%;
+    border-radius: 10%;
+    padding-bottom: 20%;
+    background-color: #005555;
+    border: 2px solid #004343;
+    display: inline-block;
+    animation-name: appear;
+    transition: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
-
-
-
+.square-big,
+.square-medium {
+    width: 30%;
+    border-radius: 5%;
+    padding-bottom: 30%;
+    display: inline-block;
+    transition: 2s;
+    background-color: #006666;
+    border: 2px solid #007777;
+}
+a {
+    transition: 2s;
+}
 .square:hover {
-  background-color: #0066cc;
+    background-color: #0066cc;
 }
-
 .square-big:hover {
-  background-color: #006699;
+    background-color: #006699;
 }
-
 .square-medium:hover {
-  background-color: #0066b3;
+    background-color: #0066b3;
 }
-
-.square-big p, .square-medium p, .square p {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  transform: rotate(315deg);
-  color: white;
-  text-shadow: 6px 6px 4px #004444;
-  font-family: "Raleway";
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
+@media(max-width: 595px) {
+    a:hover {
+        transform: scale(1.4)translate(20px, 10px);
+        z-index: 3;
+    }
+    a p:first-of-type {
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        font-size: 35px;
+        top: 25%;
+        left: 25%;
+    }
+    .square p:nth-of-type(2){
+        font-size: 12px;
+    }
+    a p:nth-of-type(2) {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-size: 14px;
+        transform: rotate(315deg);
+        color: white;
+        text-shadow: 4px 4px 2px #004444;
+        font-family: "Raleway";
+        font-weight: bold;
+        text-align: center;
+    }
 }
-
-
 #square1 {
-	//background-color: red;
-	position: absolute;
-	top: 4.25%;
-	left: 4.5%;
+    //background-color: red;
+    position: absolute;
+    top: 4.25%;
+    left: 4.5%;
 }
 #square2 {
-	//background-color: green;
-	position: absolute;
-	top:4.5%;
-	left: 37.5%;
+    //background-color: green;
+    position: absolute;
+    top: 4.5%;
+    left: 37.5%;
 }
 #square3 {
-	//background-color: blue;
-	position: absolute;
-	left: 38%;
-	top: 38%;
-	
+    //background-color: blue;
+    position: absolute;
+    left: 38%;
+    top: 38%;
 }
 #square4 {
-	//background-color: pink;
-	position: absolute;
-	top: 38%;
-	left: 62%;	
-
-}
-#square4 p, #square11 p {
-  text-align: left;
-  left: 15%;
-  top: 15%;
+    //background-color: pink;
+    position: absolute;
+    top: 38%;
+    left: 62%;
 }
 #square5 {
-	//background-color: lightblue;
-	position: absolute;
-	left: 5%;
-	top: 38%;	
+    //background-color: lightblue;
+    position: absolute;
+    left: 5%;
+    top: 38%;
 }
-
 #square6 {
-	//background-color: yellow;
-	position: absolute;
-	left: 38%;
-	top: 62.5%;
+    //background-color: yellow;
+    position: absolute;
+    left: 38%;
+    top: 62.5%;
 }
 #square7 {
-	//background-color: orange;
-	position: absolute;
-	top: 62%;
-	left: 62%;
+    //background-color: orange;
+    position: absolute;
+    top: 62%;
+    left: 62%;
 }
 #square8 {
-  position: absolute;
-  //background-color: #ff11ff;
-  top: 85%;
-  left: 118%;
-  width: 18%;
-  padding-bottom: 18%;
+    position: absolute;
+    //background-color: #ff11ff;
+    top: 85%;
+    left: 118%;
+    width: 18%;
+    padding-bottom: 18%;
 }
-
 #square9 {
-	position: absolute;
-	//background-color: #ff00ff;
-	left: 84%;
-	top: 84%;
+    position: absolute;
+    //background-color: #ff00ff;
+    left: 84%;
+    top: 84%;
 }
 #square10 {
-	position: absolute;
-	//background-color: #ffff88;
-	top: 58.5%;
-	left: 85%;
+    position: absolute;
+    //background-color: #ffff88;
+    top: 58.5%;
+    left: 85%;
 }
-
 #square11 {
-  position: absolute;
-  //background-color: #00ffff;
-  left: 60%;
-  top: 86%;
+    position: absolute;
+    //background-color: #00ffff;
+    left: 60%;
+    top: 86%;
 }
 #square12 {
-	position: absolute;
-	//background-color: #ff99ff;
-	top: 119%;
-	left: 85%;
-	width: 18%;
-	padding-bottom: 18%;
+    position: absolute;
+    //background-color: #ff99ff;
+    top: 119%;
+    left: 85%;
+    width: 18%;
+    padding-bottom: 18%;
 }
-
-
-  
-.github {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../images/icon-github.png");
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
-@media(min-width: 568px){
-  .github{
-    width: 30px;
-    height: 30px;
-  } 
-}
-
-@media(min-width: 768px){
-  .github{
-    width: 40px;
-    height: 40px;
-  } 
-}
-
 /* for wider screens*/
-@media(min-width: 596px){
-	@keyframes appear {
- 	0% {
- 		opacity:0;
- 		transform: scale(0.01)rotate(15deg);
- 		
- 	}
- 	10% {
- 		opacity:0.1;
- 		transform: scale(0.1)rotate(22deg);
- 		
- 	}
- 	20% {
- 		opacity: 0.2;
- 		transform: scale(0.2)rotate(30deg);
- 		
- 	}
- 	30% {
- 		opacity:0.3;
- 		transform: scale(0.3)rotate(37deg);
- 		
- 	}
- 	40% {
- 		opacity: 0.4;
- 		transform: scale(0.4)rotate(45deg);
- 		
- 	}
- 	50% {
- 		opacity:0.5;
- 		transform: scale(0.5)rotate(37deg);
- 		
- 	}
- 	60% {
- 		opacity: 0.6;
- 		transform: scale(0.6)rotate(30deg);
- 		
- 	}
- 	70% {
- 		opacity:0.7;
- 		transform: scale(0.7)rotate(22deg);
- 		
- 	}
- 	80% {
- 		opacity: 0.8;
- 		transform: scale(0.8)rotate(15deg);
- 		
- 	}
- 	90% {
- 		opacity:0.9;
- 		transform: scale(0.9)rotate(7deg);
- 		
- 	}
- 	100% {
- 		opacity: 1.0;
- 		transform: scale(1.0)rotate(0deg);
- 		
- 	}
 
- }
-
- .square {
-  width: 11.5%;
-  border-radius: 10%;
-  padding-bottom: 11.5%;
-  background-color: #005555;
-  border: 2px solid   #004343;
-  display: inline-block;
-  animation-name: appear;
-  transition: 2s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-}
-.square-big {
-  width: 25%;
-  border-radius: 5%;
-  padding-bottom: 25%;
-  display: inline-block;
-  transition: 2s;
-  background-color: #006666;
-  border: 2px solid  #007777;
-  animation-name: appear;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-}
-
-.square-medium {
-  width: 20.5%;
-  border-radius: 5%;
-  padding-bottom: 20.5%;
-  display: inline-block;
-  transition: 2s;
-  background-color: #006666;
-  border: 2px solid  #007777;
-  animation-name: appear;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-}
-
-.square:hover {
-  background-color: #0066cc;
-}
-
-.square-big:hover {
-  background-color: #006699;
-}
-
-.square-medium:hover {
-  background-color: #0066b3;
-}
-
-#square1 {
-  top: 4.5%;
-  left: 10.5%;
-  animation-duration: 2s;
-}
-
-
-
-#square2 {
-  top: 0.5%;
-  left: 32.5%;
-  animation-duration: 2s;
-}
-
-#square3 {
-  top: 27.5%;
-  left: 5.5%;
-  animation-duration: 2.5s;
-}
-
-
-
-#square4 {
-  top: 27.5%;
-  left: 19%;
-  animation-duration: 2.5s;
-}
-
-
-#square5 {
-  top: 27.5%;
-  left: 32.5%;
-  animation-duration: 3s;
-}
-
-
-
-#square6 {
-  top: 41%;
-  left: 5.5%;
-  animation-duration: 3s;
-}
-
-
-#square7 { 
-  top: 41%;
-  left: 19%;
-  animation-duration: 3s;
-}
-
-
-#square8 {
-  width: 7.5%;
-  padding-bottom: 7.5%;
-  top: 64.5%;
-  left: 5.5%;
-  animation-duration: 3.5s;
-}
-
-#square9 {
-  
-  top: 54.5%;
-  left: 15%;
-  animation-duration: 3.5s;
-}
-
-
-#square10 {
-  top: 54.5%;
-  left: 37.5%;
-  animation-duration: 3.5s;
-}
-
-#square11 {
-  width: 7.5%;
-  padding-bottom: 7.5%;
-  top: 54.5%;
-  left: 5.5%;
-  animation-duration: 3.5s;
-}
-
-#square12 {
-  top: 4.5%;
-  left: 59%;
-  animation-duration: 2.5s;
-}
-
-#square11 p {
-  top : 25%;
-  left: 0;
-}
-
-
-
-
-@media (min-width: 568px) {
-  .square-big p {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .square-big p {
-    font-size: 20px;
-  }
-}
-
-
-
-@media (min-width: 568px) {
-  .square-medium p {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .square-medium p {
-    font-size: 20px;
-  }
-}
-
-
-@media (min-width: 568px) {
-  .square p {
-    font-size: 14px;
-  }
-}
- 
-
-
+@media(min-width: 596px) {
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: scale(0.01)rotate(15deg);
+        }
+        10% {
+            opacity: 0.1;
+            transform: scale(0.1)rotate(22deg);
+        }
+        20% {
+            opacity: 0.2;
+            transform: scale(0.2)rotate(30deg);
+        }
+        30% {
+            opacity: 0.3;
+            transform: scale(0.3)rotate(37deg);
+        }
+        40% {
+            opacity: 0.4;
+            transform: scale(0.4)rotate(45deg);
+        }
+        50% {
+            opacity: 0.5;
+            transform: scale(0.5)rotate(37deg);
+        }
+        60% {
+            opacity: 0.6;
+            transform: scale(0.6)rotate(30deg);
+        }
+        70% {
+            opacity: 0.7;
+            transform: scale(0.7)rotate(22deg);
+        }
+        80% {
+            opacity: 0.8;
+            transform: scale(0.8)rotate(15deg);
+        }
+        90% {
+            opacity: 0.9;
+            transform: scale(0.9)rotate(7deg);
+        }
+        100% {
+            opacity: 1.0;
+            transform: scale(1.0)rotate(0deg);
+        }
+    }
+    a:hover {
+        transform: scale(1.3)translate(25px, 25px);
+        z-index: 3;
+    }
+    .square {
+        width: 11.5%;
+        border-radius: 10%;
+        padding-bottom: 11.5%;
+        background-color: #005555;
+        border: 2px solid #004343;
+        display: inline-block;
+        animation-name: appear;
+        transition: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+    }
+    .square-big {
+        width: 25%;
+        border-radius: 5%;
+        padding-bottom: 25%;
+        display: inline-block;
+        transition: 2s;
+        background-color: #006666;
+        border: 2px solid #007777;
+        animation-name: appear;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+    }
+    .square-medium {
+        width: 20.5%;
+        border-radius: 5%;
+        padding-bottom: 20.5%;
+        display: inline-block;
+        transition: 2s;
+        background-color: #006666;
+        border: 2px solid #007777;
+        animation-name: appear;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+    }
+    .square:hover {
+        background-color: #0066cc;
+    }
+    .square-big:hover {
+        background-color: #006699;
+    }
+    .square-medium:hover {
+        background-color: #0066b3;
+    }
+    #square1 {
+        top: 4.5%;
+        left: 10.5%;
+        animation-duration: 2s;
+    }
+    #square2 {
+        top: 0.5%;
+        left: 32.5%;
+        animation-duration: 2s;
+    }
+    #square3 {
+        top: 27.5%;
+        left: 5.5%;
+        animation-duration: 2.5s;
+    }
+    #square4 {
+        top: 27.5%;
+        left: 19%;
+        animation-duration: 2.5s;
+    }
+    #square5 {
+        top: 27.5%;
+        left: 32.5%;
+        animation-duration: 3s;
+    }
+    #square5:hover,
+    #square8:hover,
+    #square9:hover,
+    #square10:hover {
+        transform: scale(1.3)translate(25px, -45px);
+    }
+    #square6 {
+        top: 41%;
+        left: 5.5%;
+        animation-duration: 3s;
+    }
+    #square7 {
+        top: 41%;
+        left: 19%;
+        animation-duration: 3s;
+    }
+    #square8 {
+        width: 7.5%;
+        padding-bottom: 7.5%;
+        top: 64.5%;
+        left: 5.5%;
+        animation-duration: 3.5s;
+    }
+    #square9 {
+        top: 54.5%;
+        left: 15%;
+        animation-duration: 3.5s;
+    }
+    #square10 {
+        top: 54.5%;
+        left: 37.5%;
+        animation-duration: 3.5s;
+    }
+    #square11 {
+        width: 7.5%;
+        padding-bottom: 7.5%;
+        top: 54.5%;
+        left: 5.5%;
+        animation-duration: 3.5s;
+    }
+    #square12 {
+        top: 4.5%;
+        left: 59%;
+        animation-duration: 2.5s;
+    }
+    #square12:hover {
+        transform: scale(1.4)translate(-25px, 25px);
+    }
+   
+    a p:first-of-type {
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        font-size: 45px;
+        top: 25%;
+        left: 35%;
+    }
+    a p:nth-of-type(2) {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-size: 22px;
+        transform: rotate(315deg);
+        color: white;
+        text-shadow: 6px 6px 4px #004444;
+        font-family: "Raleway";
+        font-weight: bold;
+        text-align: center;
+    }
 }
