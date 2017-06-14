@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM loaded");
+    console.log("DOM is loaded");
     const allFirstParagraphs = document.querySelectorAll("a p:nth-of-type(1)");
     console.log(allFirstParagraphs);
    	
