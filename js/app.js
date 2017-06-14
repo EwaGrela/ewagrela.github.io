@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const allLinks = document.querySelectorAll(".squares");
-    let clickCount = 0
+   
+    for(var i = 0; i<allLinks.length; i++){
+    	allLinks[i].setAttribute("data-click", 0);
+    }
 
     if (matchMedia) {
         var mq = window.matchMedia("(max-width: 595px)");
@@ -30,16 +33,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function makeLinksVisibleOnMobile(event) {
+        const firstChild = event.target.firstElementChild;
+        const secondChild = event.target.firstElementChild.nextElementSibling; 
+        let clickCount = event.target.getAttribute("data-click");
         clickCount++;
-        const firstChild = this.firstElementChild;
-        const secondChild = this.firstElementChild.nextElementSibling;
-        if (clickCount % 2 === 1) {
-            firstChild.classList.add("invisible");
-            secondChild.classList.remove("invisible");
+        this.setAttribute("data-click", clickCount);
+        if(clickCount%2===1){
+        	firstChild.classList.add("invisible");
+        	secondChild.classList.remove("invisible");
         } else {
-            firstChild.classList.remove("invisible");
-            secondChild.classList.add("invisible");
+        	firstChild.classList.remove("invisible");
+        	secondChild.classList.add("invisible");
         }
+        
 
     }
 
