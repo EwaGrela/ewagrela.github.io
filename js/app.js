@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function makeLinksVisibleOnMobile(event) {
-        const firstChild = event.target.firstElementChild;
-        const secondChild = event.target.firstElementChild.nextElementSibling; 
-        let clickCount = event.target.getAttribute("data-click");
+        const firstChild = this.firstElementChild;
+        const secondChild = this.firstElementChild.nextElementSibling; 
+        let clickCount = this.getAttribute("data-click");
         clickCount++;
         this.setAttribute("data-click", clickCount);
         if(clickCount%2===1){

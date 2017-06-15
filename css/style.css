@@ -74,18 +74,16 @@ a {
         position: absolute;
         text-decoration: none;
         color: white;
-        font-size: 35px;
+        font-size: 2em;
         top: 25%;
         left: 25%;
     }
-    .squares p:nth-of-type(2) {
-        font-size: 12px;
-    }
+    
     .squares p:nth-of-type(2) {
         position: absolute;
         top: 25%;
         left: 25%;
-        font-size: 14px;
+        font-size: 0.7em;
         transform: rotate(315deg);
         color: white;
         text-shadow: 4px 4px 2px #004444;
@@ -169,6 +167,12 @@ a {
     left: 85%;
     width: 18%;
     padding-bottom: 18%;
+}
+
+@media(min-width: 420px){
+    .squares p:nth-of-type(2){
+        font-size: 0.9em;
+    }
 }
 /* for wider screens*/
 
@@ -349,7 +353,7 @@ a {
         position: absolute;
         text-decoration: none;
         color: white;
-        font-size: 40px;
+        font-size: 2em;
         top: 25%;
         left: 35%;
     }
@@ -357,12 +361,53 @@ a {
         position: absolute;
         top: 25%;
         left: 25%;
-        font-size: 18px;
         transform: rotate(315deg);
         color: white;
         text-shadow: 6px 6px 4px #004444;
         font-family: "Raleway";
         font-weight: bold;
-        text-align: center;
+        text-align: left;
+    }
+
+    .square p:nth-of-type(2){
+        font-size: 0.8em;
+    }
+    .square-big p:nth-of-type(2), .square-medium p:nth-of-type(2){
+        font-size: 0.9em;
+    }
+
+    #square2 p:first-of-type, #square5 p:first-of-type, #square1 p:first-of-type, #square9 p:first-of-type {
+        top: 35%;
+        left: 45%;
+
+    }
+    #square2 p:nth-of-type(2), #square5 p:nth-of-type(2) {
+        top: 25%;
+        left: 20%;
+        width: auto;
+    }
+
+    #square1 p:nth-of-type(2), #square9 p:nth-of-type(2) {
+        top: 25%;
+        left: 20%;
+        width: auto;
+    }
+
+    #square12 p:first-of-type{
+        top: 30%;
+        left: 40%;
+    }
+
+    #square12 p:nth-of-type(2){
+        left:40%;
+    }
+}
+
+@media(min-width: 768px){
+    .square p:nth-of-type(2){
+        font-size: 1em;
+    }
+    .square-big p:nth-of-type(2), .square-medium p:nth-of-type(2){
+        font-size: 1.2em;
     }
 }
