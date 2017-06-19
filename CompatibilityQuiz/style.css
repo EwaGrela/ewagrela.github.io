@@ -1,0 +1,85 @@
+body {
+	background: lightblue;
+	font-family: "Roboto"
+}
+#app {
+	margin: 0 auto;
+	border: 2px solid teal;
+	width: 80vw;
+	min-height: 200px;
+	height: 450px;
+}
+.appContainer {
+	width: 100%;
+	height: 100%;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffff99;
+	font-size: 18px;
+	color: #004545;
+}
+
+article>button {
+	width: 120px;
+	height: 40px;
+	border: 2px solid teal;
+	background-color: #009999;
+	border-radius: 5%;
+	color: #fefefe;
+}
+
+article {
+	width: 90%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+	font-family: "Roboto";
+	font-weight: bolder;
+	color: #006688;
+}
+
+
+.questionContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.invisible {
+	display: none;
+}
+.answersContainer>button {
+	width: 250px;
+	height: 30px;
+	border: 2px solid teal;
+	background-color: #006767;
+	color: #fefefe;
+	font-size: 16px;
+}
+
+.answersContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 200px;
+}
+
+.resultsDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+article p, .resultsDiv p {
+	color: 004545;
+	font-size: 18px;
+}
