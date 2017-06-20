@@ -9577,7 +9577,7 @@ var questions = [{ title: "Tea or coffee?",
 	answers: [["nope", false], ["love it!", true], ["the what?", false]]
 
 }, { title: "Your take on vegetarian cuisine:",
-	answers: [["may be very good", true], ["eww, groase", false], ["I prefer meat", false]]
+	answers: [["may be very good", true], ["yuck!", false], ["gimme meat", false]]
 
 }, { title: "Cats or dogs?",
 	answers: [["dogs", false], ["goldfish :)", false], ["cats", true]]

@@ -39,7 +39,7 @@ const questions = [
 			
 			},
 			{ title: "Your take on vegetarian cuisine:",
-			answers: [["may be very good",true], ["eww, groase",false], ["I prefer meat", false] ]
+			answers: [["may be very good",true], ["yuck!",false], ["gimme meat", false] ]
 			
 			},
 			{ title: "Cats or dogs?",
