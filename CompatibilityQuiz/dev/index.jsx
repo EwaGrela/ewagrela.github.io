@@ -55,7 +55,7 @@ class App extends React.Component {
 		return(
 			<div className ="appContainer">
 				<article>
-					<h2>Compability quiz</h2>
+					<h2>Compatibility quiz</h2>
 					<p>Hello Stranger!</p>
 					<p> Welcome to my world!</p>
 					<p>Let's find out if we are similar.</p>

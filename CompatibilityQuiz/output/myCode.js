@@ -9605,7 +9605,7 @@ var App = function (_React$Component) {
 					_react2.default.createElement(
 						"h2",
 						null,
-						"Compability quiz"
+						"Compatibility quiz"
 					),
 					_react2.default.createElement(
 						"p",
