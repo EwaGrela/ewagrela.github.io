@@ -1,6 +1,8 @@
 body {
-	background:  #006699;
-	font-family: "Roboto"
+	background:  #006f6f;
+	
+    font-family: 'Raleway', sans-serif;
+
 }
 #app {
 	margin: 0 auto;
@@ -35,8 +37,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #ffff99;
-	border: 5px solid #003366;
+	background-color: #dfdfdf;
+	border: 5px solid #004545;
 	border-radius: 15%;
 }
 
@@ -62,20 +64,24 @@ body {
 article>button {
 	width: 200px;
 	height: 50px;
-	background-color: #0033cc;
-	border: 3px solid #003399;
+	background-color: #005656;
+	border: 3px solid #004545;
 	border-radius: 10%;
-	color: #fefefe;
+	color: #dedede;
 	font-weight: bolder;
 	font-size: 1.5em;
 	text-transform: uppercase;
 }
 
+article>button:hover {
+	background-color: #006767;
+}
+
 article h2 {
 	font-size: 2.5em;
 	font-weight: bold;
-	text-shadow: 2px 2px #004488;
-
+	text-shadow: 2px 2px #004848;
+	color: #004f4f;
 }
 
 article {
@@ -88,17 +94,17 @@ article {
 
 }
 article p {
-	color: #336688;
-	text-shadow: 1px 1px #004488;
+	color: #006a6a;
+	text-shadow: 1px 1px #004848;
 }
 
 h2 {
 	font-size: 1.75em;
-	text-shadow: 2px 2px #550055;
-	text-align: center;
-	font-family: "Roboto";
+	text-shadow: 1px 1px #005555;
+	text-align: center;	
+    font-family: 'Raleway', sans-serif;
 	font-weight: bolder;
-	color: #336699;
+	color: #005f5f;
 	text-decoration: underline;
 }
 @media(min-width: 796px){
@@ -108,10 +114,10 @@ h2 {
 }
 
 h3 {
-	color: #336699;
+	color: #006767;
 	font-size: 1.5em;
 	font-weight: bold;
-	text-shadow: 1px 1px #440088;
+	text-shadow: 1px 1px #004848;
 	text-align: center;
 }
 
@@ -140,10 +146,10 @@ h3 {
 .answersContainer>button {
 	width: 80px;
 	height: 80px;
-	background-color: #33cc66;
-	border-radius: 15%;
-	border: 3px solid  #339966;
-	text-shadow: 3px 3px #339966;
+	background-color:   #006f6f;
+	border-radius: 25%;
+	border: 3px solid  #005e5e;
+	text-shadow: 3px 3px #005656;
 	color: #fefefe;
 	font-size: 0.9em;
 	font-weight: bold;
@@ -186,16 +192,11 @@ h3 {
 }
 .answersContainer>button:first-of-type {
 	align-self: flex-start;
-	background-color:  #ff3366;
-	border: 3px solid #ff0066;
-	text-shadow: 3px 3px #ff0066;
+	
 }
 .answersContainer>button:last-of-type {
 	align-self: flex-end;
-	background-color: #3333cc;
-	border: 3px solid  #3300cc;
-	text-shadow: 3px 3px #3300cc;
-}
+	}
 
 
 .resultsDiv {
@@ -203,7 +204,9 @@ h3 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #339999;
+	background-color: #009999;
+	border-top: 3px solid #003636;
+	border-bottom: 3px solid #003636;
 	width: 100%;
 }
 
@@ -249,6 +252,8 @@ article p {
 }
 
 span {
-	color: #ffff66;
-	font-size: 1.4em;
+	color: #00f5f5;
+	font-size: 1.6em;
+	font-weight: bolder;
+	font-style: italic;
 }
