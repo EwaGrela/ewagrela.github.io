@@ -11,35 +11,35 @@ const questions = [
 			answers: [["tea", false], ["coffee", false], ["energy drinks", true]],
 			
 			},
-			{title: "You prefer to work?",
-			answers: [["orderly", false], ["creatively", false], ["why not both!", true]],
+			{title: "Your approach to work?",
+			answers: [["orderly", false], ["creative", false], ["why not both!", true]],
 			},
 			{ title: "The best takeout?",
 			answers:[["pizza", false], ["chinese", false], ["indian", true]],
 			
 			},
 			{ title: "What is more important?",
-			answers: [["passion",false], ["perfection", false], ["50/50", true]],
+			answers: [["perfect", false], ["done",true],["50/50", false]],
 			
 			},
 			{ title: "Your ideal friend is...?",
 			answers: [["extrovert",true], ["introvert",false],[ "whatever", false] ]
 			
 			},
-			{ title: "You think talkative people are...",
+			{ title: "You think talkative people are:",
 			answers: [["silly", false], ["honest", false],  ["fine", true]]
 			
 			},
-			{ title: "Favourite music",
+			{ title: "Favourite music:",
 			answers: [["pop dance",true], ["metal", false], ["hip hop", false] ]
 			
 			},
-			{ title: "Do you like 'The Room'",
+			{ title: "Do you like 'The Room'?",
 			answers: [ ["nope", false], ["love it!", true], ["the what?", false] ]
 			
 			},
-			{ title: "Your take on vegetarian cuisine",
-			answers: [["it may be very good",true], ["ewwwww",false], ["I prefer meat", false] ]
+			{ title: "Your take on vegetarian cuisine:",
+			answers: [["may be very good",true], ["eww, groase",false], ["I prefer meat", false] ]
 			
 			},
 			{ title: "Cats or dogs?",
@@ -144,7 +144,11 @@ class Results extends React.Component {
 			<div className ="resultsDiv">
 				<h2>Congrats!</h2> 
 				<p>You have finished the quiz!</p>
-				<p>You received {this.props.value} points</p>
+				<p>You received 
+					<span> {this.props.value} </span>
+				points out of 
+					<span> {questions.length} </span>
+				</p>
 				<Comment value = {this.props.value}/>
 			</div>
 		)

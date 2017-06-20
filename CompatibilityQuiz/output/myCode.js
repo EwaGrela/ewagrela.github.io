@@ -9556,28 +9556,28 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var questions = [{ title: "Tea or coffee?",
 	answers: [["tea", false], ["coffee", false], ["energy drinks", true]]
 
-}, { title: "You prefer to work?",
-	answers: [["orderly", false], ["creatively", false], ["why not both!", true]]
+}, { title: "Your approach to work?",
+	answers: [["orderly", false], ["creative", false], ["why not both!", true]]
 }, { title: "The best takeout?",
 	answers: [["pizza", false], ["chinese", false], ["indian", true]]
 
 }, { title: "What is more important?",
-	answers: [["passion", false], ["perfection", false], ["50/50", true]]
+	answers: [["perfect", false], ["done", true], ["50/50", false]]
 
 }, { title: "Your ideal friend is...?",
 	answers: [["extrovert", true], ["introvert", false], ["whatever", false]]
 
-}, { title: "You think talkative people are...",
+}, { title: "You think talkative people are:",
 	answers: [["silly", false], ["honest", false], ["fine", true]]
 
-}, { title: "Favourite music",
+}, { title: "Favourite music:",
 	answers: [["pop dance", true], ["metal", false], ["hip hop", false]]
 
-}, { title: "Do you like 'The Room'",
+}, { title: "Do you like 'The Room'?",
 	answers: [["nope", false], ["love it!", true], ["the what?", false]]
 
-}, { title: "Your take on vegetarian cuisine",
-	answers: [["it may be very good", true], ["ewwwww", false], ["I prefer meat", false]]
+}, { title: "Your take on vegetarian cuisine:",
+	answers: [["may be very good", true], ["eww, groase", false], ["I prefer meat", false]]
 
 }, { title: "Cats or dogs?",
 	answers: [["dogs", false], ["goldfish :)", false], ["cats", true]]
@@ -9765,9 +9765,22 @@ var Results = function (_React$Component3) {
 				_react2.default.createElement(
 					"p",
 					null,
-					"You received ",
-					this.props.value,
-					" points"
+					"You received",
+					_react2.default.createElement(
+						"span",
+						null,
+						" ",
+						this.props.value,
+						" "
+					),
+					"points out of",
+					_react2.default.createElement(
+						"span",
+						null,
+						" ",
+						questions.length,
+						" "
+					)
 				),
 				_react2.default.createElement(Comment, { value: this.props.value })
 			);
