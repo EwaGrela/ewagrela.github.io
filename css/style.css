@@ -65,21 +65,13 @@ a {
 .square-medium:hover {
     background-color: #0066b3;
 }
-@media(max-width: 595px) {
+@media(max-width: 419px) {
     .squares:hover, .squares:focus {
         transform: scale(1.4)translate(20px, 10px);
         z-index: 3;
     }
-    .squares p:first-of-type {
-        position: absolute;
-        text-decoration: none;
-        color: white;
-        font-size: 2em;
-        top: 25%;
-        left: 25%;
-    }
-    
-    .squares p:nth-of-type(2) {
+   
+    .squares p{
         position: absolute;
         top: 25%;
         left: 25%;
@@ -169,14 +161,10 @@ a {
     padding-bottom: 18%;
 }
 
-@media(min-width: 420px){
-    .squares p:nth-of-type(2){
-        font-size: 0.9em;
-    }
-}
+
 /* for wider screens*/
 
-@media(min-width: 596px) {
+@media(min-width: 420px) {
     @keyframes appear {
         0% {
             opacity: 0;
@@ -349,15 +337,8 @@ a {
     #square12:hover {
         transform: scale(1.4)translate(-25px, 25px);
     }
-    .squares p:first-of-type {
-        position: absolute;
-        text-decoration: none;
-        color: white;
-        font-size: 2em;
-        top: 25%;
-        left: 35%;
-    }
-    .squares p:nth-of-type(2) {
+    
+    .squares p {
         position: absolute;
         top: 25%;
         left: 25%;
@@ -369,45 +350,46 @@ a {
         text-align: left;
     }
 
-    .square p:nth-of-type(2){
+    .square p{
+        font-size: 0.75em;
+    }
+    .square-big p, .square-medium p{
         font-size: 0.8em;
     }
-    .square-big p:nth-of-type(2), .square-medium p:nth-of-type(2){
-        font-size: 0.9em;
-    }
 
-    #square2 p:first-of-type, #square5 p:first-of-type, #square1 p:first-of-type, #square9 p:first-of-type {
-        top: 35%;
-        left: 45%;
-
-    }
-    #square2 p:nth-of-type(2), #square5 p:nth-of-type(2) {
+    
+    #square2 p, #square5 p {
         top: 25%;
         left: 20%;
         width: auto;
     }
 
-    #square1 p:nth-of-type(2), #square9 p:nth-of-type(2) {
+    #square1 p, #square8 p, #square9 p{
         top: 25%;
         left: 20%;
         width: auto;
     }
 
-    #square12 p:first-of-type{
-        top: 30%;
-        left: 40%;
-    }
 
-    #square12 p:nth-of-type(2){
+    #square12 p{
         left:40%;
     }
 }
 
-@media(min-width: 768px){
-    .square p:nth-of-type(2){
+@media(min-width: 596px){
+    .square p{
+        font-size: 0.9em;
+    }
+    .square-big p, .square-medium p{
         font-size: 1em;
     }
-    .square-big p:nth-of-type(2), .square-medium p:nth-of-type(2){
+}
+
+@media(min-width: 768px){
+    .square p{
+        font-size: 1em;
+    }
+    .square-big p, .square-medium p{
         font-size: 1.2em;
     }
 }

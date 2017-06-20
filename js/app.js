@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    /*
     const allLinks = document.querySelectorAll(".squares");
    
     for(var i = 0; i<allLinks.length; i++){
@@ -63,5 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         firstChild.classList.remove("invisible");
         secondChild.classList.add("invisible");
     }
+    */
 
 });
