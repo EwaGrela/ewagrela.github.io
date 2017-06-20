@@ -9558,25 +9558,25 @@ var questions = [{ title: "Tea or coffee?",
 
 }, { title: "You prefer to work?",
 	answers: [["orderly", false], ["creatively", false], ["why not both!", true]]
-}, { title: "Which takeout would you order?",
+}, { title: "The best takeout?",
 	answers: [["pizza", false], ["chinese", false], ["indian", true]]
 
 }, { title: "What is more important?",
 	answers: [["passion", false], ["perfection", false], ["50/50", true]]
 
 }, { title: "Your ideal friend is...?",
-	answers: [["extroverted", true], ["introverted", false], ["whatever", false]]
+	answers: [["extrovert", true], ["introvert", false], ["whatever", false]]
 
 }, { title: "You think talkative people are...",
 	answers: [["silly", false], ["honest", false], ["fine", true]]
 
-}, { title: "People graduating from programming bootcamps...",
-	answers: [["are hardworking", true], ["not real programmers", false], ["ignorant posers", false]]
+}, { title: "Favourite music",
+	answers: [["pop dance", true], ["metal", false], ["hip hop", false]]
 
-}, { title: "You are looking for...",
-	answers: [["HTML/CSS coder", false], ["JavaScript Dev/FrontEndDev", true], ["someone...?", false]]
+}, { title: "Do you like 'The Room'",
+	answers: [["nope", false], ["love it!", true], ["the what?", false]]
 
-}, { title: "What do you think about vegetarian cuisine?",
+}, { title: "Your take on vegetarian cuisine",
 	answers: [["it may be very good", true], ["ewwwww", false], ["I prefer meat", false]]
 
 }, { title: "Cats or dogs?",
@@ -9610,17 +9610,22 @@ var App = function (_React$Component) {
 					_react2.default.createElement(
 						"p",
 						null,
-						"Hello Stranger! Welcome to my world!"
+						"Hello Stranger!"
 					),
 					_react2.default.createElement(
 						"p",
 						null,
-						"Let's check out if we are similar or not!"
+						" Welcome to my world!"
+					),
+					_react2.default.createElement(
+						"p",
+						null,
+						"Let's find out if we are similar."
 					),
 					_react2.default.createElement(
 						"button",
 						{ onClick: this.startQuiz },
-						"Start quiz"
+						"Start"
 					)
 				),
 				_react2.default.createElement(Quiz, null)
@@ -9693,6 +9698,14 @@ var Quiz = function (_React$Component2) {
 					_react2.default.createElement(
 						"h2",
 						null,
+						"Question ",
+						this.state.index + 1,
+						" out of ",
+						questions.length
+					),
+					_react2.default.createElement(
+						"h3",
+						null,
 						questions[index].title
 					),
 					_react2.default.createElement(
@@ -9742,7 +9755,12 @@ var Results = function (_React$Component3) {
 				_react2.default.createElement(
 					"h2",
 					null,
-					"Congrats! You have finished the quiz!"
+					"Congrats!"
+				),
+				_react2.default.createElement(
+					"p",
+					null,
+					"You have finished the quiz!"
 				),
 				_react2.default.createElement(
 					"p",

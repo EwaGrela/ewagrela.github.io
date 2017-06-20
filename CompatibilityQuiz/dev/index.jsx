@@ -14,7 +14,7 @@ const questions = [
 			{title: "You prefer to work?",
 			answers: [["orderly", false], ["creatively", false], ["why not both!", true]],
 			},
-			{ title: "Which takeout would you order?",
+			{ title: "The best takeout?",
 			answers:[["pizza", false], ["chinese", false], ["indian", true]],
 			
 			},
@@ -23,22 +23,22 @@ const questions = [
 			
 			},
 			{ title: "Your ideal friend is...?",
-			answers: [["extroverted",true], ["introverted",false],[ "whatever", false] ]
+			answers: [["extrovert",true], ["introvert",false],[ "whatever", false] ]
 			
 			},
 			{ title: "You think talkative people are...",
 			answers: [["silly", false], ["honest", false],  ["fine", true]]
 			
 			},
-			{ title: "People graduating from programming bootcamps...",
-			answers: [["are hardworking",true], ["not real programmers", false], ["ignorant posers", false] ]
+			{ title: "Favourite music",
+			answers: [["pop dance",true], ["metal", false], ["hip hop", false] ]
 			
 			},
-			{ title: "You are looking for...",
-			answers: [ ["HTML/CSS coder", false], ["JavaScript Dev/FrontEndDev", true], ["someone...?", false] ]
+			{ title: "Do you like 'The Room'",
+			answers: [ ["nope", false], ["love it!", true], ["the what?", false] ]
 			
 			},
-			{ title: "What do you think about vegetarian cuisine?",
+			{ title: "Your take on vegetarian cuisine",
 			answers: [["it may be very good",true], ["ewwwww",false], ["I prefer meat", false] ]
 			
 			},
@@ -56,9 +56,10 @@ class App extends React.Component {
 			<div className ="appContainer">
 				<article>
 					<h2>Compability quiz</h2>
-					<p>Hello Stranger! Welcome to my world!</p>
-					<p>Let's check out if we are similar or not!</p>
-					<button onClick={this.startQuiz}>Start quiz</button>
+					<p>Hello Stranger!</p>
+					<p> Welcome to my world!</p>
+					<p>Let's find out if we are similar.</p>
+					<button onClick={this.startQuiz}>Start</button>
 				</article>
 				< Quiz/>
 			</div>
@@ -115,7 +116,8 @@ class Quiz extends React.Component {
 		if( isFinished ===false){
 			return(
 			<div className ="questionContainer invisible">
-				<h2>{questions[index].title}</h2>
+				<h2>Question {this.state.index +1} out of {questions.length}</h2>
+				<h3>{questions[index].title}</h3>
 				<div className ="answersContainer" >
 					<button value={questions[index].answers[0][1]} onClick ={this.doTheQuiz} >{questions[index].answers[0][0]}
 					</button>
@@ -140,7 +142,8 @@ class Results extends React.Component {
 	render(){
 		return(
 			<div className ="resultsDiv">
-				<h2>Congrats! You have finished the quiz!</h2>
+				<h2>Congrats!</h2> 
+				<p>You have finished the quiz!</p>
 				<p>You received {this.props.value} points</p>
 				<Comment value = {this.props.value}/>
 			</div>
