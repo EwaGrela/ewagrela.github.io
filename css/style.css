@@ -393,3 +393,12 @@ a {
         font-size: 1.2em;
     }
 }
+
+@media(min-width: 1024px){
+    .square p{
+        font-size: 1.1em;
+    }
+    .square-big p, .square-medium p{
+        font-size: 1.45em;
+    }
+}
