@@ -65,6 +65,8 @@ h1 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: transparent;
+	color: white;
+	font-weight: bolder;
 	border: none;
 	
 }
@@ -80,8 +82,8 @@ h1 {
 	height: 260px;
 }
 
-.timer p {
-	height: 50%;
+.timer p:first-of-type {
+	height: 150px;
 	//border: 1px solid white;
 	display: flex;
 	flex-direction: row;
@@ -89,6 +91,22 @@ h1 {
 
 
 }
+
+.timer p:nth-of-type(2){
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2%;
+	min-height: 150px;
+}
+
+.timer p:nth-of-type(2) span {
+	font-size: 20px;
+	text-align: center;
+}
+
+
 form {
 		align-self: center;
 }
@@ -128,6 +146,11 @@ form {
 		width: 100px;
 		height: 100px;
 	}
+	.timer p:nth-of-type(2) span {
+	font-size: 24px;
+	text-align: center;
+}
+
 }
 @media(min-width: 596px){
 	.item {
