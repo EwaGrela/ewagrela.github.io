@@ -105,16 +105,27 @@ button:not(#beginBtn) {
 .resultsHeader{
 	color: lightblue;
 }
-.resultsArticle,.resultsParagraph {
+.resultsArticle {
 	height: auto;
 	width: 90vw;
 	border: 3px dashed #004455;
 	margin-top: 20px;
 	background-color: #005566;
-	font-size: 1.6em;
+	font-size: 1.4em;
 	padding: 10px;
 	color: #fefefe;
 	text-align: center;
+}
+.resultsArticle div {
+	font-size: 1.3em;
+}
+.resultsParagraph {
+	font-size: 1em;
+	border: none;
+	width: 90vw;
+	padding: 10px;
+	text-align: center;
+	color: #efefef;
 }
 @media(min-width: 568px){
 	h1 {
@@ -138,7 +149,11 @@ button:not(#beginBtn) {
 	}
 	.resultsParagraph {
 		width: 70vw;
+		font-size: 1.15em;
 	}
+	.resultsArticle div {
+	font-size: 1.5em;
+}
 	
 }
 
@@ -156,5 +171,6 @@ button:not(#beginBtn) {
 	}
 	.resultsParagraph {
 		width: 60vw;
+		font-size: 1.3em
 	}
 }

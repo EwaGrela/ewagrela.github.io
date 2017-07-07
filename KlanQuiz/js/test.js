@@ -54,13 +54,10 @@ klanQuizData.once("value").then(function(data){
 				createQuestion();
 			}
 			
-		} //else {
-			//displayResults();
-		//}	
-		console.log( index, correctAnswers);	
+		} 
+		
 	}
 	function displayResults(){
-		console.log("koniec");
 		const resultsArticle = document.createElement("article");
 		resultsArticle.classList.add("resultsArticle");
 		section.append(resultsArticle);
@@ -71,7 +68,7 @@ klanQuizData.once("value").then(function(data){
 		resultsHeader.classList.add("resultsHeader");
 		resultsArticle.classList.add("resultsArticle");
 		const resultsParagraph = document.createElement("p");
-		section.append(resultsParagraph);
+		resultsArticle.append(resultsParagraph);
 		resultsParagraph.classList.add("resultsParagraph");
 		function computeResults(){
 			resultsDiv.textContent = correctAnswers + " punktów na "+ questions.length + " możliwych";
