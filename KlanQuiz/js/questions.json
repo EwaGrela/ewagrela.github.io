@@ -1,0 +1,782 @@
+{
+    "quizName": "ultimate klan quiz",
+    "quizData": {
+    "title": "Jak dobrze znasz Klan",
+    "questions": [
+        {   "questionTitle":"Jak brzmi ulubione powiedzonko cioci Stasi?",
+            "answers":[
+                {
+                    "answer": "Błożesz Ty mój!",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Sobaka!",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Na złodzieju czapka gore",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Kto rano wstaje, temu Pan Bóg daje",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Ile dzieci ma Michał i z iloma kobietami?",
+            "answers":[
+                {
+                    "answer": "Dwoje z jedną",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Czworo z trójką",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Pięcioro z dwiema",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Troje z trzema",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"W temacie Michała i jego płodności, jaką ma ksywkę na Bece z Klanu?",
+            "answers":[
+                {
+                    "answer": "Buhaj",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Jurny Juhas",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Michał Rozpłodowy",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Ronaldo",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+
+        {   "questionTitle":"Czym otruła Eryczka El-Żunia w odcinku pilocie?",
+            "answers":[
+                {
+                    "answer": "Chloroksem",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Mefedronem",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Medaksem",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Tlenkiem węgla",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Pamiętamy Eryczka, a jak nazywała się jego mama i z kim później miała kolejne dziecko?",
+            "answers":[
+                {
+                    "answer": "Anulka, z Darkiem",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Wiera, z Pawłem",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Ilonka, z docentem Deptułą",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Wiesia, z Darkiem",
+                    "isCorrect": true
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Kim dla Sandry jest Kamila?",
+            "answers":[
+                {
+                    "answer": "Siostrą dziadka jej dziecka",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Byłą ojca jej dziecka",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Tutaj dwie odpowiedzi są poprawne",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Kuzynką ojca jej dziecka",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Beata jest kobietą życia Rafalskiego, lecz zakochał się on kiedyś jeszcze w:",
+            "answers":[
+                {
+                    "answer": "Jej kuzynce Agnieszce",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Jej ciotce Dorocie",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Jej ciotce Krystynie",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Żonie jej brata, Kindze",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jak poznali się Agnieszka Lubicz i jej partner?",
+            "answers":[
+                {
+                    "answer": "Na proteście ekologów, przykuł się do drzewa",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "W redakcji 'Brukowej', ona przeczytała z nim wywiad",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "On zaoferował jej podwózkę, gdy złapała gumę",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Na imprezie organizowanej przez wspólnych znajomych",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Weźmy na tapetę siostry Lubicz; jaki jest zawód Oli?",
+            "answers":[
+                {
+                    "answer": "Jest tłumaczką języka angielskiego",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Jest szkolnym pedagogiem",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Jest kuratorem sądowym",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Jest dziennikarką",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Siostry Lubicz znane są z tego, że są kochliwe. Imiona ich obecnych partnerów to:",
+            "answers":[
+                {
+                    "answer": "Janusz i Rafał",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Adam i Miron",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Piotr i Mateusz",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Łukasz i Kuba",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Co jest popisowym daniem Jerzego z Klanu?",
+            "answers":[
+                {
+                    "answer": "Pierogi z jagodami",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Gołąbki",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Bigos",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Placek ze śliwkami",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jaka jest cecha charakterystyczna męża pani Stanisławy, Jeremiasza?",
+            "answers":[
+                {
+                    "answer": "Jest bardzo muzykalny",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Jest przywiązany do wnuka",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Ma talent kulinarny",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Jest zrzędliwy, uparty i niesympatyczny",
+                    "isCorrect": true
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jaki tytuł zdobył Borys, chłopak Kamili na konkursie piękności w Berlinie?",
+            "answers":[
+                {
+                    "answer": "Great Abs",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Best Bottom",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Sexy Ass",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Mister Muscle",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Kim będą dla siebie Leopold, mąż Grażynki i Arkadiusz, jej były?",
+            "answers":[
+                {
+                    "answer": "Teściami swoich dzieci",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Szwagrami",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Kumami",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Nie będą mieć relacji rodzinnych",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jaki pseudonim artystyczny ma narzeczony córki Leopolda?",
+            "answers":[
+                {
+                    "answer": "Corebass",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Korbas",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Destroyer",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Toxic Fucker",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+
+        {   "questionTitle":"Pan Bronek i pani Leokadia, teściowa Grażynki, byli na wycieczce w...",
+            "answers":[
+                {
+                    "answer": "Australii",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Tajlandii",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Japonii",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Kazachstanie",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jak nazywają się pieski pani Surmaczowej?",
+            "answers":[
+                {
+                    "answer": "Pixie i Dixie",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Tom i Jerry",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Pablo i Pedro",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Tropek i Dropek",
+                    "isCorrect": true
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Sekta, w szpony której wpadli Daniel i Małgosia nazywa się:",
+            "answers":[
+                {
+                    "answer": "Dzieci Słońca",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Droga Słońca",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Scjentolodzy",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Antrovis",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jak nazywała się dziewczynka z Syrii, którą opiekowali się Jacek i Agata?",
+            "answers":[
+                {
+                    "answer": "Laila",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Samira",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Shila",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Aisha",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+
+        {   "questionTitle":"Jaka jest ksywka Oli Lubicz na Bece z Klanu i skąd się wzięła?",
+            "answers":[
+                {
+                    "answer": "Czupakabra, od meksykańskiego potwora",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Czikulina (Cziku), od piosenki 'Chinka Czikulinka'",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Czaki, od Laleczki Chucky",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Czeri Lejdi, od piosenki Modern Talking",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Z jakiego powodu Kamila zarzekała się, że nie będzie w związku z Borysem?",
+            "answers":[
+                {
+                    "answer": "Z powodu różnicy wieku",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Z powodu jego powodzenia u innych kobiet",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Ponieważ Borys nie ma matury",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Ponieważ są dalekimi kuzynami",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jak nazywał się kochanek Anny Surmacz, który potem zdradził ją z jej córką?",
+            "answers":[
+                {
+                    "answer": "Zygi",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Munio",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Czaruś",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Benek",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jak ma na imię seksowna brunetka o bujnym biuście, która jest dziewczyną Jasia?",
+            "answers":[
+                {
+                    "answer": "Tamara",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Irmina",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Ramona",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Eleonora",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Jak nazywał się legendarny dyrektor liceum im. Tetmajera?",
+            "answers":[
+                {
+                    "answer": "Kazubek",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Zubkowicz",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Kozub",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Karaś",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Rysiek z Klanu miał wiele przygód, a najbardziej ekscytującą było:",
+            "answers":[
+                {
+                    "answer": "Wycieczka do Las Vegas za wygraną w totka",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Odsiecz prostytutkom z osiedlowej agencji towarzyskiej",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Pościg taksówką za złodziejami",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Wizyta z Maćkiem u seksuologa",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Zanim został ojcem dziecka Sandry, Norbert był z Kamilą, a jeszcze wcześniej spotykał się z:",
+            "answers":[
+                {
+                    "answer": "Małgosią",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Ramoną",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Agnieszką",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Olą",
+                    "isCorrect": true
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Czesia ma męża Darka, dającego jej powody do zmartwień. Jego największymi wadami są:",
+            "answers":[
+                {
+                    "answer": "Bałaganiarstwo i lenistwo",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Słabość do alkoholu i pięknych kobiet",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rozrzutność i niegospodarność",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Pracoholizm i pedantyzm",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Paweł i El-Żunia są rodzeństwem. Jak dokładnie wyglada ich relacja?",
+            "answers":[
+                {
+                    "answer": "Paweł jest starszy od El-Żuni",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "El-Żunia jest starsza od Pawła",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Są przyrodnim rodzeństwem",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Są bliźniętami",
+                    "isCorrect": true
+
+                }
+
+            ]
+
+        },
+
+        {   "questionTitle":"Jak nazywała się koleżanka Agnieszki, która targnęła się na życie?",
+            "answers":[
+                {
+                    "answer": "Łucja",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Magda",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Lena",
+                    "isCorrect": true
+
+                },
+                {
+                    "answer": "Milena",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        },
+        {   "questionTitle":"Rafalski po porzuceniu przez Beatę był z jej koleżanką z roku, Martą. Jaki miało to finał?",
+            "answers":[
+                {
+                    "answer": "Marta odeszła od Rafalskiego, zdradzając go z wykładowcą",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Rafalski w ataku furii pchnął Martę na szafkę i ją zabił",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rafalski porzucił Martę, bo mu się znudziła",
+                    "isCorrect": false
+
+                },
+                {
+                    "answer": "Rozstali się w zgodzie, uznając, że do siebie nie pasują",
+                    "isCorrect": false
+
+                }
+
+            ]
+
+        }
+
+
+    ],
+    "descriptions": [
+        {
+            "result": "Błożesz Ty mój",
+            "description": "To właśnie powiedziałaby pani Stanisława, gdyby zobaczyła Twój wynik. Potem pewnie nakarmiłaby Cię miską pielmieni i zaparzyła morze czaju. Wiesz doskonale czym kto kogo otruł, kto ma ile dzieci i, co najważniejsze, z kim. Klan nie ma przed Tobą tajemnic!"
+
+        },
+        {
+            "result": "W rzeczy samej",
+            "description":"Jak wysapałby doktor Koziełło, jesteś niezłym Klan-ekspertem, ale trzeba jeszcze nieco pracy. Zamów hinduskie żarcie/pizzę/chińszczyznę/co tam lubisz i bindżłoczuj. Akurat są wakacje, nic nowego u Lubiczów i spółki się nie wydarzy. Nadrobisz zaległości.   "
+
+        },
+        {
+            "result": "Absolutnie!",
+            "description": "...ale to absolutnie musisz nadrobić zaległości i odświeżyć pamięć, bo wygląda na to, że nie wiesz, kto słynie z Best Bottom, a kto narzeka całymi dniami. Co gorsza, być może nawet nie wiesz, co tak naprawdę Cię omija! Wszystkie odcinki Klanu są na VOD, oglądaj ile wlezie."
+        }
+    ]
+    
+}
+
+}

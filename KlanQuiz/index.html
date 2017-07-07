@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng-ENG">
+   <head>
+      <meta charset="UTF-8">
+      <title>Klan Quiz</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.css"> 
+   </head>
+   <body>
+      <section>
+        <h1>Klan quiz</h1>
+        <article>
+          <h2>Sprawdź się!</h2>
+          <p>
+            Klan ma już 20 lat! 
+          </p>
+          <p>Sprawdź, jak dobrze znasz ten serial!</p>
+          <p>Przed Tobą 30 pytań, gotowy?</p>
+          <button id="beginBtn">absolutnie!</button>
+        </article>
+      </section>
+      <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+	  <script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDlExn2UXX0oBrQxSrvRDYp1Cxr3LC36hc",
+		    authDomain: "ultimateklanquiz.firebaseapp.com",
+		    databaseURL: "https://ultimateklanquiz.firebaseio.com",
+		    projectId: "ultimateklanquiz",
+		    storageBucket: "",
+		    messagingSenderId: "448341557542"
+		  };
+		  firebase.initializeApp(config);
+	  </script>
+      <!--<script type="text/javascript" src="js/questions.js"></script>-->
+      <script type="text/javascript" src="js/test.js"></script>
+      
+   </body>
+</html>
+

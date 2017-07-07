@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cadetblue;
+  font-family: 'Lato', sans-serif;
+}
+section, article {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+article p {
+	color: #004455;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 15px;
+	font-weight: bold;
+	
+}
+article {
+	background-color: lightblue;
+	border: 2px dashed #002233;
+	width: 95vw;
+	height: auto;
+}
+h1, h2, h3 {
+	margin: 10px;
+	text-align: center;
+}
+h1 {
+	color: #fefefe;
+	text-shadow: 1px 1px #004455;
+	text-transform: capitalize;
+	font-size: 2em;
+}
+
+h2 {
+	color: #002244;
+	text-shadow: 1px 1px #fefefe;
+	font-size: 1.2em;
+}
+h3 {
+	color: #003344;
+	text-shadow: 1px 1px #fefefe;
+	font-size: 1.1em;
+	
+}
+.questionContainer{
+	border: 3px solid #004455;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 380px;
+	background-color: lightblue;
+	width: 95vw;
+	margin-top: 10px;
+}
+
+.answersContainer {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 90vw;
+	height: 300px;	
+}
+
+.questionNumber {
+	margin: 10px;
+	font-size: 1.4em;
+	color: #004455;
+	font-weight: bolder;
+}
+
+button:not(#beginBtn) {
+	width: 90%;
+	height: 40px;
+	background-color: #006677;
+	border-radius: 1%;
+	font-size: 0.9em;
+	border:3px solid #005566;
+	color: #fefefe;
+	
+}
+
+#beginBtn {
+	background-color: #006677;
+	color: white;
+	border: #005566;
+	border-radius: 4%;
+	width: 150px;
+	height: 40px;
+	margin: 15px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+.resultsHeader{
+	color: lightblue;
+}
+.resultsArticle,.resultsParagraph {
+	height: auto;
+	width: 90vw;
+	border: 3px dashed #004455;
+	margin-top: 20px;
+	background-color: #005566;
+	font-size: 1.6em;
+	padding: 10px;
+	color: #fefefe;
+	text-align: center;
+}
+@media(min-width: 568px){
+	h1 {
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 1.6em;
+	}
+	h3 {
+		font-size: 1.4em;
+	}
+	button:not(#beginBtn) {	
+		font-size: 1.1em;
+	}
+
+	article {
+		width: 70vw;
+	}
+	article p {
+		font-size: 1.3em;
+	}
+	.resultsParagraph {
+		width: 70vw;
+	}
+	
+}
+
+@media(min-width: 796px){
+	.questionContainer {
+		width: 70vw;
+	}
+
+	.answersContainer {
+		width: 65vw;
+	}
+	button:not(#beginBtn){
+		height: 50px;
+		font-size: 1.2em;
+	}
+	.resultsParagraph {
+		width: 60vw;
+	}
+}
