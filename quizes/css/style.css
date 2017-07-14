@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efefef;
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.grid-section {
+  overflow: hidden;
+  padding-bottom: 200px;
+}
+
+.grid {
+  padding-bottom: 100%;
+  position: relative;
+  height: 50vh;
+  transform: rotate(45deg);
+  transform-origin: 39%;
+  background-color: #efefef;
+  border-top: 7px solid #777;
+  border-left: 7px solid #777;
+}
+
+.diamond-big {
+  width: 25%;
+  border-radius: 5%;
+  padding-bottom: 25%;
+  display: inline-block;
+  transition: 2s;
+  background-color: #006666;
+  border: 2px solid  #007777;
+}
+
+
+.diamond-big:hover {
+  background-color: #006699;
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+#diamond1 {
+  position: absolute;
+  top: 8%;
+  left: 10.5%;  
+}
+
+#diamond2 {
+  position: absolute;
+  top: 8%;
+  left: 37%;  
+}
+
+#diamond3 {
+  position: absolute;
+  top: 35%;
+  left: 10.5%;
+}
+
+
+.diamond-big p {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: rotate(315deg);
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+}
+.diamond-big p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 568px) {
+  .diamond-big p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .diamond-big p {
+    font-size: 18px;
+  }
+}
+
+
