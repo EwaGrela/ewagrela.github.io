@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("My game of life - this WILL be a challenge!");
+    console.log("My game of life - took me a few days, but loved every second of it!");
 
     var body = document.querySelector("body");
 
@@ -64,13 +64,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //tworzymy obiekt game będący obiektem typu GameOfLife
         var game = new GameOfLife(inputBoardWidth.value, inputBoardHeight.value);
-        console.log(game);
 
         var board = document.getElementById("board");
-        console.log(board);
 
         game.board = board;
-        console.log(game);
         //tworzymy tablicę przy pomocy metody createBoard();
         GameOfLife.prototype.createBoard = function() {
             this.board.style.width = (this.width * 10) + "px";
@@ -86,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
             this.cells = allFields;
 
             for (var i = 0; i < this.cells.length; i++) {
-                console.log(this.cells[i].className);
                 this.cells[i].classList.remove("boardCell"); //ta klasa nie jest nam już później potrzebna
                 this.cells[i].addEventListener("click", function(event) {
                     this.classList.toggle("live");
@@ -113,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function() {
         GameOfLife.prototype.defineCoordinates = function(x, y) { //tworzymy metodę, która zwróci nam komórkę o podanych współrzędnych
             this.x = x;
             this.y = y;
-            //console.log(this);
             if (x < 0 || x > this.width - 1 || y < 0 || y > this.width) {
                 return undefined;
             }
@@ -208,8 +203,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         GameOfLife.prototype.computeNextGeneration = function() {
-            //console.log(this.width, this.height);
-            console.log(this);
             this.nextGeneration = [];
             for (var i = 0; i < this.height; i++) {
                 for (var j = 0; j < this.width; j++) {
@@ -222,7 +215,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         GameOfLife.prototype.printNextGeneration = function() {
-            console.log(this.nextGeneration);
             for (var i = 0; i < this.cells.length; i++) {
                 if (this.nextGeneration[i] === 1) {
                     this.cells[i].classList.add("live");
@@ -237,9 +229,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var playButton = document.getElementById("play");
         
-
         var pauseButton = document.getElementById("pause");
-        
 
         playButton.addEventListener("click", function() {
             var interval = setInterval(stepOneGame, 200);
