@@ -21,7 +21,9 @@ function createComebackBtn(element) {
     button.attr("href", "https://ewagrela.github.io/project90/");
 }
 
-
+function seeText(el){
+    document.title = $(this).text().toUpperCase();
+}
 var alertText = "Scary Spice is not amused you missed the question";
 
 function createAlertBox(element) {

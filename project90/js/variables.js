@@ -12,6 +12,7 @@
 	/*
 	variables for DOM elements
 	*/
+	var lisInMenu = $(".menu").children();
 	var header = $("header");
 	var footer = $("footer");
 	var scrollingButton = footer.find("button");

@@ -1,6 +1,5 @@
 $(function() {
     //keeping page in position
-
     $('body').scrollTop(0);
     //showing content of hamburger menu
     hamburgerMenu.on("click", function(event) {
@@ -24,6 +23,8 @@ $(function() {
             scrollTop: $(href).offset().top
         }, 2000);
     });
+    
+    lisInMenu.on("click", seeText);
     //scrolling the page up from footer
     scrollingButton.on("click", function(event) {
         event.preventDefault();
