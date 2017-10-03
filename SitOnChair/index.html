@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sit on Chair</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+</head>
+<body>
+	<div class="grid">
+		<header class="row header">
+		<div class="main-width">
+			<p class="col-7">sit <span>on</span> chair</p>
+			<menu class="col-5 header-menu">
+				<ul class="row">
+					<li class="col-4"><a href="#gallery">galeria</a></li>
+					<li class="col-4"><a href="#offer">oferta</a></li>
+					<li class="col-4"><a href="#contact">kontakt</a></li>
+				</ul>
+			</menu>
+			<menu class="hamburger-menu">
+				<button class="hamburger"></button>
+				<ul class="dropdown-menu invisible row">
+					<li class="col-4"><a href="#gallery">galeria</a></li>
+					<li class="col-4"><a href="#offer">oferta</a></li>
+					<li class="col-4"><a href="#contact">kontakt</a></li>
+				</ul>
+			</menu>
+		</div>
+	</header>
+	</div>
+	<div class="grid">
+		<section class="row slider-section">
+			<div class="main-width">
+				<article class="article-1">
+					<div class="article-item slider">
+						<button class="slider-button" id="prev"><</button>
+						<ul class="slider-list">
+							<li>
+								<img src="../images/black_chair.png">
+							</li>
+							<li>
+								<img src="../images/orange.png">
+							</li>
+							<li>
+								<img src="../images/red.png">
+							</li>
+						</ul>	
+						<button class="slider-button" id="next">></button>
+					</div>
+					<div class="article-item">
+						<h1 class="article1-header">sit <span>on</span> our <span>chair</span></h1>
+						<p>Does everybody know that pig named Lorem Ipsum? She's a disgusting pig, right? It’s about making placeholder text great again. That’s what people want, they want placeholder text to be great again.</p>
+						<button class="article-button">zobacz więcej</button>
+					</div>
+				</article>
+			</div>		
+		</section>
+	</div>
+	<div class="grid" id="gallery">
+		<section class="row pictures-section">
+			<h2>Galeria<br></h2>
+			<article class="main-width pictures-article">
+				<div class="col-4 picture-container">
+					<div id="first-picture">
+						<div>
+							<h4>Chair Clair<br></h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 picture-container">
+					<div id="second-picture">
+						<div>
+							<h4>Chair Margarita<br></h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 picture-container">
+					<div id="description">
+						<h4>Finds all inputs<br></h4>
+						<p>Does everybody know that pig named Lorem Ipsum? She's a disgusting pig, right? It’s about making placeholder text great again.</p>
+						<p>Make America great again.</p>
+					</div>
+				</div>
+			</article>
+		</section>
+	</div>
+	<div class="grid pricing" id="offer">
+		<section class="main-width pricing-section">
+			<h2>cennik<br></h2>
+			<article class="pricing-article">
+				<div class="pricing-container">
+					<div class="small-circle">
+						<div class="inside-circle"></div>
+					</div>
+					<div class="upper-container">
+						<h3>basic plan</h3>
+						<div class="pricing-circle">85 <sup>99 <br><span>PLN/msc</span></div>
+					</div>
+					<div class="stripy-container">
+						<div class="info">Zakup towaru + dowóz</div>
+						<div class="info">Serwis</div>
+					</div>
+					<div>
+						<button class="pricing-button">dołącz</button>
+					</div>
+				</div>
+				<div class="pricing-container" id="colored-container">
+					<div class="small-circle">
+						<div class="inside-circle"></div>
+					</div>
+					<div class="upper-container">
+						<h3>standard plan</h3>
+						<div class="pricing-circle">95<sup> 99<br><span>PLN/msc</span></div>
+					</div>
+					<div class="stripy-container">
+						<div class="info">Zakup towaru + dowóz</div>
+						<div class="info">Serwis</div>
+						<div class="info">Gwarancja 5 lat</div>
+					</div>
+					<div>
+						<button class="pricing-button">dołącz</button>
+					</div>
+				</div>
+				<div class="pricing-container">
+					<div class="small-circle">
+						<div class="inside-circle"></div>
+					</div>
+					<div class="upper-container">
+						<h3>advanced plan</h3>
+						<div class="pricing-circle">95 <sup> 99 <br><span>PLN/msc</span></div>
+					</div>
+					<div class="stripy-container">
+						<div class="info">Zakup towaru + dowóz</div>
+						<div class="info">Serwis</div>
+						<div class="info">Gwarancja 5 lat</div>
+						<div class="info">Porady projektanta</div>
+					</div>
+					<div>
+						<button class="pricing-button">dołącz</button>
+					</div>
+				</div>
+			</article>		
+		</section>
+	</div>
+	<div class="grid form-container" id="contact">
+		<section class="main-width form-section">
+			<h2>Kontakt<br></h2>
+			<form class="contact-form row">
+				<div class="left-form col-7">
+					<label>Imię</label>
+					<input type="text" name="name">
+					<label>e-mail</label>
+					<input type="e-mail" name="email">
+					<label>Wiadomość</label>
+					<input id="message-input" type="text" name="message">
+				</div>
+				<div class="right-form col-5">
+					<div class="red-chair-image"></div>
+					<div class="checkbox">
+						<input id="form-checkbox" type="checkbox" name="checkbox">
+						<div id="fake-checkbox"></div>
+						<label>Wyrażam zgodę na przetwarzanie danych osobowych</label>
+					</div>
+					<input id="form-submit" type="submit" name="submit" value="wyślij">
+				</div>
+			</form>
+		</section>
+	</div>
+		<footer class="footer row">
+			<section class="main-width footer-section" id="contact">
+				<div class="row footer-content">
+					<p class="copyright col-8">Copyright 2014|All rights reserved. Sit on chair</p>
+					<div class="col-2 four-icons">
+						<img src="../images/flickr.png">
+						<img src="../images/vimeo.png">
+						<img src="../images/pinterest.png">
+						<img src="../images/twitter.png">
+					</div>
+					<p class="col-2" id="logo">sit <span>on</span> chair</p>
+				</div>
+			</section>
+		</footer>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="app2.js"></script>
+</body>
+</html>
