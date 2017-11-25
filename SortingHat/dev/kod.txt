@@ -1,0 +1,48 @@
+let text;
+		if(results["Hufflepuff"]>(results["Slytherin"]+results["Gryffindor"]+results["Ravenclaw"])/2){
+			console.log("you are a Hufflepuff")
+		
+		}
+		else if (results["Slytherin"]>(results["Hufflepuff"]+results["Gryffindor"]+results["Ravenclaw"])/2){
+			console.log("You are a Slytherin")
+			
+		}
+		else if (results["Gryffindor"]>(results["Hufflepuff"]+results["Slytherin"]+results["Ravenclaw"])/2){
+			console.log("You Gryffindor")
+		
+		}
+		else if (results["Ravenclaw"]>(results["Hufflepuff"]+results["Gryffindor"]+results["Slytherin"])/2){
+			console.log("You are a Ravenclaw")
+
+		}
+		else {
+			console.log("It is undecided")
+			text = "It is not decided"
+		}
+
+
+
+
+console.log(this.state.score)
+		console.log(this.state.index)
+		console.log(questions.length)
+		console.log(this.state.result)
+		if(this.state.index<=questions.length){
+			return(
+			<div>
+				<h1>{this.state.questions[this.state.index].questionTitle}</h1>
+					{this.createQuestion(0)}
+			</div>
+			 
+			)
+		} else {
+			return(
+			<div>
+			{this.showResults()}
+			</div>
+			)
+			
+		}
+		
+		
+		

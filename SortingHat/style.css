@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body::before {
+	content: "";
+    display: block;
+    position: fixed;
+    opacity: 0.86;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    z-index: -10;
+	background-image: url("images/sorting.png");
+	filter: grayscale(80%);
+	background-size: contain;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+.text {
+	color: #fefefe;
+	font-size: 16px;
+	font-weight: bolder;
+	text-shadow: 2px 2px #fefefe;
+}
+body {
+	background-color:#555;
+	color: #dedede;
+	font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p {
+	text-align: center;
+}
+h1,h2 {
+	margin-top: 20px;
+	text-shadow: 1px 1px #111;
+}
+p {
+	font-size: 1.5em;
+	width: 60vw;
+	line-height: 1.5;
+}
+
+.mainContent, .content, .results, .results>div {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.questions{
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 80vw;
+	height: 400px;
+}
+.questions div {
+	width: 80vw;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.questions button {
+	width: 100%;
+	height: 50px;
+	font-size: 1em;
+	border: none;
+	color: #222;
+	text-shadow: 2px 2px #777;
+	text-transform: uppercase;
+	//filter: grayscale(90%);
+}
+
+.hufflepuff {
+	background-color:  #336699;
+
+}
+
+.gryffindor {
+	background-color: #457899;
+}
+
+.ravenclaw {
+	background-color:  #6d8e9a;
+}
+.slytherin {
+	background-color:  #99aaff;
+}

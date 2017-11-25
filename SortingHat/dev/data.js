@@ -1,4 +1,4 @@
-const sortingSet = {
+module.exports = {
 	title: "Time to be sorted",
 	questions: [
 		{
@@ -460,26 +460,33 @@ const sortingSet = {
 		},
 			
 	],
-	finalResults: [
-		{	
+	descriptions: [
+		 {	
 			house:"Ravenclaw",
-			characteristics:" You are a Ravenclaw, smart, studious and brainy. You use your impressive intelligence to solve all the problems"
+			characteristics:" smart, studious and brainy. You use your impressive intelligence to solve all the problems"
 
 		},
+		
 		{
 			house: "Slytherin",
-			characteristics: " You are a Slytherin, ambitious, cunning and relentless. You will stop at nothing until you get what you want", 
+			characteristics: " ambitious, cunning and relentless. You will stop at nothing until you get what you want", 
 
 		},
+		
 		{	
 			house: "Gryffindor",
-			characteristics: " You are a Gryffindor, brave, daring and chivalrous. You defend the weaker.", 
+			characteristics: " brave, daring and chivalrous. You defend the weaker.", 
 
 		},
+	
 		{
 			house: "Hufflepuff",
-			characteristics:" You are a Hufflepuff, just, loyal and patient. You are a hard worker and a true friend in need."
+			characteristics:" just, loyal and patient. You are a hard worker and a true friend in need."
 
 		}
+
 	]
+
+		
+	
 }
