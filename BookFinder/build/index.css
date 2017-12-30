@@ -1,0 +1,48 @@
+.Global {
+	text-align: center;
+	padding: 10px;
+}
+body {
+	background-color: #dedede;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 90vw;
+	padding: 5px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border: 2px solid #999;
+}
+
+.flex-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 100%;
+}
+
+img, .bookIcon{
+	width: 200px;
+	height: 300px;
+
+}
+img:hover {
+	transform: scale(1.1);
+	border: 2px solid lightblue;
+	box-shadow: 2px 2px 2px lightblue;
+	transition: 1s;
+
+}
+.bookIcon {
+	background-color: black;
+}
+
+.flex-info {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center
+}
