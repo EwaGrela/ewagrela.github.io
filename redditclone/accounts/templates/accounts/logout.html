@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content%}
+	<h2>You logged out</h2>
+	<h3>What do you want to do next?</h3>
+	<ul>
+		<li role="button" class="button primary-btn"><a href="{ url 'home'}" >log me in again</a></li>
+	</ul>
+	{% if error%}
+	<div>{{error}}</div>
+	{%endif%}
+{% endblock %}

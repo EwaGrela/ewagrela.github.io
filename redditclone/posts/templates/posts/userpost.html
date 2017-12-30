@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posts by user</title>
+</head>
+<body>
+	{% block content %}
+	<h1 class="page-header">All {{ author }} 's posts:</h1>
+	<div class="jumbotron">
+		{% for userpost in userposts.all  %}
+		<table>
+			<tr>
+				<td style="padding-right: 20px">
+				<br>
+				<a href ="#" onClick ="document.getElementById('upvote{{userpost.id}}').submit()">
+					<span class="glyphicon glyphicon-triangle-top" aria-hidden="true">	
+					</span>
+				</a>
+				<br>
+				<span>{{userpost.votes_total}}</span>
+				<br> 
+				<a href ="#" onClick ="document.getElementById('downvote{{userpost.id}}').submit()">
+					<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true">
+					</span>
+				</a>
+				</td>
+				<td>
+					<a href ="{{userpost.url}}">{{userpost.title}}</a>
+					<br>
+					<p>{{userpost.published_pretty}} by <a>{{userpost.author.username}}</a></p>
+				</td>
+			</tr>
+		</table>
+		{% if user.is_authenticated  %}
+		
+		<form id="upvote{{userpost.id}}" method= "POST" action="{% url 'posts:upvote' userpost.id %}" >
+			{% csrf_token %} 
+		<input type="hidden">
+		</form>
+{% endif %}
+
+
+{% if user.is_authenticated  %}
+		<form id="downvote{{userpost.id}}" method= "POST" action="{% url 'posts:downvote' userpost.id %}" >
+				{% csrf_token %} 
+		<input type="hidden">
+		</form>
+{% endif %}	
+		{% endfor %}
+		
+		{% endblock %}
+	
+		</div>
+</body>
+</html>
+
+
+
