@@ -1,12 +1,11 @@
-from string import punctuation, ascii_lowercase
+from string import punctuation, ascii_lowercase, ascii_uppercase
 
 specials = list(punctuation) + list("1234567890")
 lowers = list(ascii_lowercase)
-uppers = list(ascii_lowercase.upper())
-print(specials)
+uppers = list(ascii_uppercase)
 """
-Passwoerd generator:
-generating a password - a user decides if it is a weak or strong one;
+Password validator:
+checking a password - a user decides if they want a weak or a strong one;
 weak one has to be at least 6 characters long and have at least one special character OR capital letter 
 strong one - 8 characters long, has 2 special characters and one capital letter
 """
