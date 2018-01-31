@@ -195,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
             }, 8000)
         }
 
-
         generateResult();
     }
 

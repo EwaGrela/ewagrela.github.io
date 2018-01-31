@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("bettergame");
     var body = document.querySelector("body");
 
     var header = document.querySelector("header");
