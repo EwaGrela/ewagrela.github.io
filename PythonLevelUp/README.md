@@ -16,10 +16,13 @@ https://geocities-kinda-like.herokuapp.com/cities?country_name=Poland
 3. you can limit the results, works whether you want them for specific country or not: https://geocities-kinda-like.herokuapp.com/cities?country_name=Poland&per_page=10&page=2 or 
 https://geocities-kinda-like.herokuapp.com/cities?per_page=10&page=2
 4. using POST (RESTer or POSTman) you can POST a new record, provided the country_id you use is in the database:
+
 {
     "country_id": 76,
     "city_name": "Warszawa",
-}, will return the JSON with cities data as a result, will throw an error if no such country_id
+}
+
+will return the JSON with cities data as a result, will throw an error if no such country_id
 5. using GET you can check the number of roles in each language https://geocities-kinda-like.herokuapp.com/lang_roles
 
 ## flask app using postgreSQL https://we-built-this-city.herokuapp.com/
@@ -29,8 +32,11 @@ https://we-built-this-city.herokuapp.com/cities?country_name=Poland
 3. you can limit the results, works whether you want them for specific country or not: https://we-built-this-city.herokuapp.com/cities?country_name=Poland&per_page=10&page=2 or 
 https://we-built-this-city.herokuapp.com/cities?per_page=10&page=2
 4. using POST (RESTer or POSTman) you can POST a new record, provided the country_id you use is in the database:
+
 {
     "country_id": 76,
     "city_name": "Warszawa",
-}, will return the JSON with cities data as a result, will throw an error if no such country_id
+}
+
+ will return the JSON with cities data as a result, will throw an error if no such country_id
 
