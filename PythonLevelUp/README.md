@@ -5,10 +5,10 @@
 3. go to https://level-up-basic.herokuapp.com/user-agent to see your user agent
 
 ## Flask app to test logging in using a cookie and REST services: https://something-fishy.herokuapp.com/
-1. use RESTer (for Firefox) or POSTman services for POST requests and log in on https://something-fishy.herokuapp.com//login using POST method (username and password in app.py file)
+1. use RESTer (for Firefox) or POSTman services for POST requests and log in on https://something-fishy.herokuapp.com/login using POST method (username and password in app.py file)
 2. once logged in, you can see list of all fish on https://something-fishy.herokuapp.com/fishes using GET
 3. using POST you can add a fish
-4. using RESTer or POSTman, you can GET, PATCH, PUT and DELETE a single fish
+4. using RESTer or POSTman, you can GET, PATCH, PUT and DELETE a single fish https://something-fishy.herokuapp.com/fishes/<fish_id>
 
 ## Flask app using SQLite https://geocities-kinda-like.herokuapp.com/
 1. using GET (in your browser, RESTer, POSTman) you get the list of all cities in the database listed alphabetically https://geocities-kinda-like.herokuapp.com/cities
